@@ -1,0 +1,2712 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+	  <ApplicationIcon>SC3.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Main\**" />
+    <EmbeddedResource Remove="Main\**" />
+    <None Remove="Main\**" />
+    <Page Remove="Main\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Abelia.png" />
+    <None Remove="Resources\Abelia__1.png" />
+    <None Remove="Resources\Abelia__2.png" />
+    <None Remove="Resources\Abelia__3.png" />
+    <None Remove="Resources\Abigail.webp" />
+    <None Remove="Resources\Abigail__1.png" />
+    <None Remove="Resources\Abyss_1.png" />
+    <None Remove="Resources\Abyss_2.png" />
+    <None Remove="Resources\Abyss__1.png" />
+    <None Remove="Resources\Abyss__1E.png" />
+    <None Remove="Resources\Abyss__2.png" />
+    <None Remove="Resources\Abyss__2E.png" />
+    <None Remove="Resources\Abyss__X.png" />
+    <None Remove="Resources\Acacia.webp" />
+    <None Remove="Resources\Acacia__1.png" />
+    <None Remove="Resources\Aege_1.webp" />
+    <None Remove="Resources\Aege_2.webp" />
+    <None Remove="Resources\Aege__1.png" />
+    <None Remove="Resources\Aege__2.png" />
+    <None Remove="Resources\Aege__3.png" />
+    <None Remove="Resources\Aeneas.webp" />
+    <None Remove="Resources\Aeneas__1.png" />
+    <None Remove="Resources\Aeolos.webp" />
+    <None Remove="Resources\Aeolos__1.png" />
+    <None Remove="Resources\Aether.webp" />
+    <None Remove="Resources\Aether__1.png" />
+    <None Remove="Resources\Agareth.webp" />
+    <None Remove="Resources\Agareth__1.png" />
+    <None Remove="Resources\Agave.webp" />
+    <None Remove="Resources\Agave__1.png" />
+    <None Remove="Resources\Aglaia.webp" />
+    <None Remove="Resources\Aglaia__!.png" />
+    <None Remove="Resources\Aglaia__1.png" />
+    <None Remove="Resources\Aika.webp" />
+    <None Remove="Resources\Aika__1.png" />
+    <None Remove="Resources\Ailian.webp" />
+    <None Remove="Resources\Ailian__1.png" />
+    <None Remove="Resources\Alastor.webp" />
+    <None Remove="Resources\Alastor__1.png" />
+    <None Remove="Resources\Alberic.webp" />
+    <None Remove="Resources\Alberic__1.png" />
+    <None Remove="Resources\Aloces.webp" />
+    <None Remove="Resources\Aloces__1.png" />
+    <None Remove="Resources\Ambrose.webp" />
+    <None Remove="Resources\Ambrose__1.png" />
+    <None Remove="Resources\Amrita.webp" />
+    <None Remove="Resources\Amrita__1.png" />
+    <None Remove="Resources\Amy.png" />
+    <None Remove="Resources\Amy__1.png" />
+    <None Remove="Resources\Amy__2.png" />
+    <None Remove="Resources\Annaretta.webp" />
+    <None Remove="Resources\Annaretta__1.png" />
+    <None Remove="Resources\Areon.webp" />
+    <None Remove="Resources\Areon__1.png" />
+    <None Remove="Resources\Arthur.png" />
+    <None Remove="Resources\Arthur__1.png" />
+    <None Remove="Resources\Arthur__2.png" />
+    <None Remove="Resources\Arthur__X.png" />
+    <None Remove="Resources\Asrafil.webp" />
+    <None Remove="Resources\Asrafil__1.png" />
+    <None Remove="Resources\Assassin.png" />
+    <None Remove="Resources\Assassin__1.png" />
+    <None Remove="Resources\Assassin__X.png" />
+    <None Remove="Resources\Astaroth_1.png" />
+    <None Remove="Resources\Astaroth_2.png" />
+    <None Remove="Resources\Astaroth__1.png" />
+    <None Remove="Resources\Astaroth__1E.png" />
+    <None Remove="Resources\Astaroth__2.png" />
+    <None Remove="Resources\Astaroth__2E.png" />
+    <None Remove="Resources\atkDown.png" />
+    <None Remove="Resources\atkOverTime.png" />
+    <None Remove="Resources\atkUp.png" />
+    <None Remove="Resources\Aurelia.png" />
+    <None Remove="Resources\Aurelia__1.png" />
+    <None Remove="Resources\Aurelia__2.png" />
+    <None Remove="Resources\avoidCounters.png" />
+    <None Remove="Resources\avoidRingOut.png" />
+    <None Remove="Resources\avoidThrows.png" />
+    <None Remove="Resources\Azalea.webp" />
+    <None Remove="Resources\Azalea__1.png" />
+    <None Remove="Resources\Azrael.webp" />
+    <None Remove="Resources\Azrael__1.png" />
+    <None Remove="Resources\Azumi.webp" />
+    <None Remove="Resources\Azumi__1.png" />
+    <None Remove="Resources\background.png" />
+    <None Remove="Resources\background2.png" />
+    <None Remove="Resources\backgroundX.png" />
+    <None Remove="Resources\Background_3.png" />
+    <None Remove="Resources\back_UI.png" />
+    <None Remove="Resources\Balduin.webp" />
+    <None Remove="Resources\Balduin__1.png" />
+    <None Remove="Resources\Bandit_1.png" />
+    <None Remove="Resources\Bandit_2.png" />
+    <None Remove="Resources\Bandit_3.png" />
+    <None Remove="Resources\Bandit__1.png" />
+    <None Remove="Resources\Bandit__2.png" />
+    <None Remove="Resources\Bandit__3.png" />
+    <None Remove="Resources\Beleth.webp" />
+    <None Remove="Resources\Beleth__1.png" />
+    <None Remove="Resources\Berserker.png" />
+    <None Remove="Resources\Berserker__1.png" />
+    <None Remove="Resources\Berserker__X.png" />
+    <None Remove="Resources\Boss.png" />
+    <None Remove="Resources\Boss2.png" />
+    <None Remove="Resources\Brad_OhYeah.mp3" />
+    <None Remove="Resources\Brigand_F.webp" />
+    <None Remove="Resources\Brigand_M.webp" />
+    <None Remove="Resources\Brigand__1.png" />
+    <None Remove="Resources\Brigand__2.png" />
+    <None Remove="Resources\Brunhild.webp" />
+    <None Remove="Resources\Brunhild__1.png" />
+    <None Remove="Resources\Cassandra_1.png" />
+    <None Remove="Resources\Cassandra_2.png" />
+    <None Remove="Resources\Cassandra__1.png" />
+    <None Remove="Resources\Cassandra__1E.png" />
+    <None Remove="Resources\Cassandra__2.png" />
+    <None Remove="Resources\Cassandra__2E.png" />
+    <None Remove="Resources\Cassius.webp" />
+    <None Remove="Resources\Cassius__1.png" />
+    <None Remove="Resources\Celestis.webp" />
+    <None Remove="Resources\Celestis__1.png" />
+    <None Remove="Resources\Cervantes_1.png" />
+    <None Remove="Resources\Cervantes_2.png" />
+    <None Remove="Resources\Cervantes__1.png" />
+    <None Remove="Resources\Cervantes__1E.png" />
+    <None Remove="Resources\Cervantes__2.png" />
+    <None Remove="Resources\Cervantes__2E.png" />
+    <None Remove="Resources\Charade.png" />
+    <None Remove="Resources\Charade__1.png" />
+    <None Remove="Resources\Charade__2.png" />
+    <None Remove="Resources\Charade__3.png" />
+    <None Remove="Resources\char_wall.png" />
+    <None Remove="Resources\Chester.png" />
+    <None Remove="Resources\Chester__1.png" />
+    <None Remove="Resources\Chester__2.png" />
+    <None Remove="Resources\Chester__3.png" />
+    <None Remove="Resources\Chikage.webp" />
+    <None Remove="Resources\Chikage__1.png" />
+    <None Remove="Resources\Colossus.png" />
+    <None Remove="Resources\Colossus__1.png" />
+    <None Remove="Resources\counterChance.png" />
+    <None Remove="Resources\Cover.png" />
+    <None Remove="Resources\Dalkia_F.webp" />
+    <None Remove="Resources\Dalkia_M.webp" />
+    <None Remove="Resources\Dalkia__1.png" />
+    <None Remove="Resources\Dalkia__2.png" />
+    <None Remove="Resources\defDown.png" />
+    <None Remove="Resources\defUp.png" />
+    <None Remove="Resources\Demuth.png" />
+    <None Remove="Resources\Demuth__1.png" />
+    <None Remove="Resources\Demuth__2.png" />
+    <None Remove="Resources\Domenthi.webp" />
+    <None Remove="Resources\Domenthi__1.png" />
+    <None Remove="Resources\Dragon.png" />
+    <None Remove="Resources\Dragon__1.png" />
+    <None Remove="Resources\Dufeng.webp" />
+    <None Remove="Resources\Dufeng__1.png" />
+    <None Remove="Resources\easierImpact.png" />
+    <None Remove="Resources\Edith.webp" />
+    <None Remove="Resources\Edith__1.png" />
+    <None Remove="Resources\Elua_1.webp" />
+    <None Remove="Resources\Elua_2.webp" />
+    <None Remove="Resources\Elua__1.png" />
+    <None Remove="Resources\Elua__2.png" />
+    <None Remove="Resources\Ende.webp" />
+    <None Remove="Resources\Ende__1.png" />
+    <None Remove="Resources\Ende__X.png" />
+    <None Remove="Resources\Eris.webp" />
+    <None Remove="Resources\Eris__1.png" />
+    <None Remove="Resources\Eunice.webp" />
+    <None Remove="Resources\Eunice__1.png" />
+    <None Remove="Resources\Eurydice.webp" />
+    <None Remove="Resources\Eurydice__1.png" />
+    <None Remove="Resources\Fenglei.webp" />
+    <None Remove="Resources\Fenglei_1.png" />
+    <None Remove="Resources\Fenglei__1.png" />
+    <None Remove="Resources\Fenglin.webp" />
+    <None Remove="Resources\Fenglin__1.png" />
+    <None Remove="Resources\Fengyu.webp" />
+    <None Remove="Resources\Fengyu__1.png" />
+    <None Remove="Resources\Feofan.webp" />
+    <None Remove="Resources\Feofan__1.png" />
+    <None Remove="Resources\FootSoldier.png" />
+    <None Remove="Resources\FootSoldier__1.png" />
+    <None Remove="Resources\FootSoldier__2.png" />
+    <None Remove="Resources\Fu-ma Ninja__1.png" />
+    <None Remove="Resources\Fu-ma Ninja__2.png" />
+    <None Remove="Resources\Fu-ma Ninja__3.png" />
+    <None Remove="Resources\Fu-ma Ninja__4.png" />
+    <None Remove="Resources\Fu-ma Ninja__5.png" />
+    <None Remove="Resources\Fu-ma Ninja__6.png" />
+    <None Remove="Resources\Fu-ma Ninja__7.png" />
+    <None Remove="Resources\Fu-maNinja_1.png" />
+    <None Remove="Resources\Fu-maNinja_2.png" />
+    <None Remove="Resources\Fu-maNinja_3.png" />
+    <None Remove="Resources\Fu-maNinja_4.png" />
+    <None Remove="Resources\Fu-maNinja_5.png" />
+    <None Remove="Resources\Fu-maNinja_6.png" />
+    <None Remove="Resources\Fu-maNinja_7.png" />
+    <None Remove="Resources\gainHpAttack.png" />
+    <None Remove="Resources\gainHpGuard.png" />
+    <None Remove="Resources\gainHpTime.png" />
+    <None Remove="Resources\Gate_Clossing.mp3" />
+    <None Remove="Resources\General.png" />
+    <None Remove="Resources\General__1.png" />
+    <None Remove="Resources\Giradot.png" />
+    <None Remove="Resources\Giradot__1.png" />
+    <None Remove="Resources\Giradot__2.png" />
+    <None Remove="Resources\Gladiator_1.png" />
+    <None Remove="Resources\Gladiator_2.png" />
+    <None Remove="Resources\Gladiator__1.png" />
+    <None Remove="Resources\Gladiator__2.png" />
+    <None Remove="Resources\Golem_Roar.mp3" />
+    <None Remove="Resources\Gorus.webp" />
+    <None Remove="Resources\Gorus__1.png" />
+    <None Remove="Resources\Grandall_F.webp" />
+    <None Remove="Resources\Grandall_M.webp" />
+    <None Remove="Resources\Grandall__1.png" />
+    <None Remove="Resources\Grandall__2.png" />
+    <None Remove="Resources\Greed.png" />
+    <None Remove="Resources\Greed__1.png" />
+    <None Remove="Resources\Greed__2.png" />
+    <None Remove="Resources\guardBreak.png" />
+    <None Remove="Resources\guardPenetrateDamage.png" />
+    <None Remove="Resources\Gun.gif" />
+    <None Remove="Resources\Halphas.webp" />
+    <None Remove="Resources\Halphas__1.png" />
+    <None Remove="Resources\Haystir.webp" />
+    <None Remove="Resources\Haystir__1.png" />
+    <None Remove="Resources\Heal-Do_1.webp" />
+    <None Remove="Resources\Heal-Do_2.webp" />
+    <None Remove="Resources\Heal-Do__1.png" />
+    <None Remove="Resources\Heal-Do__2.png" />
+    <None Remove="Resources\Heal-Do__3.png" />
+    <None Remove="Resources\Hilda.webp" />
+    <None Remove="Resources\Hilda__1.png" />
+    <None Remove="Resources\Hualin.png" />
+    <None Remove="Resources\Hualin__1.png" />
+    <None Remove="Resources\Hualin__2.png" />
+    <None Remove="Resources\Hwang.png" />
+    <None Remove="Resources\Hwang__1.png" />
+    <None Remove="Resources\Hwang__2.png" />
+    <None Remove="Resources\Hyle_1.webp" />
+    <None Remove="Resources\Hyle_2.webp" />
+    <None Remove="Resources\Hyle__1.png" />
+    <None Remove="Resources\Hyle__2.png" />
+    <None Remove="Resources\Iblis.webp" />
+    <None Remove="Resources\Iblis__1.png" />
+    <None Remove="Resources\Ignis.webp" />
+    <None Remove="Resources\Ignis__1.png" />
+    <None Remove="Resources\Ihm.mp3" />
+    <None Remove="Resources\Ilyusha.webp" />
+    <None Remove="Resources\Ilyusha__1.png" />
+    <None Remove="Resources\img_1000.png" />
+    <None Remove="Resources\img_101.png" />
+    <None Remove="Resources\img_102.png" />
+    <None Remove="Resources\img_103.png" />
+    <None Remove="Resources\img_104.png" />
+    <None Remove="Resources\img_105.png" />
+    <None Remove="Resources\img_106.png" />
+    <None Remove="Resources\img_107.png" />
+    <None Remove="Resources\img_108.png" />
+    <None Remove="Resources\img_109.png" />
+    <None Remove="Resources\img_110.png" />
+    <None Remove="Resources\img_111.png" />
+    <None Remove="Resources\img_112.png" />
+    <None Remove="Resources\img_113.png" />
+    <None Remove="Resources\img_114.png" />
+    <None Remove="Resources\img_115.png" />
+    <None Remove="Resources\img_116.png" />
+    <None Remove="Resources\img_117.png" />
+    <None Remove="Resources\img_201.png" />
+    <None Remove="Resources\img_202.png" />
+    <None Remove="Resources\img_203.png" />
+    <None Remove="Resources\img_204.png" />
+    <None Remove="Resources\img_205.png" />
+    <None Remove="Resources\img_206.png" />
+    <None Remove="Resources\img_207.png" />
+    <None Remove="Resources\img_208.png" />
+    <None Remove="Resources\img_209.png" />
+    <None Remove="Resources\img_301.png" />
+    <None Remove="Resources\img_302.png" />
+    <None Remove="Resources\img_303.png" />
+    <None Remove="Resources\img_304.png" />
+    <None Remove="Resources\img_305.png" />
+    <None Remove="Resources\img_306.png" />
+    <None Remove="Resources\img_307.png" />
+    <None Remove="Resources\img_308.png" />
+    <None Remove="Resources\img_99.png" />
+    <None Remove="Resources\impactChance.png" />
+    <None Remove="Resources\impactGainHp.png" />
+    <None Remove="Resources\impactGiveDamage.png" />
+    <None Remove="Resources\Inferno.png" />
+    <None Remove="Resources\Inferno__1.png" />
+    <None Remove="Resources\Irene.webp" />
+    <None Remove="Resources\Irene__1.png" />
+    <None Remove="Resources\Iris.webp" />
+    <None Remove="Resources\Iris__1.png" />
+    <None Remove="Resources\Ishtar.webp" />
+    <None Remove="Resources\Ishtar__1.png" />
+    <None Remove="Resources\Ivy_1.png" />
+    <None Remove="Resources\Ivy_2.png" />
+    <None Remove="Resources\Ivy__1.png" />
+    <None Remove="Resources\Ivy__1E.png" />
+    <None Remove="Resources\Ivy__2.png" />
+    <None Remove="Resources\Ivy__2E.png" />
+    <None Remove="Resources\Ixion.webp" />
+    <None Remove="Resources\Ixion__1.png" />
+    <None Remove="Resources\Jinkai.webp" />
+    <None Remove="Resources\Jinkai__1.png" />
+    <None Remove="Resources\Juno.webp" />
+    <None Remove="Resources\Juno__1.png" />
+    <None Remove="Resources\Jyurai.webp" />
+    <None Remove="Resources\Jyurai__1.png" />
+    <None Remove="Resources\Jyuri.webp" />
+    <None Remove="Resources\Jyuri__1.png" />
+    <None Remove="Resources\Kagami.webp" />
+    <None Remove="Resources\Kagami__1.png" />
+    <None Remove="Resources\Kanade.webp" />
+    <None Remove="Resources\Kanade__1.png" />
+    <None Remove="Resources\Kanon.webp" />
+    <None Remove="Resources\Kanon__1.png" />
+    <None Remove="Resources\Karen.webp" />
+    <None Remove="Resources\Karen__1.png" />
+    <None Remove="Resources\Katina.webp" />
+    <None Remove="Resources\Katina__1.png" />
+    <None Remove="Resources\Keres.png" />
+    <None Remove="Resources\Keres__1.png" />
+    <None Remove="Resources\Keres__X.png" />
+    <None Remove="Resources\Kierkess_1.webp" />
+    <None Remove="Resources\Kierkess_2.webp" />
+    <None Remove="Resources\Kierkess__1.png" />
+    <None Remove="Resources\Kierkess__2.png" />
+    <None Remove="Resources\Kilik_1.png" />
+    <None Remove="Resources\Kilik_2.png" />
+    <None Remove="Resources\Kilik__1.png" />
+    <None Remove="Resources\Kilik__1E.png" />
+    <None Remove="Resources\Kilik__2.png" />
+    <None Remove="Resources\Kilik__2E.png" />
+    <None Remove="Resources\Kimika.webp" />
+    <None Remove="Resources\Kimika__1.png" />
+    <None Remove="Resources\Konomi.webp" />
+    <None Remove="Resources\Konomi__1.png" />
+    <None Remove="Resources\Kureha.webp" />
+    <None Remove="Resources\Kureha__1.png" />
+    <None Remove="Resources\Leraje.webp" />
+    <None Remove="Resources\Leraje__1.png" />
+    <None Remove="Resources\Leshy.webp" />
+    <None Remove="Resources\Leshy__1.png" />
+    <None Remove="Resources\Li Long__1.png" />
+    <None Remove="Resources\Li Long__2.png" />
+    <None Remove="Resources\Lilan.webp" />
+    <None Remove="Resources\Lilan__1.png" />
+    <None Remove="Resources\LiLong.png" />
+    <None Remove="Resources\Lizard Men__1.png" />
+    <None Remove="Resources\Lizardman_1.png" />
+    <None Remove="Resources\Lizardman_2.png" />
+    <None Remove="Resources\Lizardman__1.png" />
+    <None Remove="Resources\Lizardman__1E.png" />
+    <None Remove="Resources\Lizardman__2.png" />
+    <None Remove="Resources\Lizardman__2E.png" />
+    <None Remove="Resources\Lizardman__EX1.png" />
+    <None Remove="Resources\Lizardman__EX2.png" />
+    <None Remove="Resources\Lizardman__EX3.png" />
+    <None Remove="Resources\Lizardman__X.png" />
+    <None Remove="Resources\LizardMen.png" />
+    <None Remove="Resources\Loki.webp" />
+    <None Remove="Resources\Loki__1.png" />
+    <None Remove="Resources\loseHpAttack.png" />
+    <None Remove="Resources\loseHpGuard.png" />
+    <None Remove="Resources\loseHpTime.png" />
+    <None Remove="Resources\Luna.png" />
+    <None Remove="Resources\Luna__1.png" />
+    <None Remove="Resources\Luna__2.png" />
+    <None Remove="Resources\Luna__3.png" />
+    <None Remove="Resources\Lupi_1.webp" />
+    <None Remove="Resources\Lupi_2.webp" />
+    <None Remove="Resources\Lupi__1.png" />
+    <None Remove="Resources\Lupi__2.png" />
+    <None Remove="Resources\Lupi__3.png" />
+    <None Remove="Resources\Lynette.png" />
+    <None Remove="Resources\Lynette__1.png" />
+    <None Remove="Resources\Lynette__2.png" />
+    <None Remove="Resources\Maletta_F.webp" />
+    <None Remove="Resources\Maletta_M.webp" />
+    <None Remove="Resources\Maletta__1.png" />
+    <None Remove="Resources\Maletta__2.png" />
+    <None Remove="Resources\Marid.webp" />
+    <None Remove="Resources\Marid__1.png" />
+    <None Remove="Resources\Maxi_1.png" />
+    <None Remove="Resources\Maxi_2.png" />
+    <None Remove="Resources\Maxi__1.png" />
+    <None Remove="Resources\Maxi__1E.png" />
+    <None Remove="Resources\Maxi__2.png" />
+    <None Remove="Resources\Maxi__2E.png" />
+    <None Remove="Resources\Mayura.webp" />
+    <None Remove="Resources\Mayura__1.png" />
+    <None Remove="Resources\Meiga.webp" />
+    <None Remove="Resources\Meiga__1.png" />
+    <None Remove="Resources\Meilan.webp" />
+    <None Remove="Resources\Meilan__1.png" />
+    <None Remove="Resources\Minglian.webp" />
+    <None Remove="Resources\Minglian__1.png" />
+    <None Remove="Resources\Mingyue.webp" />
+    <None Remove="Resources\Mingyue__1.png" />
+    <None Remove="Resources\Mireille.webp" />
+    <None Remove="Resources\Mireille__1.png" />
+    <None Remove="Resources\Miser.png" />
+    <None Remove="Resources\Miser__1.png" />
+    <None Remove="Resources\Miser__2.png" />
+    <None Remove="Resources\Mitsurugi_1.png" />
+    <None Remove="Resources\Mitsurugi_2.png" />
+    <None Remove="Resources\Mitsurugi__1.png" />
+    <None Remove="Resources\Mitsurugi__1E.png" />
+    <None Remove="Resources\Mitsurugi__2.png" />
+    <None Remove="Resources\Mitsurugi__2E.png" />
+    <None Remove="Resources\Mooncalf.webp" />
+    <None Remove="Resources\Mooncalf__1.png" />
+    <None Remove="Resources\Muriel.webp" />
+    <None Remove="Resources\Muriel__1.png" />
+    <None Remove="Resources\Night Terror__1.png" />
+    <None Remove="Resources\Nightmare.png" />
+    <None Remove="Resources\Nightmare_!.png" />
+    <None Remove="Resources\Nightmare_1.png" />
+    <None Remove="Resources\Nightmare_2.png" />
+    <None Remove="Resources\Nightmare__1.png" />
+    <None Remove="Resources\Nightmare__1E.png" />
+    <None Remove="Resources\Nightmare__2.png" />
+    <None Remove="Resources\Nightmare__2E.png" />
+    <None Remove="Resources\Nightmare__X.png" />
+    <None Remove="Resources\NightTerror.png" />
+    <None Remove="Resources\Noel.webp" />
+    <None Remove="Resources\Noel__1.png" />
+    <None Remove="Resources\none.png" />
+    <None Remove="Resources\Notus.webp" />
+    <None Remove="Resources\Notus__1.png" />
+    <None Remove="Resources\Olcadan_1.png" />
+    <None Remove="Resources\Olcadan_2.png" />
+    <None Remove="Resources\Olcadan__1.png" />
+    <None Remove="Resources\Olcadan__1E.png" />
+    <None Remove="Resources\Olcadan__2.png" />
+    <None Remove="Resources\Olcadan__2E.png" />
+    <None Remove="Resources\Oruks.webp" />
+    <None Remove="Resources\Oruks__1.png" />
+    <None Remove="Resources\Ouka.webp" />
+    <None Remove="Resources\Ouka__1.png" />
+    <None Remove="Resources\Philine.webp" />
+    <None Remove="Resources\Philine__1.png" />
+    <None Remove="Resources\Pirate_1.png" />
+    <None Remove="Resources\Pirate_2.png" />
+    <None Remove="Resources\Pirate_3.png" />
+    <None Remove="Resources\Pirate_4.png" />
+    <None Remove="Resources\Pirate_5.png" />
+    <None Remove="Resources\Pirate_6.png" />
+    <None Remove="Resources\Pirate_7.png" />
+    <None Remove="Resources\Pirate__1.png" />
+    <None Remove="Resources\Pirate__2.png" />
+    <None Remove="Resources\Pirate__3.png" />
+    <None Remove="Resources\Pirate__4.png" />
+    <None Remove="Resources\Pirate__5.png" />
+    <None Remove="Resources\Pirate__6.png" />
+    <None Remove="Resources\Pirate__7.png" />
+    <None Remove="Resources\PreviewSkin1.png" />
+    <None Remove="Resources\PreviewSkin10.png" />
+    <None Remove="Resources\PreviewSkin101.png" />
+    <None Remove="Resources\PreviewSkin102.png" />
+    <None Remove="Resources\PreviewSkin103.png" />
+    <None Remove="Resources\PreviewSkin104.png" />
+    <None Remove="Resources\PreviewSkin105.png" />
+    <None Remove="Resources\PreviewSkin106.png" />
+    <None Remove="Resources\PreviewSkin107.png" />
+    <None Remove="Resources\PreviewSkin108.png" />
+    <None Remove="Resources\PreviewSkin109.png" />
+    <None Remove="Resources\PreviewSkin11.png" />
+    <None Remove="Resources\PreviewSkin110.png" />
+    <None Remove="Resources\PreviewSkin111.png" />
+    <None Remove="Resources\PreviewSkin112.png" />
+    <None Remove="Resources\PreviewSkin113.png" />
+    <None Remove="Resources\PreviewSkin114.png" />
+    <None Remove="Resources\PreviewSkin115.png" />
+    <None Remove="Resources\PreviewSkin116.png" />
+    <None Remove="Resources\PreviewSkin117.png" />
+    <None Remove="Resources\PreviewSkin118.png" />
+    <None Remove="Resources\PreviewSkin119.png" />
+    <None Remove="Resources\PreviewSkin12.png" />
+    <None Remove="Resources\PreviewSkin120.png" />
+    <None Remove="Resources\PreviewSkin121.png" />
+    <None Remove="Resources\PreviewSkin122.png" />
+    <None Remove="Resources\PreviewSkin123.png" />
+    <None Remove="Resources\PreviewSkin124.png" />
+    <None Remove="Resources\PreviewSkin125.png" />
+    <None Remove="Resources\PreviewSkin126.png" />
+    <None Remove="Resources\PreviewSkin127.png" />
+    <None Remove="Resources\PreviewSkin128.png" />
+    <None Remove="Resources\PreviewSkin129.png" />
+    <None Remove="Resources\PreviewSkin13.png" />
+    <None Remove="Resources\PreviewSkin130.png" />
+    <None Remove="Resources\PreviewSkin131.png" />
+    <None Remove="Resources\PreviewSkin132.png" />
+    <None Remove="Resources\PreviewSkin133.png" />
+    <None Remove="Resources\PreviewSkin134.png" />
+    <None Remove="Resources\PreviewSkin135.png" />
+    <None Remove="Resources\PreviewSkin136.png" />
+    <None Remove="Resources\PreviewSkin137.png" />
+    <None Remove="Resources\PreviewSkin138.png" />
+    <None Remove="Resources\PreviewSkin139.png" />
+    <None Remove="Resources\PreviewSkin14.png" />
+    <None Remove="Resources\PreviewSkin140.png" />
+    <None Remove="Resources\PreviewSkin141.png" />
+    <None Remove="Resources\PreviewSkin142.png" />
+    <None Remove="Resources\PreviewSkin143.png" />
+    <None Remove="Resources\PreviewSkin144.png" />
+    <None Remove="Resources\PreviewSkin145.png" />
+    <None Remove="Resources\PreviewSkin146.png" />
+    <None Remove="Resources\PreviewSkin147.png" />
+    <None Remove="Resources\PreviewSkin148.png" />
+    <None Remove="Resources\PreviewSkin15.png" />
+    <None Remove="Resources\PreviewSkin16.png" />
+    <None Remove="Resources\PreviewSkin17.png" />
+    <None Remove="Resources\PreviewSkin18.png" />
+    <None Remove="Resources\PreviewSkin19.png" />
+    <None Remove="Resources\PreviewSkin2.png" />
+    <None Remove="Resources\PreviewSkin20.png" />
+    <None Remove="Resources\PreviewSkin21.png" />
+    <None Remove="Resources\PreviewSkin22.png" />
+    <None Remove="Resources\PreviewSkin23.png" />
+    <None Remove="Resources\PreviewSkin24.png" />
+    <None Remove="Resources\PreviewSkin25.png" />
+    <None Remove="Resources\PreviewSkin26.png" />
+    <None Remove="Resources\PreviewSkin27.png" />
+    <None Remove="Resources\PreviewSkin28.png" />
+    <None Remove="Resources\PreviewSkin29.png" />
+    <None Remove="Resources\PreviewSkin3.png" />
+    <None Remove="Resources\PreviewSkin30.png" />
+    <None Remove="Resources\PreviewSkin31.png" />
+    <None Remove="Resources\PreviewSkin32.png" />
+    <None Remove="Resources\PreviewSkin33.png" />
+    <None Remove="Resources\PreviewSkin34.png" />
+    <None Remove="Resources\PreviewSkin35.png" />
+    <None Remove="Resources\PreviewSkin36.png" />
+    <None Remove="Resources\PreviewSkin37.png" />
+    <None Remove="Resources\PreviewSkin38.png" />
+    <None Remove="Resources\PreviewSkin39.png" />
+    <None Remove="Resources\PreviewSkin4.png" />
+    <None Remove="Resources\PreviewSkin40.png" />
+    <None Remove="Resources\PreviewSkin41.png" />
+    <None Remove="Resources\PreviewSkin42.png" />
+    <None Remove="Resources\PreviewSkin43.png" />
+    <None Remove="Resources\PreviewSkin44.png" />
+    <None Remove="Resources\PreviewSkin45.png" />
+    <None Remove="Resources\PreviewSkin46.png" />
+    <None Remove="Resources\PreviewSkin47.png" />
+    <None Remove="Resources\PreviewSkin48.png" />
+    <None Remove="Resources\PreviewSkin49.png" />
+    <None Remove="Resources\PreviewSkin5.png" />
+    <None Remove="Resources\PreviewSkin50.png" />
+    <None Remove="Resources\PreviewSkin51.png" />
+    <None Remove="Resources\PreviewSkin52.png" />
+    <None Remove="Resources\PreviewSkin53.png" />
+    <None Remove="Resources\PreviewSkin54.png" />
+    <None Remove="Resources\PreviewSkin55.png" />
+    <None Remove="Resources\PreviewSkin56.png" />
+    <None Remove="Resources\PreviewSkin57.png" />
+    <None Remove="Resources\PreviewSkin58.png" />
+    <None Remove="Resources\PreviewSkin59.png" />
+    <None Remove="Resources\PreviewSkin6.png" />
+    <None Remove="Resources\PreviewSkin7.png" />
+    <None Remove="Resources\PreviewSkin8.png" />
+    <None Remove="Resources\PreviewSkin9.png" />
+    <None Remove="Resources\pushbackForceDecrease.png" />
+    <None Remove="Resources\pushbackForceIncrease.png" />
+    <None Remove="Resources\Raguel.webp" />
+    <None Remove="Resources\Raguel__1.png" />
+    <None Remove="Resources\Random.png" />
+    <None Remove="Resources\Raphael_1.png" />
+    <None Remove="Resources\Raphael_2.png" />
+    <None Remove="Resources\Raphael__1.png" />
+    <None Remove="Resources\Raphael__1E.png" />
+    <None Remove="Resources\Raphael__2.png" />
+    <None Remove="Resources\Raphael__2E.png" />
+    <None Remove="Resources\Ratziel.webp" />
+    <None Remove="Resources\Ratziel__1.png" />
+    <None Remove="Resources\Rebel_F.webp" />
+    <None Remove="Resources\Rebel_M.webp" />
+    <None Remove="Resources\Rebel__1.png" />
+    <None Remove="Resources\Rebel__2.png" />
+    <None Remove="Resources\Revenant.png" />
+    <None Remove="Resources\Revenant__1.png" />
+    <None Remove="Resources\Revenant__2.png" />
+    <None Remove="Resources\Rhea.webp" />
+    <None Remove="Resources\Rhea__1.png" />
+    <None Remove="Resources\Riese.webp" />
+    <None Remove="Resources\Riese__1.png" />
+    <None Remove="Resources\Rock_1.png" />
+    <None Remove="Resources\Rock_2.png" />
+    <None Remove="Resources\Rock__1.png" />
+    <None Remove="Resources\Rock__1E.png" />
+    <None Remove="Resources\Rock__2.png" />
+    <None Remove="Resources\Rock__2E.png" />
+    <None Remove="Resources\Rock__X.png" />
+    <None Remove="Resources\Roin_1.webp" />
+    <None Remove="Resources\Roin_2.webp" />
+    <None Remove="Resources\Roin__1.png" />
+    <None Remove="Resources\Roin__2.png" />
+    <None Remove="Resources\Rudiger.webp" />
+    <None Remove="Resources\Rudiger__1.png" />
+    <None Remove="Resources\Rufus.webp" />
+    <None Remove="Resources\Rufus__1.png" />
+    <None Remove="Resources\Ryouga.webp" />
+    <None Remove="Resources\Ryouga__1.png" />
+    <None Remove="Resources\Saizou.webp" />
+    <None Remove="Resources\Saizou__1.png" />
+    <None Remove="Resources\Samurai_1.png" />
+    <None Remove="Resources\Samurai_2.png" />
+    <None Remove="Resources\Samurai_3.png" />
+    <None Remove="Resources\Samurai_4.png" />
+    <None Remove="Resources\Samurai__1.png" />
+    <None Remove="Resources\Samurai__2.png" />
+    <None Remove="Resources\Samurai__3.png" />
+    <None Remove="Resources\Samurai__4.png" />
+    <None Remove="Resources\Sentry.png" />
+    <None Remove="Resources\Sentry__1.png" />
+    <None Remove="Resources\Seong Mi-na__1.png" />
+    <None Remove="Resources\Seong Mi-na__1E.png" />
+    <None Remove="Resources\Seong Mi-na__2.png" />
+    <None Remove="Resources\Seong Mi-na__2E.png" />
+    <None Remove="Resources\Seong Mi-na__X.png" />
+    <None Remove="Resources\SeongMi-na_1.png" />
+    <None Remove="Resources\SeongMi-na_2.png" />
+    <None Remove="Resources\Setsuka_1.png" />
+    <None Remove="Resources\Setsuka_2.png" />
+    <None Remove="Resources\Setsuka__1.png" />
+    <None Remove="Resources\Setsuka__1E.png" />
+    <None Remove="Resources\Setsuka__2.png" />
+    <None Remove="Resources\Setsuka__2E.png" />
+    <None Remove="Resources\Setsuka__X.png" />
+    <None Remove="Resources\Shadow Master.png" />
+    <None Remove="Resources\Shadow Master__1.png" />
+    <None Remove="Resources\Shiina.webp" />
+    <None Remove="Resources\Shiina__1.png" />
+    <None Remove="Resources\Shiun.webp" />
+    <None Remove="Resources\Shiun__1.png" />
+    <None Remove="Resources\Shizuma.webp" />
+    <None Remove="Resources\Shizuma__1.png" />
+    <None Remove="Resources\short_sms_tone.mp3" />
+    <None Remove="Resources\Shuyu.webp" />
+    <None Remove="Resources\Shuyu__1.png" />
+    <None Remove="Resources\Siegfried_1.png" />
+    <None Remove="Resources\Siegfried_2.png" />
+    <None Remove="Resources\Siegfried__1.png" />
+    <None Remove="Resources\Siegfried__1E.png" />
+    <None Remove="Resources\Siegfried__2.png" />
+    <None Remove="Resources\Siegfried__2E.png" />
+    <None Remove="Resources\Siegfried__X.png" />
+    <None Remove="Resources\Siulan.webp" />
+    <None Remove="Resources\Siulan__1.png" />
+    <None Remove="Resources\sizeDown.png" />
+    <None Remove="Resources\sizeUp.png" />
+    <None Remove="Resources\Sizuku.webp" />
+    <None Remove="Resources\Sizuku__1.png" />
+    <None Remove="Resources\SkinPreview1.png" />
+    <None Remove="Resources\SkinPreview2.png" />
+    <None Remove="Resources\Sophitia_1.png" />
+    <None Remove="Resources\Sophitia_2.png" />
+    <None Remove="Resources\Sophitia__1.png" />
+    <None Remove="Resources\Sophitia__1E.png" />
+    <None Remove="Resources\Sophitia__2.png" />
+    <None Remove="Resources\Sophitia__2E.png" />
+    <None Remove="Resources\Sophitia__X.png" />
+    <None Remove="Resources\sound.png" />
+    <None Remove="Resources\SoundOff.png" />
+    <None Remove="Resources\SoundOn.png" />
+    <None Remove="Resources\SpaWave.mp3" />
+    <None Remove="Resources\stealHp.png" />
+    <None Remove="Resources\Strife.png" />
+    <None Remove="Resources\Strife__1.png" />
+    <None Remove="Resources\Strife__2.png" />
+    <None Remove="Resources\Swordsman_1.png" />
+    <None Remove="Resources\Swordsman_2.png" />
+    <None Remove="Resources\Swordsman__1.png" />
+    <None Remove="Resources\Swordsman__2.png" />
+    <None Remove="Resources\Syunna.webp" />
+    <None Remove="Resources\Syunna__1.png" />
+    <None Remove="Resources\Taki_1.png" />
+    <None Remove="Resources\Taki_2.png" />
+    <None Remove="Resources\Taki__1.png" />
+    <None Remove="Resources\Taki__1E.png" />
+    <None Remove="Resources\Taki__2.png" />
+    <None Remove="Resources\Taki__2E.png" />
+    <None Remove="Resources\Taki__X.png" />
+    <None Remove="Resources\Talim_1.png" />
+    <None Remove="Resources\Talim_2.png" />
+    <None Remove="Resources\Talim__1.png" />
+    <None Remove="Resources\Talim__1E.png" />
+    <None Remove="Resources\Talim__2.png" />
+    <None Remove="Resources\Talim__2E.png" />
+    <None Remove="Resources\Thief_1.png" />
+    <None Remove="Resources\Thief_2.png" />
+    <None Remove="Resources\Thief__1.png" />
+    <None Remove="Resources\Thief__2.png" />
+    <None Remove="Resources\tile000.png" />
+    <None Remove="Resources\tile001.png" />
+    <None Remove="Resources\tile002.png" />
+    <None Remove="Resources\tile003.png" />
+    <None Remove="Resources\tile004.png" />
+    <None Remove="Resources\tile005.png" />
+    <None Remove="Resources\tile006.png" />
+    <None Remove="Resources\tile007.png" />
+    <None Remove="Resources\tile008.png" />
+    <None Remove="Resources\tile009.png" />
+    <None Remove="Resources\tile010.png" />
+    <None Remove="Resources\tile011.png" />
+    <None Remove="Resources\tile012.png" />
+    <None Remove="Resources\tile013.png" />
+    <None Remove="Resources\tile014.png" />
+    <None Remove="Resources\tile015.png" />
+    <None Remove="Resources\tile016.png" />
+    <None Remove="Resources\tile017.png" />
+    <None Remove="Resources\tile018.png" />
+    <None Remove="Resources\tile019.png" />
+    <None Remove="Resources\tile020.png" />
+    <None Remove="Resources\tile021.png" />
+    <None Remove="Resources\tile022.png" />
+    <None Remove="Resources\tile023.png" />
+    <None Remove="Resources\tile024.png" />
+    <None Remove="Resources\tile025.png" />
+    <None Remove="Resources\tile026.png" />
+    <None Remove="Resources\tile027.png" />
+    <None Remove="Resources\tile028.png" />
+    <None Remove="Resources\tile029.png" />
+    <None Remove="Resources\tile030.png" />
+    <None Remove="Resources\tile031.png" />
+    <None Remove="Resources\tile032.png" />
+    <None Remove="Resources\tile033.png" />
+    <None Remove="Resources\tile034.png" />
+    <None Remove="Resources\tile035.png" />
+    <None Remove="Resources\tile036.png" />
+    <None Remove="Resources\tile037.png" />
+    <None Remove="Resources\tile038.png" />
+    <None Remove="Resources\tile039.png" />
+    <None Remove="Resources\tile040.png" />
+    <None Remove="Resources\tile041.png" />
+    <None Remove="Resources\tile042.png" />
+    <None Remove="Resources\tile043.png" />
+    <None Remove="Resources\tile044.png" />
+    <None Remove="Resources\tile045.png" />
+    <None Remove="Resources\tile046.png" />
+    <None Remove="Resources\tile047.png" />
+    <None Remove="Resources\tile048.png" />
+    <None Remove="Resources\tile049.png" />
+    <None Remove="Resources\tile050.png" />
+    <None Remove="Resources\tile051.png" />
+    <None Remove="Resources\tile052.png" />
+    <None Remove="Resources\tile053.png" />
+    <None Remove="Resources\tile054.png" />
+    <None Remove="Resources\tile055.png" />
+    <None Remove="Resources\tile056.png" />
+    <None Remove="Resources\tile057.png" />
+    <None Remove="Resources\tile058.png" />
+    <None Remove="Resources\tile059.png" />
+    <None Remove="Resources\tile060.png" />
+    <None Remove="Resources\tile061.png" />
+    <None Remove="Resources\tile062.png" />
+    <None Remove="Resources\tile063.png" />
+    <None Remove="Resources\Tina.webp" />
+    <None Remove="Resources\Tina__1.png" />
+    <None Remove="Resources\Tira_1.png" />
+    <None Remove="Resources\Tira_2.png" />
+    <None Remove="Resources\Tira__1.png" />
+    <None Remove="Resources\Tira__1E.png" />
+    <None Remove="Resources\Tira__2.png" />
+    <None Remove="Resources\Tira__2E.png" />
+    <None Remove="Resources\Tomoe.webp" />
+    <None Remove="Resources\Tomoe__1.png" />
+    <None Remove="Resources\Unknown Soul__1.png" />
+    <None Remove="Resources\Unknown Soul__2.png" />
+    <None Remove="Resources\Unknown Soul__3.png" />
+    <None Remove="Resources\UnknownSoul_1.png" />
+    <None Remove="Resources\UnknownSoul_2.png" />
+    <None Remove="Resources\UnknownSoul_3.png" />
+    <None Remove="Resources\Valeria.png" />
+    <None Remove="Resources\Valeria__1.png" />
+    <None Remove="Resources\Valeria__2.png" />
+    <None Remove="Resources\Veles.webp" />
+    <None Remove="Resources\Veles__1.png" />
+    <None Remove="Resources\Voldo_1.png" />
+    <None Remove="Resources\Voldo_2.png" />
+    <None Remove="Resources\Voldo__1.png" />
+    <None Remove="Resources\Voldo__1E.png" />
+    <None Remove="Resources\Voldo__2.png" />
+    <None Remove="Resources\Voldo__2E.png" />
+    <None Remove="Resources\Wenli.webp" />
+    <None Remove="Resources\Wenli__1.png" />
+    <None Remove="Resources\X.png" />
+    <None Remove="Resources\Xianghua_1.png" />
+    <None Remove="Resources\Xianghua_2.png" />
+    <None Remove="Resources\Xianghua__1.png" />
+    <None Remove="Resources\Xianghua__1E.png" />
+    <None Remove="Resources\Xianghua__2.png" />
+    <None Remove="Resources\Xianghua__2E.png" />
+    <None Remove="Resources\Xiaoxin.webp" />
+    <None Remove="Resources\Xiaoxin__1.png" />
+    <None Remove="Resources\Xunyu.webp" />
+    <None Remove="Resources\Xunyu__1.png" />
+    <None Remove="Resources\X__1.png" />
+    <None Remove="Resources\Yakumo.webp" />
+    <None Remove="Resources\Yakumo__1.png" />
+    <None Remove="Resources\Yoshimitsu_1.png" />
+    <None Remove="Resources\Yoshimitsu_2.png" />
+    <None Remove="Resources\Yoshimitsu__1.png" />
+    <None Remove="Resources\Yoshimitsu__1E.png" />
+    <None Remove="Resources\Yoshimitsu__2.png" />
+    <None Remove="Resources\Yoshimitsu__2E.png" />
+    <None Remove="Resources\Yueliang.webp" />
+    <None Remove="Resources\Yueliang__1.png" />
+    <None Remove="Resources\Yufeng.webp" />
+    <None Remove="Resources\Yufeng__1.png" />
+    <None Remove="Resources\Yukina.webp" />
+    <None Remove="Resources\Yukina__1.png" />
+    <None Remove="Resources\Yun-Seong_1.png" />
+    <None Remove="Resources\Yun-Seong_2.png" />
+    <None Remove="Resources\Yun-Seong__1.png" />
+    <None Remove="Resources\Yun-Seong__1E.png" />
+    <None Remove="Resources\Yun-Seong__2.png" />
+    <None Remove="Resources\Yun-Seong__2E.png" />
+    <None Remove="Resources\Zasalamel_1.png" />
+    <None Remove="Resources\Zasalamel_2.png" />
+    <None Remove="Resources\Zasalamel__1.png" />
+    <None Remove="Resources\Zasalamel__1E.png" />
+    <None Remove="Resources\Zasalamel__2.png" />
+    <None Remove="Resources\Zasalamel__2E.png" />
+    <None Remove="Resources\Zasalamel__EX.png" />
+    <None Remove="Resources\Zifeng.webp" />
+    <None Remove="Resources\Zifeng__1.png" />
+    <None Remove="Views\TextureView.xaml.cs~RF334e6b50.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Abelia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abelia__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abelia__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abelia__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abigail.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abigail__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abyss__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Acacia.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Acacia__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aege_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aege_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aege__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aege__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aege__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aeneas.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aeneas__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aeolos.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aeolos__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aether.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aether__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Agareth.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Agareth__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Agave.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Agave__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aglaia.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aglaia__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aika.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aika__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ailian.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ailian__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Alastor.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Alastor__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Alberic.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Alberic__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aloces.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aloces__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ambrose.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ambrose__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Amrita.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Amrita__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Amy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Amy__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Amy__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Annaretta.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Annaretta__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Areon.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Areon__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Arthur.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Arthur__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Arthur__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Arthur__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Asrafil.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Asrafil__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Assassin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Assassin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Assassin__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Astaroth_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Astaroth_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Astaroth__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Astaroth__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Astaroth__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Astaroth__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aurelia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aurelia__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aurelia__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Azalea.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Azalea__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Azrael.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Azrael__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Azumi.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Azumi__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\backgroundX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\atkDown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\atkOverTime.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\atkUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\avoidCounters.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\avoidRingOut.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\avoidThrows.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Background_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Balduin.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Balduin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bandit_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bandit_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bandit_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bandit__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bandit__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Bandit__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Beleth.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Beleth__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Berserker.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Berserker__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Berserker__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Boss.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Boss2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brigand_F.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brigand_M.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brigand__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brigand__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brunhild.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Brunhild__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassandra_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassandra_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassandra__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassandra__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassandra__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassandra__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassius.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cassius__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Celestis.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Celestis__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cervantes_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cervantes_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cervantes__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cervantes__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cervantes__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Cervantes__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Charade.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Charade__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Charade__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Charade__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chikage.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chikage__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Colossus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Colossus__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\counterChance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dalkia_F.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dalkia_M.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dalkia__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dalkia__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\defDown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\defUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Demuth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Demuth__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Demuth__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Domenthi.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Domenthi__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dragon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dragon__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dufeng.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Dufeng__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\easierImpact.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Edith.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Edith__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Elua_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Elua_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Elua__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Elua__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ende.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ende__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ende__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eris.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eris__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eunice.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eunice__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eurydice.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Eurydice__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fenglei.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fenglei__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fenglin.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fenglin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fengyu.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fengyu__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Feofan.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Feofan__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\FootSoldier.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\FootSoldier__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-ma Ninja__7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fu-maNinja_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gainHpAttack.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gainHpGuard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\gainHpTime.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\General.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\General__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Giradot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Giradot__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Giradot__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Gladiator_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Gladiator_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Gladiator__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Gladiator__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Gorus.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Gorus__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Grandall_F.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Grandall_M.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Grandall__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Grandall__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Greed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Greed__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Greed__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\guardBreak.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\guardPenetrateDamage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Halphas.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Halphas__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Haystir.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Haystir__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Heal-Do_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Heal-Do_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Heal-Do__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Heal-Do__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Heal-Do__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hilda.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hilda__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hualin.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hualin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hualin__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hwang.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hwang__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hwang__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hyle_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hyle_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hyle__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Hyle__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iblis.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iblis__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ignis.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ignis__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ilyusha.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ilyusha__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\impactChance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\impactGainHp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\impactGiveDamage.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Inferno.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Inferno__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Irene.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Irene__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iris.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Iris__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ishtar.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ishtar__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ivy_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ivy_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ivy__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ivy__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ivy__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ivy__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ixion.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ixion__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jinkai.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jinkai__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Juno.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Juno__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jyurai.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jyurai__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jyuri.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Jyuri__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kagami.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kagami__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kanade.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kanade__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kanon.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kanon__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Karen.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Karen__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Katina.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Katina__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Keres.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Keres__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Keres__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kierkess_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kierkess_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kierkess__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kierkess__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kilik_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kilik_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kilik__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kilik__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kilik__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kilik__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kimika.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kimika__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Konomi.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Konomi__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kureha.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kureha__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Leraje.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Leraje__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Leshy.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Leshy__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Li Long__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Li Long__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lilan.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lilan__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LiLong.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizard Men__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__EX1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__EX2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__EX3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lizardman__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\LizardMen.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Loki.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Loki__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\loseHpAttack.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\loseHpGuard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\loseHpTime.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Luna.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Luna__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Luna__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Luna__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lupi_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lupi_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lupi__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lupi__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lupi__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lynette.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lynette__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Lynette__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maletta_F.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maletta_M.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maletta__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maletta__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Marid.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Marid__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maxi_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maxi_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maxi__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maxi__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maxi__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maxi__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mayura.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mayura__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Meiga.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Meiga__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Meilan.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Meilan__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Minglian__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mingyue.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Minglian.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mingyue__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mireille.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mireille__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Miser.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Miser__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Miser__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mitsurugi_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mitsurugi_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mitsurugi__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mitsurugi__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mitsurugi__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mitsurugi__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mooncalf.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Mooncalf__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Muriel.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Muriel__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Night Terror__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Nightmare__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\NightTerror.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Noel.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Noel__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\none.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Notus.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Notus__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Olcadan_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Olcadan_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Olcadan__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Olcadan__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Olcadan__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Olcadan__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Oruks.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Oruks__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ouka.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ouka__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Philine.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Philine__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate_7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Pirate__7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pushbackForceDecrease.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\pushbackForceIncrease.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raguel.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raguel__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Random.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raphael_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raphael_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raphael__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raphael__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raphael__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Raphael__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ratziel.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ratziel__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rebel_F.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rebel_M.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rebel__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rebel__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Revenant.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Revenant__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Revenant__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rhea.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rhea__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Riese.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Riese__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rock__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Roin_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Roin_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Roin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Roin__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rudiger.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rudiger__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rufus.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rufus__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ryouga.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ryouga__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Saizou.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Saizou__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai_4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Samurai__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sentry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sentry__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Seong Mi-na__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Seong Mi-na__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Seong Mi-na__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Seong Mi-na__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Seong Mi-na__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SeongMi-na_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SeongMi-na_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Setsuka__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shadow Master.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shadow Master__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shiina.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shiina__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shiun.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shiun__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shizuma.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shizuma__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shuyu.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Shuyu__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siegfried__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siulan.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Siulan__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sizeDown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sizeUp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sizuku.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sizuku__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Sophitia__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\sound.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundOff.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SoundOn.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\stealHp.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Strife.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Strife__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Strife__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Swordsman_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Swordsman_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Swordsman__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Swordsman__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Syunna.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Syunna__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Taki__X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Talim_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Talim_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Talim__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Talim__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Talim__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Talim__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Thief_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Thief_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Thief__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Thief__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tina.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tina__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tira_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tira_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tira__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tira__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tira__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tira__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tomoe.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Tomoe__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Unknown Soul__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Unknown Soul__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Unknown Soul__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\UnknownSoul_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\UnknownSoul_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\UnknownSoul_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Valeria.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Valeria__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Valeria__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Veles.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Veles__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Voldo_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Voldo_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Voldo__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Voldo__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Voldo__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Voldo__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Wenli.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Wenli__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\X.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xianghua_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xianghua_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xianghua__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xianghua__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xianghua__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xianghua__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xiaoxin.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xiaoxin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xunyu.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xunyu__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\X__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yakumo.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yakumo__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yoshimitsu_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yoshimitsu_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yoshimitsu__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yoshimitsu__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yoshimitsu__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yoshimitsu__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yueliang.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yueliang__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yufeng.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yufeng__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yukina.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yukina__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yun-Seong_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yun-Seong_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yun-Seong__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yun-Seong__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yun-Seong__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Yun-Seong__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel__1E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zasalamel__EX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zifeng.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Zifeng__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="6.1.2" />
+    <PackageReference Include="Ionic.Zlib" Version="1.9.1.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="NAudio" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    <PackageReference Include="System.Data.HashFunction.CRC" Version="2.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+</Project>

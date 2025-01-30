@@ -1,0 +1,710 @@
+﻿<UserControl x:Class="SC3_pnach_editor.Views.WeaponEffectView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SC3_pnach_editor.Views" xmlns:viewmodels="clr-namespace:SC3_pnach_editor.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
+
+
+    <Grid Height="1080" Width="1920">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/backgroundX.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="500*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <MediaElement x:Name="customSound" LoadedBehavior="Play"/>
+
+        <Image Source="/Resources/atkOverTime.png"
+               Grid.Row="0"
+               Grid.Column="1"
+               Margin="400,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/easierImpact.png"
+               Grid.Row="0"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="0"
+            Grid.Column="1"
+            Name="slider_1"
+            Minimum="0"
+            Maximum="2"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,110,0"/>
+        <TextBlock Grid.Row="0"
+           Grid.Column="1"
+           Name="points_1"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_1, Path=Value}" />
+        <TextBlock Grid.Row="0"
+           Grid.Column="3"
+           Name="details_1"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform" />
+
+        <Image Source="/Resources/atkDown.png"
+               Grid.Row="1"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/atkUp.png"
+               Grid.Row="1"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="1"
+            Grid.Column="1"
+            Name="slider_2"
+            Minimum="-6"
+            Maximum="10"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="1"
+           Grid.Column="1"
+           Name="points_2"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_2, Path=Value}" />
+        <TextBlock Grid.Row="1"
+           Grid.Column="3"
+           Name="details_2"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Decrease/Increase Attack" />
+
+        <Image Source="/Resources/defDown.png"
+               Grid.Row="2"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/defUp.png"
+               Grid.Row="2"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="2"
+            Grid.Column="1"
+            Name="slider_3"
+            Minimum="-6"
+            Maximum="10"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="2"
+           Grid.Column="1"
+           Name="points_3"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_3, Path=Value}" />
+        <TextBlock Grid.Row="2"
+           Grid.Column="3"
+           Name="details_3"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Decrease/Increase Defense" />
+
+        <Image Source="/Resources/stealHp.png"
+               Grid.Row="3"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="3"
+            Grid.Column="1"
+            Name="slider_4"
+            Minimum="0"
+            Maximum="17"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="3"
+           Grid.Column="1"
+           Name="points_4"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_4, Path=Value}" />
+        <TextBlock Grid.Row="3"
+           Grid.Column="3"
+           Name="details_4"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Steal health from enemy" />
+
+        <Image Source="/Resources/guardPenetrateDamage.png"
+               Grid.Row="4"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="4"
+            Grid.Column="1"
+            Name="slider_5"
+            Minimum="0"
+            Maximum="11"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="4"
+           Grid.Column="1"
+           Name="points_5"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_5, Path=Value}" />
+        <TextBlock Grid.Row="4"
+           Grid.Column="3"
+           Name="details_5"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Damage inflicted thru guard" />
+
+        <Image Source="/Resources/sizeDown.png"
+               Grid.Row="5"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/sizeUp.png"
+               Grid.Row="5"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="5"
+            Grid.Column="1"
+            Name="slider_6"
+            Minimum="-4"
+            Maximum="12"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="5"
+           Grid.Column="1"
+           Name="points_6"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_6, Path=Value}" />
+        <TextBlock Grid.Row="5"
+           Grid.Column="3"
+           Name="details_6"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Weapon Size" />
+
+        <Image Source="/Resources/pushbackForceDecrease.png"
+               Grid.Row="6"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/pushbackForceIncrease.png"
+               Grid.Row="6"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="6"
+            Grid.Column="1"
+            Name="slider_7"
+            Minimum="-2"
+            Maximum="6"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="6"
+           Grid.Column="1"
+           Name="points_7"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_7, Path=Value}" />
+        <TextBlock Grid.Row="6"
+           Grid.Column="3"
+           Name="details_7"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Decrease/Increase Attack Pushback Force" />
+
+        <Image Source="/Resources/counterChance.png"
+               Grid.Row="7"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="7"
+            Grid.Column="1"
+            Name="slider_8"
+            Minimum="0"
+            Maximum="5"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="7"
+           Grid.Column="1"
+           Name="points_8"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_8, Path=Value}" />
+        <TextBlock Grid.Row="7"
+           Grid.Column="3"
+           Name="details_8"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Increase Counter Chance" />
+
+        <Image Source="/Resources/avoidCounters.png"
+               Grid.Row="8"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="8"
+            Grid.Column="1"
+            Name="slider_9"
+            Minimum="0"
+            Maximum="3"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="8"
+           Grid.Column="1"
+           Name="points_9"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_9, Path=Value}" />
+        <TextBlock Grid.Row="8"
+           Grid.Column="3"
+           Name="details_9"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Nullify Enemies Counters chance" />
+
+        <Image Source="/Resources/loseHpGuard.png"
+               Grid.Row="9"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/gainHpGuard.png"
+               Grid.Row="9"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="9"
+            Grid.Column="1"
+            Name="slider_10"
+            Minimum="-7"
+            Maximum="9"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="9"
+           Grid.Column="1"
+           Name="points_10"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_10, Path=Value}" />
+        <TextBlock Grid.Row="9"
+           Grid.Column="3"
+           Name="details_10"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Decrease/Increase Health while guarding enemies attacks" />
+
+        <Image Source="/Resources/impactChance.png"
+               Grid.Row="10"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="10"
+            Grid.Column="1"
+            Name="slider_11"
+            Minimum="0"
+            Maximum="1"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="10"
+           Grid.Column="1"
+           Name="points_11"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_11, Path=Value}" />
+        <TextBlock Grid.Row="10"
+           Grid.Column="3"
+           Name="details_11"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Automatically Guard Impact some attacks" />
+
+        <Image Source="/Resources/impactGiveDamage.png"
+               Grid.Row="11"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="11"
+            Grid.Column="1"
+            Name="slider_12"
+            Minimum="0"
+            Maximum="4"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="11"
+           Grid.Column="1"
+           Name="points_12"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_12, Path=Value}" />
+        <TextBlock Grid.Row="11"
+           Grid.Column="3"
+           Name="details_12"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Increase Damage Received by Opponent when successfully Guard Impact" />
+
+        <Image Source="/Resources/impactGainHp.png"
+               Grid.Row="12"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="12"
+            Grid.Column="1"
+            Name="slider_13"
+            Minimum="0"
+            Maximum="7"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="12"
+           Grid.Column="1"
+           Name="points_13"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_13, Path=Value}" />
+        <TextBlock Grid.Row="12"
+           Grid.Column="3"
+           Name="details_13"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Recover Health when successfully Guard Impact" />
+
+        <Image Source="/Resources/guardBreak.png"
+               Grid.Row="13"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="13"
+            Grid.Column="1"
+            Name="slider_14"
+            Minimum="0"
+            Maximum="7"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="13"
+           Grid.Column="1"
+           Name="points_14"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_14, Path=Value}" />
+        <TextBlock Grid.Row="13"
+           Grid.Column="3"
+           Name="details_14"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Increase Guard Break Chance" />
+
+        <Image Source="/Resources/avoidThrows.png"
+               Grid.Row="14"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="14"
+            Grid.Column="1"
+            Name="slider_15"
+            Minimum="0"
+            Maximum="4"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="14"
+           Grid.Column="1"
+           Name="points_15"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_15, Path=Value}" />
+        <TextBlock Grid.Row="14"
+           Grid.Column="3"
+           Name="details_15"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Increase Throw Escape Rate" />
+
+        <Image Source="/Resources/avoidRingOut.png"
+               Grid.Row="15"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="15"
+            Grid.Column="1"
+            Name="slider_16"
+            Minimum="0"
+            Maximum="5"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="15"
+           Grid.Column="1"
+           Name="points_16"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_16, Path=Value}" />
+        <TextBlock Grid.Row="15"
+           Grid.Column="3"
+           Name="details_16"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Increase Ring-Out Escape Rate" />
+
+        <Image Source="/Resources/loseHpTime.png"
+               Grid.Row="16"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/gainHpTime.png"
+               Grid.Row="16"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="16"
+            Grid.Column="1"
+            Name="slider_17"
+            Minimum="-13"
+            Maximum="13"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="16"
+           Grid.Column="1"
+           Name="points_17"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_17, Path=Value}" />
+        <TextBlock Grid.Row="16"
+           Grid.Column="3"
+           Name="details_17"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Drain/Recover Health over Time" />
+
+        <Image Source="/Resources/loseHpAttack.png"
+               Grid.Row="17"
+               Grid.Column="0"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Image Source="/Resources/gainHpAttack.png"
+               Grid.Row="17"
+               Grid.Column="2"
+               Margin="0,0,0,0"
+               Height="60"
+               VerticalAlignment="Top"/>
+        <Slider Grid.Row="17"
+            Grid.Column="1"
+            Name="slider_18"
+            Minimum="-6"
+            Maximum="9"
+            Value="0"
+            TickFrequency="1"
+            IsSnapToTickEnabled="True"
+            Margin="10,15,10,0"/>
+        <TextBlock Grid.Row="17"
+           Grid.Column="1"
+           Name="points_18"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Margin="220,20,220,0"
+           Text="{Binding ElementName=slider_18, Path=Value}" />
+        <TextBlock Grid.Row="17"
+           Grid.Column="3"
+           Name="details_18"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Drain/Recover Health when Attacking" />
+
+
+        <!--Reset To Default-->
+        <Button Grid.Row="15"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                x:Name="DefaultButton"
+                Background="#A00000"
+                FontFamily="Century Gothic"
+                FontSize="35"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="ResetToDefault_Click" Margin="994,0,0,0">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Reset To Default" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--Switch to Main Page-->
+        <Button Grid.Row="8"
+                Grid.Column="3"
+                Grid.RowSpan="2"
+                x:Name="MainPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToMainPage_Click" Margin="994,0,0,0">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Return to Main Menu" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#55165E" Offset="0" />
+                    <GradientStop Color="#661E7E" Offset="0.25" />
+                    <GradientStop Color="#77269E" Offset="0.5" />
+                    <GradientStop Color="#661E7E" Offset="0.75" />
+                    <GradientStop Color="#55165E" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+
+
+</UserControl>
