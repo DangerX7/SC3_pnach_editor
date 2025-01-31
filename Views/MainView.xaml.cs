@@ -38,7 +38,6 @@ namespace SC3_pnach_editor.Views
 
         public MainView()
         {
-
             InitializeComponent();
 
 
@@ -278,6 +277,12 @@ namespace SC3_pnach_editor.Views
             statusText.Text = "Codes Removed";
             timer.Start();
             CreatePnach.ClearPnach();
+        }
+
+        private void GoToCostumesPage_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsClass.SaveData();
+            viewModel.DisplayCostumesView();
         }
     }
 

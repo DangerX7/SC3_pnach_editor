@@ -635,7 +635,38 @@
             TickFrequency="1"
             IsSnapToTickEnabled="True"
             Margin="14,103,18,23"/>
-        
+
+
+
+        <!--Switch to Costumes Page-->
+        <Button Grid.Row="5"
+                Grid.Column="6"
+                x:Name="costumesPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToCostumesPage_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Custom Costumes" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#008B8B" Offset="0" />
+                    <GradientStop Color="#009999" Offset="0.25" />
+                    <GradientStop Color="#00B0B0" Offset="0.5" />
+                    <GradientStop Color="#009999" Offset="0.75" />
+                    <GradientStop Color="#008B8B" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
 
 
     </Grid>

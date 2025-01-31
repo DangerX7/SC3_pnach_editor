@@ -447,6 +447,7 @@
     <None Remove="Resources\Nightmare__2E.png" />
     <None Remove="Resources\Nightmare__X.png" />
     <None Remove="Resources\NightTerror.png" />
+    <None Remove="Resources\NightTerrorGray.png" />
     <None Remove="Resources\Noel.webp" />
     <None Remove="Resources\Noel__1.png" />
     <None Remove="Resources\none.png" />
@@ -699,6 +700,7 @@
     <None Remove="Resources\Swordsman__2.png" />
     <None Remove="Resources\Syunna.webp" />
     <None Remove="Resources\Syunna__1.png" />
+    <None Remove="Resources\TakiStockings.png" />
     <None Remove="Resources\Taki_1.png" />
     <None Remove="Resources\Taki_2.png" />
     <None Remove="Resources\Taki__1.png" />
@@ -2003,6 +2005,9 @@
     <Content Include="Resources\NightTerror.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\NightTerrorGray.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Noel.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2424,6 +2429,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Syunna__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TakiStockings.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Taki_1.png">

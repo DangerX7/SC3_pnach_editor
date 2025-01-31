@@ -38,7 +38,7 @@ namespace SC3_pnach_editor.Services
         public static int ChroniclesCharacterP2 = 0;
         public static int ChroniclesCharacterP1_weapon = 0;
         public static int ChroniclesCharacterP2_weapon = 0;
-        
+
         public static int OpponentControl = 0;
 
         public static bool SlipperyFieldP1 { get; set; } = false;
@@ -76,6 +76,9 @@ namespace SC3_pnach_editor.Services
         public static int P1Speed = 0;
         public static int P2Speed = 0;
 
+        public static string NightTerrorSkin { get; set; } = "";
+        public static string TakiSkin { get; set; } = "";
+
         public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, bool bonusCharacters, bool ultimateWeapons, bool guardianForceP1,
             bool guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
             bool slipperyFieldP1, bool slipperyFieldP2, int chroniclesCharacterP1, int chroniclesCharacterP2, int opponentControl,
@@ -83,7 +86,8 @@ namespace SC3_pnach_editor.Services
             int wpnEffect1, int wpnEffect2, int wpnEffect3, int wpnEffect4, int wpnEffect5, int wpnEffect6,
             int wpnEffect7, int wpnEffect8, int wpnEffect9, int wpnEffect10, int wpnEffect11, int wpnEffect12,
             int wpnEffect13, int wpnEffect14, int wpnEffect15, int wpnEffect16, int wpnEffect17, int wpnEffect18,
-            string characterP1, string characterP2, string modelP1, string modelP2, bool useSetCharacters, int p1Speed, int p2Speed)
+            string characterP1, string characterP2, string modelP1, string modelP2, bool useSetCharacters, int p1Speed, int p2Speed,
+            string nightTerrorSkin, string takiSkin)
         {
             codeFolderPath = connectionString;
             PnachName = pnachName;
@@ -133,6 +137,9 @@ namespace SC3_pnach_editor.Services
 
             P1Speed = p1Speed;
             P2Speed = p2Speed;
+
+            NightTerrorSkin = nightTerrorSkin;
+            TakiSkin = takiSkin;
         }
 
         public static bool isConfigFileLoaded = false;
@@ -158,7 +165,7 @@ namespace SC3_pnach_editor.Services
             public int ChroniclesCharacterP1_weapon { get; set; } = SettingsClass.ChroniclesCharacterP1_weapon;
             public int ChroniclesCharacterP2_weapon { get; set; } = SettingsClass.ChroniclesCharacterP2_weapon;
 
-            
+
             public int OpponentControl { get; set; } = SettingsClass.OpponentControl;
             public int WpnEffect1 { get; set; } = SettingsClass.WpnEffect1;
             public int WpnEffect2 { get; set; } = SettingsClass.WpnEffect2;
@@ -188,6 +195,9 @@ namespace SC3_pnach_editor.Services
 
             public int P1Speed { get; set; } = SettingsClass.P1Speed;
             public int P2Speed { get; set; } = SettingsClass.P2Speed;
+
+            public string NightTerrorSkin { get; set; } = SettingsClass.NightTerrorSkin;
+            public string TakiSkin { get; set; } = SettingsClass.TakiSkin;
         }
 
         public static GetData Settings = new GetData();
@@ -250,6 +260,9 @@ namespace SC3_pnach_editor.Services
 
                 P1Speed = Settings.P1Speed;
                 P2Speed = Settings.P2Speed;
+
+                NightTerrorSkin = Settings.NightTerrorSkin;
+                TakiSkin = Settings.TakiSkin;
             }
             else
             {
@@ -280,15 +293,15 @@ namespace SC3_pnach_editor.Services
             Settings.ChroniclesCharacterP2_weapon = ChroniclesCharacterP2_weapon;
             Settings.OpponentControl = OpponentControl;
 
-            Settings.WpnEffect1  = WpnEffect1;
-            Settings.WpnEffect2  = WpnEffect2;
-            Settings.WpnEffect3  = WpnEffect3;
-            Settings.WpnEffect4  = WpnEffect4;
-            Settings.WpnEffect5  = WpnEffect5;
-            Settings.WpnEffect6  = WpnEffect6;
-            Settings.WpnEffect7  = WpnEffect7;
-            Settings.WpnEffect8  = WpnEffect8;
-            Settings.WpnEffect9  = WpnEffect9;
+            Settings.WpnEffect1 = WpnEffect1;
+            Settings.WpnEffect2 = WpnEffect2;
+            Settings.WpnEffect3 = WpnEffect3;
+            Settings.WpnEffect4 = WpnEffect4;
+            Settings.WpnEffect5 = WpnEffect5;
+            Settings.WpnEffect6 = WpnEffect6;
+            Settings.WpnEffect7 = WpnEffect7;
+            Settings.WpnEffect8 = WpnEffect8;
+            Settings.WpnEffect9 = WpnEffect9;
             Settings.WpnEffect10 = WpnEffect10;
             Settings.WpnEffect11 = WpnEffect11;
             Settings.WpnEffect12 = WpnEffect12;
@@ -308,6 +321,9 @@ namespace SC3_pnach_editor.Services
 
             Settings.P1Speed = P1Speed;
             Settings.P2Speed = P2Speed;
+
+            Settings.NightTerrorSkin = NightTerrorSkin;
+            Settings.TakiSkin = TakiSkin;
 
             string serialString = JsonConvert.SerializeObject(Settings);
             Directory.CreateDirectory(folderPath);

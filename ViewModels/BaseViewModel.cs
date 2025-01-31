@@ -49,5 +49,13 @@ namespace SC3_pnach_editor.ViewModels
                 ProcessingClass.MainWindowFrame.Content = new CharactersView();
             });
         }
+
+        public void DisplayCostumesView()
+        {
+            Application.Current.Dispatcher.Invoke((Action)delegate
+            {
+                ProcessingClass.MainWindowFrame.Content = new CostumesView();
+            });
+        }
     }
 }

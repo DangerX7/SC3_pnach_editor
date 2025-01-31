@@ -1,0 +1,187 @@
+﻿<UserControl x:Class="SC3_pnach_editor.Views.CostumesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SC3_pnach_editor.Views" xmlns:viewmodels="clr-namespace:SC3_pnach_editor.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
+
+
+    <Grid Height="1080" Width="1920">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/backgroundX.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="340*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <MediaElement x:Name="customSound" LoadedBehavior="Play"/>
+
+        <!--NightTerrorGraySkin--> 
+        <Border Grid.Row="0"
+                Grid.Column="0"
+                Name="NightTerrorGrayBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding NightTerrorSkin}"
+                          Width="20"
+                          Checked="NightTerrorGraySkin_Checked"
+                          Unchecked="NightTerrorGraySkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="0"
+           Grid.Column="1"
+           Name="NightTerrorGrayText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Night Terror - Costume 1 [Gray Skin]"
+           Tag="NightTerrorGray"
+           MouseEnter="SkinPreview"/>
+
+        <!--TakiStockingsSkin-->
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Name="TakiStockingsBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding TakiSkin}"
+                          Width="20"
+                          Checked="TakiStockingsSkin_Checked"
+                          Unchecked="TakiStockingsSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="1"
+           Grid.Column="1"
+           Name="TakiStockingsText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Taki - Costume 1 [with stockings]"
+           Tag="TakiStockings"
+           MouseEnter="SkinPreview"/>
+
+        <!--Costume Preview-->
+        <Image Source="{Binding SkinPreview}"
+               Grid.Row="4"
+               Grid.Column="2"
+               Margin="54,10,111,50"
+               Height="660" Grid.RowSpan="12"/>
+
+        <!--Reset To Default-->
+        <Button Grid.Row="15"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                x:Name="DefaultButton"
+                Background="#A00000"
+                FontFamily="Century Gothic"
+                FontSize="35"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="ResetToDefault_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Reset To Default" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="20"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--Switch to Main Page-->
+        <Button Grid.Row="8"
+                Grid.Column="3"
+                Grid.RowSpan="2"
+                x:Name="MainPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToMainPage_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Return to Main Menu" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#55165E" Offset="0" />
+                    <GradientStop Color="#661E7E" Offset="0.25" />
+                    <GradientStop Color="#77269E" Offset="0.5" />
+                    <GradientStop Color="#661E7E" Offset="0.75" />
+                    <GradientStop Color="#55165E" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <!--ErrorMessage-->
+        <TextBlock Grid.Row="16"
+           Grid.Column="2"
+           Name="ErrorText"
+           FontSize="26"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="{Binding ErrorTextMessage, UpdateSourceTrigger=PropertyChanged}"
+           Margin="40,0,40,0"/>
+
+    </Grid>
+
+
+</UserControl>

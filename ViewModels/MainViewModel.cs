@@ -24,7 +24,7 @@ namespace SC3_pnach_editor.ViewModels
             SlipperyFieldP1 = SettingsClass.SlipperyFieldP1;
             SlipperyFieldP2 = SettingsClass.SlipperyFieldP2;
 
-            GfxCopyFrom = SettingsClass.GfxCopyFrom;
+            GfxCopyFrom = SettingsClass.GfxCopyFrom + @"\Ultimate_Weapons\";
             GfxCopyTo = SettingsClass.GfxCopyTo;
 
             UseSetCharacters = SettingsClass.UseSetCharacters;
