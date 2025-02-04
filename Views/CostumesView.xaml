@@ -116,7 +116,7 @@
         <Image Source="{Binding SkinPreview}"
                Grid.Row="4"
                Grid.Column="2"
-               Margin="54,10,111,50"
+               Margin="50,10,60,50"
                Height="660" Grid.RowSpan="12"/>
 
         <!--Reset To Default-->
