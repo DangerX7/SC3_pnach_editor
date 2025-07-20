@@ -9,6 +9,8 @@ using System.IO;
 using System.Windows;
 using SC3_pnach_editor.Services;
 using System.Drawing;
+using System.Windows.Media.TextFormatting;
+using System.Windows.Shapes;
 
 namespace SC3_pnach_editor.ViewModels
 {
@@ -20,11 +22,17 @@ namespace SC3_pnach_editor.ViewModels
         {
             SettingsClass.LoadData();
             TexturesBaseFolderPath = SettingsClass.GfxCopyFrom + @"\Skins\";
-            TexturesTargetFolderPath = SettingsClass.GfxCopyTo;
+            TexturesTargetFolderPath = SettingsClass.GfxCopyTo + @"\";
 
 
             NightTerrorSkin = SettingsClass.NightTerrorSkin;
             TakiSkin = SettingsClass.TakiSkin;
+            CassandraSkin = SettingsClass.CassandraSkin;
+            ColossusSkin = SettingsClass.ColossusSkin;
+            LynetteSkin = SettingsClass.LynetteSkin;
+            NightmareSkin = SettingsClass.NightmareSkin;
+            SiegfriedSkin = SettingsClass.SiegfriedSkin;
+            SophitiaSkin = SettingsClass.SophitiaSkin;
         }
 
 
@@ -103,6 +111,102 @@ namespace SC3_pnach_editor.ViewModels
             }
         }
 
+        private string _cassandraSkin;
+
+        public string CassandraSkin
+        {
+            get { return _cassandraSkin; }
+            set
+            {
+                if (_cassandraSkin != value)
+                {
+                    _cassandraSkin = value;
+                    SettingsClass.CassandraSkin = _cassandraSkin;
+                    RaisePropertyChanged("CassandraSkin");
+                }
+            }
+        }
+
+        private string _colossusSkin;
+
+        public string ColossusSkin
+        {
+            get { return _colossusSkin; }
+            set
+            {
+                if (_colossusSkin != value)
+                {
+                    _colossusSkin = value;
+                    SettingsClass.ColossusSkin = _colossusSkin;
+                    RaisePropertyChanged("ColossusSkin");
+                }
+            }
+        }
+
+        private string _lynetteSkin;
+
+        public string LynetteSkin
+        {
+            get { return _lynetteSkin; }
+            set
+            {
+                if (_lynetteSkin != value)
+                {
+                    _lynetteSkin = value;
+                    SettingsClass.LynetteSkin = _lynetteSkin;
+                    RaisePropertyChanged("LynetteSkin");
+                }
+            }
+        }
+
+        private string _nightmareSkin;
+
+        public string NightmareSkin
+        {
+            get { return _nightmareSkin; }
+            set
+            {
+                if (_nightmareSkin != value)
+                {
+                    _nightmareSkin = value;
+                    SettingsClass.NightmareSkin = _nightmareSkin;
+                    RaisePropertyChanged("NightmareSkin");
+                }
+            }
+        }
+
+        private string _siegfriedSkin;
+
+        public string SiegfriedSkin
+        {
+            get { return _siegfriedSkin; }
+            set
+            {
+                if (_siegfriedSkin != value)
+                {
+                    _siegfriedSkin = value;
+                    SettingsClass.SiegfriedSkin = _siegfriedSkin;
+                    RaisePropertyChanged("SiegfriedSkin");
+                }
+            }
+        }
+
+        private string _sophitiaSkin;
+
+        public string SophitiaSkin
+        {
+            get { return _sophitiaSkin; }
+            set
+            {
+                if (_sophitiaSkin != value)
+                {
+                    _sophitiaSkin = value;
+                    SettingsClass.SophitiaSkin = _sophitiaSkin;
+                    RaisePropertyChanged("SophitiaSkin");
+                }
+            }
+        }
+
 
         private string _errorTextMessage;
 
@@ -122,107 +226,77 @@ namespace SC3_pnach_editor.ViewModels
 
         public void AddOrRemoveTextures(string type, string texture)
         {
-            switch (texture)
+            try
             {
-                case "nightTerrorGraySkin":
-                    if (type == "add")
-                    {
-                        try
-                        {
-                            ReplaceTextures(@"\Alt_Night_Terror\", "17cddcb346c641cd-ada04c386efd6795-r128x64-00002a93", "2fff2ed54477c1d3-6056cb63b00a0647-r128x64-00002a93",
-                                "316280873e353249-8d323311f476a595-r128x128-00002a93", "3603054d75453b05-2d8d8ab83fbcc793-r128x128-00002a93",
-                                "42314a5dd1c7f075-c23b5ebf48131e12-r128x64-00002a93", "4f6bc098125a5228-cdccc5b8dec7d1fc-r256x256-00002a93",
-                                "5c5066374b76adff-6cc9c703b29e7917-r128x64-00002a93", "b0d87eac4974ca36-833265533a9e52ea-r64x64-00002a93",
-                                "b5e68bd6cdea370-4ddb4c27940de88e-r128x128-00002a93", "b5f5479c33e28297-d184ded7f0465b28-r128x64-00002a93",
-                                "b829d72ac4ade1d8-b6b9f32feff88a77-r256x128-00002a93", "c8bc8e96984c6a33-d38f1b4efadbb0b6-r128x64-00002a93",
-                                "cdf9359b89487c53-534e96e98ae3fd43-r128x64-00002a93", "e84877f8a964231b-2cbe83cbedb970ee-r128x64-00002a93",
-                                "ed6862f967d5ba9f-e2deae24a16386ff-r256x256-00002a93", "f15135d4f7d6870c-630a0ebe48de4c59-r128x128-00002a93",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "");
+                ReplaceTexturesPack(texture, type);
+            }
+            catch (Exception error)
+            {
+                ErrorTextMessage = error.Message;
+            }
 
-                            SettingsClass.NightTerrorSkin = NightTerrorSkin;
-                            SettingsClass.SaveData();
-                        }
-                        catch (Exception error)
-                        {
-                            ErrorTextMessage = error.Message;
-                        }
-                    }
-                    else if (type == "remove")
-                    {
-                        RemoveTextures("17cddcb346c641cd-ada04c386efd6795-r128x64-00002a93", "2fff2ed54477c1d3-6056cb63b00a0647-r128x64-00002a93",
-                                "316280873e353249-8d323311f476a595-r128x128-00002a93", "3603054d75453b05-2d8d8ab83fbcc793-r128x128-00002a93",
-                                "42314a5dd1c7f075-c23b5ebf48131e12-r128x64-00002a93", "4f6bc098125a5228-cdccc5b8dec7d1fc-r256x256-00002a93",
-                                "5c5066374b76adff-6cc9c703b29e7917-r128x64-00002a93", "b0d87eac4974ca36-833265533a9e52ea-r64x64-00002a93",
-                                "b5e68bd6cdea370-4ddb4c27940de88e-r128x128-00002a93", "b5f5479c33e28297-d184ded7f0465b28-r128x64-00002a93",
-                                "b829d72ac4ade1d8-b6b9f32feff88a77-r256x128-00002a93", "c8bc8e96984c6a33-d38f1b4efadbb0b6-r128x64-00002a93",
-                                "cdf9359b89487c53-534e96e98ae3fd43-r128x64-00002a93", "e84877f8a964231b-2cbe83cbedb970ee-r128x64-00002a93",
-                                "ed6862f967d5ba9f-e2deae24a16386ff-r256x256-00002a93", "f15135d4f7d6870c-630a0ebe48de4c59-r128x128-00002a93",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "");
-                    }
-                    break;
-                case "takiStockingsSkin":
-                    if (type == "add")
-                    {
-                        try
-                        {
-                            ReplaceTextures(@"\Taki_Blue\", "2056eac81651761f-94ec922ae8a628dc-r128x128-00002a93", "a0718f3b4f3e195b-f20a75b232183a9d-r64x64-00002a93",
-                                "ec1eb3472b8fb398-20ffa0116b34e0be-r128x128-00002a93", "f3fd9af293c7fa58-a110ceda0ec48026-r256x256-00002a93",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "");
+            SettingsClass.SaveData();
 
-                            SettingsClass.TakiSkin = TakiSkin;
-                            SettingsClass.SaveData();
-                        }
-                        catch (Exception error)
-                        {
-                            ErrorTextMessage = error.Message;
-                        }
-                    }
-                    else if (type == "remove")
-                    {
-                        RemoveTextures("2056eac81651761f-94ec922ae8a628dc-r128x128-00002a93", "a0718f3b4f3e195b-f20a75b232183a9d-r64x64-00002a93",
-                                "ec1eb3472b8fb398-20ffa0116b34e0be-r128x128-00002a93", "f3fd9af293c7fa58-a110ceda0ec48026-r256x256-00002a93",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "",
-                                "", "");
-                    }
-                    break;
+        }
+
+        internal void ReplaceTexturesPack(string folderName, string type)
+        {
+            string copyFrom = TexturesBaseFolderPath + folderName;
+            string copyTo = TexturesTargetFolderPath + folderName;
+            if (type == "add")
+            {
+                if (Directory.Exists(copyTo))
+                {
+                    Directory.Delete(copyTo, true);
+                }
+
+                CopyDirectory(copyFrom, copyTo);
+            }
+            else if (type == "remove")
+            {
+                DeleteFolder(copyTo);
+            }
+
+        }
+
+
+        static void CopyDirectory(string sourceDir, string destinationDir)
+        {
+            // Create the destination directory if it does not exist
+            if (!Directory.Exists(destinationDir))
+            {
+                Directory.CreateDirectory(destinationDir);
+            }
+
+            // Copy all files in the source directory
+            foreach (string file in Directory.GetFiles(sourceDir))
+            {
+                string destFile = System.IO.Path.Combine(destinationDir, System.IO.Path.GetFileName(file));
+                File.Copy(file, destFile, true); // true allows overwriting
+            }
+
+            // Recursively copy subdirectories
+            foreach (string subDir in Directory.GetDirectories(sourceDir))
+            {
+                string destSubDir = System.IO.Path.Combine(destinationDir, System.IO.Path.GetFileName(subDir));
+                CopyDirectory(subDir, destSubDir);
             }
         }
 
+        static void DeleteFolder(string folderPath)
+        {
+            if (Directory.Exists(folderPath))
+            {
+                // Remove Read-Only Attribute from All Files
+                foreach (string file in Directory.GetFiles(folderPath, "*", SearchOption.AllDirectories))
+                {
+                    File.SetAttributes(file, FileAttributes.Normal);
+                }
+
+                // Delete the folder and its contents
+                Directory.Delete(folderPath, true);
+            }
+        }
 
         internal void ReplaceTextures(string folderName, string name1, string name2, string name3, string name4, string name5, string name6,
             string name7, string name8, string name9,string name10, string name11, string name12, string name13, string name14, string name15,

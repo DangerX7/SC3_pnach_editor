@@ -75,7 +75,7 @@
            FontSize="30"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
-           Text="Night Terror - Costume 1 [Gray Skin]"
+           Text="Night Terror - Costume 1 [Blue Skin]"
            Tag="NightTerrorGray"
            MouseEnter="SkinPreview"/>
 
@@ -112,6 +112,207 @@
            Tag="TakiStockings"
            MouseEnter="SkinPreview"/>
 
+        <!--CassandraPinkSkin-->
+        <Border Grid.Row="2"
+                Grid.Column="0"
+                Name="CassandraPinkBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding CassandraSkin}"
+                          Width="20"
+                          Checked="CassandraPinkSkin_Checked"
+                          Unchecked="CassandraPinkSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="2"
+           Grid.Column="1"
+           Name="CassandraPinkText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Cassandra - Costume 2 [black and white]"
+           Tag="CassandraPink"
+           MouseEnter="SkinPreview"/>
+
+        <!--ColossusGoldenSkin-->
+        <Border Grid.Row="3"
+                Grid.Column="0"
+                Name="ColossusGoldenBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding ColossusSkin}"
+                          Width="20"
+                          Checked="ColossusGoldenSkin_Checked"
+                          Unchecked="ColossusGoldenSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="3"
+           Grid.Column="1"
+           Name="ColossusGoldenText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Colossus - Costume 2 [golden]"
+           Tag="ColossusGolden"
+           MouseEnter="SkinPreview"/>
+
+        <!--GreenLynetteSkin-->
+        <Border Grid.Row="4"
+                Grid.Column="0"
+                Name="GreenLynetteBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding LynetteSkin}"
+                          Width="20"
+                          Checked="GreenLynetteSkin_Checked"
+                          Unchecked="GreenLynetteSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="4"
+           Grid.Column="1"
+           Name="GreenLynetteText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Lynette - Costume 1 [green]"
+           Tag="GreenLynette"
+           MouseEnter="SkinPreview"/>
+
+        <!--NightmareRedSkin-->
+        <Border Grid.Row="5"
+                Grid.Column="0"
+                Name="NightmareRedBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding NightmareSkin}"
+                          Width="20"
+                          Checked="NightmareRedSkin_Checked"
+                          Unchecked="NightmareRedSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="5"
+           Grid.Column="1"
+           Name="NightmareRedText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Nightmare - Costume 1 [lightier]"
+           Tag="NightmareRed"
+           MouseEnter="SkinPreview"/>
+
+        <!--SiegfriedPurpleSkin-->
+        <Border Grid.Row="6"
+                Grid.Column="0"
+                Name="SiegfriedPurpleBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SiegfriedSkin}"
+                          Width="20"
+                          Checked="SiegfriedPurpleSkin_Checked"
+                          Unchecked="SiegfriedPurpleSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="6"
+           Grid.Column="1"
+           Name="SiegfriedPurpleText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Siegfried - Costume 1 [Pink or something]"
+           Tag="SiegfriedPurple"
+           MouseEnter="SkinPreview"/>
+
+        <!--SophitiaBrownSkin-->
+        <Border Grid.Row="7"
+                Grid.Column="0"
+                Name="SophitiaBrownBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SophitiaSkin}"
+                          Width="20"
+                          Checked="SophitiaBrownSkin_Checked"
+                          Unchecked="SophitiaBrownSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="7"
+           Grid.Column="1"
+           Name="SophitiaBrownText"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Sophitia - Costume 1 [Brown]"
+           Tag="SophitiaBrown"
+           MouseEnter="SkinPreview"/>
+
+        
+        
+        
         <!--Costume Preview-->
         <Image Source="{Binding SkinPreview}"
                Grid.Row="4"
@@ -119,26 +320,6 @@
                Margin="50,10,60,50"
                Height="660" Grid.RowSpan="12"/>
 
-        <!--Reset To Default-->
-        <Button Grid.Row="15"
-                Grid.RowSpan="2"
-                Grid.Column="3"
-                x:Name="DefaultButton"
-                Background="#A00000"
-                FontFamily="Century Gothic"
-                FontSize="35"
-                FontStyle="Italic"
-                FontWeight="Bold"
-                Click="ResetToDefault_Click">
-            <Button.Content>
-                <TextBlock TextWrapping="Wrap" Text="Reset To Default" />
-            </Button.Content>
-            <Button.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="20"/>
-                </Style>
-            </Button.Resources>
-        </Button>
 
         <!--Switch to Main Page-->
         <Button Grid.Row="8"

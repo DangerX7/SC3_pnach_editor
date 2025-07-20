@@ -127,6 +127,7 @@
     <None Remove="Resources\Brigand__2.png" />
     <None Remove="Resources\Brunhild.webp" />
     <None Remove="Resources\Brunhild__1.png" />
+    <None Remove="Resources\CassandraPink.png" />
     <None Remove="Resources\Cassandra_1.png" />
     <None Remove="Resources\Cassandra_2.png" />
     <None Remove="Resources\Cassandra__1.png" />
@@ -155,6 +156,7 @@
     <None Remove="Resources\Chikage.webp" />
     <None Remove="Resources\Chikage__1.png" />
     <None Remove="Resources\Colossus.png" />
+    <None Remove="Resources\ColossusGolden.png" />
     <None Remove="Resources\Colossus__1.png" />
     <None Remove="Resources\counterChance.png" />
     <None Remove="Resources\Cover.png" />
@@ -238,6 +240,7 @@
     <None Remove="Resources\Greed.png" />
     <None Remove="Resources\Greed__1.png" />
     <None Remove="Resources\Greed__2.png" />
+    <None Remove="Resources\GreenLynette.png" />
     <None Remove="Resources\guardBreak.png" />
     <None Remove="Resources\guardPenetrateDamage.png" />
     <None Remove="Resources\Gun.gif" />
@@ -438,6 +441,7 @@
     <None Remove="Resources\Muriel__1.png" />
     <None Remove="Resources\Night Terror__1.png" />
     <None Remove="Resources\Nightmare.png" />
+    <None Remove="Resources\NightmareRed.png" />
     <None Remove="Resources\Nightmare_!.png" />
     <None Remove="Resources\Nightmare_1.png" />
     <None Remove="Resources\Nightmare_2.png" />
@@ -664,6 +668,7 @@
     <None Remove="Resources\short_sms_tone.mp3" />
     <None Remove="Resources\Shuyu.webp" />
     <None Remove="Resources\Shuyu__1.png" />
+    <None Remove="Resources\SiegfriedPurple.png" />
     <None Remove="Resources\Siegfried_1.png" />
     <None Remove="Resources\Siegfried_2.png" />
     <None Remove="Resources\Siegfried__1.png" />
@@ -679,6 +684,7 @@
     <None Remove="Resources\Sizuku__1.png" />
     <None Remove="Resources\SkinPreview1.png" />
     <None Remove="Resources\SkinPreview2.png" />
+    <None Remove="Resources\SophitiaBrown.png" />
     <None Remove="Resources\Sophitia_1.png" />
     <None Remove="Resources\Sophitia_2.png" />
     <None Remove="Resources\Sophitia__1.png" />
@@ -1183,6 +1189,9 @@
     <Content Include="Resources\Brunhild__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\CassandraPink.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Cassandra_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1262,6 +1271,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Colossus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ColossusGolden.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Colossus__1.png">
@@ -1496,6 +1508,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Greed__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\GreenLynette.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\guardBreak.png">
@@ -1981,6 +1996,9 @@
     <Content Include="Resources\Night Terror__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\NightmareRed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Nightmare_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2332,6 +2350,9 @@
     <Content Include="Resources\Shuyu__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\SiegfriedPurple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Siegfried_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2369,6 +2390,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Sizuku__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SophitiaBrown.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Sophitia_1.png">

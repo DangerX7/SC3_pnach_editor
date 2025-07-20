@@ -78,6 +78,12 @@ namespace SC3_pnach_editor.Services
 
         public static string NightTerrorSkin { get; set; } = "";
         public static string TakiSkin { get; set; } = "";
+        public static string CassandraSkin { get; set; } = "";
+        public static string ColossusSkin { get; set; } = "";
+        public static string LynetteSkin { get; set; } = "";
+        public static string NightmareSkin { get; set; } = "";
+        public static string SiegfriedSkin { get; set; } = "";
+        public static string SophitiaSkin { get; set; } = "";
 
         public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, bool bonusCharacters, bool ultimateWeapons, bool guardianForceP1,
             bool guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
@@ -87,7 +93,8 @@ namespace SC3_pnach_editor.Services
             int wpnEffect7, int wpnEffect8, int wpnEffect9, int wpnEffect10, int wpnEffect11, int wpnEffect12,
             int wpnEffect13, int wpnEffect14, int wpnEffect15, int wpnEffect16, int wpnEffect17, int wpnEffect18,
             string characterP1, string characterP2, string modelP1, string modelP2, bool useSetCharacters, int p1Speed, int p2Speed,
-            string nightTerrorSkin, string takiSkin)
+            string nightTerrorSkin, string takiSkin, string cassandraSkin, string colossusSkin, string lynetteSkin, string nightmareSkin, 
+            string siegfriedSkin, string sophitiaSkin)
         {
             codeFolderPath = connectionString;
             PnachName = pnachName;
@@ -140,6 +147,13 @@ namespace SC3_pnach_editor.Services
 
             NightTerrorSkin = nightTerrorSkin;
             TakiSkin = takiSkin;
+            CassandraSkin = cassandraSkin;
+            ColossusSkin = colossusSkin;
+            LynetteSkin = lynetteSkin;
+            NightmareSkin = nightmareSkin;
+            SiegfriedSkin = siegfriedSkin;
+            SophitiaSkin = sophitiaSkin;
+
         }
 
         public static bool isConfigFileLoaded = false;
@@ -198,6 +212,13 @@ namespace SC3_pnach_editor.Services
 
             public string NightTerrorSkin { get; set; } = SettingsClass.NightTerrorSkin;
             public string TakiSkin { get; set; } = SettingsClass.TakiSkin;
+            public string CassandraSkin { get; set; } = SettingsClass.CassandraSkin;
+            public string ColossusSkin { get; set; } = SettingsClass.ColossusSkin;
+            public string LynetteSkin { get; set; } = SettingsClass.LynetteSkin;
+            public string NightmareSkin { get; set; } = SettingsClass.NightmareSkin;
+            public string SiegfriedSkin { get; set; } = SettingsClass.SiegfriedSkin;
+            public string SophitiaSkin { get; set; } = SettingsClass.SophitiaSkin;
+
         }
 
         public static GetData Settings = new GetData();
@@ -263,7 +284,13 @@ namespace SC3_pnach_editor.Services
 
                 NightTerrorSkin = Settings.NightTerrorSkin;
                 TakiSkin = Settings.TakiSkin;
-            }
+                CassandraSkin = Settings.CassandraSkin;
+                ColossusSkin = Settings.ColossusSkin;
+                LynetteSkin = Settings.LynetteSkin;
+                NightmareSkin = Settings.NightmareSkin;
+                SiegfriedSkin = Settings.SiegfriedSkin;
+                SophitiaSkin = Settings.SophitiaSkin;
+    }
             else
             {
                 SaveData();
@@ -324,6 +351,12 @@ namespace SC3_pnach_editor.Services
 
             Settings.NightTerrorSkin = NightTerrorSkin;
             Settings.TakiSkin = TakiSkin;
+            Settings.CassandraSkin = CassandraSkin;
+            Settings.ColossusSkin = ColossusSkin;
+            Settings.LynetteSkin = LynetteSkin;
+            Settings.NightmareSkin = NightmareSkin;
+            Settings.SiegfriedSkin = SiegfriedSkin;
+            Settings.SophitiaSkin = SophitiaSkin;
 
             string serialString = JsonConvert.SerializeObject(Settings);
             Directory.CreateDirectory(folderPath);
