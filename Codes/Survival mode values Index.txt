@@ -1,0 +1,263 @@
+-------------------stageLevel--------------------
+
+00 - Highlands (Earthquake in Vs. Special)
+01 - Egyptian Temple
+02 - Clock Tower
+03 - Eurydice Shrine
+04 - Ostrheinsburg Castle - Battlement
+05 - Water Mill Valley
+06 - Battle in the Strait
+07 - Valentine Mansion
+08 - Ling-Sheng Su Temple Ruin
+09 - Lakeside Coliseum
+0A - Kunpaetku Shrine Ruins
+0B - Indian Port
+0C - Lost Cathedral
+0D - Secret Money Pit
+0E - Underground Buddhist Sanctum
+0F - Proving Grounds
+10 - Grand Labyrinth
+11 - Sacred Mt. Fuji
+12 - Lost Cathedral - Ruin
+13 - Pirate Raid
+14 - Jyurakudai Villa
+15 - Romanian Valley - Castle Siege
+16 - Lotus Garden
+17 - Old Toledo - Burning Gallery
+18 - Silk Road Ruin
+19 - Chaos - Spiritual Realm
+1A - Castle Room (Shop, Olcadan ending)
+1B - Azuchi-Momoyama road (Mitsurugi/Taki ending)
+1C - Castle Gate (Nightmare/Lizardman ending)
+1D - Field (Kilik/Xianghua ending)
+1E - Bridge (Talim/Seong Mi-na ending)
+1F - Forest (Tira/Raphael ending)
+20 - Sacred Money Pit (Voldo ending)
+21 - Sailing boat (Rock ending) <Camera!>
+22 - Badlands (Astaroth ending)
+23 - Pirate Raid (Cervantes ending) <Camera!>
+24 - Library (Zasalamel/Raphael ending)
+25 - Eurydice Shrine Gallery (Cassandra/Sophitia ending)
+26 - Blacksmith / Sophitia's house (Cassandra/Tira ending) <Camera!>
+27 - Soul Edge in Lost Cathedral (Ending) <Crash!>
+28 - Indian Port (Ending) <Crash!>
+29 - Lakeside Coliseum (Ending) <Crash!>
+30 - Character selection background
+31 - Main menu background
+32 - Soul Calibur III logo
+33 - Character creation background
+
+-------------------fightingStyle----------------------
+
+01 - Mitsurugi
+02 - SeongMi-na
+03 - Taki
+04 - Maxi
+05 - Voldo
+06 - Sophitia
+07 - Siegfried
+08 - Rock
+0B - Ivy
+0C - Kilik
+0D - Xianghua
+0E - Lizardman
+0F - Yoshimitsu
+11 - Nightmare
+12 - Astaroth
+14 - Cervantes
+15 - Raphael
+16 - Talim
+17 - Cassandra
+1A - Yun-Seong
+22 - Setsuka
+23 - Tira
+24 - Zasalamel
+
+30 - Amy
+41 - Miser
+42 - Greed
+43 - Arthur
+44 - Hwang
+45 - Luna
+46 - Valeria
+47 - Hualin
+48 - Giradot
+4A - Demuth
+4B - Aurelia
+4C - Chester
+4D - Strife
+4E - Abelia
+4F - Lynette
+51 - Li Long
+54 - Revenant
+
+*****************special (don't use)
+25 - Olcadan
+26 - Abyss
+27 - Night Terror
+NEED TO GET DATA FOR CHARADE
+2E - Shadow Master
+31 - Colossus
+
+-------------------costume & model----------------------
+                 | C |M1|M2|M3|M4 [fighting style]
+Mitsurugi         01 -00,01,08,09
+Seong Mi-na       02 -00,01,08,09
+Taki              03 -00,01,08,09
+Maxi              04 -00,01,08,09
+Voldo             05 -00,01,08,09
+Sophitia          06 -00,01,08,09
+Siegfried         07 -00,01,08,09
+Rock              08 -00,01,08,09
+Ivy               0B -00,01,08,09
+Kilik             0C -00,01,08,09
+Xianghua          0D -00,01,08,09
+Lizardman         0E -00,01,08,09 | 36,37,38 - 00
+Yoshimitsu        0F -00,01,08,09
+Nightmare         11 -00,01,08,09
+Astaroth          12 -00,01,08,09
+Cervantes         14 -00,01,08,09
+Raphael           15 -00,01,08,09
+Talim             16 -00,01,08,09
+Cassandra         17 -00,01,08,09
+Yun-Seong         18 -00,01,08,09
+Setsuka           22 -00,01,08,09
+Tira              23 -00,01,08,09
+Zasalamel         24 -00,01,08,09 | 35 - 00
+Olcadan           25 -00,01,08,09 [copycat standard]
+Abyss             26 -00,01,08,09
+
+Amy               30 -00,01
+Miser             41 -00,01  
+Greed             42 -00,01
+Arthur            43 -00,01
+Hwang             44 -00,01
+Luna              45 -00,01 | E1 - 02
+Valeria           46 -00,01
+Hualin            47 -00,01
+Giradot           48 -00,01
+Demuth            4A -00,01
+Aurelia           4B -00,01
+Chester           4C -00,01 | E4 - 00
+Strife            4D -00,01
+Abelia            4E -00,01 | E0 - 02
+Lynette           4F -00,01
+Li Long           51 -00,01
+Revenant          54 -00,01
+
+Lizard Men        1E-00 [0E]
+Night Terror      27-00
+Charade           NEEDS TO BE CHECKED
+Inferno           2B-00 [14]
+Shadow Master     2E-00 [copycat bonus]
+Colossus          31-00
+Berserker         81-00 [48]
+Samurai 1         84-00 [43]
+Samurai 2         84-01 [43]
+Samurai 3         84-02 [43]
+Samurai 4         84-03 [43]
+Gladiator 1       85-00 [4D]
+Gladiator 2       86-00 [4E]
+Unknown Soul      87,88,89-00 [51,44,43]
+Fu-ma Ninja 1     8A-00 [42]
+Fu-ma Ninja 2     8B-00 [4B]
+Fu-ma Ninja 3     8B-01 [4B]
+Fu-ma Ninja 4     8C-00 [41]
+Fu-ma Ninja 5     8C-01 [41]
+Fu-ma Ninja 6     8C-02 [41]
+Fu-ma Ninja 7     8C-03 [41]
+Bandit 1          8D-00 [45]
+Bandit 2          8E-00 [4B]
+Bandit 3          8E-01 [4B]
+Thief 1           8F-00 [4C]
+Thief 2           90-00 [4C]
+Pirate 1          91-00 [4C]
+Pirate 2          91-01 [4C]
+Pirate 3          91-02 [4C]
+Pirate 4          92-00 [44]
+Pirate 5          92-01 [44]
+Pirate 6          92-02 [44]
+Pirate 7          92-03 [44]
+Assassin          93-00 [42]
+Swordsman 1       94-00 [45]
+Swordsman 2       94-01 [45]
+FootSoldier       95-00 [4E]
+General           96-00 [4D]
+Sentry            97-00 [47]
+Keres             98-00 [4D]
+Dragon            99-00 [44]
+
+Jinkai            A0-00 [41] | Shiina            A1-00 [41]
+Kagami            A0-01 [41] | Chikage           A1-01 [41]
+Shiun             A0-02 [41] | Konomi            A1-02 [41]
+Cassius           A2-00 [42] | Kimika            A3-00 [42]
+Saizou            A2-01 [42] | Syunna            A3-01 [42]
+Ryouga            A2-02 [42] | Tomoe             A3-02 [42]
+Meiga             A4-00 [43] | Azumi             A5-00 [43]
+Alastor           A4-01 [43] | Yukina            A5-01 [43]
+Shizuma           A4-02 [43] | Ouka              A5-02 [43]
+Xiaoxin           A6-00 [44] | Jyuri             A7-00 [44]
+Oruks             A6-01 [44] | Shuyu             A7-01 [44]
+Agareth           A6-02 [44] | Mingyue           A7-02 [44]
+Veles             A8-00 [45] | Siulan            A9-00 [45]
+Aether            A8-01 [45] | Fenglin           A9-01 [45]
+Ixion             A8-02 [45] | Philine           A9-02 [45]
+Ignis             AA-00 [46] | Mireille          AB-00 [46]
+Notus             AA-01 [46] | Aglaia            AB-01 [46]
+Azrael            AA-02 [46] | Kanon             AB-02 [46]
+Jyurai            AC-00 [47] | Fengyu            AD-00 [47]
+Kureha            AC-01 [47] | Fenglei           AD-01 [47]
+Xunyu             AC-02 [47] | Minglian          AD-02 [47]
+Noel              AE-00 [48] | Annaretta         AF-00 [48]
+Rudiger           AE-01 [48] | Iris              AF-01 [48]
+Aeneas            AE-02 [48] | Brunhild          AF-02 [48]
+Asrafil           B0-00 [4A] | Amrita            B1-00 [4A]
+Zifeng            B0-01 [4A] | Azalea            B1-01 [4A]
+Aeolos            B0-02 [4A] | Yueliang          B1-02 [4A]
+Kanade            B2-00 [4B] | Ambrose           B3-00 [4B]
+Domenthi          B2-01 [4B] | Ailian            B3-01 [4B]
+Marid             B2-02 [4B] | Aika              B3-02 [4B]
+Loki              B4-00 [4C] | Karen             B5-00 [4C]
+Celestis          B4-01 [4C] | Lilan             B5-01 [4C]
+Beleth            B4-02 [4C] | Abigail           B5-02 [4C]
+Balduin           B6-00 [4D] | Juno              B7-00 [4D]
+Aloces            B6-01 [4D] | Eurydice          B7-01 [4D]
+Areon             B6-02 [4D] | Ishtar            B7-02 [4D]
+Rufus             B8-00 [4E] | Eunice            B9-00 [4E]
+Raguel            B8-01 [4E] | Acacia            B9-01 [4E]
+Feofan            B8-02 [4E] | Hilda             B9-02 [4E]
+Iblis             BA-00 [4F] | Muriel            BB-00 [4F]
+Alberic           BA-01 [4F] | Wenli             BB-01 [4F]
+Leshy             BA-02 [4F] | Irene             BB-02 [4F]
+Yufeng            BC-00 [51] | Mayura            BD-00 [51]
+Yakumo            BC-01 [51] | Meilan            BD-01 [51]
+Dufeng            BC-02 [51] | Rhea              BD-02 [51]
+Halphas           BE-00 [54] | Edith             BF-00 [54]
+Gorus             BE-01 [54] | Riese             BF-01 [54]
+Ilyusha           BE-02 [54] | Agave             BF-02 [54]
+Haystir           C0-00 [30] | Katina            C1-00 [30]
+Leraje            C0-01 [30] | Eris              C1-01 [30]
+Ratziel           C0-02 [30] | Sizuku            C1-02 [30]
+Grandall M        A0-03 [41] - C0-03 [30] +2
+Dalkia M          A0-04 [41] - C0-04 [30] +2
+Brigand M         A0-05 [41] - C0-05 [30] +2
+Maletta M         A0-06 [41] - C0-06 [30] +2
+Rebel M           A0-07 [41] - C0-07 [30] +2
+Grandall F        A1-03 [41] - C1-03 [30] +2
+Dalkia F          A1-04 [41] - C1-04 [30] +2
+Brigand F         A1-05 [41] - C1-05 [30] +2
+Maletta F         A1-06 [41] - C1-06 [30] +2
+Rebel F           A1-07 [41] - C1-07 [30] +2
+Tina              E9-02 [42]
+Aege              E7-00,01,02 [4D]
+HealDo            E8-00,01,02 [54]
+Elua              E8-00,01    [42]
+Lupi              EA-00,01,02 [48]
+Roin              EB-00,01    [48]
+Kierkess          EC-00,01    [46]      
+Hyle              ED-00,01    [4E]         
+Mooncalf          EE-00,01    [45]       
+Ende              EF-00       [43]        
+Yotory            EF-01       [01]    
+
+Created char      62,63,64,65,66,67,68,69,6A,6B - 0 [?]

@@ -1,10 +1,17 @@
-﻿using SC3_pnach_editor.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.Diagnostics.PerformanceData;
+using System.DirectoryServices;
+using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -13,16 +20,14 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using SC3_pnach_editor.Services;
+using System.Windows.Resources;
+using System.Windows.Threading;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.FileSystemGlobbing;
 using NAudio.Wave;
-using System.Windows.Resources;
-using System.IO;
-using System.Timers;
-using System.Diagnostics;
-using System.Windows.Threading;
-using System.Runtime.InteropServices;
+using SC3_pnach_editor.Codes;
+using SC3_pnach_editor.Services;
+using SC3_pnach_editor.ViewModels;
 
 namespace SC3_pnach_editor.Views
 {
@@ -100,7 +105,7 @@ namespace SC3_pnach_editor.Views
             OpponentControlCombo.ItemsSource = viewModel.OpponentControlCombo;
             OpponentControlCombo.SelectedIndex = SettingsClass.OpponentControl;
 
-
+            SurvivalModeCodes.GetSurvivalCode("Test");
         }
 
         private void ValueSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

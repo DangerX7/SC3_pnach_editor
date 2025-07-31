@@ -1241,7 +1241,7 @@ namespace SC3_pnach_editor.ViewModels
         };
         public string[,] MooncalfValues = new string[,]
         {
-            { "Mooncalf", "Costume 1", "Grieve Edge", "Mooncalf.webp", "EE", "00", "Mooncalf__1.png" }
+            { "Mooncalf", "Costume 1", "Chinese Blade", "Mooncalf.webp", "EE", "00", "Mooncalf__1.png" }
         };
         public string[,] EndeValues = new string[,]
         {
