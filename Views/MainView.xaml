@@ -188,7 +188,7 @@
                   FontSize="22"
                   Margin="0,0,0,100"/>
 
-        <!--WeaponSpecialPowerP1-->
+        <!--WeaponSpecialPowerP1--><!--
         <TextBlock Grid.Row="3"
                    Grid.Column="1"
                    Foreground="#FFAAAA" 
@@ -200,33 +200,24 @@
                   Grid.Column="0"
                   Grid.Row="3"
                   FontSize="22"
-                  Margin="10,0,0,100"/>
+                  Margin="10,0,0,100"/>-->
 
         <!--GuardianForceP1-->
-        <Border Grid.Row="4"
-                Grid.Column="0"
-                Name="guardP1"
-                BorderBrush="Blue"
-                BorderThickness="0"
-                Margin="160,0,0,0">
-
-            <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
-                          Foreground="Black"
-                          IsChecked="{Binding GuardianForceP1}"
-                          Width="20"/>
-            </Viewbox>
-        </Border>
+        <ComboBox x:Name="ArmorComboP1"
+                  Grid.Column="0"
+                  Grid.Row="4"
+                  FontSize="22"
+                  Margin="5,45,5,55"/>
         <TextBlock Grid.Row="4"
                    Grid.Column="1"
                    FontSize="38"
                    Name="guardP1T"
                    TextWrapping="WrapWithOverflow"
-                   Foreground="LightGreen"
-                   Text="Guardian Force"
+                   Foreground="#FFAAAA" 
+                   Text="Armor"
                    Margin="10,44,4,40"/>
 
-        <!--SlipperyFieldP1-->
+        <!--SlipperyFieldP1--><!--
         <Border Grid.Row="5"
                 Grid.Column="0"
                 Name="slipperyP1"
@@ -248,7 +239,7 @@
                    TextWrapping="WrapWithOverflow"
                    Foreground="LightGreen"
                    Text="Slippery Field"
-                   Margin="10,44,4,40"/>
+                   Margin="10,44,4,40"/>-->
 
 
 
@@ -271,7 +262,7 @@
                   FontSize="22"
                   Margin="0,0,0,100"/>
 
-        <!--WeaponSpecialPowerP2-->
+        <!--WeaponSpecialPowerP2--><!--
         <TextBlock Grid.Row="3"
                    Grid.Column="4"
                    Foreground="#FFAAAA" 
@@ -283,34 +274,25 @@
                   Grid.Column="3"
                   Grid.Row="3"
                   FontSize="22"
-                  Margin="10,0,0,100"/>
+                  Margin="0,0,10,100"/>-->
 
         <!--GuardianForceP2-->
-        <Border Grid.Row="4"
-                Grid.Column="3"
-                Name="guardP2"
-                BorderBrush="Blue"
-                BorderThickness="0"
-                Margin="160,0,0,0">
-
-            <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
-                          Foreground="Black"
-                          IsChecked="{Binding GuardianForceP2}"
-                          Width="20"/>
-            </Viewbox>
-        </Border>
+        <ComboBox x:Name="ArmorComboP2"
+                  Grid.Column="3"
+                  Grid.Row="4"
+                  FontSize="22"
+                  Margin="0,44,10,56"/>
         <TextBlock Grid.Row="4"
                    Grid.Column="3"
                    FontSize="38"
                    Name="guardP2T"
                    TextWrapping="WrapWithOverflow"
-                   Foreground="LightGreen"
-                   Text="Guardian Force"
+                   Foreground="#FFAAAA"
+                   Text="Armor"
                    Margin="270,44,0,40"
                    Grid.ColumnSpan="2"/>
 
-        <!--SlipperyFieldP2-->
+        <!--SlipperyFieldP2--><!--
         <Border Grid.Row="5"
                 Grid.Column="3"
                 Name="slipperyP2"
@@ -332,7 +314,7 @@
                    TextWrapping="WrapWithOverflow"
                    Foreground="LightGreen"
                    Text="Slippery Field"
-                   Margin="10,44,4,40"/>
+                   Margin="10,44,4,40"/>-->
 
         <!--UltimateWeaponsPack-->
         <Border
@@ -425,14 +407,28 @@
 
 
 
+        <!--PlayerControl-->
+        <TextBlock Grid.Row="4"
+                   Grid.Column="5"
+                   Foreground="#FFAAAA" 
+                   FontSize="32"
+                   FontWeight="Bold"
+                   Text="Left Fighter"
+                  Margin="60,10,10,90"/>
+        <ComboBox x:Name="PlayerControlCombo"
+                  Grid.Column="6"
+                  Grid.Row="4"
+                  FontSize="30"
+                  Margin="10,10,10,90"
+                  MaxDropDownHeight="270"/>
         <!--OpponentControl-->
         <TextBlock Grid.Row="4"
-                   Grid.Column="6"
+                   Grid.Column="5"
                    Foreground="#FFAAAA" 
-                   FontSize="29"
+                   FontSize="32"
                    FontWeight="Bold"
-                   Text="Opponent Control"
-                   Margin="10,50,4,50"/>
+                   Text="Right Fighter"
+                  Margin="60,100,10,0"/>
         <ComboBox x:Name="OpponentControlCombo"
                   Grid.Column="6"
                   Grid.Row="4"
@@ -444,7 +440,7 @@
         <Button Grid.Row="5"
                 Grid.Column="2"
                 x:Name="PnachButton"
-                Background="#A00000"
+                Background="#0000A0"
                 FontFamily="Century Gothic"
                 FontSize="35"
                 FontStyle="Italic"
@@ -465,7 +461,7 @@
         <Button Grid.Row="6"
                 Grid.Column="2"
                 x:Name="PnachButtonCancel"
-                Background="#0000A0"
+                Background="#A00000"
                 Foreground="#BBBBBB" 
                 FontFamily="Century Gothic"
                 FontSize="35"
@@ -474,7 +470,7 @@
                 Margin="10,20,10,10"
                 Click="DeactivateCodes_Click">
             <Button.Content>
-                <TextBlock TextWrapping="Wrap" Text="Clear Codes" />
+                <TextBlock TextWrapping="Wrap" Text="RESET CODES" />
             </Button.Content>
             <Button.Resources>
                 <Style TargetType="Border">
@@ -666,6 +662,67 @@
                 </Style>
             </Button.Resources>
         </Button>
+
+
+        <!--Switch to Survival Page-->
+        <Button Grid.Row="3"
+                Grid.Column="3"
+                x:Name="survivalPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToSurvivalPage_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Survival Mode" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#C06000" Offset="0" />
+                    <GradientStop Color="#E07000" Offset="0.25" />
+                    <GradientStop Color="#FF8000" Offset="0.5" />
+                    <GradientStop Color="#E07000" Offset="0.75" />
+                    <GradientStop Color="#C06000" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <!--Switch to Special Effect Page-->
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                x:Name="specialEffectsPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToSpecialEffectsPage_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Edit Special Effects" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#BBBBBB" Offset="0" />
+                    <GradientStop Color="#DDDDDD" Offset="0.25" />
+                    <GradientStop Color="#FFFFFF" Offset="0.5" />
+                    <GradientStop Color="#DDDDDD" Offset="0.75" />
+                    <GradientStop Color="#BBBBBB" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
 
 
 

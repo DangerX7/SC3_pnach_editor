@@ -1,20 +1,22 @@
-﻿using System;
+﻿using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
 using System.DirectoryServices;
 using System.Drawing;
-using Microsoft.IdentityModel.Tokens;
+using System.IO;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace SC3_pnach_editor.Services
 {
     public class CreatePnach
     {
 
-        public static void ExportPnach(bool extraChars, string weaponEfcP1, string weaponSpP1, bool guardianP1, bool slipperyP1,
-                 string weaponEfcP2, string weaponSpP2, bool guardianP2, bool slipperyP2, string selectedChar, string selectedChar2,
+        public static void ExportPnach(string survivalModeCode, bool extraChars, string weaponEfcP1, string weaponSpP1, int guardianP1, bool slipperyP1,
+                 string weaponEfcP2, string weaponSpP2, int guardianP2, bool slipperyP2, string selectedChar, string selectedChar2, string playerControl,
                  string opponentControl, string selectedDis, string selectedDis2, bool ultWeapons, int p1Speed, int p2Speed)
         {
             if (File.Exists(SettingsClass.codeFilePath))
@@ -37,177 +39,585 @@ namespace SC3_pnach_editor.Services
 
             #region Weapon Special Powers
 
+
             string weaponsSpecialPower = "";
-            if (weaponSpP1 == "None" && weaponSpP2 == "All Guard Break")
+
+            if (SettingsClass.AllGuardBreakP1 == true ||
+                SettingsClass.AllGuardBreakP2 == true ||
+                SettingsClass.AllUnblockableP1 == true ||
+                SettingsClass.AllUnblockableP2 == true ||
+                SettingsClass.ParalysisP1 == true ||
+                SettingsClass.ParalysisP2 == true ||
+                SettingsClass.DownLoseP1 == true ||
+                SettingsClass.DownLoseP2 == true ||
+                SettingsClass.MinusGuardP1 == true ||
+                SettingsClass.MinusGuardP2 == true ||
+                SettingsClass.PoisonP1 == true ||
+                SettingsClass.PoisonP2 == true ||
+                SettingsClass.SuperPoisonP1 == true ||
+                SettingsClass.SuperPoisonP2 == true ||
+                SettingsClass.MegaPoisonP1 == true ||
+                SettingsClass.MegaPoisonP2 == true ||
+                SettingsClass.CureP1 == true ||
+                SettingsClass.CureP2 == true ||
+                SettingsClass.SuperCureP1 == true ||
+                SettingsClass.SuperCureP2 == true ||
+                SettingsClass.MegaCureP1 == true ||
+                SettingsClass.MegaCureP2 == true ||
+                SettingsClass.DefenseDownP1 == true ||
+                SettingsClass.DefenseDownP2 == true ||
+                SettingsClass.DefenseUpP1 == true ||
+                SettingsClass.DefenseUpP2 == true ||
+                SettingsClass.SuperDefenseP1 == true ||
+                SettingsClass.SuperDefenseP2 == true ||
+                SettingsClass.GlueP1 == true ||
+                SettingsClass.GlueP2 == true ||
+                SettingsClass.SeparateP1 == true ||
+                SettingsClass.SeparateP2 == true ||
+                SettingsClass.IceP1 == true ||
+                SettingsClass.IceP2 == true ||
+                SettingsClass.WhirlwindP1 == true ||
+                SettingsClass.WhirlwindP2 == true ||
+                SettingsClass.AerialWindP1 == true ||
+                SettingsClass.AerialWindP2 == true ||
+                SettingsClass.SmashP1 == true ||
+                SettingsClass.SmashP2 == true ||
+                SettingsClass.SoulSmashP1 == true ||
+                SettingsClass.SoulSmashP2 == true ||
+                SettingsClass.ReserveOffenseUpP1 == true ||
+                SettingsClass.ReserveOffenseUpP2 == true)
             {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CE1C,extended,0002 //Thunder Effect P2" + Environment.NewLine +
-                "patch=1,EE,1053CF20,extended,0001 //Thunder Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010002 //Thunder Effect + Gfx P2 [Shared]" + Environment.NewLine +
-                "";
+                weaponsSpecialPower = "patch=1,EE,104ED9CA,extended,0001 //Enable COTS effects [master]" + Environment.NewLine;
+
+                string p1EffectBase = "1";
+                string p2EffectBase = "1";
+                if (SettingsClass.PoisonP1 == true || SettingsClass.SuperPoisonP1 == true || SettingsClass.MegaPoisonP1 == true ||
+                    SettingsClass.AerialWindP1 == true)
+                {
+                    p1EffectBase = "3";
+                }
+                if (SettingsClass.PoisonP2 == true || SettingsClass.SuperPoisonP2 == true || SettingsClass.MegaPoisonP2 == true ||
+                    SettingsClass.AerialWindP2 == true)
+                {
+                    p2EffectBase = "3";
+                }
+                if (SettingsClass.SoulSmashP1 == true)
+                {
+                    p1EffectBase = "F";
+                }
+                if (SettingsClass.SoulSmashP2 == true)
+                {
+                    p2EffectBase = "F";
+                }
+                weaponsSpecialPower += "patch=1,EE,2053CD40,extended," +
+                    "000" + p2EffectBase + "000" + p1EffectBase + " //Enable effect both players" + Environment.NewLine;
+
+                if (SettingsClass.AllGuardBreakP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE1C,extended,0001 //Thunder Effect on P1" + Environment.NewLine +
+                        "patch=1,EE,1053CF20,extended,0001 //Thunder Gfx P2" + Environment.NewLine;
+                }
+                if (SettingsClass.AllGuardBreakP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFA8,extended,0001 //Thunder Effect on P2" + Environment.NewLine +
+                        "patch=1,EE,1053CD94,extended,0001 //Thunder Gfx P1" + Environment.NewLine;
+                }
+                if (SettingsClass.AllUnblockableP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE18,extended,0001 //Fire Effect on P1" + Environment.NewLine +
+                        "patch=1,EE,1053CFB0,extended,0001 //Fire Gfx P2" + Environment.NewLine;
+                }
+                if (SettingsClass.AllUnblockableP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFA4,extended,0001 //Fire Effect on P2" + Environment.NewLine +
+                        "patch=1,EE,1053CE24,extended,0001 //Fire Gfx P1" + Environment.NewLine;
+                }
+                if (SettingsClass.ParalysisP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE14,extended,0001 //Paralysis Effect on P1" + Environment.NewLine +
+                        "patch=1,EE,1053CFAC,extended,0001 //Paralysis Gfx P2" + Environment.NewLine;
+                }
+                if (SettingsClass.ParalysisP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFA0,extended,0001 //Paralysis Effect on P2" + Environment.NewLine +
+                        "patch=1,EE,1053CE20,extended,0001 //Paralysis Gfx P1" + Environment.NewLine;
+                }
+                if (SettingsClass.MinusGuardP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE3C,extended,0001 // P1 Poison Flag (guard)" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3D800000 // P1 Poison percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.MinusGuardP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFC8,extended,0001 // P2 Poison Flag (guard)" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3D800000 // P2 Poison percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.PoisonP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDB8,extended,0002 // P1 Poison Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D064,extended,3D000000 // P1 Poison Drain Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.PoisonP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF44,extended,0002 // P2 Poison Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E064,extended,3D000000 // P2 Poison Drain Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.SuperPoisonP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDB8,extended,0002 // P1 Poison Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D064,extended,3D800000 // P1 Poison Drain Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.SuperPoisonP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF44,extended,0002 // P2 Poison Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E064,extended,3D800000 // P2 Poison Drain Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.MegaPoisonP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDB8,extended,0002 // P1 Poison Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D064,extended,3E000000 // P1 Poison Drain Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.MegaPoisonP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF44,extended,0002 // P2 Poison Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E064,extended,3E000000 // P2 Poison Drain Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.CureP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3D000000 // P1 Cure Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.CureP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3D000000 // P2 Cure Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.SuperCureP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3D800000 // P1 Cure Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.SuperCureP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3D800000 // P2 Cure Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.MegaCureP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3E000000 // P1 Cure Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.MegaCureP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3E000000 // P2 Cure Percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.DefenseDownP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE34,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3FC00000 // P1 Def" + Environment.NewLine;
+                }
+                if (SettingsClass.DefenseDownP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFC0,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3FC00000 // P2 Def" + Environment.NewLine;
+                }
+                if (SettingsClass.DefenseUpP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE34,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3F400000 // P1 Def" + Environment.NewLine;
+                }
+                if (SettingsClass.DefenseUpP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFC0,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3F400000 // P2 Def" + Environment.NewLine;
+                }
+                if (SettingsClass.SuperDefenseP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE34,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3F000000 // P1 Def" + Environment.NewLine;
+                }
+                if (SettingsClass.SuperDefenseP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFC0,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3F000000 // P2 Def" + Environment.NewLine;
+                }
+                if (SettingsClass.ReserveOffenseUpP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CE38,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,40000000 // P1 Hp down = Atk up" + Environment.NewLine;
+                }
+                if (SettingsClass.ReserveOffenseUpP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CFC4,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,40000000 // P2 Hp down = Atk up" + Environment.NewLine;
+                }
+                if (SettingsClass.GlueP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDA0,extended,0001 // P1 Glue Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3C000000 // P2 Attraction percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.GlueP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF2C,extended,0001 // P2 Glue Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3C000000 // P1 Attraction percentage" + Environment.NewLine;
+                }
+                if (SettingsClass.SeparateP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDA0,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,BCA40000 // P2 Separation power" + Environment.NewLine;
+                }
+                if (SettingsClass.SeparateP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF2C,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,BCA40000 // P1 Separation power" + Environment.NewLine;
+                }
+                if (SettingsClass.IceP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CD4C,extended,0001 //Can Fall Of The Ring Player 1" + Environment.NewLine +
+                        "patch=1,EE,D04ED758,extended,00000008 //when time is decreasing" + Environment.NewLine +
+                        "patch=1,EE,1053CD58,extended,0001 //Slippery Feets Player 1" + Environment.NewLine;
+                }
+                if (SettingsClass.IceP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CED8,extended,0001 //Can Fall Of The Ring Player 2" + Environment.NewLine +
+                        "patch=1,EE,D04ED758,extended,00000008 //when time is decreasing" + Environment.NewLine +
+                        "patch=1,EE,1053CEE4,extended,0001 //Slippery Feets Player 2" + Environment.NewLine;
+                }
+                if (SettingsClass.WhirlwindP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CD54,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,3C240000 // Wind power against P1" + Environment.NewLine;
+                }
+                if (SettingsClass.WhirlwindP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CEE0,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,3C240000 // Wind power against P2" + Environment.NewLine;
+                }
+                if (SettingsClass.AerialWindP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CD7C,extended,0002 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D064,extended,3F000000 // P1 fly up" + Environment.NewLine;
+                }
+                if (SettingsClass.AerialWindP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF08,extended,0002 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E064,extended,3F000000 // P2 fly up" + Environment.NewLine;
+                }
+                if (SettingsClass.SmashP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CD5C,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,1053CE04,extended,0001 // P2 Smash power" + Environment.NewLine;
+                }
+                if (SettingsClass.SmashP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CEE8,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,1053CF90,extended,0001 // P1 Smash power" + Environment.NewLine;
+                }
+                if (SettingsClass.SoulSmashP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CD5C,extended,0001 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,1053CD88,extended,0002 // P1 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053D060,extended,42200000 // P1 damage when he hits walls" + Environment.NewLine +
+                        "patch=1,EE,2053D064,extended,407EB852 // distance traveled by P1" + Environment.NewLine;
+                }
+                if (SettingsClass.SoulSmashP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CEE8,extended,0001 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,1053CF14,extended,0002 // P2 Flag" + Environment.NewLine +
+                        "patch=1,EE,2053E060,extended,42200000 // P2 damage when he hits walls" + Environment.NewLine +
+                        "patch=1,EE,2053E064,extended,407EB852 // distance traveled by P2" + Environment.NewLine;
+                }
+                if (SettingsClass.DownLoseP1 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CDA8,extended,0001 //Down Lose Effect P1" + Environment.NewLine;
+                }
+                if (SettingsClass.DownLoseP2 == true)
+                {
+                    weaponsSpecialPower += "patch=1,EE,1053CF34,extended,0001 //Down Lose Effect P2" + Environment.NewLine;
+                }
+
             }
-            if (weaponSpP1 == "None" && weaponSpP2 == "All Unblockable")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CE18,extended,0002 //Fire Effect P2" + Environment.NewLine +
-                "patch=1,EE,1053CFB0,extended,0001 //Fire Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010002 //Fire Effect + Gfx P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "None" && weaponSpP2 == "Paralysis")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CE14,extended,0001 //Paralysis Effect P2" + Environment.NewLine +
-                "patch=1,EE,1053CFAC,extended,0002 //Paralysis Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00020001 //Paralysis Effect + Gfx P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "None" && weaponSpP2 == "Down Lose")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CF34,extended,0007 //Down Lose Effect P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010000 //Down Lose Effect P1 & P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "None" && weaponSpP2 == "Cure")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104D23EE,extended,3D80 // Change Weapon Heal Stat" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 // Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010000 // P2 Cure" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "None" && weaponSpP2 == "Poison")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104D23EE,extended,BD80 // Change Weapon Damage Stat P2" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 // Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFCC,extended,0001 // Poison Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00030000 // P2 Poison" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "All Guard Break" && weaponSpP2 == "None")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFA8,extended,0002 //Thunder Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CD94,extended,0001 //Thunder Gfx P1" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00020001 //Thunder Effect + Gfx P1 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "All Guard Break" && weaponSpP2 == "All Guard Break")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFA8,extended,0002 //Thunder Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CE1C,extended,0002 //Thunder Effect P2" + Environment.NewLine +
-                "patch=1,EE,1053CD94,extended,0001 //Thunder Gfx P1" + Environment.NewLine +
-                "patch=1,EE,1053CF20,extended,0001 //Thunder Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00030003 //Thunder Effect + Gfx P1 & P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "All Unblockable" && weaponSpP2 == "None")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFA4,extended,0002 //Fire Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CE24,extended,0001 //Fire Gfx P1" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00020001 //Fire Effect + Gfx P1 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "All Unblockable" && weaponSpP2 == "All Unblockable")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFA4,extended,0002 //Fire Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CE18,extended,0002 //Fire Effect P2" + Environment.NewLine +
-                "patch=1,EE,1053CE24,extended,0001 //Fire Gfx P1" + Environment.NewLine +
-                "patch=1,EE,1053CFB0,extended,0001 //Fire Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00030003 //Fire Effect + Gfx P1 & P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Paralysis" && weaponSpP2 == "None")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFA0,extended,0001 //Paralysis Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CE20,extended,0002 //Paralysis Gfx P1" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010002 //Paralysis Effect + Gfx P1 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Paralysis" && weaponSpP2 == "Paralysis")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CFA0,extended,0001 //Paralysis Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CE14,extended,0001 //Paralysis Effect P2" + Environment.NewLine +
-                "patch=1,EE,1053CE20,extended,0002 //Paralysis Gfx P1" + Environment.NewLine +
-                "patch=1,EE,1053CFAC,extended,0002 //Paralysis Gfx P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00030003 //Paralysis Effect + Gfx P1 & P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Down Lose" && weaponSpP2 == "None")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CDA8,extended,0007 //Down Lose Effect P1" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00000001 //Down Lose Effect P1 & P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Down Lose" && weaponSpP2 == "Down Lose")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CDA8,extended,0007 //Down Lose Effect P1" + Environment.NewLine +
-                "patch=1,EE,1053CF34,extended,0007 //Down Lose Effect P2" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010001 //Down Lose Effect P1 & P2 [Shared]" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Cure" && weaponSpP2 == "None")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104B4C6E,extended,3D80 // Change Weapon Heal Stat" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 // Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00000001 // P1 Cure" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Cure" && weaponSpP2 == "Cure")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104B4C6E,extended,3D80 // Change Weapon Heal Stat P1" + Environment.NewLine +
-                "patch=1,EE,104D23EE,extended,3D80 // Change Weapon Heal Stat P2" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 // Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CDBC,extended,0007 // P1 Down Lose" + Environment.NewLine +
-                "patch=1,EE,1053CF48,extended,0007 // P2 Down Lose" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00010001 // P1 & P2 Cure" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Poison" && weaponSpP2 == "None")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104B4C6E,extended,BD80 // Change Weapon Damage Stat P1" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 // Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CE40,extended,0001 // Poison Gfx P1" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00000003 // P1 Poison" + Environment.NewLine +
-                "";
-            }
-            if (weaponSpP1 == "Poison" && weaponSpP2 == "Poison")
-            {
-                weaponsSpecialPower = "" + Environment.NewLine +
-                "patch=1,EE,104B4C6E,extended,BD80 // Change Weapon Damage Stat P1" + Environment.NewLine +
-                "patch=1,EE,104D23EE,extended,BD80 // Change Weapon Damage Stat P2" + Environment.NewLine +
-                "patch=1,EE,104ED9CA,extended,0001 // Enable weapon effects [Shared]" + Environment.NewLine +
-                "patch=1,EE,1053CE40,extended,0001 // P1 Poison Gfx" + Environment.NewLine +
-                "patch=1,EE,1053CFCC,extended,0001 // P2 Poison Gfx" + Environment.NewLine +
-                "patch=1,EE,2053CD40,extended,00030003 // P1 & P2 Poison" + Environment.NewLine +
-                "";
-            }
+
+            //string p1EffectBase = "";
+            //string p2EffectBase = "";
+            //string p1Effect1 = "";
+            //string p1Effect2 = "";
+            //string p1Effect3 = "";
+            //string p1Effect4 = "";
+            //string p2Effect1 = "";
+            //string p2Effect2 = "";
+            //string p2Effect3 = "";
+            //string p2Effect4 = "";
+
+            //string p1WeaponSpecialSecondary = "";
+            //string p2WeaponSpecialSecondary = "";
+
+            //switch (weaponSpP1)
+            //{
+            //    case "None":
+            //        p1EffectBase = "0";
+            //        break;
+            //    case "-All Guard Break":
+            //        p1EffectBase = "3";
+            //        p1WeaponSpecialSecondary = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE1C,extended,0002 //Thunder Effect on P1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,1053CF20,extended,0001 //Thunder Gfx P2" + Environment.NewLine;
+            //        break;
+            //    case "-All Unblockable":
+            //        p1EffectBase = "3";
+            //        p1WeaponSpecialSecondary = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE18,extended,0002 //Fire Effect on P1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,1053CFB0,extended,0001 //Fire Gfx P2" + Environment.NewLine;
+            //        break;
+            //    case "-Paralysis":
+            //        p1EffectBase = "1";
+            //        p1WeaponSpecialSecondary = "3";
+            //        p1Effect1 = "patch=1,EE,1053CE14,extended,0001 //Paralysis Effect on P1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,1053CFAC,extended,0002 //Paralysis Gfx P2" + Environment.NewLine;
+            //        break;
+            //    case "-Down Lose":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CDA8,extended,0007 //Down Lose Effect P1" + Environment.NewLine;
+            //        break;
+            //    case "-Poison":
+            //        p1EffectBase = "3";
+            //        p1Effect1 = "patch=1,EE,1053CDB8,extended,0002 // P1 Poison Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D064,extended,3D000000 // P1 Poison Drain Percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Super Poison":
+            //        p1EffectBase = "3";
+            //        p1Effect1 = "patch=1,EE,1053CDB8,extended,0002 // P1 Poison Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D064,extended,3D800000 // P1 Poison Drain Percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Mega Poison":
+            //        p1EffectBase = "3";
+            //        p1Effect1 = "patch=1,EE,1053CDB8,extended,0002 // P1 Poison Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D064,extended,3E000000 // P1 Poison Drain Percentage" + Environment.NewLine;
+            //        break;
+            //    case "+Cure":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3D000000 // P1 Cure Percentage" + Environment.NewLine;
+            //        break;
+            //    case "+Super Cure":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3D800000 // P1 Cure Percentage" + Environment.NewLine;
+            //        break;
+            //    case "+Mega Cure":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CDBC,extended,0001 // Cure Gfx P1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3E000000 // P1 Cure Percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Minus Guard":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE3C,extended,0001 // P1 Poison Flag (guard)" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3D800000 // P1 Poison percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Glue":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CDA0,extended,0001 // P1 Glue Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3C000000 // P2 Attraction percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Defense Down":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE34,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3FC00000 // P1 Def" + Environment.NewLine;
+            //        break;
+            //    case "+Defense Up":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE34,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3F400000 // P1 Def" + Environment.NewLine;
+            //        break;
+            //    case "+Super Defense":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE34,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3F000000 // P1 Def" + Environment.NewLine;
+            //        break;
+            //    case "+Reserve Offense Up":
+            //        p1EffectBase = "1";
+            //        p1Effect1 = "patch=1,EE,1053CE38,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,40000000 // P1 Hp down = Atk up" + Environment.NewLine;
+            //        break;
+            //    case "-Separate":
+            //        p1EffectBase = "3";
+            //        p1Effect1 = "patch=1,EE,2053CDA0,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,BCA3D70A // P2 Separation power" + Environment.NewLine;
+            //        break;
+            //    case "-Ice":
+            //        p1EffectBase = "7";
+            //        p1Effect1 = "patch=1,EE,1053CD4C,extended,0001 //Can Fall Of The Ring Player 1" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,D04ED758,extended,00000008 //Time is decreasing" + Environment.NewLine +
+            //                    "patch=1,EE,1053CD58,extended,0001 //Slippery Feets Player 1" + Environment.NewLine;
+            //        break;
+            //    case "-Whirlwind":
+            //        p1EffectBase = "3";
+            //        p1Effect1 = "patch=1,EE,1053CD54,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D060,extended,3C23D70A // Wind power against P1" + Environment.NewLine;
+            //        break;
+            //    case "-Soul Smash":
+            //        p1EffectBase = "F";
+            //        p1Effect1 = "patch=1,EE,1053CD5C,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,1053CD88,extended,0002 // P1 Flag" + Environment.NewLine;
+            //        p1Effect3 = "patch=1,EE,2053D060,extended,42200000 // P1 damage when he hits walls" + Environment.NewLine;
+            //        p1Effect4 = "patch=1,EE,2053D064,extended,407EB852 // distance traveled by P1" + Environment.NewLine;
+            //        break;
+            //    case "-Aerial Wind":
+            //        p1EffectBase = "3";
+            //        p1Effect1 = "patch=1,EE,1053CD7C,extended,0002 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,2053D064,extended,3F000000 // P1 fly up" + Environment.NewLine;
+            //        break;
+            //    case "-Smash":
+            //        p1EffectBase = "5";
+            //        p1Effect1 = "patch=1,EE,1053CD5C,extended,0001 // P1 Flag" + Environment.NewLine;
+            //        p1Effect2 = "patch=1,EE,1053CE04,extended,0004 // P2 Smash power" + Environment.NewLine;
+            //        break;
+            //}
+            //switch (weaponSpP2)
+            //{
+            //    case "None":
+            //        p2EffectBase = "0";
+            //        break;
+            //    case "-All Guard Break":
+            //        p2EffectBase = "3";
+            //        p2WeaponSpecialSecondary = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFA8,extended,0002 //Thunder Effect on P2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,1053CD94,extended,0001 //Thunder Gfx P1" + Environment.NewLine;
+            //        break;
+            //    case "-All Unblockable":
+            //        p2EffectBase = "3";
+            //        p2WeaponSpecialSecondary = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFA4,extended,0002 //Fire Effect on P2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,1053CE24,extended,0001 //Fire Gfx P1" + Environment.NewLine;
+            //        break;
+            //    case "-Paralysis":
+            //        p2EffectBase = "1";
+            //        p2WeaponSpecialSecondary = "3";
+            //        p2Effect1 = "patch=1,EE,1053CFA0,extended,0001 //Paralysis Effect on P2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,1053CE20,extended,0002 //Paralysis Gfx P1" + Environment.NewLine;
+            //        break;
+            //    case "-Down Lose":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CF34,extended,0007 //Down Lose Effect P2" + Environment.NewLine;
+            //        break;
+            //    case "-Poison":
+            //        p2EffectBase = "3";
+            //        p2Effect1 = "patch=1,EE,1053CF44,extended,0002 // P2 Poison Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E064,extended,3D000000 // P2 Poison Drain Percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Super Poison":
+            //        p2EffectBase = "3";
+            //        p2Effect1 = "patch=1,EE,1053CF44,extended,0002 // P2 Poison Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E064,extended,3D800000 // P2 Poison Drain Percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Mega Poison":
+            //        p2EffectBase = "3";
+            //        p2Effect1 = "patch=1,EE,1053CF44,extended,0002 // P2 Poison Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E064,extended,3E000000 // P2 Poison Drain Percentage" + Environment.NewLine;
+            //        break;
+            //    case "+Cure":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3D000000 // P2 Cure Percentage" + Environment.NewLine;
+            //        break;
+            //    case "+Super Cure":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3D800000 // P2 Cure Percentage" + Environment.NewLine;
+            //        break;
+            //    case "+Mega Cure":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CF48,extended,0001 // Cure Gfx P2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3E000000 // P2 Cure Percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Minus Guard":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFC8,extended,0001 // P2 Poison Flag (guard)" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3D800000 // P2 Poison percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Glue":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CF2C,extended,0001 // P2 Glue Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3C000000 // P1 Attraction percentage" + Environment.NewLine;
+            //        break;
+            //    case "-Defense Down":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFC0,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3FC00000 // P2 Def" + Environment.NewLine;
+            //        break;
+            //    case "+Defense Up":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFC0,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3F400000 // P2 Def" + Environment.NewLine;
+            //        break;
+            //    case "+Super Defense":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFC0,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3F000000 // P2 Def" + Environment.NewLine;
+            //        break;
+            //    case "+Reserve Offense Up":
+            //        p2EffectBase = "1";
+            //        p2Effect1 = "patch=1,EE,1053CFC4,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,40000000 // P2 Hp down = Atk up" + Environment.NewLine;
+            //        break;
+            //    case "-Separate":
+            //        p2EffectBase = "3";
+            //        p2Effect1 = "patch=1,EE,1053CF2C,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,BCA3D70A // P1 Separation power" + Environment.NewLine;
+            //        break;
+            //    case "-Ice":
+            //        p2EffectBase = "7";
+            //        p2Effect1 = "patch=1,EE,1053CED8,extended,0001 //Can Fall Of The Ring Player 2" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,D04ED758,extended,00000008 //Time is decreasing" + Environment.NewLine +
+            //                    "patch=1,EE,1053CEE4,extended,0001 //Slippery Feets Player 2" + Environment.NewLine;
+            //        break;
+            //    case "-Whirlwind":
+            //        p2EffectBase = "3";
+            //        p2Effect1 = "patch=1,EE,1053CEE0,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E060,extended,3C23D70A // Wind power against P2" + Environment.NewLine;
+            //        break;
+            //    case "-Soul Smash":
+            //        p2EffectBase = "F";
+            //        p2Effect1 = "patch=1,EE,1053CEE8,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,1053CF14,extended,0002 // P2 Flag" + Environment.NewLine;
+            //        p2Effect3 = "patch=1,EE,2053E060,extended,42200000 // P2 damage when he hits walls" + Environment.NewLine;
+            //        p2Effect4 = "patch=1,EE,2053E064,extended,407EB852 // distance traveled by P2" + Environment.NewLine;
+            //        break;
+            //    case "-Aerial Wind":
+            //        p2EffectBase = "3";
+            //        p2Effect1 = "patch=1,EE,1053CF08,extended,0002 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,2053E064,extended,3F000000 // P2 fly up" + Environment.NewLine;
+            //        break;
+            //    case "-Smash":
+            //        p2EffectBase = "5";
+            //        p2Effect1 = "patch=1,EE,1053CEE8,extended,0001 // P2 Flag" + Environment.NewLine;
+            //        p2Effect2 = "patch=1,EE,1053CF90,extended,0004 // P1 Smash power" + Environment.NewLine;
+            //        break;
+            //}
+
+            ////in case no effect for the other fighter was added we need to manually set it to 1 or else the weapon gfx won't show up
+            //if ((p1WeaponSpecialSecondary != "" && p2EffectBase == "0") || p1WeaponSpecialSecondary == "3")
+            //{
+            //    p2EffectBase = p1WeaponSpecialSecondary;
+            //}
+            //if ((p2WeaponSpecialSecondary != "" && p1EffectBase == "0") || p2WeaponSpecialSecondary == "3")
+            //{
+            //    p1EffectBase = p2WeaponSpecialSecondary;
+            //}
+
+            //if (weaponSpP1 != "None" || weaponSpP2 != "None")
+            //{
+            //    weaponsSpecialPower = "" + Environment.NewLine +
+            //        "patch=1,EE,104ED9CA,extended,0001 //Enable weapon effects [Shared]" + Environment.NewLine +
+            //        "patch=1,EE,2053CD40,extended,000" + p2EffectBase + "000" + p1EffectBase + " //Enable effect" + Environment.NewLine +
+            //        p1Effect1 + p1Effect2 + p1Effect3 + p1Effect4 + p2Effect1 + p2Effect2 + p2Effect3 + p2Effect4 +
+            //        "";
+            //}
+            //else
+            //{
+            //    weaponsSpecialPower = "";
+            //}
 
             #endregion
 
@@ -1013,7 +1423,7 @@ namespace SC3_pnach_editor.Services
                     weaponEffectsP1 = "" + Environment.NewLine +
                     "patch=1,EE," + _P1_1  + ",extended,00000000 //Easier Impacts Player 1" + Environment.NewLine +
                     "patch=1,EE," + _P1_2  + ",extended,3FC00000 //Attack Player 1" + Environment.NewLine +
-                    "patch=1,EE," + _P1_3  + ",extended,3F900000 //Defense Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_3  + ",extended,3F700000 //Defense Player 1" + Environment.NewLine +
                     "patch=1,EE," + _P1_4  + ",extended,00000000 //Steal Health Player 1" + Environment.NewLine +
                     "patch=1,EE," + _P1_5  + ",extended,3F200000 //Damage Give Thru Guard Player 1" + Environment.NewLine +
                     "patch=1,EE," + _P1_6  + ",extended,40000000 //Weapon Size Player 1" + Environment.NewLine +
@@ -1029,6 +1439,28 @@ namespace SC3_pnach_editor.Services
                     "patch=1,EE," + _P1_16 + ",extended,00000000 //Avoid Ring Out Rate Player 1" + Environment.NewLine +
                     "patch=1,EE," + _P1_17 + ",extended,00000000 //Auto HP Recover Player 1" + Environment.NewLine +
                     "patch=1,EE," + _P1_18 + ",extended,41000000 //Recover HP When Attacking Drain Player 1" + Environment.NewLine +
+                    "";
+                    break;
+                case "One hit kill [OP]":
+                    weaponEffectsP1 = "" + Environment.NewLine +
+                    "patch=1,EE," + _P1_1  + ",extended,00100000 //Easier Impacts Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_2  + ",extended,42000000 //Attack Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_3  + ",extended,3D000000 //Defense Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_4  + ",extended,41000000 //Steal Health Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_5  + ",extended,40000000 //Damage Give Thru Guard Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_6  + ",extended,41000000 //Weapon Size Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_7  + ",extended,41000000 //Pushback Enemy Force Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_8  + ",extended,40000000 //Counter Rate Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_9  + ",extended,40000000 //Nulify Counters Rate Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_10 + ",extended,40000000 //HP Recovered Thru Guard Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_11 + ",extended,3DCCCCCB //Auto Guard Impact Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_12 + ",extended,40000000 //Impact Damage Given Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_13 + ",extended,41000000 //Health Regain When Impact Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_14 + ",extended,40000000 //Guard Break Rate Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_15 + ",extended,40000000 //Auto Guard Throws Rate Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_16 + ",extended,40000000 //Avoid Ring Out Rate Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_17 + ",extended,3F000000 //Auto HP Recover Player 1" + Environment.NewLine +
+                    "patch=1,EE," + _P1_18 + ",extended,C3000000 //Recover HP When Attacking Drain Player 1" + Environment.NewLine +
                     "";
                     break;
             }
@@ -1130,7 +1562,7 @@ namespace SC3_pnach_editor.Services
                     weaponEffectsP2 = "" + Environment.NewLine +
                     "patch=1,EE," + _P2_1  + ",extended,00000000 //Easier Impacts Player 2" + Environment.NewLine +
                     "patch=1,EE," + _P2_2  + ",extended,3FC00000 //Attack Player 2" + Environment.NewLine +
-                    "patch=1,EE," + _P2_3  + ",extended,3F900000 //Defense Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_3  + ",extended,3F700000 //Defense Player 2" + Environment.NewLine +
                     "patch=1,EE," + _P2_4  + ",extended,00000000 //Steal Health Player 2" + Environment.NewLine +
                     "patch=1,EE," + _P2_5  + ",extended,3F200000 //Damage Give Thru Guard Player 2" + Environment.NewLine +
                     "patch=1,EE," + _P2_6  + ",extended,40000000 //Weapon Size Player 2" + Environment.NewLine +
@@ -1148,25 +1580,93 @@ namespace SC3_pnach_editor.Services
                     "patch=1,EE," + _P2_18 + ",extended,41000000 //Recover HP When Attacking Drain Player 2" + Environment.NewLine +
                     "";
                     break;
+                case "One hit kill [OP]":
+                    weaponEffectsP2 = "" + Environment.NewLine +
+                    "patch=1,EE," + _P2_1  + ",extended,00100000 //Easier Impacts Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_2  + ",extended,42000000 //Attack Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_3  + ",extended,3D000000 //Defense Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_4  + ",extended,41000000 //Steal Health Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_5  + ",extended,40000000 //Damage Give Thru Guard Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_6  + ",extended,41000000 //Weapon Size Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_7  + ",extended,41000000 //Pushback Enemy Force Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_8  + ",extended,40000000 //Counter Rate Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_9  + ",extended,40000000 //Nulify Counters Rate Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_10 + ",extended,40000000 //HP Recovered Thru Guard Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_11 + ",extended,3DCCCCCB //Auto Guard Impact Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_12 + ",extended,40000000 //Impact Damage Given Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_13 + ",extended,41000000 //Health Regain When Impact Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_14 + ",extended,40000000 //Guard Break Rate Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_15 + ",extended,40000000 //Auto Guard Throws Rate Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_16 + ",extended,40000000 //Avoid Ring Out Rate Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_17 + ",extended,3F000000 //Auto HP Recover Player 2" + Environment.NewLine +
+                    "patch=1,EE," + _P2_18 + ",extended,C3000000 //Recover HP When Attacking Drain Player 2" + Environment.NewLine +
+                    "";
+                    break;
             }
 
             #endregion
 
 
             string guardianForceP1 = "";
-            if (guardianP1)
+            if (guardianP1 != 0)
             {
-                guardianForceP1 = "" + Environment.NewLine +
-                "patch=1,EE,204B4AF4,extended,00020005 //Guardian Force Player 1" + Environment.NewLine +
-                "";
+                switch (guardianP1)
+                {
+                    case 1:
+                        guardianForceP1 = "" + Environment.NewLine +
+                        "patch=1,EE,204B4AF4,extended,00020004 //Frail P1" + Environment.NewLine +
+                        "";
+                        break;
+                    case 2:
+                        guardianForceP1 = "" + Environment.NewLine +
+                        "patch=1,EE,204B4AF4,extended,00020000 //No Armor" + Environment.NewLine +
+                        "";
+                        break;
+                    case 3:
+                        guardianForceP1 = "" + Environment.NewLine +
+                        "patch=1,EE,2051F6F0,extended,01 //Soul wisps in air" + Environment.NewLine +
+                        "patch=1,EE,2051F87C,extended,01 //Wisp stagger enemy" + Environment.NewLine +
+                        "patch=1,EE,2051F888,extended,02 //Enable Body Gfx P1" + Environment.NewLine +
+                        "patch=1,EE,2051F5C0,extended,00030001 //Soul Armor P1" + Environment.NewLine +
+                        "";
+                        break;
+                    case 4:
+                        guardianForceP1 = "" + Environment.NewLine +
+                        "patch=1,EE,204B4AF4,extended,00020005 //Guardian Force P1" + Environment.NewLine +
+                        "";
+                        break;
+                }
             }
 
             string guardianForceP2 = "";
-            if (guardianP2)
+            if (guardianP2 != 0)
             {
-                guardianForceP2 = "" + Environment.NewLine +
-                "patch=1,EE,204D2274,extended,00020005 //Guardian Force Player 2" + Environment.NewLine +
-                "";
+                switch (guardianP2)
+                {
+                    case 1:
+                        guardianForceP2 = "" + Environment.NewLine +
+                        "patch=1,EE,204D2274,extended,00020004 //Frail P2" + Environment.NewLine +
+                        "";
+                        break;
+                    case 2:
+                        guardianForceP2 = "" + Environment.NewLine +
+                        "patch=1,EE,204D2274,extended,00020000 //No Armor P2" + Environment.NewLine +
+                        "";
+                        break;
+                    case 3:
+                        guardianForceP2 = "" + Environment.NewLine +
+                        "patch=1,EE,2053CE70,extended,01 //Soul wisps in air P2" + Environment.NewLine +
+                        "patch=1,EE,2053CFFC,extended,01 //Wisp stagger enemy P2" + Environment.NewLine +
+                        "patch=1,EE,2053D008,extended,02 //Enable Body Gfx P2" + Environment.NewLine +
+                        "patch=1,EE,2053CD40,extended,00030001 //Soul Armor P2" + Environment.NewLine +
+                        "";
+                        break;
+                    case 4:
+                        guardianForceP2 = "" + Environment.NewLine +
+                        "patch=1,EE,204D2274,extended,00020005 //Guardian Force P2" + Environment.NewLine +
+                        "";
+                        break;
+                }
             }
 
             string slipperyFieldP1 = "";
@@ -1196,7 +1696,7 @@ namespace SC3_pnach_editor.Services
             if (extraChars)
             {
                 string infernoCodeP1_Guard = "";
-                if (!guardianP1)
+                if (guardianP1 !=1 && guardianP1 != 3 && guardianP1 != 4)
                 {
                     infernoCodeP1_Guard = "" + Environment.NewLine +
                     "patch=1,EE,D04B4860,extended,0000002B //If P1 is Inferno" + Environment.NewLine +
@@ -1223,7 +1723,7 @@ namespace SC3_pnach_editor.Services
                 "";
 
                 string infernoCodeP2_Guard = "";
-                if (!guardianP2)
+                if (guardianP2 != 1 && guardianP2 != 3 && guardianP2 != 4)
                 {
                     infernoCodeP2_Guard = "" + Environment.NewLine +
                     "patch=1,EE,D04D1FE0,extended,0000002B //If P2 is Inferno" + Environment.NewLine +
@@ -3703,48 +4203,106 @@ namespace SC3_pnach_editor.Services
 
             #endregion
 
+            string playerControlCode = ""; //c#
+            switch (playerControl)
+            {
+                case "Player 1":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0001 //left side fighter control" + Environment.NewLine +
+                    "";
+                    break;
+                case "Easy":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0002 //left side fighter control" + Environment.NewLine +
+                    "patch=1,EE,1051F2C4,extended,0000 //left side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,1051F2CC,extended,0000 //left side fighter AI" + Environment.NewLine +
+                    "";
+                    break;
+                case "Normal":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0002 //left side fighter control" + Environment.NewLine +
+                    "patch=1,EE,1051F2C4,extended,0001 //left side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,1051F2CC,extended,0001 //left side fighter AI" + Environment.NewLine +
+                    "";
+                    break;
+                case "Hard":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0002 //left side fighter control" + Environment.NewLine +
+                    "patch=1,EE,1051F2C4,extended,0002 //left side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,1051F2CC,extended,0002 //left side fighter AI" + Environment.NewLine +
+                    "";
+                    break;
+                case "Very Hard":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0002 //left side fighter control" + Environment.NewLine +
+                    "patch=1,EE,1051F2C4,extended,0003 //left side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,1051F2CC,extended,0003 //left side fighter AI" + Environment.NewLine +
+                    "";
+                    break;
+                case "Ultra Hard":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0002 //left side fighter control" + Environment.NewLine +
+                    "patch=1,EE,1051F2C4,extended,0004 //left side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,1051F2CC,extended,0004 //left side fighter AI" + Environment.NewLine +
+                    "";
+                    break;
+                case "Extremely Hard":
+                    playerControlCode = "" + Environment.NewLine +
+                    "patch=1,EE,104B4858,extended,0002 //left side fighter control" + Environment.NewLine +
+                    "patch=1,EE,1051F2C4,extended,0005 //left side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,1051F2CC,extended,0005 //left side fighter AI" + Environment.NewLine +
+                    "";
+                    break;
+            }
+
             string opponentControlCode = "";
             switch (opponentControl)
             {
                 case "Player 2":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0001 //opponent control" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0001 //right side fighter control" + Environment.NewLine +
                     "";
                     break;
                 case "Easy":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                    "patch=1,EE,10520D54,extended,0000 //opponent AI" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0002 //right side fighter control" + Environment.NewLine +
+                    "patch=1,EE,10520D54,extended,0000 //right side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,10520D5C,extended,0000 //right side fighter AI" + Environment.NewLine +
                     "";
                     break;
                 case "Normal":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                    "patch=1,EE,10520D54,extended,0001 //opponent AI" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0002 //right side fighter control" + Environment.NewLine +
+                    "patch=1,EE,10520D54,extended,0001 //right side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,10520D5C,extended,0001 //right side fighter AI" + Environment.NewLine +
                     "";
                     break;
                 case "Hard":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                    "patch=1,EE,10520D54,extended,0002 //opponent AI" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0002 //right side fighter control" + Environment.NewLine +
+                    "patch=1,EE,10520D54,extended,0002 //right side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,10520D5C,extended,0002 //right side fighter AI" + Environment.NewLine +
                     "";
                     break;
                 case "Very Hard":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                    "patch=1,EE,10520D54,extended,0003 //opponent AI" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0002 //right side fighter control" + Environment.NewLine +
+                    "patch=1,EE,10520D54,extended,0003 //right side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,10520D5C,extended,0003 //right side fighter AI" + Environment.NewLine +
                     "";
                     break;
                 case "Ultra Hard":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                    "patch=1,EE,10520D54,extended,0004 //opponent AI" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0002 //right side fighter control" + Environment.NewLine +
+                    "patch=1,EE,10520D54,extended,0004 //right side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,10520D5C,extended,0004 //right side fighter AI" + Environment.NewLine +
                     "";
                     break;
                 case "Extremely Hard":
                     opponentControlCode = "" + Environment.NewLine +
-                    "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                    "patch=1,EE,10520D54,extended,0005 //opponent AI" + Environment.NewLine +
+                    "patch=1,EE,104D1FD8,extended,0002 //right side fighter control" + Environment.NewLine +
+                    "patch=1,EE,10520D54,extended,0005 //right side fighter AI" + Environment.NewLine +
+                    "patch=1,EE,10520D5C,extended,0005 //right side fighter AI" + Environment.NewLine +
                     "";
                     break;
             }
@@ -3757,7 +4315,7 @@ namespace SC3_pnach_editor.Services
                             "";
             }
 
-            string characterSelect = Codes.CharacterSelect.GetCharacterPnachCode(false);
+            string characterSelect = Codes.CharacterSelect.GetCharacterPnachCode(false, false, false);
 
 
             bool p1WpnEf = true;
@@ -3827,18 +4385,21 @@ namespace SC3_pnach_editor.Services
                     p2SpeedCodeValue = "3C014040";
                     break;
             }
-            string p2SpeedCode = "\n patch=1,EE,200FFD0C,extended," + p2SpeedCodeValue + "//P2" +
+            string p2SpeedCode = "";
+            if (survivalModeCode == "")
+            {
+                p2SpeedCode = "\n patch=1,EE,200FFD0C,extended," + p2SpeedCodeValue + "//P2" +
                                  "\n patch=1,EE,200FFD10,extended,3C04004D//P2" +
                                  "\n patch=1,EE,200FFD14,extended,AC8136D0//P2";
-
+            }
 
             string bothSpeedCode = "\n patch=1,EE,200FFD18,extended,0260202D//BOTH" +
                                    "\n patch=1,EE,200FFD1C,extended,0806CDD1//BOTH" +
                                    "\n patch=1,EE,201B3740,extended,0803FF40//BOTH";
 
 
-            string pnachCode = "\n" + stageCode + characterSelect + /*charCode + charCode2 +*/ opponentControlCode + weaponsSpecialPower +
-                weaponEffectsP1 + weaponEffectsP2 + guardianForceP1 +
+            string pnachCode = "\n" + survivalModeCode + stageCode + characterSelect + /*charCode + charCode2 +*/ playerControlCode + opponentControlCode
+                + weaponsSpecialPower + weaponEffectsP1 + weaponEffectsP2 + guardianForceP1 +
                 guardianForceP2 + slipperyFieldP1 + slipperyFieldP2 + ultimateWeapons  + extraCharacters + infernoCode +
                 p1SpeedCode + p2SpeedCode + bothSpeedCode;
 
@@ -3851,7 +4412,7 @@ namespace SC3_pnach_editor.Services
 
             SettingsClass.LoadData();
             pnachCode += Codes.NewWeapons.GetWeaponsCode(SettingsClass.UltimateWeapons, false, false);
-            pnachCode += Codes.CharacterSelect.GetCharacterPnachCode(true);
+            pnachCode += Codes.CharacterSelect.GetCharacterPnachCode(true, false, false);
 
             File.WriteAllText(SettingsClass.codeFilePath, pnachCode, Encoding.UTF8);
         }

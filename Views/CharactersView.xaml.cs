@@ -90,7 +90,7 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("LunaValues");
             UpdateImageAndText("ValeriaValues");
             UpdateImageAndText("HualinValues");
-            UpdateImageAndText("GiradotValues");
+            UpdateImageAndText("GirardotValues");
             UpdateImageAndText("DemuthValues");
             UpdateImageAndText("AureliaValues");
             UpdateImageAndText("ChesterValues");
@@ -255,6 +255,7 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("BrigandFemaleValues");
             UpdateImageAndText("MalettaFemaleValues");
             UpdateImageAndText("RebelFemaleValues");
+            UpdateImageAndText("ExtraValues");
             UpdateImageAndText("TinaValues");
             UpdateImageAndText("AegeValues");
             UpdateImageAndText("HealDoValues");
@@ -269,7 +270,52 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("BossValues");
             UpdateImageAndText("BossValues2");
             #endregion
+
+            if (SettingsClass.LastSelectedCharP1 == "" || SettingsClass.LastSelectedIndexP1 == -1)
+            {
+                viewModel.Player1Character = "/Resources/none.png";
+            }
+            else if (SettingsClass.LastSelectedCharP1 != "RandomValues")
+            {
+                CharacterSelect(1, SettingsClass.LastSelectedCharP1, false, "", "");
+                string[,] currentArray = GetSelectedArray(SettingsClass.LastSelectedCharP1);
+                viewModel.Player1Character = "/Resources/" + currentArray[SettingsClass.LastSelectedIndexP1, 6];
+            }
+            else
+            {
+                GetPlayerHex(1);
+                viewModel.Player1Character = "/Resources/Random.png";
+            }
+            if (SettingsClass.LastSelectedCharP2 == "" || SettingsClass.LastSelectedIndexP2 == -1)
+            {
+                viewModel.Player2Character = "/Resources/none.png";
+            }
+            else if (SettingsClass.LastSelectedCharP2 != "RandomValues")
+            {
+                CharacterSelect(2, SettingsClass.LastSelectedCharP2, false, "", "");
+                string[,] currentArray = GetSelectedArray(SettingsClass.LastSelectedCharP2);
+                viewModel.Player2Character = "/Resources/" + currentArray[SettingsClass.LastSelectedIndexP2, 6];
+            }
+            else
+            {
+                GetPlayerHex(2);
+                viewModel.Player2Character = "/Resources/Random.png";
+            }
         }
+
+        public string GetImageNameAtStartup(string character, string model)
+        {
+            string imageName = "";
+
+            switch (character)
+            {
+                case "":
+                    imageName = "MitsurugiValues";
+                    break;
+            }
+            return imageName;
+        }
+
 
         private void MouseEnter(object sender, MouseEventArgs e)
         {
@@ -410,8 +456,8 @@ namespace SC3_pnach_editor.Views
                 case "HualinValues":
                     HualinValues.Source = bitmap;
                     break;
-                case "GiradotValues":
-                    GiradotValues.Source = bitmap;
+                case "GirardotValues":
+                    GirardotValues.Source = bitmap;
                     break;
                 case "DemuthValues":
                     DemuthValues.Source = bitmap;
@@ -899,6 +945,9 @@ namespace SC3_pnach_editor.Views
                 case "RebelFemaleValues":
                     RebelFemaleValues.Source = bitmap;
                     break;
+                case "ExtraValues":
+                    ExtraValues.Source = bitmap;
+                    break;
                 case "TinaValues":
                     TinaValues.Source = bitmap;
                     break;
@@ -1167,6 +1216,9 @@ namespace SC3_pnach_editor.Views
                 GetPlayerHex(playerIndex);
                 viewModel.Player1Character = "/Resources/Random.png";
             }
+            SettingsClass.LastSelectedCharP1 = imageName;
+            SettingsClass.LastSelectedIndexP1 = currentIndex;
+            SettingsClass.SaveData();
 
         }
 
@@ -1186,6 +1238,9 @@ namespace SC3_pnach_editor.Views
                 GetPlayerHex(playerIndex);
                 viewModel.Player2Character = "/Resources/Random.png";
             }
+            SettingsClass.LastSelectedCharP2 = imageName;
+            SettingsClass.LastSelectedIndexP2 = currentIndex;
+            SettingsClass.SaveData();
         }
 
         private void CharacterSelect(int playerIndex, string imageName, bool random, string m1, string m2)
@@ -1196,11 +1251,13 @@ namespace SC3_pnach_editor.Views
                 {
                     SettingsClass.CharacterP1 = imageName;
                     SettingsClass.ModelP1 = imageName;
+                    SettingsClass.VoiceP1 = "";
                 }
                 else if (playerIndex == 2)
                 {
                     SettingsClass.CharacterP2 = imageName;
                     SettingsClass.ModelP2 = imageName;
+                    SettingsClass.VoiceP2 = "";
                 }
             }
             else //change ok
@@ -1213,11 +1270,13 @@ namespace SC3_pnach_editor.Views
                     {
                         SettingsClass.CharacterP1 = currentArray[currentIndex, 4];
                         SettingsClass.ModelP1 = currentArray[currentIndex, 5];
+                        SettingsClass.VoiceP1 = currentArray[currentIndex, 7];
                     }
                     else if (playerIndex == 2)
                     {
                         SettingsClass.CharacterP2 = currentArray[currentIndex, 4];
                         SettingsClass.ModelP2 = currentArray[currentIndex, 5];
+                        SettingsClass.VoiceP2 = currentArray[currentIndex, 7];
                     }
                 }
                 else
@@ -1348,8 +1407,8 @@ namespace SC3_pnach_editor.Views
                 case "HualinValues":
                     currentArray = viewModel.HualinValues;
                     break;
-                case "GiradotValues":
-                    currentArray = viewModel.GiradotValues;
+                case "GirardotValues":
+                    currentArray = viewModel.GirardotValues;
                     break;
                 case "DemuthValues":
                     currentArray = viewModel.DemuthValues;
@@ -1837,6 +1896,9 @@ namespace SC3_pnach_editor.Views
                 case "RebelFemaleValues":
                     currentArray = viewModel.RebelFemaleValues;
                     break;
+                case "ExtraValues":
+                    currentArray = viewModel.ExtraValues;
+                    break;
                 case "TinaValues":
                     currentArray = viewModel.TinaValues;
                     break;
@@ -1906,17 +1968,25 @@ namespace SC3_pnach_editor.Views
         {
             CharacterSelect(1, "none", false, "", "");
             viewModel.Player1Character = "/Resources/none.png";
+
+            SettingsClass.LastSelectedCharP1 = "";
+            SettingsClass.LastSelectedIndexP1 = -1;
+            SettingsClass.SaveData();
         }
 
         private void ResetP2(object sender, MouseButtonEventArgs e)
         {
             CharacterSelect(2, "none", false, "", "");
             viewModel.Player2Character = "/Resources/none.png";
+
+            SettingsClass.LastSelectedCharP2 = "";
+            SettingsClass.LastSelectedIndexP2 = -1;
+            SettingsClass.SaveData();
         }
 
         private void Char_Info(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Select any warrior you want from from anywhere in the game\n" +
+            MessageBox.Show("Select any warrior you want from anywhere in the game\n" +
                 "Left Mouse Button = Select Player 1 Character\n" +
                 "Right Mouse Button = Select player 2 Character\n" +
                 "Scroll Up-Down on Mouse Wheel = Costume/Discipline Switch\n" +

@@ -9,11 +9,12 @@ namespace SC3_pnach_editor.ViewModelsClasses
     public class SurvivalList
     {
         public string stageLevel = "";
+        public string stageMusic = "";
         public int stageNumber = 0;
         public string fightingStyle = "";
         public string model = "";
         public string costume = "";
-        public int weaponNumber = 0;
+        public string weaponNumber = "";
 
         public string aiLevel = "";
         public string weaponSpecial = ""; //Fire, Thunder etc
@@ -39,5 +40,8 @@ namespace SC3_pnach_editor.ViewModelsClasses
         public string ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
         public string hpRegenOrDrain = ""; //Drain/Recover Health over Time
         public string hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+
+        public string? voice = null;
+        public string? specialData = null;
     }
 }

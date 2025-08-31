@@ -17,9 +17,13 @@
 
   <ItemGroup>
     <None Remove="Resources\Abelia.png" />
+    <None Remove="Resources\Abelia_1.webp" />
+    <None Remove="Resources\Abelia_2.webp" />
     <None Remove="Resources\Abelia__1.png" />
     <None Remove="Resources\Abelia__2.png" />
     <None Remove="Resources\Abelia__3.png" />
+    <None Remove="Resources\Abelia__4.png" />
+    <None Remove="Resources\Abelia__5.png" />
     <None Remove="Resources\Abigail.webp" />
     <None Remove="Resources\Abigail__1.png" />
     <None Remove="Resources\Abyss_1.png" />
@@ -36,8 +40,10 @@
     <None Remove="Resources\Aege__1.png" />
     <None Remove="Resources\Aege__2.png" />
     <None Remove="Resources\Aege__3.png" />
+    <None Remove="Resources\Aege__4.png" />
     <None Remove="Resources\Aeneas.webp" />
     <None Remove="Resources\Aeneas__1.png" />
+    <None Remove="Resources\Aeneas__2.png" />
     <None Remove="Resources\Aeolos.webp" />
     <None Remove="Resources\Aeolos__1.png" />
     <None Remove="Resources\Aether.webp" />
@@ -53,6 +59,7 @@
     <None Remove="Resources\Aika__1.png" />
     <None Remove="Resources\Ailian.webp" />
     <None Remove="Resources\Ailian__1.png" />
+    <None Remove="Resources\Ailian__2.png" />
     <None Remove="Resources\Alastor.webp" />
     <None Remove="Resources\Alastor__1.png" />
     <None Remove="Resources\Alberic.webp" />
@@ -70,6 +77,7 @@
     <None Remove="Resources\Annaretta__1.png" />
     <None Remove="Resources\Areon.webp" />
     <None Remove="Resources\Areon__1.png" />
+    <None Remove="Resources\Arthias.webp" />
     <None Remove="Resources\Arthur.png" />
     <None Remove="Resources\Arthur__1.png" />
     <None Remove="Resources\Arthur__2.png" />
@@ -89,6 +97,8 @@
     <None Remove="Resources\atkOverTime.png" />
     <None Remove="Resources\atkUp.png" />
     <None Remove="Resources\Aurelia.png" />
+    <None Remove="Resources\Aurelia_1.webp" />
+    <None Remove="Resources\Aurelia_2.webp" />
     <None Remove="Resources\Aurelia__1.png" />
     <None Remove="Resources\Aurelia__2.png" />
     <None Remove="Resources\avoidCounters.png" />
@@ -121,6 +131,7 @@
     <None Remove="Resources\Boss.png" />
     <None Remove="Resources\Boss2.png" />
     <None Remove="Resources\Brad_OhYeah.mp3" />
+    <None Remove="Resources\Brigands.webp" />
     <None Remove="Resources\Brigand_F.webp" />
     <None Remove="Resources\Brigand_M.webp" />
     <None Remove="Resources\Brigand__1.png" />
@@ -145,11 +156,15 @@
     <None Remove="Resources\Cervantes__2.png" />
     <None Remove="Resources\Cervantes__2E.png" />
     <None Remove="Resources\Charade.png" />
+    <None Remove="Resources\CharadeP2.png" />
     <None Remove="Resources\Charade__1.png" />
     <None Remove="Resources\Charade__2.png" />
     <None Remove="Resources\Charade__3.png" />
     <None Remove="Resources\char_wall.png" />
     <None Remove="Resources\Chester.png" />
+    <None Remove="Resources\Chester_1.webp" />
+    <None Remove="Resources\Chester_2.webp" />
+    <None Remove="Resources\Chester_3.webp" />
     <None Remove="Resources\Chester__1.png" />
     <None Remove="Resources\Chester__2.png" />
     <None Remove="Resources\Chester__3.png" />
@@ -160,6 +175,7 @@
     <None Remove="Resources\Colossus__1.png" />
     <None Remove="Resources\counterChance.png" />
     <None Remove="Resources\Cover.png" />
+    <None Remove="Resources\Dalkia.webp" />
     <None Remove="Resources\Dalkia_F.webp" />
     <None Remove="Resources\Dalkia_M.webp" />
     <None Remove="Resources\Dalkia__1.png" />
@@ -167,6 +183,8 @@
     <None Remove="Resources\defDown.png" />
     <None Remove="Resources\defUp.png" />
     <None Remove="Resources\Demuth.png" />
+    <None Remove="Resources\Demuth_1.webp" />
+    <None Remove="Resources\Demuth_2.webp" />
     <None Remove="Resources\Demuth__1.png" />
     <None Remove="Resources\Demuth__2.png" />
     <None Remove="Resources\Domenthi.webp" />
@@ -182,6 +200,7 @@
     <None Remove="Resources\Elua_2.webp" />
     <None Remove="Resources\Elua__1.png" />
     <None Remove="Resources\Elua__2.png" />
+    <None Remove="Resources\Elua__4.png" />
     <None Remove="Resources\Ende.webp" />
     <None Remove="Resources\Ende__1.png" />
     <None Remove="Resources\Ende__X.png" />
@@ -191,6 +210,10 @@
     <None Remove="Resources\Eunice__1.png" />
     <None Remove="Resources\Eurydice.webp" />
     <None Remove="Resources\Eurydice__1.png" />
+    <None Remove="Resources\Eurydice__2.png" />
+    <None Remove="Resources\Extra_1.png" />
+    <None Remove="Resources\Extra_2.png" />
+    <None Remove="Resources\Extra_3.png" />
     <None Remove="Resources\Fenglei.webp" />
     <None Remove="Resources\Fenglei_1.png" />
     <None Remove="Resources\Fenglei__1.png" />
@@ -200,6 +223,7 @@
     <None Remove="Resources\Fengyu__1.png" />
     <None Remove="Resources\Feofan.webp" />
     <None Remove="Resources\Feofan__1.png" />
+    <None Remove="Resources\Feofan__2.png" />
     <None Remove="Resources\FootSoldier.png" />
     <None Remove="Resources\FootSoldier__1.png" />
     <None Remove="Resources\FootSoldier__2.png" />
@@ -226,6 +250,12 @@
     <None Remove="Resources\Giradot.png" />
     <None Remove="Resources\Giradot__1.png" />
     <None Remove="Resources\Giradot__2.png" />
+    <None Remove="Resources\Girardot.png" />
+    <None Remove="Resources\Girardot_!.webp" />
+    <None Remove="Resources\Girardot_1.webp" />
+    <None Remove="Resources\Girardot_2.webp" />
+    <None Remove="Resources\Girardot__1.png" />
+    <None Remove="Resources\Girardot__2.png" />
     <None Remove="Resources\Gladiator_1.png" />
     <None Remove="Resources\Gladiator_2.png" />
     <None Remove="Resources\Gladiator__1.png" />
@@ -233,6 +263,7 @@
     <None Remove="Resources\Golem_Roar.mp3" />
     <None Remove="Resources\Gorus.webp" />
     <None Remove="Resources\Gorus__1.png" />
+    <None Remove="Resources\Grandall.webp" />
     <None Remove="Resources\Grandall_F.webp" />
     <None Remove="Resources\Grandall_M.webp" />
     <None Remove="Resources\Grandall__1.png" />
@@ -246,6 +277,7 @@
     <None Remove="Resources\Gun.gif" />
     <None Remove="Resources\Halphas.webp" />
     <None Remove="Resources\Halphas__1.png" />
+    <None Remove="Resources\Halteese.webp" />
     <None Remove="Resources\Haystir.webp" />
     <None Remove="Resources\Haystir__1.png" />
     <None Remove="Resources\Heal-Do_1.webp" />
@@ -253,6 +285,7 @@
     <None Remove="Resources\Heal-Do__1.png" />
     <None Remove="Resources\Heal-Do__2.png" />
     <None Remove="Resources\Heal-Do__3.png" />
+    <None Remove="Resources\Heal-Do__4.png" />
     <None Remove="Resources\Hilda.webp" />
     <None Remove="Resources\Hilda__1.png" />
     <None Remove="Resources\Hualin.png" />
@@ -329,6 +362,7 @@
     <None Remove="Resources\Ixion__1.png" />
     <None Remove="Resources\Jinkai.webp" />
     <None Remove="Resources\Jinkai__1.png" />
+    <None Remove="Resources\Jinkai__2.png" />
     <None Remove="Resources\Juno.webp" />
     <None Remove="Resources\Juno__1.png" />
     <None Remove="Resources\Jyurai.webp" />
@@ -341,6 +375,7 @@
     <None Remove="Resources\Kanade__1.png" />
     <None Remove="Resources\Kanon.webp" />
     <None Remove="Resources\Kanon__1.png" />
+    <None Remove="Resources\Kanon__2.png" />
     <None Remove="Resources\Karen.webp" />
     <None Remove="Resources\Karen__1.png" />
     <None Remove="Resources\Katina.webp" />
@@ -366,6 +401,7 @@
     <None Remove="Resources\Kureha__1.png" />
     <None Remove="Resources\Leraje.webp" />
     <None Remove="Resources\Leraje__1.png" />
+    <None Remove="Resources\Leraje__2.png" />
     <None Remove="Resources\Leshy.webp" />
     <None Remove="Resources\Leshy__1.png" />
     <None Remove="Resources\Li Long__1.png" />
@@ -385,23 +421,29 @@
     <None Remove="Resources\Lizardman__EX3.png" />
     <None Remove="Resources\Lizardman__X.png" />
     <None Remove="Resources\LizardMen.png" />
+    <None Remove="Resources\LizardMenBlue.png" />
     <None Remove="Resources\Loki.webp" />
     <None Remove="Resources\Loki__1.png" />
     <None Remove="Resources\loseHpAttack.png" />
     <None Remove="Resources\loseHpGuard.png" />
     <None Remove="Resources\loseHpTime.png" />
     <None Remove="Resources\Luna.png" />
+    <None Remove="Resources\Luna_1.webp" />
+    <None Remove="Resources\Luna_2.webp" />
     <None Remove="Resources\Luna__1.png" />
     <None Remove="Resources\Luna__2.png" />
     <None Remove="Resources\Luna__3.png" />
     <None Remove="Resources\Lupi_1.webp" />
     <None Remove="Resources\Lupi_2.webp" />
+    <None Remove="Resources\Lupi_3.webp" />
     <None Remove="Resources\Lupi__1.png" />
     <None Remove="Resources\Lupi__2.png" />
     <None Remove="Resources\Lupi__3.png" />
+    <None Remove="Resources\Lupi__4.png" />
     <None Remove="Resources\Lynette.png" />
     <None Remove="Resources\Lynette__1.png" />
     <None Remove="Resources\Lynette__2.png" />
+    <None Remove="Resources\Maletta.webp" />
     <None Remove="Resources\Maletta_F.webp" />
     <None Remove="Resources\Maletta_M.webp" />
     <None Remove="Resources\Maletta__1.png" />
@@ -418,6 +460,7 @@
     <None Remove="Resources\Mayura__1.png" />
     <None Remove="Resources\Meiga.webp" />
     <None Remove="Resources\Meiga__1.png" />
+    <None Remove="Resources\Meiga__2.png" />
     <None Remove="Resources\Meilan.webp" />
     <None Remove="Resources\Meilan__1.png" />
     <None Remove="Resources\Minglian.webp" />
@@ -603,10 +646,12 @@
     <None Remove="Resources\Raphael__2E.png" />
     <None Remove="Resources\Ratziel.webp" />
     <None Remove="Resources\Ratziel__1.png" />
+    <None Remove="Resources\Rebels.webp" />
     <None Remove="Resources\Rebel_F.webp" />
     <None Remove="Resources\Rebel_M.webp" />
     <None Remove="Resources\Rebel__1.png" />
     <None Remove="Resources\Rebel__2.png" />
+    <None Remove="Resources\RedAmy.png" />
     <None Remove="Resources\Revenant.png" />
     <None Remove="Resources\Revenant__1.png" />
     <None Remove="Resources\Revenant__2.png" />
@@ -614,6 +659,7 @@
     <None Remove="Resources\Rhea__1.png" />
     <None Remove="Resources\Riese.webp" />
     <None Remove="Resources\Riese__1.png" />
+    <None Remove="Resources\Riese__2.png" />
     <None Remove="Resources\Rock_1.png" />
     <None Remove="Resources\Rock_2.png" />
     <None Remove="Resources\Rock__1.png" />
@@ -626,7 +672,10 @@
     <None Remove="Resources\Roin__1.png" />
     <None Remove="Resources\Roin__2.png" />
     <None Remove="Resources\Rudiger.webp" />
+    <None Remove="Resources\Rudiger_1.webp" />
+    <None Remove="Resources\Rudiger_2.webp" />
     <None Remove="Resources\Rudiger__1.png" />
+    <None Remove="Resources\Rudiger__2.png" />
     <None Remove="Resources\Rufus.webp" />
     <None Remove="Resources\Rufus__1.png" />
     <None Remove="Resources\Ryouga.webp" />
@@ -698,6 +747,8 @@
     <None Remove="Resources\SpaWave.mp3" />
     <None Remove="Resources\stealHp.png" />
     <None Remove="Resources\Strife.png" />
+    <None Remove="Resources\Strife_1.webp" />
+    <None Remove="Resources\Strife_2.webp" />
     <None Remove="Resources\Strife__1.png" />
     <None Remove="Resources\Strife__2.png" />
     <None Remove="Resources\Swordsman_1.png" />
@@ -790,6 +841,7 @@
     <None Remove="Resources\tile063.png" />
     <None Remove="Resources\Tina.webp" />
     <None Remove="Resources\Tina__1.png" />
+    <None Remove="Resources\Tina__2.png" />
     <None Remove="Resources\Tira_1.png" />
     <None Remove="Resources\Tira_2.png" />
     <None Remove="Resources\Tira__1.png" />
@@ -804,6 +856,7 @@
     <None Remove="Resources\UnknownSoul_1.png" />
     <None Remove="Resources\UnknownSoul_2.png" />
     <None Remove="Resources\UnknownSoul_3.png" />
+    <None Remove="Resources\Unused__1.png" />
     <None Remove="Resources\Valeria.png" />
     <None Remove="Resources\Valeria__1.png" />
     <None Remove="Resources\Valeria__2.png" />
@@ -826,6 +879,7 @@
     <None Remove="Resources\Xianghua__2E.png" />
     <None Remove="Resources\Xiaoxin.webp" />
     <None Remove="Resources\Xiaoxin__1.png" />
+    <None Remove="Resources\Xiaoxin__2.png" />
     <None Remove="Resources\Xunyu.webp" />
     <None Remove="Resources\Xunyu__1.png" />
     <None Remove="Resources\X__1.png" />
@@ -865,6 +919,12 @@
     <Content Include="Resources\Abelia.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Abelia_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abelia_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Abelia__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -872,6 +932,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Abelia__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abelia__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Abelia__5.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Abigail.webp">
@@ -922,10 +988,16 @@
     <Content Include="Resources\Aege__3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Aege__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Aeneas.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Aeneas__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aeneas__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Aeolos.webp">
@@ -968,6 +1040,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Ailian__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Ailian__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Alastor.webp">
@@ -1021,6 +1096,9 @@
     <Content Include="Resources\Areon__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Arthias.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Arthur.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1067,6 +1145,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Aurelia.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aurelia_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Aurelia_2.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Aurelia__1.png">
@@ -1171,6 +1255,9 @@
     <Content Include="Resources\Boss2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Brigands.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Brigand_F.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1243,6 +1330,9 @@
     <Content Include="Resources\Charade.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\CharadeP2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Charade__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1253,6 +1343,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Chester.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Chester_3.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Chester__1.png">
@@ -1282,6 +1381,9 @@
     <Content Include="Resources\counterChance.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Dalkia.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Dalkia_F.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1301,6 +1403,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Demuth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Demuth_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Demuth_2.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Demuth__1.png">
@@ -1348,6 +1456,9 @@
     <Content Include="Resources\Elua__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Elua__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Ende.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1375,6 +1486,18 @@
     <Content Include="Resources\Eurydice__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Eurydice__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Extra_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Extra_2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Extra_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Fenglei.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1397,6 +1520,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Feofan__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Feofan__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\FootSoldier.png">
@@ -1462,13 +1588,19 @@
     <Content Include="Resources\General__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Giradot.png">
+    <Content Include="Resources\Girardot.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Giradot__1.png">
+    <Content Include="Resources\Girardot_1.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Giradot__2.png">
+    <Content Include="Resources\Girardot_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Girardot__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Girardot__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Gladiator_1.png">
@@ -1487,6 +1619,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Gorus__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Grandall.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Grandall_F.webp">
@@ -1525,6 +1660,9 @@
     <Content Include="Resources\Halphas__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Halteese.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Haystir.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1544,6 +1682,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Heal-Do__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Heal-Do__4.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Hilda.webp">
@@ -1663,6 +1804,9 @@
     <Content Include="Resources\Jinkai__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Jinkai__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Juno.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1697,6 +1841,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Kanon__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Kanon__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Karen.webp">
@@ -1774,6 +1921,9 @@
     <Content Include="Resources\Leraje__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Leraje__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Leshy.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1831,6 +1981,9 @@
     <Content Include="Resources\LizardMen.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\LizardMenBlue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Loki.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1849,6 +2002,12 @@
     <Content Include="Resources\Luna.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Luna_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Luna_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Luna__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1864,6 +2023,9 @@
     <Content Include="Resources\Lupi_2.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Lupi_3.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Lupi__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1873,6 +2035,9 @@
     <Content Include="Resources\Lupi__3.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Lupi__4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Lynette.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1880,6 +2045,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Lynette__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Maletta.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Maletta_F.webp">
@@ -1928,6 +2096,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Meiga__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Meiga__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Meilan.webp">
@@ -2158,6 +2329,9 @@
     <Content Include="Resources\Ratziel__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Rebels.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Rebel_F.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2168,6 +2342,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Rebel__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\RedAmy.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Revenant.png">
@@ -2189,6 +2366,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Riese__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Riese__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Rock_1.png">
@@ -2224,10 +2404,16 @@
     <Content Include="Resources\Roin__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Rudiger.webp">
+    <Content Include="Resources\Rudiger_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rudiger_2.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Rudiger__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Rudiger__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Rufus.webp">
@@ -2431,6 +2617,12 @@
     <Content Include="Resources\Strife.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Strife_1.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Strife_2.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Strife__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2515,6 +2707,9 @@
     <Content Include="Resources\Tina__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Tina__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Tira_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2555,6 +2750,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\UnknownSoul_3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Unused__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Valeria.png">
@@ -2621,6 +2819,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Xiaoxin__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Xiaoxin__2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Xunyu.webp">

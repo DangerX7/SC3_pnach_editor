@@ -170,9 +170,9 @@ namespace SC3_pnach_editor.ViewModels
             }
         }
 
-        private bool _guardianForceP1;
+        private int _guardianForceP1;
 
-        public bool GuardianForceP1
+        public int GuardianForceP1
         {
             get { return _guardianForceP1; }
             set
@@ -186,9 +186,9 @@ namespace SC3_pnach_editor.ViewModels
             }
         }
 
-        private bool _guardianForceP2;
+        private int _guardianForceP2;
 
-        public bool GuardianForceP2
+        public int GuardianForceP2
         {
             get { return _guardianForceP2; }
             set
@@ -272,18 +272,44 @@ namespace SC3_pnach_editor.ViewModels
             "Soul Edge Complete",
             "Soul Calibur Complete",
             "The Ancient True Power",
-            "Olympus Punisher Power"
+            "Olympus Punisher Power",
+            "One hit kill [OP]"
         };
 
         public List<string> WeaponSpecialPowerCombo = new List<string>
         {
             "None",
-            "All Guard Break",
-            "All Unblockable",
-            "Paralysis",
-            "Down Lose",
-            "Cure",
-            "Poison"
+            "-All Guard Break",
+            "-All Unblockable",
+            "-Paralysis",
+            "-Minus Guard",
+            "-Poison",
+            "-Super Poison",
+            "-Mega Poison",
+            "+Cure",
+            "+Super Cure",
+            "+Mega Cure",
+            "-Defense Down",
+            "+Defense Up",
+            "+Super Defense",
+            "+Reserve Offense Up",
+            "-Glue",
+            "-Separate",
+            "-Ice",
+            "-Whirlwind",
+            "-Aerial Wind",
+            "-Smash",
+            "-Soul Smash",
+            "-Down Lose"
+        };
+
+        public List<string> ArmorCombo = new List<string>
+        {
+            "Default",
+            "Frail",
+            "No Armor",
+            "Soul Armor (Only P2 in mission)",
+            "Guardian Force"
         };
 
 
@@ -492,6 +518,19 @@ namespace SC3_pnach_editor.ViewModels
             }
         }
 
+        
+
+        public List<string> PlayerControlCombo = new List<string>
+        {
+            "No Change",
+            "Player 1",
+            "Easy",
+            "Normal",
+            "Hard",
+            "Very Hard",
+            "Ultra Hard",
+            "Extremely Hard"
+        };
 
         public List<string> OpponentControlCombo = new List<string>
         {

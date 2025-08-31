@@ -46,7 +46,7 @@
 
         <MediaElement x:Name="customSound" LoadedBehavior="Play"/>
 
-        <!--NightTerrorGraySkin--> 
+        <!--NightTerrorGraySkin-->
         <Border Grid.Row="0"
                 Grid.Column="0"
                 Name="NightTerrorGrayBox"
@@ -72,7 +72,7 @@
         <TextBlock Grid.Row="0"
            Grid.Column="1"
            Name="NightTerrorGrayText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Night Terror - Costume 1 [Blue Skin]"
@@ -105,7 +105,7 @@
         <TextBlock Grid.Row="1"
            Grid.Column="1"
            Name="TakiStockingsText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Taki - Costume 1 [with stockings]"
@@ -138,7 +138,7 @@
         <TextBlock Grid.Row="2"
            Grid.Column="1"
            Name="CassandraPinkText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Cassandra - Costume 2 [black and white]"
@@ -171,7 +171,7 @@
         <TextBlock Grid.Row="3"
            Grid.Column="1"
            Name="ColossusGoldenText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Colossus - Costume 2 [golden]"
@@ -204,7 +204,7 @@
         <TextBlock Grid.Row="4"
            Grid.Column="1"
            Name="GreenLynetteText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Lynette - Costume 1 [green]"
@@ -237,7 +237,7 @@
         <TextBlock Grid.Row="5"
            Grid.Column="1"
            Name="NightmareRedText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Nightmare - Costume 1 [lightier]"
@@ -268,14 +268,13 @@
             </Viewbox>
         </Border>
         <TextBlock Grid.Row="6"
-           Grid.Column="1"
            Name="SiegfriedPurpleText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Siegfried - Costume 1 [Pink or something]"
            Tag="SiegfriedPurple"
-           MouseEnter="SkinPreview"/>
+           MouseEnter="SkinPreview" Grid.ColumnSpan="3" Margin="98,0,817,0"/>
 
         <!--SophitiaBrownSkin-->
         <Border Grid.Row="7"
@@ -303,16 +302,112 @@
         <TextBlock Grid.Row="7"
            Grid.Column="1"
            Name="SophitiaBrownText"
-           FontSize="30"
+           FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
            Text="Sophitia - Costume 1 [Brown]"
            Tag="SophitiaBrown"
            MouseEnter="SkinPreview"/>
+        <!--RedAmySkin-->
+        <Border Grid.Row="8"
+                Grid.Column="0"
+                Name="RedAmyBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
 
-        
-        
-        
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AmySkin}"
+                          Width="20"
+                          Checked="RedAmySkin_Checked"
+                          Unchecked="RedAmySkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="8"
+           Grid.Column="1"
+           Name="RedAmyText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Amy - Costume 1 [Red]"
+           Tag="RedAmy"
+           MouseEnter="SkinPreview"/>
+        <!--CharadeP2Skin-->
+        <Border Grid.Row="9"
+                Grid.Column="0"
+                Name="CharadeP2SkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding CharadeSkin}"
+                          Width="20"
+                          Checked="CharadeP2Skin_Checked"
+                          Unchecked="CharadeP2Skin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="9"
+           Grid.Column="1"
+           Name="CharadeSkinText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Charade - Costume 1 [P2]"
+           Tag="CharadeP2"
+           MouseEnter="SkinPreview"/>
+        <!--LizardMenBlueSkin-->
+        <Border Grid.Row="10"
+                Grid.Column="0"
+                Name="LizardMenBlueSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding LizardMenSkin}"
+                          Width="20"
+                          Checked="LizardMenBlueSkin_Checked"
+                          Unchecked="LizardMenBlueSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="10"
+           Grid.Column="1"
+           Name="LizardMenBlueText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Lizard Men - Costume 1 [Blue]"
+           Tag="LizardMenBlue"
+           MouseEnter="SkinPreview"/>
+
+
+
+
         <!--Costume Preview-->
         <Image Source="{Binding SkinPreview}"
                Grid.Row="4"

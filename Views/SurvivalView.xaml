@@ -1,0 +1,410 @@
+﻿<UserControl x:Class="SC3_pnach_editor.Views.SurvivalView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SC3_pnach_editor.Views" xmlns:viewmodels="clr-namespace:SC3_pnach_editor.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
+
+
+    <Grid Height="1080" Width="1920">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/backgroundX.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="340*"/>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <MediaElement x:Name="customSound" LoadedBehavior="Play"/>
+
+        <!--Level 1-->
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                x:Name="level1"
+                Background="#00A000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="TrainingArcSurvival_Click"
+                MouseEnter="TrainingArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Training Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 2-->
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                x:Name="level2"
+                Background="#00A000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="AmateurArcSurvival_Click"
+                MouseEnter="AmateurArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Amateur Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 3-->
+        <Button Grid.Row="5"
+                Grid.Column="1"
+                x:Name="level3"
+                Background="#C0C000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="IntermediateArcSurvival_Click"
+                MouseEnter="IntermediateArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Intermediate Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 4-->
+        <Button Grid.Row="7"
+                Grid.Column="1"
+                x:Name="level4"
+                Background="#C0C000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="AdvancedArcSurvival_Click"
+                MouseEnter="AdvancedArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Advanced Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 5-->
+        <Button Grid.Row="9"
+                Grid.Column="1"
+                x:Name="level5"
+                Background="#D06000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="ExpertArcSurvival_Click"
+                MouseEnter="ExpertArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Expert Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 6-->
+        <Button Grid.Row="11"
+                Grid.Column="1"
+                x:Name="level6"
+                Background="#D06000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="MasterArcSurvival_Click"
+                MouseEnter="MasterArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Master Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 7-->
+        <Button Grid.Row="13"
+                Grid.Column="1"
+                x:Name="level7"
+                Background="#D00000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="ChampionArcSurvival_Click"
+                MouseEnter="ChampionArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Champion Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 8-->
+        <Button Grid.Row="15"
+                Grid.Column="1"
+                x:Name="level8"
+                Background="#D00000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="LegendaryArcSurvival_Click"
+                MouseEnter="LegendaryArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Legendary Arc *" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Level 9-->
+        <Button Grid.Row="1"
+                Grid.Column="3"
+                x:Name="level9"
+                Background="#D00000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="GodArcSurvival_Click"
+                MouseEnter="GodArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="God Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Special-->
+        <Button Grid.Row="3"
+                Grid.Column="3"
+                x:Name="levelx1"
+                Background="#D00000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="SpecialArcSurvival_Click"
+                MouseEnter="SpecialArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Special Arc *" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Random-->
+        <Button Grid.Row="5"
+                Grid.Column="3"
+                x:Name="levelx2"
+                Background="#AAAAAA"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="MysteriousArcSurvival_Click"
+                MouseEnter="MysteriousArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Mysterious Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Bonus-->
+        <Button Grid.Row="7"
+                Grid.Column="3"
+                x:Name="levelx3"
+                Background="#D06000"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="BonusArcSurvival_Click"
+                MouseEnter="BonusArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Bonus Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Custom-->
+        <Button Grid.Row="9"
+                Grid.Column="3"
+                x:Name="levelx4"
+                Background="#AAAAAA"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,0,0"
+                Click="CustomArcSurvival_Click"
+                MouseEnter="CustomArcSurvival_MouseEnter">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Custom Arc" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <!--Information-->
+        <!-- Container for background and text -->
+        <Grid Grid.Row="0"
+            Grid.RowSpan="18"
+            Grid.Column="5"
+            Margin="0,20,20,0">
+
+            <!-- Dark semi-transparent background -->
+            <Border Background="#AA222222"   
+                CornerRadius="6"
+            Padding="10">
+                <TextBlock Name="info"
+                   FontSize="36"
+                   TextWrapping="WrapWithOverflow"
+                   Foreground="LightBlue"
+                   Text="{Binding ModeInformation, UpdateSourceTrigger=PropertyChanged}"/>
+            </Border>
+        </Grid>
+
+        <!-- Yellow border around the same area -->
+        <Border Grid.Column="5"
+            Grid.Row="0"
+            Grid.RowSpan="18"
+            BorderThickness="6"
+            Margin="-10,10,20,-10"
+            BorderBrush="Yellow"/>
+
+        <TextBlock Name="Activationinfo"
+                   Grid.Column="5"
+                   Grid.Row="19"
+                   FontSize="30"
+                   TextWrapping="WrapWithOverflow"
+                   Foreground="DarkRed"
+                   Text="{Binding CodeInformation, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <!--Switch to Main Page-->
+        <Button Grid.Row="8"
+                Grid.Column="6"
+                Grid.RowSpan="2"
+                x:Name="MainPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToMainPage_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Return to Main Menu" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#55165E" Offset="0" />
+                    <GradientStop Color="#661E7E" Offset="0.25" />
+                    <GradientStop Color="#77269E" Offset="0.5" />
+                    <GradientStop Color="#661E7E" Offset="0.75" />
+                    <GradientStop Color="#55165E" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--Reset-->
+        <Button Grid.Row="18"
+                Grid.Column="6"
+                Grid.RowSpan="2"
+                x:Name="Reset"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="Remove_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Remove Code" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#AAAAAA" Offset="0" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <!--ErrorMessage-->
+        <TextBlock Grid.Row="16"
+           Grid.Column="2"
+           Name="ErrorText"
+           FontSize="26"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="{Binding ErrorTextMessage, UpdateSourceTrigger=PropertyChanged}"
+           Margin="40,0,40,0"/>
+
+    </Grid>
+
+
+</UserControl>

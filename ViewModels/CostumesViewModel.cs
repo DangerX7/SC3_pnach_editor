@@ -33,6 +33,9 @@ namespace SC3_pnach_editor.ViewModels
             NightmareSkin = SettingsClass.NightmareSkin;
             SiegfriedSkin = SettingsClass.SiegfriedSkin;
             SophitiaSkin = SettingsClass.SophitiaSkin;
+            AmySkin = SettingsClass.AmySkin;
+            CharadeSkin = SettingsClass.CharadeSkin;
+            LizardMenSkin = SettingsClass.LizardMenSkin;
         }
 
 
@@ -203,6 +206,54 @@ namespace SC3_pnach_editor.ViewModels
                     _sophitiaSkin = value;
                     SettingsClass.SophitiaSkin = _sophitiaSkin;
                     RaisePropertyChanged("SophitiaSkin");
+                }
+            }
+        }
+
+        private string _amySkin;
+
+        public string AmySkin
+        {
+            get { return _amySkin; }
+            set
+            {
+                if (_amySkin != value)
+                {
+                    _amySkin = value;
+                    SettingsClass.AmySkin = _amySkin;
+                    RaisePropertyChanged("AmySkin");
+                }
+            }
+        }
+
+        private string _charadeSkin;
+
+        public string CharadeSkin
+        {
+            get { return _charadeSkin; }
+            set
+            {
+                if (_charadeSkin != value)
+                {
+                    _charadeSkin = value;
+                    SettingsClass.CharadeSkin = _charadeSkin;
+                    RaisePropertyChanged("CharadeSkin");
+                }
+            }
+        }
+
+        private string _lizardMenSkin;
+
+        public string LizardMenSkin
+        {
+            get { return _lizardMenSkin; }
+            set
+            {
+                if (_lizardMenSkin != value)
+                {
+                    _lizardMenSkin = value;
+                    SettingsClass.LizardMenSkin = _lizardMenSkin;
+                    RaisePropertyChanged("LizardMenSkin");
                 }
             }
         }

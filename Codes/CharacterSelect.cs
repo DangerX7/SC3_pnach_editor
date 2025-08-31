@@ -10,7 +10,7 @@ namespace SC3_pnach_editor.Codes
 {
     public class CharacterSelect
     {
-        public static string GetCharacterPnachCode(bool liteModeOn)
+        public static string GetCharacterPnachCode(bool liteModeOn, bool restrictP2, bool restrictP1)
         {
             string charCode = "";
 
@@ -19,12 +19,43 @@ namespace SC3_pnach_editor.Codes
             if ((SettingsClass.UseSetCharacters && !liteModeOn) || liteModeOn)//main menu char set block
             {
                 string player1Char = "";
-                if (SettingsClass.CharacterP1 != "none")
+                if (SettingsClass.CharacterP1 != "none" && SettingsClass.CharacterP1 != "" && restrictP1 != true)
                 {
                     if (SettingsClass.CharacterP1 != "FF")
                     {
+                        string voicePiece1 = "";
+                        if (SettingsClass.VoiceP1 != null && SettingsClass.VoiceP1 != "")
+                        {
+                            voicePiece1 = Environment.NewLine + "patch=1,EE,004B4872,extended," + SettingsClass.VoiceP1 + " //Voice";
+                            if (SettingsClass.CharacterP1 == "BF" && SettingsClass.ModelP1 == "01")
+                            {
+                                //Add Riese second voice
+                                voicePiece1 = voicePiece1 +
+                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4608 //Second Voice";
+                            }
+                            if (SettingsClass.CharacterP1 == "C0" && SettingsClass.ModelP1 == "01")
+                            {
+                                //Add Leraje second voice
+                                voicePiece1 = voicePiece1 +
+                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4540 //Second Voice";
+                            }
+                            if (SettingsClass.CharacterP1 == "E8" && SettingsClass.ModelP1 == "00")
+                            {
+                                //Add Heal-Do second voice
+                                voicePiece1 = voicePiece1 +
+                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F45E0 //Second Voice";
+                            }
+                            if (SettingsClass.CharacterP1 == "30" && SettingsClass.ModelP1 == "00")
+                            {
+                                //Add Amy special second voice
+                                voicePiece1 = voicePiece1 +
+                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4518 //Second Voice";
+                            }
+                        }
+
                         player1Char = "patch=1,EE,004B4860,extended," + SettingsClass.CharacterP1 + " //Character" + Environment.NewLine +
-                                      "patch=1,EE,004B486E,extended," + SettingsClass.ModelP1 + " //Model";
+                                      "patch=1,EE,004B486E,extended," + SettingsClass.ModelP1 + " //Model" +
+                                      voicePiece1;
                     }
                     else//for bosses
                     {
@@ -168,12 +199,43 @@ namespace SC3_pnach_editor.Codes
                     }
                 }
                 string player2Char = "";
-                if (SettingsClass.CharacterP2 != "none")
+                if (SettingsClass.CharacterP2 != "none" && SettingsClass.CharacterP2 != "" && restrictP2 != true)
                 {
                     if (SettingsClass.CharacterP2 != "FF")
                     {
+                        string voicePiece2 = "";
+                        if (SettingsClass.VoiceP2 != null && SettingsClass.VoiceP2 != "")
+                        {
+                            voicePiece2 = Environment.NewLine + "patch=1,EE,004D1FF2,extended," + SettingsClass.VoiceP2 + " //Voice";
+                            if (SettingsClass.CharacterP2 == "BF" && SettingsClass.ModelP2 == "01")
+                            {
+                                //Add Riese second voice
+                                voicePiece2 = voicePiece2 +
+                                    Environment.NewLine + "patch=1,EE,204D2008,extended,004F4608 //Second Voice";
+                            }
+                            if (SettingsClass.CharacterP2 == "C0" && SettingsClass.ModelP2 == "01")
+                            {
+                                //Add Leraje second voice
+                                voicePiece2 = voicePiece2 +
+                                    Environment.NewLine + "patch=1,EE,204D2008,extended,004F4540 //Second Voice";
+                            }
+                            if (SettingsClass.CharacterP2 == "E8" && SettingsClass.ModelP2 == "00")
+                            {
+                                //Add Heal-Do second voice
+                                voicePiece2 = voicePiece2 +
+                                    Environment.NewLine + "patch=1,EE,204D2008,extended,004F45E0 //Second Voice";
+                            }
+                            if (SettingsClass.CharacterP2 == "30" && SettingsClass.ModelP2 == "00")
+                            {
+                                //Add Amy special second voice
+                                voicePiece2 = voicePiece2 +
+                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4518 //Second Voice";
+                            }
+                        }
+
                         player2Char = "patch=1,EE,004D1FE0,extended," + SettingsClass.CharacterP2 + " //Character2" + Environment.NewLine +
-                                      "patch=1,EE,004D1FEE,extended," + SettingsClass.ModelP2 + " //Model2";
+                                      "patch=1,EE,004D1FEE,extended," + SettingsClass.ModelP2 + " //Model2" +
+                                      voicePiece2;
                     }
                     else//for bosses
                     {
@@ -323,8 +385,10 @@ namespace SC3_pnach_editor.Codes
 
             if (liteModeOn)
             {
-                //add inferno code
-                charCode += "" + Environment.NewLine +
+                if (restrictP2 != true)
+                {
+                    //add inferno code
+                    charCode += "" + Environment.NewLine +
                             "patch=1,EE,D04B4860,extended,0000002B //If P1 is Inferno" + Environment.NewLine +
                             "patch=1,EE,204B4AF4,extended,00020000 //Default Defense P1" + Environment.NewLine +
 
@@ -341,6 +405,8 @@ namespace SC3_pnach_editor.Codes
                             "patch=1,EE,D04B486E,extended,01000001 //If P1 is Yotory model" + Environment.NewLine +
                             "patch=1,EE,004B4862,extended,01 //Yotory plays like Mitsurugi" + Environment.NewLine +
 
+                            "patch=1,EE,D04B4860,extended,00000031 //If P1 is Collosus" + Environment.NewLine +
+                            "patch=1,EE,1051F2CC,extended,0002 //Change AI to Collosus" + Environment.NewLine +
 
                             "patch=1,EE,D04D1FE0,extended,0000002B //If P2 is Inferno" + Environment.NewLine +
                             "patch=1,EE,204D2274,extended,00020000 //Default Defense P2" + Environment.NewLine +
@@ -356,15 +422,41 @@ namespace SC3_pnach_editor.Codes
 
                             "patch=1,EE,D04D1FE0,extended,020000EF //If P2 is Yotory character" + Environment.NewLine +
                             "patch=1,EE,D04D1FEE,extended,01000001 //If P2 is Yotory model" + Environment.NewLine +
-                            "patch=1,EE,004D1FE2,extended,01 //Yotory plays like Mitsurugi";
+                            "patch=1,EE,004D1FE2,extended,01 //Yotory plays like Mitsurugi" + Environment.NewLine +
 
-
-                //add enemy control code
-                SettingsClass.LoadData();
-                int controlIndex = SettingsClass.OpponentControl;
-                if (controlIndex > 0)
+                            "patch=1,EE,D04D1FE0,extended,00000031 //If P2 is Collosus" + Environment.NewLine +
+                            "patch=1,EE,10520D5C,extended,0002 //Change AI to Collosus" + Environment.NewLine;
+                }
+                else
                 {
-                    List<string> OpponentControlCombo = new List<string>
+                    //only add for P1
+                    charCode += "" + Environment.NewLine +
+                            "patch=1,EE,D04B4860,extended,0000002B //If P1 is Inferno" + Environment.NewLine +
+                            "patch=1,EE,204B4AF4,extended,00020000 //Default Defense P1" + Environment.NewLine +
+
+                            "patch=1,EE,D04B4860,extended,0000002B //If P1 is Inferno" + Environment.NewLine +
+                            "patch=1,EE,204B4C30,extended,40000000 //Attack Player 1" + Environment.NewLine +
+
+                            "patch=1,EE,D04B4860,extended,0000002B //If P1 is Inferno" + Environment.NewLine +
+                            "patch=1,EE,004B4862,extended,14 //Inferno plays like Cervantes" + Environment.NewLine +
+
+                            "patch=1,EE,D04B4860,extended,0000002B //If P1 is Inferno" + Environment.NewLine +
+                            "patch=1,EE,004B4896,extended,05 //Inferno have Soul Edge" + Environment.NewLine +
+
+                            "patch=1,EE,D04B4860,extended,020000EF //If P1 is Yotory character" + Environment.NewLine +
+                            "patch=1,EE,D04B486E,extended,01000001 //If P1 is Yotory model" + Environment.NewLine +
+                            "patch=1,EE,004B4862,extended,01 //Yotory plays like Mitsurugi";
+                }
+
+
+                if (restrictP2 != true)
+                {
+                    //add enemy control code
+                    SettingsClass.LoadData();
+                    int controlIndex = SettingsClass.OpponentControl;
+                    if (controlIndex > 0)
+                    {
+                        List<string> OpponentControlCombo = new List<string>
                     {
                         "No Change",
                         "Player 2",
@@ -376,63 +468,64 @@ namespace SC3_pnach_editor.Codes
                         "Extremely Hard"
                     };
 
-                    string opponentControl = OpponentControlCombo[SettingsClass.OpponentControl];
-                    string opponentControlCode = "";
-                    switch (opponentControl)
-                    {
-                        case "Player 2":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0001 //opponent control" + Environment.NewLine +
-                            "";
-                            break;
-                        case "Easy":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                            "patch=1,EE,10520D54,extended,0000 //opponent AI" + Environment.NewLine +
-                            "";
-                            break;
-                        case "Normal":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                            "patch=1,EE,10520D54,extended,0001 //opponent AI" + Environment.NewLine +
-                            "";
-                            break;
-                        case "Hard":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                            "patch=1,EE,10520D54,extended,0002 //opponent AI" + Environment.NewLine +
-                            "";
-                            break;
-                        case "Very Hard":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                            "patch=1,EE,10520D54,extended,0003 //opponent AI" + Environment.NewLine +
-                            "";
-                            break;
-                        case "Ultra Hard":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                            "patch=1,EE,10520D54,extended,0004 //opponent AI" + Environment.NewLine +
-                            "";
-                            break;
-                        case "Extremely Hard":
-                            opponentControlCode = "" + Environment.NewLine +
-                            "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
-                            "patch=1,EE,10520D54,extended,0005 //opponent AI" + Environment.NewLine +
-                            "";
-                            break;
+                        string opponentControl = OpponentControlCombo[SettingsClass.OpponentControl];
+                        string opponentControlCode = "";
+                        switch (opponentControl)
+                        {
+                            case "Player 2":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0001 //opponent control" + Environment.NewLine +
+                                "";
+                                break;
+                            case "Easy":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
+                                "patch=1,EE,10520D54,extended,0000 //opponent AI" + Environment.NewLine +
+                                "";
+                                break;
+                            case "Normal":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
+                                "patch=1,EE,10520D54,extended,0001 //opponent AI" + Environment.NewLine +
+                                "";
+                                break;
+                            case "Hard":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
+                                "patch=1,EE,10520D54,extended,0002 //opponent AI" + Environment.NewLine +
+                                "";
+                                break;
+                            case "Very Hard":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
+                                "patch=1,EE,10520D54,extended,0003 //opponent AI" + Environment.NewLine +
+                                "";
+                                break;
+                            case "Ultra Hard":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
+                                "patch=1,EE,10520D54,extended,0004 //opponent AI" + Environment.NewLine +
+                                "";
+                                break;
+                            case "Extremely Hard":
+                                opponentControlCode = "" + Environment.NewLine +
+                                "patch=1,EE,104D1FD8,extended,0002 //opponent control" + Environment.NewLine +
+                                "patch=1,EE,10520D54,extended,0005 //opponent AI" + Environment.NewLine +
+                                "";
+                                break;
+                        }
+
+                        charCode += "" + Environment.NewLine + opponentControlCode;
+
                     }
 
-                    charCode += "" + Environment.NewLine + opponentControlCode;
 
+                    //SettingsClass.OpponentControl = OpponentControlCombo.SelectedIndex;
+                    //string opponentControl = Convert.ToString(OpponentControlCombo.SelectedValue);
                 }
-
-
-                //SettingsClass.OpponentControl = OpponentControlCombo.SelectedIndex;
-                //string opponentControl = Convert.ToString(OpponentControlCombo.SelectedValue);
             }
 
-            if (SettingsClass.StageValue != "XX" && !SettingsClass.StageValue.IsNullOrEmpty())
+            if (SettingsClass.StageValue != "XX" && !SettingsClass.StageValue.IsNullOrEmpty() && restrictP2 != true)
             {
                 var stageCode = "" + Environment.NewLine +
                             "patch=1,EE,004ED64C,extended,000000" + SettingsClass.StageValue + " //Stage code (unstable)" + Environment.NewLine +

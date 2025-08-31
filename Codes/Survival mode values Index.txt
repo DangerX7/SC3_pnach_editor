@@ -1,51 +1,51 @@
 -------------------stageLevel--------------------
-
-00 - Highlands (Earthquake in Vs. Special)
-01 - Egyptian Temple
-02 - Clock Tower
-03 - Eurydice Shrine
-04 - Ostrheinsburg Castle - Battlement
-05 - Water Mill Valley
-06 - Battle in the Strait
-07 - Valentine Mansion
-08 - Ling-Sheng Su Temple Ruin
-09 - Lakeside Coliseum
-0A - Kunpaetku Shrine Ruins
-0B - Indian Port
-0C - Lost Cathedral
-0D - Secret Money Pit
-0E - Underground Buddhist Sanctum
-0F - Proving Grounds
-10 - Grand Labyrinth
-11 - Sacred Mt. Fuji
-12 - Lost Cathedral - Ruin
-13 - Pirate Raid
-14 - Jyurakudai Villa
-15 - Romanian Valley - Castle Siege
-16 - Lotus Garden
-17 - Old Toledo - Burning Gallery
-18 - Silk Road Ruin
-19 - Chaos - Spiritual Realm
-1A - Castle Room (Shop, Olcadan ending)
-1B - Azuchi-Momoyama road (Mitsurugi/Taki ending)
-1C - Castle Gate (Nightmare/Lizardman ending)
-1D - Field (Kilik/Xianghua ending)
-1E - Bridge (Talim/Seong Mi-na ending)
-1F - Forest (Tira/Raphael ending)
-20 - Sacred Money Pit (Voldo ending)
-21 - Sailing boat (Rock ending) <Camera!>
-22 - Badlands (Astaroth ending)
-23 - Pirate Raid (Cervantes ending) <Camera!>
-24 - Library (Zasalamel/Raphael ending)
-25 - Eurydice Shrine Gallery (Cassandra/Sophitia ending)
-26 - Blacksmith / Sophitia's house (Cassandra/Tira ending) <Camera!>
-27 - Soul Edge in Lost Cathedral (Ending) <Crash!>
-28 - Indian Port (Ending) <Crash!>
-29 - Lakeside Coliseum (Ending) <Crash!>
-30 - Character selection background
-31 - Main menu background
-32 - Soul Calibur III logo
-33 - Character creation background
+level         music
+0000            00 - Highlands (Earthquake in Vs. Special)
+0001 0101 0201  01 - Egyptian Temple
+0002            02 - Clock Tower
+0003            03 - Eurydice Shrine
+0004            04 - Ostrheinsburg Castle - Battlement
+0005            05 - Water Mill Valley
+0006            06 - Battle in the Strait
+0007            07 - Valentine Mansion
+0008            08 - Ling-Sheng Su Temple Ruin
+0009 0109       09 - Lakeside Coliseum
+000A            0A - Kunpaetku Shrine Ruins
+000B            0B - Indian Port
+000C            0C - Lost Cathedral
+000D            0D - Secret Money Pit
+000E            0E - Underground Buddhist Sanctum
+000F            0F - Proving Grounds
+0010 0110 0210  10 - Grand Labyrinth
+0011            11 - Sacred Mt. Fuji
+0012            12 - Lost Cathedral - Ruin
+0013            13 - Pirate Raid
+0014            14 - Jyurakudai Villa
+0015            15 - Romanian Valley - Castle Siege
+0016            16 - Lotus Garden
+0017            17 - Old Toledo - Burning Gallery
+0018            18 - Silk Road Ruin
+0019            19 - Chaos - Spiritual Realm
+001A            ?? - Castle Room (Shop, Olcadan ending)
+001B            ?? - Azuchi-Momoyama road (Mitsurugi/Taki ending)
+001C            ?? - Castle Gate (Nightmare/Lizardman ending)
+001D            ?? - Field (Kilik/Xianghua ending)
+001E            ?? - Bridge (Talim/Seong Mi-na ending)
+001F            ?? - Forest (Tira/Raphael ending)
+0020            ?? - Sacred Money Pit (Voldo ending)
+0021            ?? - Sailing boat (Rock ending) <Camera!>
+0022            ?? - Badlands (Astaroth ending)
+0023            ?? - Pirate Raid (Cervantes ending) <Camera!>
+0024            ?? - Library (Zasalamel/Raphael ending)
+0025            ?? - Eurydice Shrine Gallery (Cassandra/Sophitia ending)
+0026            ?? - Blacksmith / Sophitia's house (Cassandra/Tira ending) <Camera!>
+0027            ?? - Soul Edge in Lost Cathedral (Ending) <Crash!>
+0028            ?? - Indian Port (Ending) <Crash!>
+0029            ?? - Lakeside Coliseum (Ending) <Crash!>
+0030            ?? - Character selection background
+0031            ?? - Main menu background
+0032            ?? - Soul Calibur III logo
+0033            ?? - Character creation background
 
 -------------------fightingStyle----------------------
 
@@ -99,8 +99,8 @@ NEED TO GET DATA FOR CHARADE
 2E - Shadow Master
 31 - Colossus
 
--------------------costume & model----------------------
-                 | C |M1|M2|M3|M4 [fighting style]
+-------------------model costume and fighting style----------------------
+                 | M |C1|C2|C3|C4 [fighting style]
 Mitsurugi         01 -00,01,08,09
 Seong Mi-na       02 -00,01,08,09
 Taki              03 -00,01,08,09
@@ -120,37 +120,37 @@ Cervantes         14 -00,01,08,09
 Raphael           15 -00,01,08,09
 Talim             16 -00,01,08,09
 Cassandra         17 -00,01,08,09
-Yun-Seong         18 -00,01,08,09
+Yun-Seong         1A -00,01,08,09
 Setsuka           22 -00,01,08,09
 Tira              23 -00,01,08,09
 Zasalamel         24 -00,01,08,09 | 35 - 00
 Olcadan           25 -00,01,08,09 [copycat standard]
-Abyss             26 -00,01,08,09
+Abyss             26 -00,01,08,09 {2 weapons}
 
-Amy               30 -00,01
-Miser             41 -00,01  
-Greed             42 -00,01
-Arthur            43 -00,01
-Hwang             44 -00,01
-Luna              45 -00,01 | E1 - 02
-Valeria           46 -00,01
-Hualin            47 -00,01
-Giradot           48 -00,01
-Demuth            4A -00,01
-Aurelia           4B -00,01
-Chester           4C -00,01 | E4 - 00
-Strife            4D -00,01
-Abelia            4E -00,01 | E0 - 02
-Lynette           4F -00,01
-Li Long           51 -00,01
-Revenant          54 -00,01
+Amy               30 -00,01                 {6 weapons}
+Miser             41 -00,01                 {6 weapons}
+Greed             42 -00,01                 {7 weapons}
+Arthur            43 -00,01                 {7 weapons}
+Hwang             44 -00,01                 {7 weapons}
+Luna              45 -00,01 | E1 - 02       {8 weapons}
+Valeria           46 -00,01                 {7 weapons}
+Hualin            47 -00,01                 {6 weapons}
+Girardot          48 -00,01                 {8 weapons}
+Demuth            4A -00,01                 {6 weapons}
+Aurelia           4B -00,01                 {6 weapons}
+Chester           4C -00,01 | E4 - 00       {6 weapons}
+Strife            4D -00,01                 {8 weapons}
+Abelia            4E -00,01 | E0 - 02       {7 weapons}
+Lynette           4F -00,01                 {6 weapons}
+Li Long           51 -00,01                 {6 weapons}
+Revenant          54 -00,01                 {7 weapons}
 
 Lizard Men        1E-00 [0E]
-Night Terror      27-00
-Charade           NEEDS TO BE CHECKED
+Night Terror      27-00 {1 weapon}
+Charade           28,29,2A - 00 [use the same] (special)
 Inferno           2B-00 [14]
 Shadow Master     2E-00 [copycat bonus]
-Colossus          31-00
+Colossus          31-00 {1 weapon}
 Berserker         81-00 [48]
 Samurai 1         84-00 [43]
 Samurai 2         84-01 [43]
@@ -250,14 +250,119 @@ Maletta F         A1-06 [41] - C1-06 [30] +2
 Rebel F           A1-07 [41] - C1-07 [30] +2
 Tina              E9-02 [42]
 Aege              E7-00,01,02 [4D]
-HealDo            E8-00,01,02 [54]
-Elua              E8-00,01    [42]
+Heal-Do           E8-00,01,02 [54]
+Elua              E9-00,01    [42]
 Lupi              EA-00,01,02 [48]
 Roin              EB-00,01    [48]
 Kierkess          EC-00,01    [46]      
 Hyle              ED-00,01    [4E]         
-Mooncalf          EE-00,01    [45]       
+Mooncalf          EE-00       [45]       
 Ende              EF-00       [43]        
-Yotory            EF-01       [01]    
+Yotory            EF-01       [01]   
 
-Created char      62,63,64,65,66,67,68,69,6A,6B - 0 [?]
+Girl from COTS cutscene   E0-03 [4E]
+Guy from COTS cutscene    E0-07 [4E]
+Maid ???                  E1-07 [45]
+
+Luca      missing
+Yuilin    missing
+
+Created char      60-6F - 0 [??] //incomplete code
+
+-----------Voices-------------------------
+
+104B4872 P1 
+104D1FF2 P2
+
+Mitsurugi         0001
+Seong Mi-na       0002
+Taki              0003
+Maxi              0004
+Voldo             0005
+Sophitia          0006
+Siegfried         0007
+Rock              0008
+Ivy               000B
+Kilik             000C
+Xianghua          000D
+Lizardman         000E
+Yoshimitsu        000F
+Nightmare         0011
+Astaroth          0012
+Cervantes         0014
+Raphael           0015
+Talim             0016
+Cassandra         0017
+Yun-Seong         001A
+Setsuka           0022
+Tira              0023
+Zasalamel         0024
+Olcadan           0025
+Abyss             0026
+
+Amy               0030
+Miser             0071
+Greed             006F
+Arthur            0068
+Hwang             0044
+Luna              0075
+Valeria           0046
+Hualin            0047
+Girardot          0068
+Demuth            006D
+Aurelia           0079
+Chester           0063
+Strife            0067
+Abelia            0070
+Lynette           004F
+Li Long           0051
+Revenant          0013
+
+Lizard Men        ????
+Night Terror      0027
+Charade           0013
+Inferno           0013
+Shadow Master     0013
+Colossus          FFFF
+Keres             0013
+Berserker         0065
+Assassin          0073
+
+Plus  + Sun  Male  60,64,68,6C
+Minus + Sun  Male  61,65,69,6D
+Plus  + Moon Male  62,66,6A,6E
+Minus + Moon Male  63,67,6B,6F
+
+Plus  + Sun  Female  70,74,78,7C
+Minus + Sun  Female  71,75,79,7D
+Plus  + Moon Female  72,76,7A,7E
+Minus + Moon Female  73,77,7B,7F
+
+Second Voice
+204B4888 P1 
+204D2008 P2
+
+Amy         004F43B0
+Miser       004F4978
+Greed       004F49A0
+Arthur      004F49C8
+Hwang       004F49F0 [Required]
+Luna        004F4A18
+Valeria     004F4A40 [Required]
+Hualin      004F4A68 [Required]
+Girardot    004F4A90
+Demuth      004F4AB8
+Aurelia     004F4AE0
+Chester     004F4B08
+Strife      004F4B30
+Abelia      004F4B58
+Lynette     004F4B80 [Required]
+Li Long     004F4BA8 [Required]
+Revenant    004F4BD0
+
+Riese allied unit  004F45E0 [70]
+Leraje allied unit  004F4540 [64]
+Heal-Do allied unit  004F4608 [71]
+
+Berserker   004F3EB0 (They are still speaking)
+Assassin    004F4180 (They are still speaking)

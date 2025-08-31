@@ -302,7 +302,7 @@
                MouseEnter="MouseEnter"
                MouseLeftButtonDown="MouseLeftClick"
                MouseRightButtonDown="MouseRightClick"/>
-        <Image x:Name="GiradotValues" 
+        <Image x:Name="GirardotValues" 
                Grid.Row="4"
                Grid.Column="12"
                MouseWheel="ImageControl_MouseWheel"
@@ -1438,14 +1438,20 @@
                MouseEnter="MouseEnter"
                MouseLeftButtonDown="MouseLeftClick"
                MouseRightButtonDown="MouseRightClick"/>
+        <Image x:Name="ExtraValues" 
+               Grid.Row="16"
+               Grid.Column="15"
+               MouseWheel="ImageControl_MouseWheel"
+               MouseEnter="MouseEnter"
+               MouseLeftButtonDown="MouseLeftClick"
+               MouseRightButtonDown="MouseRightClick"/>
         <Image x:Name="TinaValues" 
                Grid.Row="17"
                Grid.Column="4"
                MouseWheel="ImageControl_MouseWheel"
                MouseEnter="MouseEnter"
                MouseLeftButtonDown="MouseLeftClick"
-               MouseRightButtonDown="MouseRightClick"
-               Visibility="Hidden"/>
+               MouseRightButtonDown="MouseRightClick"/>
         <Image x:Name="AegeValues" 
                Grid.Row="17"
                Grid.Column="5"
@@ -1518,13 +1524,13 @@
                MouseRightButtonDown="MouseRightClick"/>
 
         <Image x:Name="RandomValues" 
-               Grid.Row="16"
-               Grid.RowSpan="2"
+               Grid.Row="15"
+               Grid.RowSpan="3"
                Grid.Column="16"
-               Grid.ColumnSpan="2"
+               Grid.ColumnSpan="3"
                MouseEnter="MouseEnter"
                MouseLeftButtonDown="MouseLeftClick"
-               MouseRightButtonDown="MouseRightClick"/>
+               MouseRightButtonDown="MouseRightClick" Margin="30,29,29,28"/>
         <Image x:Name="BossValues" 
                Grid.Row="16"
                Grid.Column="2"

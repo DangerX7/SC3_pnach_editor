@@ -1,0 +1,1478 @@
+﻿<UserControl x:Class="SC3_pnach_editor.Views.SpecialEffectsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SC3_pnach_editor.Views" xmlns:viewmodels="clr-namespace:SC3_pnach_editor.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
+
+
+    <Grid Height="1080" Width="1920">
+
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/backgroundX.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="200*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <MediaElement x:Name="customSound" LoadedBehavior="Play"/>
+
+        <TextBlock Grid.Row="0"
+           Grid.Column="0"
+           FontSize="50"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="P1"
+           Margin="14,0,11,0"/>
+        <TextBlock Grid.Row="0"
+           Grid.Column="1"
+           FontSize="50"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="P2"
+           Margin="14,0,1,0"/>
+        <TextBlock Grid.Row="0"
+           Grid.Column="3"
+           FontSize="50"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="P1"
+           Margin="14,0,11,0"/>
+        <TextBlock Grid.Row="0"
+           Grid.Column="4"
+           FontSize="50"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="P2"
+           Margin="14,0,1,0"/>
+        <TextBlock Grid.Row="0"
+           Grid.Column="6"
+           FontSize="50"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="P1"
+           Margin="14,0,11,0"/>
+        <TextBlock Grid.Row="0"
+           Grid.Column="7"
+           FontSize="50"
+           TextWrapping="WrapWithOverflow"
+           Foreground="Red"
+           Text="P2"
+           Margin="14,0,1,0"/>
+
+        <!--All Guard Break-->
+        <Border Grid.Row="1"
+                Grid.Column="0"
+                Name="AllGuardBreakP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AllGuardBreakP1}"
+                          Width="16"
+                          x:Name="AllGuardBreakP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.Column="1"
+                Name="AllGuardBreakP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AllGuardBreakP2}"
+                          Width="16"
+                          x:Name="AllGuardBreakP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="1"
+           Grid.Column="2"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="All Guard Break"
+           Tag="AllGuardBreak"
+           MouseEnter="EffectPreview"/>
+
+        <!--All Unblockable-->
+        <Border Grid.Row="2"
+                Grid.Column="0"
+                Name="AllUnblockableP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AllUnblockableP1}"
+                          Width="16"
+                          x:Name="AllUnblockableP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="2"
+                Grid.Column="1"
+                Name="AllUnblockableP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AllUnblockableP2}"
+                          Width="16"
+                          x:Name="AllUnblockableP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="2"
+           Grid.Column="2"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="All Unblockable"
+           Tag="AllUnblockable"
+           MouseEnter="EffectPreview"/>
+
+        <!--Paralysis-->
+        <Border Grid.Row="3"
+                Grid.Column="0"
+                Name="ParalysisP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding ParalysisP1}"
+                          Width="16"
+                          x:Name="ParalysisP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="3"
+                Grid.Column="1"
+                Name="ParalysisP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding ParalysisP2}"
+                          Width="16"
+                          x:Name="ParalysisP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="3"
+           Grid.Column="2"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Paralysis"
+           Tag="Paralysis"
+           MouseEnter="EffectPreview"/>
+
+        <!--Down Lose-->
+        <Border Grid.Row="4"
+                Grid.Column="0"
+                Name="DownLoseP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding DownLoseP1}"
+                          Width="16"
+                          x:Name="DownLoseP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="4"
+                Grid.Column="1"
+                Name="DownLoseP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding DownLoseP2}"
+                          Width="16"
+                          x:Name="DownLoseP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="4"
+           Grid.Column="2"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Down Lose"
+           Tag="DownLose"
+           MouseEnter="EffectPreview"/>
+
+        <!--Minus Guard-->
+        <Border Grid.Row="1"
+                Grid.Column="3"
+                Name="MinusGuardP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding MinusGuardP1}"
+                          Width="16"
+                          x:Name="MinusGuardP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.Column="4"
+                Name="MinusGuardP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding MinusGuardP2}"
+                          Width="16"
+                          x:Name="MinusGuardP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="1"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Minus Guard"
+           Tag="MinusGuard"
+           MouseEnter="EffectPreview"/>
+
+        <!--Poison-->
+        <Border Grid.Row="2"
+                Grid.Column="3"
+                Name="PoisonP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding PoisonP1}"
+                          Width="16"
+                          x:Name="PoisonP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="2"
+                Grid.Column="4"
+                Name="PoisonP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding PoisonP2}"
+                          Width="16"
+                          x:Name="PoisonP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="2"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="DarkRed"
+           Text="Poison"
+           Tag="Poison"
+           MouseEnter="EffectPreview"/>
+
+        <!--Super Poison-->
+        <Border Grid.Row="3"
+                Grid.Column="3"
+                Name="SuperPoisonP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SuperPoisonP1}"
+                          Width="16"
+                          x:Name="SuperPoisonP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="3"
+                Grid.Column="4"
+                Name="SuperPoisonP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SuperPoisonP2}"
+                          Width="16"
+                          x:Name="SuperPoisonP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="3"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="DarkRed"
+           Text="Super Poison"
+           Tag="SuperPoison"
+           MouseEnter="EffectPreview"/>
+
+        <!--Mega Poison-->
+        <Border Grid.Row="4"
+                Grid.Column="3"
+                Name="MegaPoisonP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding MegaPoisonP1}"
+                          Width="16"
+                          x:Name="MegaPoisonP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="4"
+                Grid.Column="4"
+                Name="MegaPoisonP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding MegaPoisonP2}"
+                          Width="16"
+                          x:Name="MegaPoisonP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="4"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="DarkRed"
+           Text="Mega Poison"
+           Tag="MegaPoison"
+           MouseEnter="EffectPreview"/>
+
+        <!--Cure-->
+        <Border Grid.Row="5"
+                Grid.Column="3"
+                Name="CureP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding CureP1}"
+                          Width="16"
+                          x:Name="CureP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="5"
+                Grid.Column="4"
+                Name="CureP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding CureP2}"
+                          Width="16"
+                          x:Name="CureP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="5"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Cure"
+           Tag="Cure"
+           MouseEnter="EffectPreview"/>
+
+        <!--Super Cure-->
+        <Border Grid.Row="6"
+                Grid.Column="3"
+                Name="SuperCureP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SuperCureP1}"
+                          Width="16"
+                          x:Name="SuperCureP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="6"
+                Grid.Column="4"
+                Name="SuperCureP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SuperCureP2}"
+                          Width="16"
+                          x:Name="SuperCureP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="6"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Super Cure"
+           Tag="SuperCure"
+           MouseEnter="EffectPreview"/>
+
+        <!--Mega Cure-->
+        <Border Grid.Row="7"
+                Grid.Column="3"
+                Name="MegaCureP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding MegaCureP1}"
+                          Width="16"
+                          x:Name="MegaCureP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="7"
+                Grid.Column="4"
+                Name="MegaCureP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding MegaCureP2}"
+                          Width="16"
+                          x:Name="MegaCureP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="7"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Mega Cure"
+           Tag="MegaCure"
+           MouseEnter="EffectPreview"/>
+
+        <!--Defense Down-->
+        <Border Grid.Row="8"
+                Grid.Column="3"
+                Name="DefenseDownP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding DefenseDownP1}"
+                          Width="16"
+                          x:Name="DefenseDownP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="8"
+                Grid.Column="4"
+                Name="DefenseDownP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding DefenseDownP2}"
+                          Width="16"
+                          x:Name="DefenseDownP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="8"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Defense Down"
+           Tag="DefenseDown"
+           MouseEnter="EffectPreview"/>
+
+        <!--Defense Up-->
+        <Border Grid.Row="9"
+                Grid.Column="3"
+                Name="DefenseUpP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding DefenseUpP1}"
+                          Width="16"
+                          x:Name="DefenseUpP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="9"
+                Grid.Column="4"
+                Name="DefenseUpP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding DefenseUpP2}"
+                          Width="16"
+                          x:Name="DefenseUpP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="9"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Defense Up"
+           Tag="DefenseUp"
+           MouseEnter="EffectPreview"/>
+
+        <!--Super Defense-->
+        <Border Grid.Row="10"
+                Grid.Column="3"
+                Name="SuperDefenseP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SuperDefenseP1}"
+                          Width="16"
+                          x:Name="SuperDefenseP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="10"
+                Grid.Column="4"
+                Name="SuperDefenseP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SuperDefenseP2}"
+                          Width="16"
+                          x:Name="SuperDefenseP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="10"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Super Defense"
+           Tag="SuperDefense"
+           MouseEnter="EffectPreview"/>
+
+        <!--Glue-->
+        <Border Grid.Row="1"
+                Grid.Column="6"
+                Name="GlueP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding GlueP1}"
+                          Width="16"
+                          x:Name="GlueP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="1"
+                Grid.Column="7"
+                Name="GlueP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding GlueP2}"
+                          Width="16"
+                          x:Name="GlueP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="1"
+           Grid.Column="8"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Glue"
+           Tag="Glue"
+           MouseEnter="EffectPreview"/>
+
+        <!--Separate-->
+        <Border Grid.Row="2"
+                Grid.Column="6"
+                Name="SeparateP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SeparateP1}"
+                          Width="16"
+                          x:Name="SeparateP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="2"
+                Grid.Column="7"
+                Name="SeparateP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SeparateP2}"
+                          Width="16"
+                          x:Name="SeparateP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="2"
+           Grid.Column="8"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Separate"
+           Tag="Separate"
+           MouseEnter="EffectPreview"/>
+
+        <!--Ice-->
+        <Border Grid.Row="3"
+                Grid.Column="6"
+                Name="IceP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding IceP1}"
+                          Width="16"
+                          x:Name="IceP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="3"
+                Grid.Column="7"
+                Name="IceP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding IceP2}"
+                          Width="16"
+                          x:Name="IceP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="3"
+           Grid.Column="8"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Ice"
+           Tag="Ice"
+           MouseEnter="EffectPreview"/>
+
+        <!--Whirlwind-->
+        <Border Grid.Row="4"
+                Grid.Column="6"
+                Name="WhirlwindP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding WhirlwindP1}"
+                          Width="16"
+                          x:Name="WhirlwindP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="4"
+                Grid.Column="7"
+                Name="WhirlwindP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding WhirlwindP2}"
+                          Width="16"
+                          x:Name="WhirlwindP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="4"
+           Grid.Column="8"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Whirlwind"
+           Tag="Whirlwind"
+           MouseEnter="EffectPreview"/>
+
+        <!--Aerial Wind-->
+        <Border Grid.Row="5"
+                Grid.Column="6"
+                Name="AerialWindP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AerialWindP1}"
+                          Width="16"
+                          x:Name="AerialWindP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="5"
+                Grid.Column="7"
+                Name="AerialWindP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding AerialWindP2}"
+                          Width="16"
+                          x:Name="AerialWindP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="5"
+           Grid.Column="8"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="DarkRed"
+           Text="Aerial Wind"
+           Tag="Aerialwind"
+           MouseEnter="EffectPreview"/>
+
+        <!--Smash-->
+        <Border Grid.Row="5"
+                Grid.Column="0"
+                Name="SmashP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SmashP1}"
+                          Width="16"
+                          x:Name="SmashP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="5"
+                Grid.Column="1"
+                Name="SmashP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SmashP2}"
+                          Width="16"
+                          x:Name="SmashP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="5"
+           Grid.Column="2"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Smash"
+           Tag="Smash"
+           MouseEnter="EffectPreview"/>
+
+        <!--Soul Smash-->
+        <Border Grid.Row="6"
+                Grid.Column="6"
+                Name="SoulSmashP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SoulSmashP1}"
+                          Width="16"
+                          x:Name="SoulSmashP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="6"
+                Grid.Column="7"
+                Name="SoulSmashP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SoulSmashP2}"
+                          Width="16"
+                          x:Name="SoulSmashP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="6"
+           Grid.Column="8"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="DarkRed"
+           Text="Soul Smash"
+           Tag="SoulSmash"
+           MouseEnter="EffectPreview"/>
+
+        <!--Reserve Offense Up-->
+        <Border Grid.Row="11"
+                Grid.Column="3"
+                Name="ReserveOffenseUpP1Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding ReserveOffenseUpP1}"
+                          Width="16"
+                          x:Name="ReserveOffenseUpP1"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <Border Grid.Row="11"
+                Grid.Column="4"
+                Name="ReserveOffenseUpP2Box"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding ReserveOffenseUpP2}"
+                          Width="16"
+                          x:Name="ReserveOffenseUpP2"
+                          Checked="CheckBox_Checked"
+                          Unchecked="CheckBox_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="11"
+           Grid.Column="5"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="CornflowerBlue"
+           Text="Reserve Offense Up"
+           Tag="ReserveOffenseUp"
+           MouseEnter="EffectPreview"/>
+
+
+        <!--Change Code File Name-->
+        <Button Grid.Row="14"
+                Grid.Column="2"
+                x:Name="ChangeCodeFileName"
+                Background="DarkOrange"
+                FontFamily="Times New Roman"
+                FontSize="37"
+                Margin="0,0,229,0"
+                Click="DissableAll_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" Text="Dissable all" />
+            </Button.Content>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="40"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+
+        <!--Switch to Main Page-->
+        <Button Grid.Row="13"
+                Grid.Column="8"
+                x:Name="MainPage1"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="Activate_Click" Margin="160,0,0,-60">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Activate codes" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#005500" Offset="0" />
+                    <GradientStop Color="#007700" Offset="0.25" />
+                    <GradientStop Color="#009900" Offset="0.5" />
+                    <GradientStop Color="#007700" Offset="0.75" />
+                    <GradientStop Color="#005500" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <!--Switch to Main Page-->
+        <Button Grid.Row="16"
+                Grid.Column="8"
+                x:Name="MainPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToMainPage_Click" Margin="228,0,0,-60">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Return to Main Menu" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#55165E" Offset="0" />
+                    <GradientStop Color="#661E7E" Offset="0.25" />
+                    <GradientStop Color="#77269E" Offset="0.5" />
+                    <GradientStop Color="#661E7E" Offset="0.75" />
+                    <GradientStop Color="#55165E" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Border Grid.Column="3"
+            Grid.Row="0"
+            Grid.RowSpan="13"
+            BorderThickness="6"
+            Margin="0,0,176,48"
+            BorderBrush="Blue" Grid.ColumnSpan="6"/>
+
+
+
+        <!--Information-->
+        <!-- Container for background and text -->
+        <Grid Grid.Row="13"
+            Grid.RowSpan="4"
+            Grid.Column="3"
+            Margin="10,-0,10,-60" Grid.ColumnSpan="5">
+
+            <!-- Dark semi-transparent background -->
+            <Border Background="#AA222222"   
+                CornerRadius="6"
+            Padding="10">
+                <TextBlock Name="info"
+                   FontSize="36"
+                   TextWrapping="WrapWithOverflow"
+                   Foreground="LightBlue"
+                   Text="{Binding ModeInformation, UpdateSourceTrigger=PropertyChanged}"/>
+            </Border>
+        </Grid>
+
+        <!-- Yellow border around the same area -->
+        <Border Grid.Column="3"
+            Grid.Row="13"
+            Grid.RowSpan="4"
+            BorderThickness="6"
+            Margin="0,0,1,-60"
+            BorderBrush="Yellow" Grid.ColumnSpan="5"/>
+
+        <TextBlock Name="Activationinfo"
+                   Grid.Column="5"
+                   Grid.Row="19"
+                   FontSize="30"
+                   TextWrapping="WrapWithOverflow"
+                   Foreground="DarkRed"
+                   Text="{Binding CodeInformation, UpdateSourceTrigger=PropertyChanged}"/>
+
+
+        <TextBlock Grid.Row="7"
+           Grid.Column="2"
+           Grid.RowSpan="2"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Text="Red: only 1 can be selected, others need to be dissabled."
+           Margin="0,30,0,0"/>
+        <TextBlock Grid.Row="9"
+           Grid.Column="2"
+           Grid.RowSpan="2"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Text="Blue: only 1 can be selected of this color, but all greens can be activated too."/>
+        <TextBlock Grid.Row="11"
+           Grid.Column="2"
+           Grid.RowSpan="2"
+           FontSize="30"
+           TextWrapping="WrapWithOverflow"
+           Foreground="White"
+           Text="Green: All can be activated + one blue one if neccesary."
+           Margin="0,10,0,0"/>
+
+    </Grid>
+
+
+</UserControl>

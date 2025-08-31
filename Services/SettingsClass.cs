@@ -26,8 +26,8 @@ namespace SC3_pnach_editor.Services
 
         public static bool BonusCharacters { get; set; } = false;
         public static bool UltimateWeapons { get; set; } = false;
-        public static bool GuardianForceP1 { get; set; } = false;
-        public static bool GuardianForceP2 { get; set; } = false;
+        public static int GuardianForceP1 { get; set; } = 0;
+        public static int GuardianForceP2 { get; set; } = 0;
 
 
         public static int WeaponEffectP1 = 0;
@@ -39,6 +39,7 @@ namespace SC3_pnach_editor.Services
         public static int ChroniclesCharacterP1_weapon = 0;
         public static int ChroniclesCharacterP2_weapon = 0;
 
+        public static int PlayerControl = 0;
         public static int OpponentControl = 0;
 
         public static bool SlipperyFieldP1 { get; set; } = false;
@@ -84,17 +85,81 @@ namespace SC3_pnach_editor.Services
         public static string NightmareSkin { get; set; } = "";
         public static string SiegfriedSkin { get; set; } = "";
         public static string SophitiaSkin { get; set; } = "";
+        public static string AmySkin { get; set; } = "";
+        public static string CharadeSkin { get; set; } = "";
+        public static string LizardMenSkin { get; set; } = "";
 
-        public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, bool bonusCharacters, bool ultimateWeapons, bool guardianForceP1,
-            bool guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
-            bool slipperyFieldP1, bool slipperyFieldP2, int chroniclesCharacterP1, int chroniclesCharacterP2, int opponentControl,
+        public static string SelectedSurvivalMode { get; set; } = "";
+        public static string LastSelectedCharP1 { get; set; } = "";
+        public static string LastSelectedCharP2 { get; set; } = "";
+        public static int LastSelectedIndexP1 { get; set; } = -1;
+        public static int LastSelectedIndexP2 { get; set; } = -1;
+        public static string VoiceP1 { get; set; } = "";
+        public static string VoiceP2 { get; set; } = "";
+
+        public static bool AllGuardBreakP1 { get; set; } = false;
+        public static bool AllGuardBreakP2 { get; set; } = false;
+        public static bool AllUnblockableP1 { get; set; } = false;
+        public static bool AllUnblockableP2 { get; set; } = false; 
+        public static bool ParalysisP1 { get; set; } = false;
+        public static bool ParalysisP2 { get; set; } = false;
+        public static bool DownLoseP1 { get; set; } = false;
+        public static bool DownLoseP2 { get; set; } = false;
+        public static bool MinusGuardP1 { get; set; } = false;
+        public static bool MinusGuardP2 { get; set; } = false;
+        public static bool PoisonP1 { get; set; } = false;
+        public static bool PoisonP2 { get; set; } = false;
+        public static bool SuperPoisonP1 { get; set; } = false;
+        public static bool SuperPoisonP2 { get; set; } = false;
+        public static bool MegaPoisonP1 { get; set; } = false;
+        public static bool MegaPoisonP2 { get; set; } = false;
+        public static bool CureP1 { get; set; } = false;
+        public static bool CureP2 { get; set; } = false;
+        public static bool SuperCureP1 { get; set; } = false;
+        public static bool SuperCureP2 { get; set; } = false;
+        public static bool MegaCureP1 { get; set; } = false;
+        public static bool MegaCureP2 { get; set; } = false;
+        public static bool DefenseDownP1 { get; set; } = false;
+        public static bool DefenseDownP2 { get; set; } = false;
+        public static bool DefenseUpP1 { get; set; } = false;
+        public static bool DefenseUpP2 { get; set; } = false;
+        public static bool SuperDefenseP1 { get; set; } = false;
+        public static bool SuperDefenseP2 { get; set; } = false;
+        public static bool GlueP1 { get; set; } = false;
+        public static bool GlueP2 { get; set; } = false;
+        public static bool SeparateP1 { get; set; } = false;
+        public static bool SeparateP2 { get; set; } = false;
+        public static bool IceP1 { get; set; } = false;
+        public static bool IceP2 { get; set; } = false;
+        public static bool WhirlwindP1 { get; set; } = false;
+        public static bool WhirlwindP2 { get; set; } = false;
+        public static bool AerialWindP1 { get; set; } = false;
+        public static bool AerialWindP2 { get; set; } = false;
+        public static bool SmashP1 { get; set; } = false;
+        public static bool SmashP2 { get; set; } = false;
+        public static bool SoulSmashP1 { get; set; } = false;
+        public static bool SoulSmashP2 { get; set; } = false;
+        public static bool ReserveOffenseUpP1 { get; set; } = false;
+        public static bool ReserveOffenseUpP2 { get; set; } = false;
+        public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, bool bonusCharacters, bool ultimateWeapons,
+            int guardianForceP1, int guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
+            bool slipperyFieldP1, bool slipperyFieldP2, int chroniclesCharacterP1, int chroniclesCharacterP2, int playerControl, int opponentControl,
             int chroniclesCharacterP1_weapon, int chroniclesCharacterP2_weapon,
             int wpnEffect1, int wpnEffect2, int wpnEffect3, int wpnEffect4, int wpnEffect5, int wpnEffect6,
             int wpnEffect7, int wpnEffect8, int wpnEffect9, int wpnEffect10, int wpnEffect11, int wpnEffect12,
             int wpnEffect13, int wpnEffect14, int wpnEffect15, int wpnEffect16, int wpnEffect17, int wpnEffect18,
             string characterP1, string characterP2, string modelP1, string modelP2, bool useSetCharacters, int p1Speed, int p2Speed,
             string nightTerrorSkin, string takiSkin, string cassandraSkin, string colossusSkin, string lynetteSkin, string nightmareSkin, 
-            string siegfriedSkin, string sophitiaSkin)
+            string siegfriedSkin, string sophitiaSkin, string amySkin, string charadeSkin, string lizardMenSkin,
+            string selectedSurvivalMode, string lastSelectedCharP1, string lastSelectedCharP2,
+            int lastSelectedIndexP1, int lastSelectedIndexP2, string voiceP1, string voiceP2,
+            bool allGuardBreakP1, bool allGuardBreakP2, bool allUnblockableP1, bool allUnblockableP2, bool paralysisP1, bool paralysisP2,
+            bool downLoseP1, bool downLoseP2, bool minusGuardP1, bool minusGuardP2, bool poisonP1, bool poisonP2, bool superPoisonP1, bool superPoisonP2,
+            bool megaPoisonP1, bool megaPoisonP2, bool cureP1, bool cureP2, bool superCureP1, bool superCureP2, bool megaCureP1, bool megaCureP2,
+            bool defenseDownP1, bool defenseDownP2, bool defenseUpP1, bool defenseUpP2, bool superDefenseP1, bool superDefenseP2,
+            bool glueP1, bool glueP2, bool separateP1, bool separateP2, bool iceP1, bool iceP2, bool whirlwindP1, bool whirlwindP2,
+            bool aerialWindP1, bool aerialWindP2, bool smashP1, bool smashP2, bool soulSmashP1, bool soulSmashP2,
+            bool reserveOffenseUpP1, bool reserveOffenseUpP2)
         {
             codeFolderPath = connectionString;
             PnachName = pnachName;
@@ -114,6 +179,7 @@ namespace SC3_pnach_editor.Services
             ChroniclesCharacterP2 = chroniclesCharacterP2;
             ChroniclesCharacterP1_weapon = chroniclesCharacterP1_weapon;
             ChroniclesCharacterP2_weapon = chroniclesCharacterP2_weapon;
+            PlayerControl = playerControl;
             OpponentControl = opponentControl;
 
             WpnEffect1 = wpnEffect1;
@@ -140,7 +206,7 @@ namespace SC3_pnach_editor.Services
             ModelP1 = modelP1;
             ModelP2 = modelP2;
 
-            useSetCharacters = UseSetCharacters;//CHECK THIS DUMBASS
+            useSetCharacters = UseSetCharacters;//CHECK THIS DUMBASS - no I won't
 
             P1Speed = p1Speed;
             P2Speed = p2Speed;
@@ -153,6 +219,64 @@ namespace SC3_pnach_editor.Services
             NightmareSkin = nightmareSkin;
             SiegfriedSkin = siegfriedSkin;
             SophitiaSkin = sophitiaSkin;
+            AmySkin = amySkin;
+            CharadeSkin = charadeSkin;
+            LizardMenSkin = lizardMenSkin;
+
+            SelectedSurvivalMode = selectedSurvivalMode;
+
+            LastSelectedCharP1 = lastSelectedCharP1;
+            LastSelectedCharP2 = lastSelectedCharP2;
+            LastSelectedIndexP1 = lastSelectedIndexP1;
+            LastSelectedIndexP2 = lastSelectedIndexP2;
+
+            VoiceP1 = voiceP1;
+            VoiceP2 = voiceP2;
+
+            AllGuardBreakP1     = allGuardBreakP1    ;
+            AllGuardBreakP2     = allGuardBreakP2    ;
+            AllUnblockableP1    = allUnblockableP1   ;
+            AllUnblockableP2    = allUnblockableP2   ;
+            ParalysisP1         = paralysisP1        ;
+            ParalysisP2         = paralysisP2        ;
+            DownLoseP1          = downLoseP1         ;
+            DownLoseP2          = downLoseP2         ;
+            MinusGuardP1        = minusGuardP1       ;
+            MinusGuardP2        = minusGuardP2       ;
+            PoisonP1            = poisonP1           ;
+            PoisonP2            = poisonP2           ;
+            SuperPoisonP1       = superPoisonP1      ;
+            SuperPoisonP2       = superPoisonP2      ;
+            MegaPoisonP1        = megaPoisonP1       ;
+            MegaPoisonP2        = megaPoisonP2       ;
+            CureP1              = cureP1             ;
+            CureP2              = cureP2             ;
+            SuperCureP1         = superCureP1        ;
+            SuperCureP2         = superCureP2        ;
+            MegaCureP1          = megaCureP1         ;
+            MegaCureP2          = megaCureP2         ;
+            DefenseDownP1       = defenseDownP1      ;
+            DefenseDownP2       = defenseDownP2      ;
+            DefenseUpP1         = defenseUpP1        ;
+            DefenseUpP2         = defenseUpP2        ;
+            SuperDefenseP1      = superDefenseP1     ;
+            SuperDefenseP2      = superDefenseP2     ;
+            GlueP1              = glueP1             ;
+            GlueP2              = glueP2             ;
+            SeparateP1          = separateP1         ;
+            SeparateP2          = separateP2         ;
+            IceP1               = iceP1              ;
+            IceP2               = iceP2              ;
+            WhirlwindP1         = whirlwindP1        ;
+            WhirlwindP2         = whirlwindP2        ;
+            AerialWindP1        = aerialWindP1       ;
+            AerialWindP2        = aerialWindP2       ;
+            SmashP1             = smashP1            ;
+            SmashP2             = smashP2            ;
+            SoulSmashP1         = soulSmashP1        ;
+            SoulSmashP2         = soulSmashP2        ;
+            ReserveOffenseUpP1  = reserveOffenseUpP1 ;
+            ReserveOffenseUpP2  = reserveOffenseUpP2 ;
 
         }
 
@@ -165,8 +289,8 @@ namespace SC3_pnach_editor.Services
             public string GfxCopyTo { get; set; } = SettingsClass.GfxCopyTo;
             public bool BonusCharacters { get; set; } = SettingsClass.BonusCharacters;
             public bool UltimateWeapons { get; set; } = SettingsClass.UltimateWeapons;
-            public bool GuardianForceP1 { get; set; } = SettingsClass.GuardianForceP1;
-            public bool GuardianForceP2 { get; set; } = SettingsClass.GuardianForceP2;
+            public int GuardianForceP1 { get; set; } = SettingsClass.GuardianForceP1;
+            public int GuardianForceP2 { get; set; } = SettingsClass.GuardianForceP2;
             public int WeaponEffectP1 { get; set; } = SettingsClass.WeaponEffectP1;
             public int WeaponSpecialPowerP1 { get; set; } = SettingsClass.WeaponSpecialPowerP1;
             public int WeaponEffectP2 { get; set; } = SettingsClass.WeaponEffectP2;
@@ -180,6 +304,7 @@ namespace SC3_pnach_editor.Services
             public int ChroniclesCharacterP2_weapon { get; set; } = SettingsClass.ChroniclesCharacterP2_weapon;
 
 
+            public int PlayerControl { get; set; } = SettingsClass.PlayerControl;
             public int OpponentControl { get; set; } = SettingsClass.OpponentControl;
             public int WpnEffect1 { get; set; } = SettingsClass.WpnEffect1;
             public int WpnEffect2 { get; set; } = SettingsClass.WpnEffect2;
@@ -218,7 +343,63 @@ namespace SC3_pnach_editor.Services
             public string NightmareSkin { get; set; } = SettingsClass.NightmareSkin;
             public string SiegfriedSkin { get; set; } = SettingsClass.SiegfriedSkin;
             public string SophitiaSkin { get; set; } = SettingsClass.SophitiaSkin;
+            public string AmySkin { get; set; } = SettingsClass.AmySkin;
+            public string CharadeSkin { get; set; } = SettingsClass.CharadeSkin;
+            public string LizardMenSkin { get; set; } = SettingsClass.LizardMenSkin;
 
+            public string SelectedSurvivalMode { get; set; } = SettingsClass.SelectedSurvivalMode;
+            public string LastSelectedCharP1 { get; set; } = SettingsClass.LastSelectedCharP1;
+            public string LastSelectedCharP2 { get; set; } = SettingsClass.LastSelectedCharP2;
+            public int LastSelectedIndexP1 { get; set; } = SettingsClass.LastSelectedIndexP1;
+            public int LastSelectedIndexP2 { get; set; } = SettingsClass.LastSelectedIndexP2;
+
+            public string VoiceP1 { get; set; } = SettingsClass.VoiceP1;
+            public string VoiceP2 { get; set; } = SettingsClass.VoiceP2;
+
+            public bool AllGuardBreakP1       { get; set; } = SettingsClass.AllGuardBreakP1   ;
+            public bool AllGuardBreakP2       { get; set; } = SettingsClass.AllGuardBreakP2   ;
+            public bool AllUnblockableP1      { get; set; } = SettingsClass.AllUnblockableP1  ;
+            public bool AllUnblockableP2      { get; set; } = SettingsClass.AllUnblockableP2  ;
+            public bool ParalysisP1           { get; set; } = SettingsClass.ParalysisP1       ;
+            public bool ParalysisP2           { get; set; } = SettingsClass.ParalysisP2       ;
+            public bool DownLoseP1            { get; set; } = SettingsClass.DownLoseP1        ;
+            public bool DownLoseP2            { get; set; } = SettingsClass.DownLoseP2        ;
+            public bool MinusGuardP1          { get; set; } = SettingsClass.MinusGuardP1      ;
+            public bool MinusGuardP2          { get; set; } = SettingsClass.MinusGuardP2      ;
+            public bool PoisonP1              { get; set; } = SettingsClass.PoisonP1          ;
+            public bool PoisonP2              { get; set; } = SettingsClass.PoisonP2          ;
+            public bool SuperPoisonP1         { get; set; } = SettingsClass.SuperPoisonP1     ;
+            public bool SuperPoisonP2         { get; set; } = SettingsClass.SuperPoisonP2     ;
+            public bool MegaPoisonP1          { get; set; } = SettingsClass.MegaPoisonP1      ;
+            public bool MegaPoisonP2          { get; set; } = SettingsClass.MegaPoisonP2      ;
+            public bool CureP1                { get; set; } = SettingsClass.CureP1            ;
+            public bool CureP2                { get; set; } = SettingsClass.CureP2            ;
+            public bool SuperCureP1           { get; set; } = SettingsClass.SuperCureP1       ;
+            public bool SuperCureP2           { get; set; } = SettingsClass.SuperCureP2       ;
+            public bool MegaCureP1            { get; set; } = SettingsClass.MegaCureP1        ;
+            public bool MegaCureP2            { get; set; } = SettingsClass.MegaCureP2        ;
+            public bool DefenseDownP1         { get; set; } = SettingsClass.DefenseDownP1     ;
+            public bool DefenseDownP2         { get; set; } = SettingsClass.DefenseDownP2     ;
+            public bool DefenseUpP1           { get; set; } = SettingsClass.DefenseUpP1       ;
+            public bool DefenseUpP2           { get; set; } = SettingsClass.DefenseUpP2       ;
+            public bool SuperDefenseP1        { get; set; } = SettingsClass.SuperDefenseP1    ;
+            public bool SuperDefenseP2        { get; set; } = SettingsClass.SuperDefenseP2    ;
+            public bool GlueP1                { get; set; } = SettingsClass.GlueP1            ;
+            public bool GlueP2                { get; set; } = SettingsClass.GlueP2            ;
+            public bool SeparateP1            { get; set; } = SettingsClass.SeparateP1        ;
+            public bool SeparateP2            { get; set; } = SettingsClass.SeparateP2        ;
+            public bool IceP1                 { get; set; } = SettingsClass.IceP1             ;
+            public bool IceP2                 { get; set; } = SettingsClass.IceP2             ;
+            public bool WhirlwindP1           { get; set; } = SettingsClass.WhirlwindP1       ;
+            public bool WhirlwindP2           { get; set; } = SettingsClass.WhirlwindP2       ;
+            public bool AerialWindP1          { get; set; } = SettingsClass.AerialWindP1      ;
+            public bool AerialWindP2          { get; set; } = SettingsClass.AerialWindP2      ;
+            public bool SmashP1               { get; set; } = SettingsClass.SmashP1           ;
+            public bool SmashP2               { get; set; } = SettingsClass.SmashP2           ;
+            public bool SoulSmashP1           { get; set; } = SettingsClass.SoulSmashP1       ;
+            public bool SoulSmashP2           { get; set; } = SettingsClass.SoulSmashP2       ;
+            public bool ReserveOffenseUpP1    { get; set; } = SettingsClass.ReserveOffenseUpP1;
+            public bool ReserveOffenseUpP2    { get; set; } = SettingsClass.ReserveOffenseUpP2;
         }
 
         public static GetData Settings = new GetData();
@@ -250,6 +431,7 @@ namespace SC3_pnach_editor.Services
                 ChroniclesCharacterP1_weapon = Settings.ChroniclesCharacterP1_weapon;
                 ChroniclesCharacterP2_weapon = Settings.ChroniclesCharacterP2_weapon;
                 OpponentControl = Settings.OpponentControl;
+                PlayerControl = Settings.PlayerControl;
 
                 WpnEffect1 = Settings.WpnEffect1;
                 WpnEffect2 = Settings.WpnEffect2;
@@ -290,7 +472,64 @@ namespace SC3_pnach_editor.Services
                 NightmareSkin = Settings.NightmareSkin;
                 SiegfriedSkin = Settings.SiegfriedSkin;
                 SophitiaSkin = Settings.SophitiaSkin;
-    }
+                AmySkin = Settings.AmySkin;
+                CharadeSkin = Settings.CharadeSkin;
+                LizardMenSkin = Settings.LizardMenSkin;
+
+                SelectedSurvivalMode = Settings.SelectedSurvivalMode;
+                LastSelectedCharP1 = Settings.LastSelectedCharP1;
+                LastSelectedCharP2 = Settings.LastSelectedCharP2;
+                LastSelectedIndexP1 = Settings.LastSelectedIndexP1;
+                LastSelectedIndexP2 = Settings.LastSelectedIndexP2;
+
+                VoiceP1 = Settings.VoiceP1;
+                VoiceP2 = Settings.VoiceP2;
+
+                AllGuardBreakP1       = Settings.AllGuardBreakP1   ;
+                AllGuardBreakP2       = Settings.AllGuardBreakP2   ;
+                AllUnblockableP1      = Settings.AllUnblockableP1  ;
+                AllUnblockableP2      = Settings.AllUnblockableP2  ;
+                ParalysisP1           = Settings.ParalysisP1       ;
+                ParalysisP2           = Settings.ParalysisP2       ;
+                DownLoseP1            = Settings.DownLoseP1        ;
+                DownLoseP2            = Settings.DownLoseP2        ;
+                MinusGuardP1          = Settings.MinusGuardP1      ;
+                MinusGuardP2          = Settings.MinusGuardP2      ;
+                PoisonP1              = Settings.PoisonP1          ;
+                PoisonP2              = Settings.PoisonP2          ;
+                SuperPoisonP1         = Settings.SuperPoisonP1     ;
+                SuperPoisonP2         = Settings.SuperPoisonP2     ;
+                MegaPoisonP1          = Settings.MegaPoisonP1      ;
+                MegaPoisonP2          = Settings.MegaPoisonP2      ;
+                CureP1                = Settings.CureP1            ;
+                CureP2                = Settings.CureP2            ;
+                SuperCureP1           = Settings.SuperCureP1       ;
+                SuperCureP2           = Settings.SuperCureP2       ;
+                MegaCureP1            = Settings.MegaCureP1        ;
+                MegaCureP2            = Settings.MegaCureP2        ;
+                DefenseDownP1         = Settings.DefenseDownP1     ;
+                DefenseDownP2         = Settings.DefenseDownP2     ;
+                DefenseUpP1           = Settings.DefenseUpP1       ;
+                DefenseUpP2           = Settings.DefenseUpP2       ;
+                SuperDefenseP1        = Settings.SuperDefenseP1    ;
+                SuperDefenseP2        = Settings.SuperDefenseP2    ;
+                GlueP1                = Settings.GlueP1            ;
+                GlueP2                = Settings.GlueP2            ;
+                SeparateP1            = Settings.SeparateP1        ;
+                SeparateP2            = Settings.SeparateP2        ;
+                IceP1                 = Settings.IceP1             ;
+                IceP2                 = Settings.IceP2             ;
+                WhirlwindP1           = Settings.WhirlwindP1       ;
+                WhirlwindP2           = Settings.WhirlwindP2       ;
+                AerialWindP1          = Settings.AerialWindP1      ;
+                AerialWindP2          = Settings.AerialWindP2      ;
+                SmashP1               = Settings.SmashP1           ;
+                SmashP2               = Settings.SmashP2           ;
+                SoulSmashP1           = Settings.SoulSmashP1       ;
+                SoulSmashP2           = Settings.SoulSmashP2       ;
+                ReserveOffenseUpP1    = Settings.ReserveOffenseUpP1;
+                ReserveOffenseUpP2    = Settings.ReserveOffenseUpP2;
+            }
             else
             {
                 SaveData();
@@ -319,6 +558,7 @@ namespace SC3_pnach_editor.Services
             Settings.ChroniclesCharacterP1_weapon = ChroniclesCharacterP1_weapon;
             Settings.ChroniclesCharacterP2_weapon = ChroniclesCharacterP2_weapon;
             Settings.OpponentControl = OpponentControl;
+            Settings.PlayerControl = PlayerControl;
 
             Settings.WpnEffect1 = WpnEffect1;
             Settings.WpnEffect2 = WpnEffect2;
@@ -357,6 +597,63 @@ namespace SC3_pnach_editor.Services
             Settings.NightmareSkin = NightmareSkin;
             Settings.SiegfriedSkin = SiegfriedSkin;
             Settings.SophitiaSkin = SophitiaSkin;
+            Settings.AmySkin = AmySkin;
+            Settings.CharadeSkin = CharadeSkin;
+            Settings.LizardMenSkin = LizardMenSkin;
+
+            Settings.SelectedSurvivalMode = SelectedSurvivalMode;
+            Settings.LastSelectedCharP1 = LastSelectedCharP1;
+            Settings.LastSelectedCharP2 = LastSelectedCharP2;
+            Settings.LastSelectedIndexP1 = LastSelectedIndexP1;
+            Settings.LastSelectedIndexP2 = LastSelectedIndexP2;
+
+            Settings.VoiceP1 = VoiceP1;
+            Settings.VoiceP2 = VoiceP2;
+
+            Settings.AllGuardBreakP1       = AllGuardBreakP1   ;
+            Settings.AllGuardBreakP2       = AllGuardBreakP2   ;
+            Settings.AllUnblockableP1      = AllUnblockableP1  ;
+            Settings.AllUnblockableP2      = AllUnblockableP2  ;
+            Settings.ParalysisP1           = ParalysisP1       ;
+            Settings.ParalysisP2           = ParalysisP2       ;
+            Settings.DownLoseP1            = DownLoseP1        ;
+            Settings.DownLoseP2            = DownLoseP2        ;
+            Settings.MinusGuardP1          = MinusGuardP1      ;
+            Settings.MinusGuardP2          = MinusGuardP2      ;
+            Settings.PoisonP1              = PoisonP1          ;
+            Settings.PoisonP2              = PoisonP2          ;
+            Settings.SuperPoisonP1         = SuperPoisonP1     ;
+            Settings.SuperPoisonP2         = SuperPoisonP2     ;
+            Settings.MegaPoisonP1          = MegaPoisonP1      ;
+            Settings.MegaPoisonP2          = MegaPoisonP2      ;
+            Settings.CureP1                = CureP1            ;
+            Settings.CureP2                = CureP2            ;
+            Settings.SuperCureP1           = SuperCureP1       ;
+            Settings.SuperCureP2           = SuperCureP2       ;
+            Settings.MegaCureP1            = MegaCureP1        ;
+            Settings.MegaCureP2            = MegaCureP2        ;
+            Settings.DefenseDownP1         = DefenseDownP1     ;
+            Settings.DefenseDownP2         = DefenseDownP2     ;
+            Settings.DefenseUpP1           = DefenseUpP1       ;
+            Settings.DefenseUpP2           = DefenseUpP2       ;
+            Settings.SuperDefenseP1        = SuperDefenseP1    ;
+            Settings.SuperDefenseP2        = SuperDefenseP2    ;
+            Settings.GlueP1                = GlueP1            ;
+            Settings.GlueP2                = GlueP2            ;
+            Settings.SeparateP1            = SeparateP1        ;
+            Settings.SeparateP2            = SeparateP2        ;
+            Settings.IceP1                 = IceP1             ;
+            Settings.IceP2                 = IceP2             ;
+            Settings.WhirlwindP1           = WhirlwindP1       ;
+            Settings.WhirlwindP2           = WhirlwindP2       ;
+            Settings.AerialWindP1          = AerialWindP1      ;
+            Settings.AerialWindP2          = AerialWindP2      ;
+            Settings.SmashP1               = SmashP1           ;
+            Settings.SmashP2               = SmashP2           ;
+            Settings.SoulSmashP1           = SoulSmashP1       ;
+            Settings.SoulSmashP2           = SoulSmashP2       ;
+            Settings.ReserveOffenseUpP1    = ReserveOffenseUpP1;
+            Settings.ReserveOffenseUpP2    = ReserveOffenseUpP2;
 
             string serialString = JsonConvert.SerializeObject(Settings);
             Directory.CreateDirectory(folderPath);

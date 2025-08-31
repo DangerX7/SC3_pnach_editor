@@ -151,6 +151,37 @@ namespace SC3_pnach_editor.Views
         {
             viewModel.AddOrRemoveTextures("remove", @"Sophitia_brown");
         }
+
+        private void RedAmySkin_Checked(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddOrRemoveTextures("add", @"Red_Amy");
+        }
+
+        private void RedAmySkin_Unchecked(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddOrRemoveTextures("remove", @"Red_Amy");
+        }
+
+        private void CharadeP2Skin_Checked(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddOrRemoveTextures("add", @"Charade_P2");
+        }
+
+        private void CharadeP2Skin_Unchecked(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddOrRemoveTextures("remove", @"Charade_P2");
+        }
+
+        private void LizardMenBlueSkin_Checked(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddOrRemoveTextures("add", @"Lizard_Men_Blue");
+        }
+
+        private void LizardMenBlueSkin_Unchecked(object sender, RoutedEventArgs e)
+        {
+            viewModel.AddOrRemoveTextures("remove", @"Lizard_Men_Blue");
+        }
+
     }
 
 
