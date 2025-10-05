@@ -1,0 +1,6 @@
+first of all take a look at the file "example God difficulty" to see how the final code should look (this is an example)
+now to get your values check "survival help" file it and copy paste them into the file "template"
+
+always write inside "" for example here
+survivalCode.stageMusic = "";  => survivalCode.stageMusic = "INSERT VALUE HERE";
+never modify anything else in this file, or it's name or location

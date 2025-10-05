@@ -6818,6 +6818,7 @@ namespace SC3_pnach_editor.Codes
                             break;
                     }
 
+                    int maxCharRandom = 40 + 1;
                     
                     int selectStage1 = rnd.Next(1, 32);
                     string selectedStage1 = SurvivalModeSubCodes.GetRandomStageData(selectStage1);
@@ -6842,7 +6843,7 @@ namespace SC3_pnach_editor.Codes
                     List<string> addedEnemies = new List<string>();
 
                     //Enemy 1
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 1);
@@ -6861,7 +6862,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 2
-                    CharacterLocation = rnd.Next(1, 21);
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 1);
@@ -6880,7 +6881,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 3
-                    CharacterLocation = rnd.Next(1, 21);
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 1);
@@ -6899,7 +6900,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 4
-                    CharacterLocation = rnd.Next(1, 21);
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 2);
@@ -6918,7 +6919,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 5
-                    CharacterLocation = rnd.Next(1, 21);
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 2);
@@ -6937,7 +6938,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 6
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 2);
@@ -6956,7 +6957,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 7
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 2);
@@ -6975,7 +6976,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 8
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 2);
@@ -6994,7 +6995,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 9
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 2);
@@ -7013,7 +7014,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 10
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 3);
@@ -7032,7 +7033,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 11
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 3);
@@ -7051,7 +7052,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 12
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 3);
@@ -7070,7 +7071,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 13
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 3);
@@ -7089,7 +7090,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 14
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 3);
@@ -7108,7 +7109,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 15
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 3);
@@ -7127,7 +7128,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 16
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 4);
@@ -7146,7 +7147,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 17
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 4);
@@ -7165,7 +7166,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 18
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 4);
@@ -7184,7 +7185,7 @@ namespace SC3_pnach_editor.Codes
                     stageCode += SurvivalModeSubCodes.GetStageCode(survivalCode);
 
                     //Enemy 19
-                    CharacterLocation = rnd.Next(1, 21); //10 is max
+                    CharacterLocation = rnd.Next(1, maxCharRandom);
                     CharacterCode = SurvivalModeSubCodes.GetRandomCharacterData(CharacterLocation, addedEnemies);
                     addedEnemies.Add(CharacterCode);
                     weaponCode = SurvivalModeSubCodes.GetRandomWeaponData(CharacterCode.Substring(4, 2), 4);
@@ -7904,8 +7905,7 @@ namespace SC3_pnach_editor.Codes
                 #region Custom Arc [Your selection]
                 case "Custom Arc":
 
-                    string appFolder = AppDomain.CurrentDomain.BaseDirectory;
-                    string customFolder = Path.Combine(appFolder, "Custom Survival Files");
+                    string customFolder = SettingsClass.SurvivalPath;
                     string templateFile = Path.Combine(customFolder, "template.txt");
 
                     if (File.Exists(templateFile))

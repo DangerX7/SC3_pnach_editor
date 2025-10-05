@@ -116,6 +116,55 @@ namespace SC3_pnach_editor.Views
             OpponentControlCombo.ItemsSource = viewModel.OpponentControlCombo;
             OpponentControlCombo.SelectedIndex = SettingsClass.OpponentControl;
 
+            ////////////////////////////////////////////////////////////////////////////////
+
+            //2053FC60 - 2054034F
+            //20540350 - 20540A3F
+            //20540A40 - 2054112F
+            //20541130 - 2054181F
+            //20541820 - 20541F0F
+            //20541F10 - 205425FF
+            //20542600 - 20542CEF
+            //20542CF0 - 205433DF
+            //205433E0 - 20543ACF
+            //20543AD0 - 205441BF
+
+            //int charSlot = 10;
+            //string selectedChar = "test_converted";
+            //string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            //string addressFilePath = Path.Combine(desktop, "slot " + charSlot + ".txt");
+            //string valuesFilePath = Path.Combine(desktop,  selectedChar + ".txt");
+            //string outputFilePath = Path.Combine(desktop, "combined.txt");
+
+            //// Read both files
+            //string[] addressLines = File.ReadAllLines(addressFilePath);
+            //string[] valueLines = File.ReadAllLines(valuesFilePath);
+
+            //// Make sure both have the same number of rows
+            //if (addressLines.Length != valueLines.Length)
+            //{
+            //    Console.WriteLine("Error: Files must have the same number of lines.");
+            //    return;
+            //}
+
+            //// Build combined lines
+            //string[] combinedLines = new string[addressLines.Length];
+            //for (int i = 0; i < addressLines.Length; i++)
+            //{
+            //    combinedLines[i] = addressLines[i].Replace("XXXXXXXX", valueLines[i]);
+            //}
+
+            //// Join all lines into one big string (each separated by newline)
+            //string bigString = string.Join(Environment.NewLine, combinedLines);
+
+            //// Write to new file
+            //File.WriteAllText(outputFilePath, bigString);
+
+            //Console.WriteLine("✅ Combined file created successfully on Desktop: " + outputFilePath);
+
+            ///////////////////////////////////////////////////////////////////////////////
+
         }
 
         private void ValueSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -280,8 +329,9 @@ namespace SC3_pnach_editor.Views
                 isCotsEffectActivated = true;
             }
 
-                SettingsClass.GfxCopyFrom = viewModel.GfxCopyFrom;
+            SettingsClass.GfxCopyFrom = viewModel.GfxCopyFrom;
             SettingsClass.GfxCopyTo = viewModel.GfxCopyTo;
+            SettingsClass.SurvivalPath = viewModel.SurvivalPath;
 
             SettingsClass.P1Speed = int.Parse(slider_P1spd.Value.ToString());
             SettingsClass.P2Speed = int.Parse(slider_P2spd.Value.ToString());
@@ -422,6 +472,9 @@ namespace SC3_pnach_editor.Views
             SettingsClass.NightmareSkin = "";
             SettingsClass.SiegfriedSkin = "";
             SettingsClass.SophitiaSkin = "";
+            SettingsClass.AmySkin = "";
+            SettingsClass.CharadeSkin = "";
+            SettingsClass.LizardMenSkin = "";
 
             SettingsClass.SelectedSurvivalMode = "";
 

@@ -1,0 +1,695 @@
+
+                Expert Arc:
+				
+                    survivalCode.stageLevel = "0210"; //for rounds 1-5
+                    survivalCode.stageMusic = "10";
+					
+                    survivalCode.stageLevel = "0012"; //for rounds 6-10
+                    survivalCode.stageMusic = "12";
+					
+                    survivalCode.stageLevel = "0019"; //for rounds 11-15
+                    survivalCode.stageMusic = "19";
+					
+                    survivalCode.stageLevel = "0009"; //for rounds 16-20
+                    survivalCode.stageMusic = "09";
+					
+				    #
+					
+                    survivalCode.stageNumber = 1;
+                    survivalCode.model = "98";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "4D";
+					survivalCode.weaponNumber = "02"; //Keres
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = ""; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3F80"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = ""; //Steal health from enemy
+					survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+					survivalCode.weaponSize = "3FA00000";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 2;
+                    survivalCode.model = "28";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "54";
+					survivalCode.weaponNumber = "05"; //Charade - SET add a lot of piercing damage
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = "Paralysis"; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3FC0"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = ""; //Steal health from enemy
+					survivalCode.pierceDamage = "3F000000"; //Damage inflicted thru guard
+					survivalCode.weaponSize = "";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 3;
+                    survivalCode.model = "93";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "42";
+					survivalCode.weaponNumber = "00"; //Assassin - SET poisons you and steal your hp
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = "Poison"; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3FA8"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = "40000000"; //Steal health from enemy
+					survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+					survivalCode.weaponSize = "";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 4;
+                    survivalCode.model = "81";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "48";
+					survivalCode.weaponNumber = "07"; //Berserker
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3F90"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = ""; //Steal health from enemy
+					survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+					survivalCode.weaponSize = "40000000";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = "00000000"; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 5;
+                    survivalCode.model = "26";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "26";
+					survivalCode.weaponNumber = "00"; //Abyss
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = "Down Lose"; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3F90"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = ""; //Steal health from enemy
+					survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+					survivalCode.weaponSize = "";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 6;
+                    survivalCode.model = "4D";
+					survivalCode.costume = "01";
+					survivalCode.fightingStyle = "4D";
+					survivalCode.weaponNumber = "06"; //Strife
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = "All Guard Break"; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3F98"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = "3F400000"; //Steal health from enemy
+					survivalCode.pierceDamage = "3F800000"; //Damage inflicted thru guard
+					survivalCode.weaponSize = "40800000";
+					survivalCode.atkPushForce = "41000000"; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = "00000000"; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 7;
+                    survivalCode.model = "30";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "30";
+					survivalCode.weaponNumber = "04"; //Amy
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3FB0"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = ""; //Steal health from enemy
+					survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+					survivalCode.weaponSize = "";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 8;
+                    survivalCode.model = "1E";
+					survivalCode.costume = "00";
+					survivalCode.fightingStyle = "0E";
+					survivalCode.weaponNumber = "06"; //Lizard Men
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = ""; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3FA8"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = "40800000"; //Steal health from enemy
+					survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+					survivalCode.weaponSize = "";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 9;
+                    survivalCode.model = "07";
+					survivalCode.costume = "01";
+					survivalCode.fightingStyle = "11";
+					survivalCode.weaponNumber = "00"; //Siegfried with Nightmare fighting style
+					
+					survivalCode.aiLevel = "05"; // 00-05
+					survivalCode.weaponSpecial = ""; //Fire, Thunder, Paralysis, Cure etc
+					survivalCode.guardianForce = "05"; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+					survivalCode.stickyFeet = ""; //Slippery Feets
+					survivalCode.speed = "3F88"; //3F80 default speed
+                    survivalCode.voice = "";
+					
+					survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+					survivalCode.attack = ""; //Decrease/Increase Attack
+					survivalCode.defense = ""; //Decrease/Increase Defense
+					survivalCode.stealHp = ""; //Steal health from enemy
+					survivalCode.pierceDamage = "3F000000"; //Damage inflicted thru guard
+					survivalCode.weaponSize = "";
+					survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+					survivalCode.counterRate = ""; //Increase Counter Chance
+					survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+					survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+					survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+					survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+					survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+					survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+					survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+					survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+					survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+					survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 10;
+                    survivalCode.model = "31";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "31";
+                    survivalCode.weaponNumber = "00"; //Collosus
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = ""; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "4000"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = "3E800000"; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 11;
+                    survivalCode.model = "15";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "15";
+                    survivalCode.weaponNumber = "05"; //Raphael
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = ""; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 12;
+                    survivalCode.model = "12";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "12";
+                    survivalCode.weaponNumber = "05"; //Astaroth
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = ""; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = "05"; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3F40"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = "40400000"; //Decrease/Increase Attack
+                    survivalCode.defense = "3F400000"; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = "00000000"; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 13;
+                    survivalCode.model = "02";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "02";
+                    survivalCode.weaponNumber = "03"; //Seong Mi-na 
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "Paralysis"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA8"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = ""; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = "3F800000"; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "40800000";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 14;
+                    survivalCode.model = "25";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "25";
+                    survivalCode.weaponNumber = "04"; //Olcadan 
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = ""; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = "40000000"; //Decrease/Increase Attack
+                    survivalCode.defense = "3F000000"; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 15;
+                    survivalCode.model = "2B";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "14";
+                    survivalCode.weaponNumber = "05"; //Inferno
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = "00"; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = "40000000"; //Decrease/Increase Attack
+                    survivalCode.defense = ""; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = "00000000"; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 16;
+                    survivalCode.model = "ED";
+                    survivalCode.costume = "01";
+                    survivalCode.fightingStyle = "4E";
+                    survivalCode.weaponNumber = "06"; //Hyle
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "All Guard Break"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = "3E800000"; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = "3E800000"; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 17;
+                    survivalCode.model = "43";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "43";
+                    survivalCode.weaponNumber = "14"; //Arthur with Soul Calibur from Luna
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = ""; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "3FC00000";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = "C1800000"; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 18;
+                    survivalCode.model = "06";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "06";
+                    survivalCode.weaponNumber = "05"; //Sophitia
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "Cure"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FA0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = "3F400000"; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "3FA00000";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = "3E800000"; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = "3E800000"; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = "40000000"; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = "40000000"; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = "C0000000"; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 19;
+                    survivalCode.model = "03";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "03";
+                    survivalCode.weaponNumber = "6D"; //Taki with Cervantes Soul Edge
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = ""; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3FB0"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = ""; //Decrease/Increase Defense
+                    survivalCode.stealHp = "40000000"; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "3FC00000";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = "00000000"; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+					
+                    #
+					
+                    survivalCode.stageNumber = 20;
+                    survivalCode.model = "27";
+                    survivalCode.costume = "00";
+                    survivalCode.fightingStyle = "27";
+                    survivalCode.weaponNumber = "00"; //Night Terror
+
+                    survivalCode.aiLevel = "05"; // 00-05
+                    survivalCode.weaponSpecial = "All Unblockable"; //Fire, Thunder, Paralysis, Cure etc
+                    survivalCode.guardianForce = "05"; //Keres have 05, Will o the wisp have 04, Soul Armor custom 06
+                    survivalCode.stickyFeet = ""; //Slippery Feets
+                    survivalCode.speed = "3F90"; //3F80 default speed
+                    survivalCode.voice = "";
+
+                    survivalCode.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
+                    survivalCode.attack = ""; //Decrease/Increase Attack
+                    survivalCode.defense = ""; //Decrease/Increase Defense
+                    survivalCode.stealHp = ""; //Steal health from enemy
+                    survivalCode.pierceDamage = ""; //Damage inflicted thru guard
+                    survivalCode.weaponSize = "";
+                    survivalCode.atkPushForce = ""; //Decrease/Increase Attack Pushback Force
+                    survivalCode.counterRate = ""; //Increase Counter Chance
+                    survivalCode.nullCounter = ""; //Nullify Enemies Counters chance
+                    survivalCode.guardHpModify = ""; //Decrease/Increase Health while guarding enemies attacks
+                    survivalCode.autoGuardImpact = ""; //Automatically Guard Impact some attacks
+                    survivalCode.parryDamage = ""; //Increase Damage Received by Opponent when successfully Guard Impact
+                    survivalCode.parryRegen = ""; //Recover Health when successfully Guard Impact
+                    survivalCode.guardBreakRate = ""; //Increase Guard Break Chance
+                    survivalCode.throwEscapeChance = ""; //Increase Throw Escape Rate
+                    survivalCode.ringOutEscapeChance = ""; //Increase Ring-Out Escape Rate
+                    survivalCode.hpRegenOrDrain = ""; //Drain/Recover Health over Time
+                    survivalCode.hpRegenOrDrainOnAtk = ""; //Drain/Recover Health when Attacking
+                    break;

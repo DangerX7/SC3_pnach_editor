@@ -175,6 +175,10 @@
     <None Remove="Resources\Colossus__1.png" />
     <None Remove="Resources\counterChance.png" />
     <None Remove="Resources\Cover.png" />
+    <None Remove="Resources\Custom Survival Files\example God difficulty.txt" />
+    <None Remove="Resources\Custom Survival Files\READ ME FIRST.txt" />
+    <None Remove="Resources\Custom Survival Files\survival help.txt" />
+    <None Remove="Resources\Custom Survival Files\template.txt" />
     <None Remove="Resources\Dalkia.webp" />
     <None Remove="Resources\Dalkia_F.webp" />
     <None Remove="Resources\Dalkia_M.webp" />
@@ -1379,6 +1383,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\counterChance.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Custom Survival Files\example God difficulty.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Custom Survival Files\READ ME FIRST.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Custom Survival Files\survival help.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Custom Survival Files\template.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Dalkia.webp">

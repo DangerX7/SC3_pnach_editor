@@ -23,6 +23,7 @@ namespace SC3_pnach_editor.Services
 
         public static string GfxCopyFrom = "";
         public static string GfxCopyTo = "";
+        public static string SurvivalPath = "";
 
         public static bool BonusCharacters { get; set; } = false;
         public static bool UltimateWeapons { get; set; } = false;
@@ -141,7 +142,7 @@ namespace SC3_pnach_editor.Services
         public static bool SoulSmashP2 { get; set; } = false;
         public static bool ReserveOffenseUpP1 { get; set; } = false;
         public static bool ReserveOffenseUpP2 { get; set; } = false;
-        public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, bool bonusCharacters, bool ultimateWeapons,
+        public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, string survivalPath, bool bonusCharacters, bool ultimateWeapons,
             int guardianForceP1, int guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
             bool slipperyFieldP1, bool slipperyFieldP2, int chroniclesCharacterP1, int chroniclesCharacterP2, int playerControl, int opponentControl,
             int chroniclesCharacterP1_weapon, int chroniclesCharacterP2_weapon,
@@ -165,6 +166,7 @@ namespace SC3_pnach_editor.Services
             PnachName = pnachName;
             GfxCopyFrom = gfxCopyFrom;
             GfxCopyTo = gfxCopyTo;
+            SurvivalPath = survivalPath;
             BonusCharacters = bonusCharacters;
             UltimateWeapons = ultimateWeapons;
             GuardianForceP1 = guardianForceP1;
@@ -287,6 +289,7 @@ namespace SC3_pnach_editor.Services
             public string PnachName { get; set; } = SettingsClass.PnachName;
             public string GfxCopyFrom { get; set; } = SettingsClass.GfxCopyFrom;
             public string GfxCopyTo { get; set; } = SettingsClass.GfxCopyTo;
+            public string SurvivalPath { get; set; } = SettingsClass.SurvivalPath;
             public bool BonusCharacters { get; set; } = SettingsClass.BonusCharacters;
             public bool UltimateWeapons { get; set; } = SettingsClass.UltimateWeapons;
             public int GuardianForceP1 { get; set; } = SettingsClass.GuardianForceP1;
@@ -415,6 +418,7 @@ namespace SC3_pnach_editor.Services
                 PnachName = Settings.PnachName;
                 GfxCopyFrom = Settings.GfxCopyFrom;
                 GfxCopyTo = Settings.GfxCopyTo;
+                SurvivalPath = Settings.SurvivalPath;
                 BonusCharacters = Settings.BonusCharacters;
                 UltimateWeapons = Settings.UltimateWeapons;
                 GuardianForceP1 = Settings.GuardianForceP1;
@@ -542,6 +546,7 @@ namespace SC3_pnach_editor.Services
             Settings.PnachName = PnachName;
             Settings.GfxCopyFrom = GfxCopyFrom;
             Settings.GfxCopyTo = GfxCopyTo;
+            Settings.SurvivalPath = SurvivalPath;
             Settings.BonusCharacters = BonusCharacters;
             Settings.UltimateWeapons = UltimateWeapons;
             Settings.GuardianForceP1 = GuardianForceP1;

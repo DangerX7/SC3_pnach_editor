@@ -4398,8 +4398,8 @@ namespace SC3_pnach_editor.Services
                                    "\n patch=1,EE,201B3740,extended,0803FF40//BOTH";
 
 
-            string pnachCode = "\n" + survivalModeCode + stageCode + characterSelect + /*charCode + charCode2 +*/ playerControlCode + opponentControlCode
-                + weaponsSpecialPower + weaponEffectsP1 + weaponEffectsP2 + guardianForceP1 +
+            string pnachCode = "\n" + playerControlCode + opponentControlCode + survivalModeCode + stageCode + characterSelect + /*charCode + charCode2 +*/ 
+                weaponsSpecialPower + weaponEffectsP1 + weaponEffectsP2 + guardianForceP1 +
                 guardianForceP2 + slipperyFieldP1 + slipperyFieldP2 + ultimateWeapons  + extraCharacters + infernoCode +
                 p1SpeedCode + p2SpeedCode + bothSpeedCode;
 

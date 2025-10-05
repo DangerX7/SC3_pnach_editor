@@ -26,6 +26,7 @@ namespace SC3_pnach_editor.ViewModels
 
             GfxCopyFrom = SettingsClass.GfxCopyFrom;
             GfxCopyTo = SettingsClass.GfxCopyTo;
+            SurvivalPath = SettingsClass.SurvivalPath;
 
             UseSetCharacters = SettingsClass.UseSetCharacters;
 
@@ -88,6 +89,23 @@ namespace SC3_pnach_editor.ViewModels
                 }
             }
         }
+
+        private string _survivalPath;
+        public string SurvivalPath
+        {
+            get { return _survivalPath; }
+            set
+            {
+                if (_survivalPath != value)
+                {
+                    _survivalPath = value;
+                    RaisePropertyChanged("SurvivalPath");
+                }
+            }
+        }
+
+
+        
 
         private string _editorVersion;
         public string EditorVersion

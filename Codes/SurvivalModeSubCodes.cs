@@ -1399,14 +1399,7 @@ namespace SC3_pnach_editor.Codes
             string CharacterCode = "";
             switch (CharacterLocation)
             {
-                case 1:
-                case 2:
-                case 3:
-                case 4:
-                case 5:
-                case 6:
-                case 7:
-                case 8:
+                case >= 1 and <= 20:
                     //pick standard character
                     List<string> standardChars = new List<string> {
                                 "010001","010101","010801","010901",
@@ -1440,10 +1433,7 @@ namespace SC3_pnach_editor.Codes
                     CharacterCode = standardChars[rnd.Next(standardChars.Count)];
 
                     break;
-                case 9:
-                case 10:
-                case 11:
-                case 12:
+                case >= 21 and <= 30:
                     //pick bonus character
                     List<string> bonusChars = new List<string> {
                                 "300030","300130",
@@ -1470,8 +1460,7 @@ namespace SC3_pnach_editor.Codes
                     CharacterCode = bonusChars[rnd.Next(bonusChars.Count)];
 
                     break;
-                case 13:
-                case 14:
+                case >= 31 and <= 34:
                     //pick tales of souls npc
                     List<string> tosNPCChars = new List<string> {
                                 "1E000E", "280028", "290029", "2A002A", "2E002E",
@@ -1516,11 +1505,7 @@ namespace SC3_pnach_editor.Codes
                     CharacterCode = tosNPCChars[rnd.Next(tosNPCChars.Count)];
 
                     break;
-                case 15:
-                case 16:
-                case 17:
-                case 18:
-                case 19:
+                case >= 35 and <= 39:
                     //pick COTS character
                     List<string> cotsChars = new List<string> {
                                 "A00041", "A10041",
@@ -1587,7 +1572,7 @@ namespace SC3_pnach_editor.Codes
                     CharacterCode = cotsChars[rnd.Next(cotsChars.Count)];
 
                     break;
-                case 20:
+                case 40:
                     //pick COTS common units or the unused models from cutscenes
                     List<string> extraChars = new List<string> {
                                 "E00345", /*"E00744", "E10746",*/
@@ -2517,7 +2502,7 @@ namespace SC3_pnach_editor.Codes
 
                             modifiers.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
                             modifiers.attack = ""; //Decrease/Increase Attack
-                            modifiers.defense = ""; //Decrease/Increase Defense
+                            modifiers.defense = "3E800000"; //Decrease/Increase Defense
                             modifiers.stealHp = ""; //Steal health from enemy
                             modifiers.pierceDamage = ""; //Damage inflicted thru guard
                             modifiers.weaponSize = "";
@@ -2617,7 +2602,7 @@ namespace SC3_pnach_editor.Codes
 
                             modifiers.weaponEffect = ""; //0 = Nothing, 1 = Increase attack over time, 2 = Guard Impact becomes easier to perform
                             modifiers.attack = ""; //Decrease/Increase Attack
-                            modifiers.defense = "3FA00000"; //Decrease/Increase Defense
+                            modifiers.defense = ""; //Decrease/Increase Defense
                             modifiers.stealHp = ""; //Steal health from enemy
                             modifiers.pierceDamage = ""; //Damage inflicted thru guard
                             modifiers.weaponSize = "";
