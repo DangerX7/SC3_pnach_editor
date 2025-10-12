@@ -73,5 +73,13 @@ namespace SC3_pnach_editor.ViewModels
                 ProcessingClass.MainWindowFrame.Content = new SpecialEffectsView();
             });
         }
+
+        public void DisplayCustomCharactersView()
+        {
+            Application.Current.Dispatcher.Invoke((Action)delegate
+            {
+                ProcessingClass.MainWindowFrame.Content = new CustomCharactersView();
+            });
+        }
     }
 }

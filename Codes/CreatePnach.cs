@@ -5,6 +5,7 @@ using System.DirectoryServices;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
@@ -4398,10 +4399,15 @@ namespace SC3_pnach_editor.Services
                                    "\n patch=1,EE,201B3740,extended,0803FF40//BOTH";
 
 
+            //Custom Characters
+            string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
+            string addressFilePath = Path.Combine(customFolder, "combinedPnach" + ".txt");
+            string customCharactersCode = File.ReadAllText(addressFilePath);
+
             string pnachCode = "\n" + playerControlCode + opponentControlCode + survivalModeCode + stageCode + characterSelect + /*charCode + charCode2 +*/ 
                 weaponsSpecialPower + weaponEffectsP1 + weaponEffectsP2 + guardianForceP1 +
                 guardianForceP2 + slipperyFieldP1 + slipperyFieldP2 + ultimateWeapons  + extraCharacters + infernoCode +
-                p1SpeedCode + p2SpeedCode + bothSpeedCode;
+                p1SpeedCode + p2SpeedCode + bothSpeedCode + "\n" + customCharactersCode;
 
             File.WriteAllText(SettingsClass.codeFilePath, pnachCode, Encoding.UTF8);
         }
@@ -4422,5 +4428,105 @@ namespace SC3_pnach_editor.Services
             File.WriteAllText(SettingsClass.codeFilePath, "", Encoding.UTF8);
         }
 
+        public static string GetCustomCharactersPnachCodes()
+        {
+            string char1code = "";
+            string char2code = "";
+            string char3code = "";
+            string char4code = "";
+            string char5code = "";
+            string char6code = "";
+            string char7code = "";
+            string char8code = "";
+            string char9code = "";
+            string char10code = "";
+            if (SettingsClass.CustomCharacter1 != "")
+            {
+                char1code = GenerateCodePiece(1, SettingsClass.CustomCharacter1);
+                char1code = Environment.NewLine + "//Slot 1 \n" + char1code;
+            }
+            if (SettingsClass.CustomCharacter2 != "")
+            {
+                char2code = GenerateCodePiece(2, SettingsClass.CustomCharacter2);
+                char2code = Environment.NewLine + "//Slot 2 \n" + char2code;
+            }
+            if (SettingsClass.CustomCharacter3 != "")
+            {
+                char3code = GenerateCodePiece(3, SettingsClass.CustomCharacter3);
+                char3code = Environment.NewLine + "//Slot 3 \n" + char3code;
+            }
+            if (SettingsClass.CustomCharacter4 != "")
+            {
+                char4code = GenerateCodePiece(4, SettingsClass.CustomCharacter4);
+                char4code = Environment.NewLine + "//Slot 4 \n" + char4code;
+            }
+            if (SettingsClass.CustomCharacter5 != "")
+            {
+                char5code = GenerateCodePiece(5, SettingsClass.CustomCharacter5);
+                char5code = Environment.NewLine + "//Slot 5 \n" + char5code;
+            }
+            if (SettingsClass.CustomCharacter6 != "")
+            {
+                char6code = GenerateCodePiece(6, SettingsClass.CustomCharacter6);
+                char6code = Environment.NewLine + "//Slot 6 \n" + char6code;
+            }
+            if (SettingsClass.CustomCharacter7 != "")
+            {
+                char7code = GenerateCodePiece(7, SettingsClass.CustomCharacter7);
+                char7code = Environment.NewLine + "//Slot 7 \n" + char7code;
+            }
+            if (SettingsClass.CustomCharacter8 != "")
+            {
+                char8code = GenerateCodePiece(8, SettingsClass.CustomCharacter8);
+                char8code = Environment.NewLine + "//Slot 8 \n" + char8code;
+            }
+            if (SettingsClass.CustomCharacter9 != "")
+            {
+                char9code = GenerateCodePiece(9, SettingsClass.CustomCharacter9);
+                char9code = Environment.NewLine + "//Slot 9 \n" + char9code;
+            }
+            if (SettingsClass.CustomCharacter10 != "")
+            {
+                char10code = GenerateCodePiece(10, SettingsClass.CustomCharacter10);
+                char10code = Environment.NewLine + "//Slot 10 \n" + char10code;
+            }
+
+            string allCodes = char1code + char2code + char3code + char4code + char5code +
+                char6code + char7code + char8code + char9code + char10code + Environment.NewLine;
+
+            string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
+            string addressFilePath = Path.Combine(customFolder, "combinedPnach" + ".txt");
+            File.WriteAllText(addressFilePath, allCodes);
+
+            return allCodes;
+        }
+
+        public static string GenerateCodePiece(int slot, string character)
+        {
+            int charSlot = slot;
+            string selectedChar = character;
+            //string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
+
+            string addressFilePath = Path.Combine(customFolder, "slot " + charSlot + ".txt");
+            string valuesFilePath = Path.Combine(customFolder, selectedChar + ".txt");
+            string outputFilePath = Path.Combine(customFolder, "combined.txt");
+
+            // Read both files
+            string[] addressLines = File.ReadAllLines(addressFilePath);
+            string[] valueLines = File.ReadAllLines(valuesFilePath);
+
+            // Build combined lines
+            string[] combinedLines = new string[addressLines.Length];
+            for (int i = 0; i < addressLines.Length; i++)
+            {
+                combinedLines[i] = addressLines[i].Replace("XXXXXXXX", valueLines[i]);
+            }
+
+            // Join all lines into one big string (each separated by newline)
+            string bigString = string.Join(Environment.NewLine, combinedLines);
+
+            return bigString;
+        }
     }
 }

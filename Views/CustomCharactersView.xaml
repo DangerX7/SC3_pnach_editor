@@ -1,0 +1,310 @@
+﻿<UserControl x:Class="SC3_pnach_editor.Views.CustomCharactersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SC3_pnach_editor.Views" xmlns:viewmodels="clr-namespace:SC3_pnach_editor.ViewModels"
+             mc:Ignorable="d"
+             d:DesignHeight="1080" d:DesignWidth="1920">
+
+
+
+    <Grid Height="1080" Width="1920">
+
+        <!--<Grid.Background>
+            <ImageBrush ImageSource="/Resources/Background_3.png"/>
+        </Grid.Background>-->
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="440"/>
+            <ColumnDefinition Width="400"/>
+        </Grid.ColumnDefinitions>
+
+
+        <MediaElement x:Name="customSound" LoadedBehavior="Play"/>
+
+        <!--M1 Slots-->
+        <Border Grid.Column="0"
+            Grid.ColumnSpan="12"
+            Grid.Row="0"
+            Grid.RowSpan="2"
+            BorderThickness="6"
+            Margin="0,0,-8,-8"
+            BorderBrush="Orange"/>
+        <Image x:Name="Slot1"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot2"
+                   Grid.Row="1"
+                   Grid.Column="2"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot3"
+                   Grid.Row="1"
+                   Grid.Column="3"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot4"
+                   Grid.Row="1"
+                   Grid.Column="4"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot5"
+                   Grid.Row="1"
+                   Grid.Column="5"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot6"
+                   Grid.Row="1"
+                   Grid.Column="6"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot7"
+                   Grid.Row="1"
+                   Grid.Column="7"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot8"
+                   Grid.Row="1"
+                   Grid.Column="8"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot9"
+                   Grid.Row="1"
+                   Grid.Column="9"
+                   MouseLeftButtonDown="Slot_Click"/>
+        <Image x:Name="Slot10"
+                   Grid.Row="1"
+                   Grid.Column="10"
+                   MouseLeftButtonDown="Slot_Click"/>
+
+        <Image x:Name="MemCard"
+                   Source="/Resources/MemoryIcon.png"
+                   Height="100"
+                   Grid.Row="1"
+                   Grid.Column="11"/>
+
+
+        <!--Custom Characters-->
+
+        <Border Grid.Column="0"
+            Grid.ColumnSpan="11"
+            Grid.Row="3"
+            Grid.RowSpan="10"
+            BorderThickness="6"
+            Margin="0,-8,-8,-8"
+            BorderBrush="Cyan"/>
+        <Image x:Name="YuilinValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="1"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="LucaValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="2"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="LupiValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="3"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="NinaValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="4"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="ScorpionValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="5"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="BloodValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="6"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="SoruValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="7"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="SoniaValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="8"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="KOSMOSValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="9"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="TifaValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="3"
+               Grid.Column="10"
+               MouseLeftButtonDown="Character_Click"/>
+
+
+
+        <TextBlock x:Name="CharNameTextBlock"
+                   FontSize="42"
+                   Foreground="White"
+                   Grid.Row="1"
+                   Grid.Column="15"
+                   TextAlignment="Center"
+                   Margin="55,0,45,0"/>
+        <TextBlock x:Name="CostumeTextBlock1"
+                   FontSize="35"
+                   Grid.Row="3"
+                   Grid.Column="15"
+                   TextAlignment="Center"
+                   Margin="35,10,32,10"/>
+        <TextBlock x:Name="CostumeTextBlock2"
+                   FontSize="35"
+                   Grid.Row="4"
+                   Grid.Column="15"
+                   TextAlignment="Center"
+                   Margin="35,10,32,10"/>
+        <TextBlock x:Name="SoulTextBlock1"
+                   FontSize="35"
+                   Grid.Row="6"
+                   Grid.Column="21"
+                   TextAlignment="Center"
+                   Margin="35,0,0,0"/>
+        <TextBlock x:Name="SoulTextBlock2"
+                   FontSize="35"
+                   Grid.Row="7"
+                   Grid.Column="21"
+                   TextAlignment="Center"
+                   Margin="35,0,0,0"/>
+
+        <Image x:Name="CharacterPortrait" 
+               Source="{Binding CharacterPortrait}"
+               Grid.Row="1"
+               Grid.RowSpan="11"
+               Grid.Column="12"
+               Margin="8,9,369,9" Grid.ColumnSpan="4"/>
+
+        <!--RESET ALL-->
+        <Button Grid.Row="12"
+                Grid.Column="14"
+                Grid.RowSpan="2"
+                x:Name="RESET"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="ResetAll_Click" 
+                Margin="0,10,240,10">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="RESET ALL" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#880000" Offset="0" />
+                    <GradientStop Color="#990808" Offset="0.25" />
+                    <GradientStop Color="#AA1010" Offset="0.5" />
+                    <GradientStop Color="#990808" Offset="0.75" />
+                    <GradientStop Color="#880000" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--Dump hex to pnach-->
+        <Button Grid.Row="12"
+                Grid.Column="14"
+                Grid.RowSpan="2"
+                x:Name="DumpHex"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="DumpHexData_Click" 
+                Margin="220,10,20,10">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Dump Hex" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#205588" Offset="0" />
+                    <GradientStop Color="#3370A0" Offset="0.25" />
+                    <GradientStop Color="#4488AA" Offset="0.5" />
+                    <GradientStop Color="#3370A0" Offset="0.75" />
+                    <GradientStop Color="#205588" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <!--Switch to Main Page-->
+        <Button Grid.Row="12"
+                Grid.Column="20"
+                Grid.RowSpan="2"
+                x:Name="MainPage"
+                Foreground="#181818"
+                FontFamily="Palatino Linotype"
+                FontSize="34"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Click="GoToMainPage_Click" 
+                Margin="0,0,0,0">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Return to Main Menu" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#55165E" Offset="0" />
+                    <GradientStop Color="#661E7E" Offset="0.25" />
+                    <GradientStop Color="#77269E" Offset="0.5" />
+                    <GradientStop Color="#661E7E" Offset="0.75" />
+                    <GradientStop Color="#55165E" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+    </Grid>
+
+
+</UserControl>

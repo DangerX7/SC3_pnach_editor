@@ -160,7 +160,27 @@
     <None Remove="Resources\Charade__1.png" />
     <None Remove="Resources\Charade__2.png" />
     <None Remove="Resources\Charade__3.png" />
+    <None Remove="Resources\char_01.png" />
+    <None Remove="Resources\char_02.png" />
+    <None Remove="Resources\char_03.png" />
+    <None Remove="Resources\char_04.png" />
+    <None Remove="Resources\char_05.png" />
+    <None Remove="Resources\char_06.png" />
+    <None Remove="Resources\char_07.png" />
+    <None Remove="Resources\char_08.png" />
+    <None Remove="Resources\char_09.png" />
+    <None Remove="Resources\char_10.png" />
     <None Remove="Resources\char_wall.png" />
+    <None Remove="Resources\char__01.png" />
+    <None Remove="Resources\char__02.png" />
+    <None Remove="Resources\char__03.png" />
+    <None Remove="Resources\char__04.png" />
+    <None Remove="Resources\char__05.png" />
+    <None Remove="Resources\char__06.png" />
+    <None Remove="Resources\char__07.png" />
+    <None Remove="Resources\char__08.png" />
+    <None Remove="Resources\char__09.png" />
+    <None Remove="Resources\char__10.png" />
     <None Remove="Resources\Chester.png" />
     <None Remove="Resources\Chester_1.webp" />
     <None Remove="Resources\Chester_2.webp" />
@@ -467,6 +487,7 @@
     <None Remove="Resources\Meiga__2.png" />
     <None Remove="Resources\Meilan.webp" />
     <None Remove="Resources\Meilan__1.png" />
+    <None Remove="Resources\MemoryIcon.png" />
     <None Remove="Resources\Minglian.webp" />
     <None Remove="Resources\Minglian__1.png" />
     <None Remove="Resources\Mingyue.webp" />
@@ -737,6 +758,16 @@
     <None Remove="Resources\Sizuku__1.png" />
     <None Remove="Resources\SkinPreview1.png" />
     <None Remove="Resources\SkinPreview2.png" />
+    <None Remove="Resources\Slot1.png" />
+    <None Remove="Resources\Slot10.png" />
+    <None Remove="Resources\Slot2.png" />
+    <None Remove="Resources\Slot3.png" />
+    <None Remove="Resources\Slot4.png" />
+    <None Remove="Resources\Slot5.png" />
+    <None Remove="Resources\Slot6.png" />
+    <None Remove="Resources\Slot7.png" />
+    <None Remove="Resources\Slot8.png" />
+    <None Remove="Resources\Slot9.png" />
     <None Remove="Resources\SophitiaBrown.png" />
     <None Remove="Resources\Sophitia_1.png" />
     <None Remove="Resources\Sophitia_2.png" />
@@ -1344,6 +1375,66 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Charade__3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_08.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_09.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__01.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__02.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__03.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__04.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__05.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__06.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__07.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__08.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__09.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__10.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Chester.png">
@@ -2123,6 +2214,9 @@
     <Content Include="Resources\Meilan__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\MemoryIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Minglian__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2592,6 +2686,36 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Sizuku__1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot4.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot5.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot6.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot7.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot8.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Slot9.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\SophitiaBrown.png">

@@ -188,7 +188,8 @@
                   FontSize="22"
                   Margin="0,0,0,100"/>
 
-        <!--WeaponSpecialPowerP1--><!--
+        <!--WeaponSpecialPowerP1-->
+        <!--
         <TextBlock Grid.Row="3"
                    Grid.Column="1"
                    Foreground="#FFAAAA" 
@@ -217,7 +218,8 @@
                    Text="Armor"
                    Margin="10,44,4,40"/>
 
-        <!--SlipperyFieldP1--><!--
+        <!--SlipperyFieldP1-->
+        <!--
         <Border Grid.Row="5"
                 Grid.Column="0"
                 Name="slipperyP1"
@@ -262,7 +264,8 @@
                   FontSize="22"
                   Margin="0,0,0,100"/>
 
-        <!--WeaponSpecialPowerP2--><!--
+        <!--WeaponSpecialPowerP2-->
+        <!--
         <TextBlock Grid.Row="3"
                    Grid.Column="4"
                    Foreground="#FFAAAA" 
@@ -292,7 +295,8 @@
                    Margin="270,44,0,40"
                    Grid.ColumnSpan="2"/>
 
-        <!--SlipperyFieldP2--><!--
+        <!--SlipperyFieldP2-->
+        <!--
         <Border Grid.Row="5"
                 Grid.Column="3"
                 Name="slipperyP2"
@@ -740,6 +744,38 @@
                  MaxLength="200"
                  Margin="5,57,5,52"/>
 
+
+        <!--Switch to Custom Characters Page-->
+        <Button Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                Grid.ColumnSpan="2"
+                x:Name="CustomCharactersPage"
+                Foreground="#181818"
+                FontFamily="Trebuchet MS"
+                FontSize="30"
+                FontStyle="Italic"
+                FontWeight="Bold"
+                Margin="274,149,10,10"
+                Click="GoToCustomCharactersPage_Click">
+            <Button.Content>
+                <TextBlock TextWrapping="Wrap" TextAlignment="Center" Text="Custom Character Select Page" />
+            </Button.Content>
+            <Button.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#004848" Offset="0" />
+                    <GradientStop Color="#006060" Offset="0.25" />
+                    <GradientStop Color="#007979" Offset="0.5" />
+                    <GradientStop Color="#006060" Offset="0.75" />
+                    <GradientStop Color="#004848" Offset="1" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
     </Grid>
 
