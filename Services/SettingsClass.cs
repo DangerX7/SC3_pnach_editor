@@ -153,6 +153,17 @@ namespace SC3_pnach_editor.Services
         public static string CustomCharacter8 { get; set; } = "";
         public static string CustomCharacter9 { get; set; } = "";
         public static string CustomCharacter10 { get; set; } = "";
+
+        public static string CustomCharacter11 { get; set; } = "";
+        public static string CustomCharacter12 { get; set; } = "";
+        public static string CustomCharacter13 { get; set; } = "";
+        public static string CustomCharacter14 { get; set; } = "";
+        public static string CustomCharacter15 { get; set; } = "";
+        public static string CustomCharacter16 { get; set; } = "";
+        public static string CustomCharacter17 { get; set; } = "";
+        public static string CustomCharacter18 { get; set; } = "";
+        public static string CustomCharacter19 { get; set; } = "";
+        public static string CustomCharacter20 { get; set; } = "";
         public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, string survivalPath, bool bonusCharacters, bool ultimateWeapons,
             int guardianForceP1, int guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
             bool slipperyFieldP1, bool slipperyFieldP2, int chroniclesCharacterP1, int chroniclesCharacterP2, int playerControl, int opponentControl,
@@ -173,7 +184,9 @@ namespace SC3_pnach_editor.Services
             bool aerialWindP1, bool aerialWindP2, bool smashP1, bool smashP2, bool soulSmashP1, bool soulSmashP2,
             bool reserveOffenseUpP1, bool reserveOffenseUpP2,
             string customCharacter1, string customCharacter2, string customCharacter3, string customCharacter4, string customCharacter5,
-            string customCharacter6, string customCharacter7, string customCharacter8, string customCharacter9, string customCharacter10)
+            string customCharacter6, string customCharacter7, string customCharacter8, string customCharacter9, string customCharacter10,
+            string customCharacter11, string customCharacter12, string customCharacter13, string customCharacter14, string customCharacter15,
+            string customCharacter16, string customCharacter17, string customCharacter18, string customCharacter19, string customCharacter20)
         {
             codeFolderPath = connectionString;
             PnachName = pnachName;
@@ -303,6 +316,17 @@ namespace SC3_pnach_editor.Services
             CustomCharacter8 = customCharacter8;
             CustomCharacter9 = customCharacter9;
             CustomCharacter10 = customCharacter10;
+
+            CustomCharacter11 = customCharacter11;
+            CustomCharacter12 = customCharacter12;
+            CustomCharacter13 = customCharacter13;
+            CustomCharacter14 = customCharacter14;
+            CustomCharacter15 = customCharacter15;
+            CustomCharacter16 = customCharacter16;
+            CustomCharacter17 = customCharacter17;
+            CustomCharacter18 = customCharacter18;
+            CustomCharacter19 = customCharacter19;
+            CustomCharacter20 = customCharacter20;
         }
 
         public static bool isConfigFileLoaded = false;
@@ -438,6 +462,17 @@ namespace SC3_pnach_editor.Services
             public string CustomCharacter8 { get; set; } = SettingsClass.CustomCharacter8;
             public string CustomCharacter9 { get; set; } = SettingsClass.CustomCharacter9;
             public string CustomCharacter10 { get; set; } = SettingsClass.CustomCharacter10;
+
+            public string CustomCharacter11 { get; set; } = SettingsClass.CustomCharacter11;
+            public string CustomCharacter12 { get; set; } = SettingsClass.CustomCharacter12;
+            public string CustomCharacter13 { get; set; } = SettingsClass.CustomCharacter13;
+            public string CustomCharacter14 { get; set; } = SettingsClass.CustomCharacter14;
+            public string CustomCharacter15 { get; set; } = SettingsClass.CustomCharacter15;
+            public string CustomCharacter16 { get; set; } = SettingsClass.CustomCharacter16;
+            public string CustomCharacter17 { get; set; } = SettingsClass.CustomCharacter17;
+            public string CustomCharacter18 { get; set; } = SettingsClass.CustomCharacter18;
+            public string CustomCharacter19 { get; set; } = SettingsClass.CustomCharacter19;
+            public string CustomCharacter20 { get; set; } = SettingsClass.CustomCharacter20;
         }
 
         public static GetData Settings = new GetData();
@@ -579,6 +614,17 @@ namespace SC3_pnach_editor.Services
                 CustomCharacter8 = Settings.CustomCharacter8;
                 CustomCharacter9 = Settings.CustomCharacter9;
                 CustomCharacter10 = Settings.CustomCharacter10;
+
+                CustomCharacter11 = Settings.CustomCharacter11;
+                CustomCharacter12 = Settings.CustomCharacter12;
+                CustomCharacter13 = Settings.CustomCharacter13;
+                CustomCharacter14 = Settings.CustomCharacter14;
+                CustomCharacter15 = Settings.CustomCharacter15;
+                CustomCharacter16 = Settings.CustomCharacter16;
+                CustomCharacter17 = Settings.CustomCharacter17;
+                CustomCharacter18 = Settings.CustomCharacter18;
+                CustomCharacter19 = Settings.CustomCharacter19;
+                CustomCharacter20 = Settings.CustomCharacter20;
             }
             else
             {
@@ -716,6 +762,17 @@ namespace SC3_pnach_editor.Services
             Settings.CustomCharacter8 = CustomCharacter8;
             Settings.CustomCharacter9 = CustomCharacter9;
             Settings.CustomCharacter10 = CustomCharacter10;
+
+            Settings.CustomCharacter11 = CustomCharacter11;
+            Settings.CustomCharacter12 = CustomCharacter12;
+            Settings.CustomCharacter13 = CustomCharacter13;
+            Settings.CustomCharacter14 = CustomCharacter14;
+            Settings.CustomCharacter15 = CustomCharacter15;
+            Settings.CustomCharacter16 = CustomCharacter16;
+            Settings.CustomCharacter17 = CustomCharacter17;
+            Settings.CustomCharacter18 = CustomCharacter18;
+            Settings.CustomCharacter19 = CustomCharacter19;
+            Settings.CustomCharacter20 = CustomCharacter20;
 
             string serialString = JsonConvert.SerializeObject(Settings);
             Directory.CreateDirectory(folderPath);

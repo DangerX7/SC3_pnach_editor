@@ -482,6 +482,29 @@ namespace SC3_pnach_editor.Views
             SettingsClass.ReserveOffenseUpP1 = false;
             SettingsClass.ReserveOffenseUpP2 = false;
 
+            //remove cistom characters data
+            SettingsClass.CustomCharacter1 = "";
+            SettingsClass.CustomCharacter2 = "";
+            SettingsClass.CustomCharacter3 = "";
+            SettingsClass.CustomCharacter4 = "";
+            SettingsClass.CustomCharacter5 = "";
+            SettingsClass.CustomCharacter6 = "";
+            SettingsClass.CustomCharacter7 = "";
+            SettingsClass.CustomCharacter8 = "";
+            SettingsClass.CustomCharacter9 = "";
+            SettingsClass.CustomCharacter10 = "";
+            SettingsClass.CustomCharacter11 = "";
+            SettingsClass.CustomCharacter12 = "";
+            SettingsClass.CustomCharacter13 = "";
+            SettingsClass.CustomCharacter14 = "";
+            SettingsClass.CustomCharacter15 = "";
+            SettingsClass.CustomCharacter16 = "";
+            SettingsClass.CustomCharacter17 = "";
+            SettingsClass.CustomCharacter18 = "";
+            SettingsClass.CustomCharacter19 = "";
+            SettingsClass.CustomCharacter20 = "";
+            string reset = CreatePnach.GetCustomCharactersPnachCodes("RESET");
+
             SettingsClass.SaveData();
 
             //DELETE MAIN GFX FOLDER

@@ -4428,7 +4428,7 @@ namespace SC3_pnach_editor.Services
             File.WriteAllText(SettingsClass.codeFilePath, "", Encoding.UTF8);
         }
 
-        public static string GetCustomCharactersPnachCodes()
+        public static string GetCustomCharactersPnachCodes(string textureFolder)
         {
             string char1code = "";
             string char2code = "";
@@ -4440,6 +4440,18 @@ namespace SC3_pnach_editor.Services
             string char8code = "";
             string char9code = "";
             string char10code = "";
+
+            string char11code = "";
+            string char12code = "";
+            string char13code = "";
+            string char14code = "";
+            string char15code = "";
+            string char16code = "";
+            string char17code = "";
+            string char18code = "";
+            string char19code = "";
+            string char20code = "";
+
             if (SettingsClass.CustomCharacter1 != "")
             {
                 char1code = GenerateCodePiece(1, SettingsClass.CustomCharacter1);
@@ -4491,12 +4503,99 @@ namespace SC3_pnach_editor.Services
                 char10code = Environment.NewLine + "//Slot 10 \n" + char10code;
             }
 
+            if (SettingsClass.CustomCharacter11 != "")
+            {
+                char11code = GenerateCodePiece(11, SettingsClass.CustomCharacter11);
+                char11code = Environment.NewLine + "//Slot 11 \n" + char11code;
+            }
+            if (SettingsClass.CustomCharacter12 != "")
+            {
+                char12code = GenerateCodePiece(12, SettingsClass.CustomCharacter12);
+                char12code = Environment.NewLine + "//Slot 12 \n" + char12code;
+            }
+            if (SettingsClass.CustomCharacter13 != "")
+            {
+                char13code = GenerateCodePiece(13, SettingsClass.CustomCharacter13);
+                char13code = Environment.NewLine + "//Slot 13 \n" + char13code;
+            }
+            if (SettingsClass.CustomCharacter14 != "")
+            {
+                char14code = GenerateCodePiece(14, SettingsClass.CustomCharacter14);
+                char14code = Environment.NewLine + "//Slot 14 \n" + char14code;
+            }
+            if (SettingsClass.CustomCharacter15 != "")
+            {
+                char15code = GenerateCodePiece(15, SettingsClass.CustomCharacter15);
+                char15code = Environment.NewLine + "//Slot 15 \n" + char15code;
+            }
+            if (SettingsClass.CustomCharacter16 != "")
+            {
+                char16code = GenerateCodePiece(16, SettingsClass.CustomCharacter16);
+                char16code = Environment.NewLine + "//Slot 16 \n" + char16code;
+            }
+            if (SettingsClass.CustomCharacter17 != "")
+            {
+                char17code = GenerateCodePiece(17, SettingsClass.CustomCharacter17);
+                char17code = Environment.NewLine + "//Slot 17 \n" + char17code;
+            }
+            if (SettingsClass.CustomCharacter18 != "")
+            {
+                char18code = GenerateCodePiece(18, SettingsClass.CustomCharacter18);
+                char18code = Environment.NewLine + "//Slot 18 \n" + char18code;
+            }
+            if (SettingsClass.CustomCharacter19 != "")
+            {
+                char19code = GenerateCodePiece(19, SettingsClass.CustomCharacter19);
+                char19code = Environment.NewLine + "//Slot 19 \n" + char19code;
+            }
+            if (SettingsClass.CustomCharacter20 != "")
+            {
+                char20code = GenerateCodePiece(20, SettingsClass.CustomCharacter20);
+                char20code = Environment.NewLine + "//Slot 20 \n" + char20code;
+            }
+
+
             string allCodes = char1code + char2code + char3code + char4code + char5code +
-                char6code + char7code + char8code + char9code + char10code + Environment.NewLine;
+                char6code + char7code + char8code + char9code + char10code + Environment.NewLine +
+                char11code + char12code + char13code + char14code + char15code +
+                char16code + char17code + char18code + char19code + char20code + Environment.NewLine;
 
             string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
             string addressFilePath = Path.Combine(customFolder, "combinedPnach" + ".txt");
             File.WriteAllText(addressFilePath, allCodes);
+
+            if (textureFolder != "")
+            {
+                string textureFolderPath = SettingsClass.GfxCopyTo;
+                string customTexturesFolder = Path.Combine(textureFolderPath, "Custom_Characters_Textures");
+
+                if (textureFolder == "RESET")
+                {
+                    //remove all
+                    if (Directory.Exists(customTexturesFolder))
+                    {
+                        Directory.Delete(customTexturesFolder, recursive: true);
+                    }
+
+                }
+                else
+                {
+                    //copy selected folder
+                    if (!Directory.Exists(customTexturesFolder))
+                    {
+                        Directory.CreateDirectory(customTexturesFolder);
+                    }
+
+                    string parentFolder = Path.Combine(SettingsClass.GfxCopyFrom, "Custom_Characters");
+                    string folderToCopy = Path.Combine(parentFolder, textureFolder);
+
+                    // Create a subfolder in the destination with the same name as the folder being copied
+                    string destinationFolder = Path.Combine(customTexturesFolder, Path.GetFileName(folderToCopy));
+
+                    // Copy the folder and all its contents (including subfolders)
+                    CopyDirectory(folderToCopy, destinationFolder);
+                }
+            }
 
             return allCodes;
         }
@@ -4528,5 +4627,25 @@ namespace SC3_pnach_editor.Services
 
             return bigString;
         }
+
+        static void CopyDirectory(string sourceDir, string destinationDir)
+        {
+            Directory.CreateDirectory(destinationDir);
+
+            // Copy all files
+            foreach (string file in Directory.GetFiles(sourceDir))
+            {
+                string destFile = Path.Combine(destinationDir, Path.GetFileName(file));
+                File.Copy(file, destFile, overwrite: true);
+            }
+
+            // Recursively copy all subdirectories
+            foreach (string subDir in Directory.GetDirectories(sourceDir))
+            {
+                string destSubDir = Path.Combine(destinationDir, Path.GetFileName(subDir));
+                CopyDirectory(subDir, destSubDir);
+            }
+        }
+
     }
 }

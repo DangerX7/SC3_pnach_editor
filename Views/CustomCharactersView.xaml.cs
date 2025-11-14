@@ -13,6 +13,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -146,16 +147,152 @@ namespace SC3_pnach_editor.Views
                 UpdateImageAndText("Slot10", null, SettingsClass.CustomCharacter10, 10);
             }
 
+
+            if (SettingsClass.CustomCharacter11 == "")
+            {
+                UpdateImageAndText("Slot11", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot11", null, SettingsClass.CustomCharacter11, 11);
+            }
+
+            if (SettingsClass.CustomCharacter12 == "")
+            {
+                UpdateImageAndText("Slot12", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot12", null, SettingsClass.CustomCharacter12, 12);
+            }
+
+            if (SettingsClass.CustomCharacter13 == "")
+            {
+                UpdateImageAndText("Slot13", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot13", null, SettingsClass.CustomCharacter13, 13);
+            }
+
+            if (SettingsClass.CustomCharacter14 == "")
+            {
+                UpdateImageAndText("Slot14", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot14", null, SettingsClass.CustomCharacter14, 14);
+            }
+
+            if (SettingsClass.CustomCharacter15 == "")
+            {
+                UpdateImageAndText("Slot15", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot15", null, SettingsClass.CustomCharacter15, 15);
+            }
+
+            if (SettingsClass.CustomCharacter16 == "")
+            {
+                UpdateImageAndText("Slot16", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot16", null, SettingsClass.CustomCharacter16, 16);
+            }
+
+            if (SettingsClass.CustomCharacter17 == "")
+            {
+                UpdateImageAndText("Slot17", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot17", null, SettingsClass.CustomCharacter17, 17);
+            }
+
+            if (SettingsClass.CustomCharacter18 == "")
+            {
+                UpdateImageAndText("Slot18", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot18", null, SettingsClass.CustomCharacter18, 18);
+            }
+
+            if (SettingsClass.CustomCharacter19 == "")
+            {
+                UpdateImageAndText("Slot19", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot19", null, SettingsClass.CustomCharacter19, 19);
+            }
+
+            if (SettingsClass.CustomCharacter20 == "")
+            {
+                UpdateImageAndText("Slot20", null, null, null);
+            }
+            else
+            {
+                UpdateImageAndText("Slot20", null, SettingsClass.CustomCharacter20, 20);
+            }
+
+
             UpdateImageAndText("YuilinValues", null, null, null);
             UpdateImageAndText("LucaValues", null, null, null);
             UpdateImageAndText("LupiValues", null, null, null);
             UpdateImageAndText("NinaValues", null, null, null);
             UpdateImageAndText("ScorpionValues", null, null, null);
-            UpdateImageAndText("BloodValues", null, null, null);
-            UpdateImageAndText("SoruValues", null, null, null);
+            UpdateImageAndText("CelestaValues", null, null, null);
+            UpdateImageAndText("PoisonValues", null, null, null);
             UpdateImageAndText("SoniaValues", null, null, null);
             UpdateImageAndText("KOSMOSValues", null, null, null);
             UpdateImageAndText("TifaValues", null, null, null);
+
+            UpdateImageAndText("BlackKnightValues", null, null, null);
+            UpdateImageAndText("EurydiceValues", null, null, null);
+            UpdateImageAndText("TsangValues", null, null, null);
+            UpdateImageAndText("SheenaValues", null, null, null);
+            UpdateImageAndText("DemetriusValues", null, null, null);
+            UpdateImageAndText("JaniceValues", null, null, null);
+            UpdateImageAndText("KitaValues", null, null, null);
+            UpdateImageAndText("EileenValues", null, null, null);
+            UpdateImageAndText("OrikValues", null, null, null);
+            UpdateImageAndText("RosaValues", null, null, null);
+
+            UpdateImageAndText("SoruValues", null, null, null);
+            UpdateImageAndText("CecilValues", null, null, null);
+            UpdateImageAndText("StellaValues", null, null, null);
+            UpdateImageAndText("JilliannaValues", null, null, null);
+            UpdateImageAndText("BloodValues", null, null, null);
+            UpdateImageAndText("DaelkereValues", null, null, null);
+            UpdateImageAndText("IrolValues", null, null, null);
+            UpdateImageAndText("RoyValues", null, null, null);
+            UpdateImageAndText("KokuenraValues", null, null, null);
+            UpdateImageAndText("SpicaValues", null, null, null);
+
+            UpdateImageAndText("ValcuaValues", null, null, null);
+            UpdateImageAndText("AversaValues", null, null, null);
+            UpdateImageAndText("EdgarValues", null, null, null);
+            UpdateImageAndText("BlancheValues", null, null, null);
+            UpdateImageAndText("HelenaValues", null, null, null);
+            UpdateImageAndText("NicholasValues", null, null, null);
+            UpdateImageAndText("AkaraValues", null, null, null);
+            UpdateImageAndText("CitrineValues", null, null, null);
+            UpdateImageAndText("MariseValues", null, null, null);
+            UpdateImageAndText("GrimReaperValues", null, null, null);
+
+            UpdateImageAndText("LeonUzumakiValues", null, null, null);
+            UpdateImageAndText("CherylValues", null, null, null);
+            UpdateImageAndText("TheoHValues", null, null, null);
+            UpdateImageAndText("ChimeraValues", null, null, null);
+            UpdateImageAndText("FitzgeraldValues", null, null, null);
+            UpdateImageAndText("RoanCascadeValues", null, null, null);
+            UpdateImageAndText("SorenValues", null, null, null);
+            UpdateImageAndText("BasiliskValues", null, null, null);
+            UpdateImageAndText("ThymeValues", null, null, null);
+            UpdateImageAndText("TheCalamityValues", null, null, null);
 
         }
 
@@ -170,7 +307,103 @@ namespace SC3_pnach_editor.Views
             string imageName = ((Image)sender).Name;
 
             currentIndex = 0;
-            UpdateImageAndText(imageName, null, null, null);
+
+            if (imageName.Contains("Slot"))
+            {
+                string selectedSlot = "";
+                switch (imageName)
+                {
+                    case "Slot1":
+                        selectedSlot = SettingsClass.CustomCharacter1;
+                        break;
+                    case "Slot2":
+                        selectedSlot = SettingsClass.CustomCharacter2;
+                        break;
+                    case "Slot3":
+                        selectedSlot = SettingsClass.CustomCharacter3;
+                        break;
+                    case "Slot4":
+                        selectedSlot = SettingsClass.CustomCharacter4;
+                        break;
+                    case "Slot5":
+                        selectedSlot = SettingsClass.CustomCharacter5;
+                        break;
+                    case "Slot6":
+                        selectedSlot = SettingsClass.CustomCharacter6;
+                        break;
+                    case "Slot7":
+                        selectedSlot = SettingsClass.CustomCharacter7;
+                        break;
+                    case "Slot8":
+                        selectedSlot = SettingsClass.CustomCharacter8;
+                        break;
+                    case "Slot9":
+                        selectedSlot = SettingsClass.CustomCharacter9;
+                        break;
+                    case "Slot10":
+                        selectedSlot = SettingsClass.CustomCharacter10;
+                        break;
+
+                    case "Slot11":
+                        selectedSlot = SettingsClass.CustomCharacter11;
+                        break;
+                    case "Slot12":
+                        selectedSlot = SettingsClass.CustomCharacter12;
+                        break;
+                    case "Slot13":
+                        selectedSlot = SettingsClass.CustomCharacter13;
+                        break;
+                    case "Slot14":
+                        selectedSlot = SettingsClass.CustomCharacter14;
+                        break;
+                    case "Slot15":
+                        selectedSlot = SettingsClass.CustomCharacter15;
+                        break;
+                    case "Slot16":
+                        selectedSlot = SettingsClass.CustomCharacter16;
+                        break;
+                    case "Slot17":
+                        selectedSlot = SettingsClass.CustomCharacter17;
+                        break;
+                    case "Slot18":
+                        selectedSlot = SettingsClass.CustomCharacter18;
+                        break;
+                    case "Slot19":
+                        selectedSlot = SettingsClass.CustomCharacter19;
+                        break;
+                    case "Slot20":
+                        selectedSlot = SettingsClass.CustomCharacter20;
+                        break;
+                }
+
+                if (selectedSlot != "")
+                {
+                    string removeLetter = Regex.Replace(selectedSlot, "[A-Za-z]", "");
+                    int number = int.Parse(removeLetter);
+                    string newImage = CustomCharactersViewModel.CharList[number - 1];
+
+                    if (!string.IsNullOrEmpty(selectedSlot))
+                    {
+                        //for second costume
+                        char lastChar = selectedSlot[selectedSlot.Length - 1];
+
+                        if (char.IsDigit(lastChar))
+                        {
+                            currentIndex = 0;
+                        }
+                        else if (lastChar == 'B')
+                        {
+                            currentIndex = 1;
+                        }
+                    }
+
+                    UpdateImageAndText(newImage, null, null, null);
+                }
+            }
+            else
+            {
+                UpdateImageAndText(imageName, null, null, null);
+            }
         }
         private void UpdateImageAndText(string? btnName, int? slotSelected, string? charSelected, int? preselectSlot)
         {
@@ -178,7 +411,8 @@ namespace SC3_pnach_editor.Views
             string imageName = "";
             if (preselectSlot != null)
             {
-                int index = Convert.ToInt32(charSelected);
+                string convert = Regex.Replace(charSelected, "[A-Za-z]", "");
+                int index = Convert.ToInt32(convert);
                 imageName = viewModel.CharListItem(index);
                 currentArray = GetSelectedArray(imageName);
                 imageName = currentArray[currentIndex, 3];
@@ -217,6 +451,7 @@ namespace SC3_pnach_editor.Views
                 CostumeTextBlock2.Text = "";
                 SoulTextBlock1.Text = "";
                 SoulTextBlock2.Text = "";
+                TextureTextBlock.Text = "";
 
 
                 CharNameTextBlock.Text = currentArray[currentIndex, 0];
@@ -226,6 +461,11 @@ namespace SC3_pnach_editor.Views
                     CostumeTextBlock1.Foreground = Brushes.White;
                     SoulTextBlock1.Text = currentArray[0, 2];
                     SoulTextBlock1.Foreground = Brushes.White;
+                    if (!btnName.Contains("Slot"))
+                    {
+                        TextureTextBlock.Text = currentArray[0, 8];
+                        TextureTextBlock.Foreground = Brushes.White;
+                    }
                 }
                 if (currentArray.GetLength(0) > 1)
                 {
@@ -233,6 +473,11 @@ namespace SC3_pnach_editor.Views
                     CostumeTextBlock2.Foreground = Brushes.White;
                     SoulTextBlock2.Text = currentArray[1, 2];
                     SoulTextBlock2.Foreground = Brushes.White;
+                    if (!btnName.Contains("Slot"))
+                    {
+                        TextureTextBlock.Text = currentArray[1, 8];
+                        TextureTextBlock.Foreground = Brushes.White;
+                    }
                 }
 
                 switch (currentIndex)
@@ -270,11 +515,11 @@ namespace SC3_pnach_editor.Views
                 case "ScorpionValues":
                     ScorpionValues.Source = bitmap;
                     break;
-                case "BloodValues":
-                    BloodValues.Source = bitmap;
+                case "CelestaValues":
+                    CelestaValues.Source = bitmap;
                     break;
-                case "SoruValues":
-                    SoruValues.Source = bitmap;
+                case "PoisonValues":
+                    PoisonValues.Source = bitmap;
                     break;
                 case "SoniaValues":
                     SoniaValues.Source = bitmap;
@@ -284,6 +529,130 @@ namespace SC3_pnach_editor.Views
                     break;
                 case "TifaValues":
                     TifaValues.Source = bitmap;
+                    break;
+
+                case "BlackKnightValues":
+                    BlackKnightValues.Source = bitmap;
+                    break;
+                case "EurydiceValues":
+                    EurydiceValues.Source = bitmap;
+                    break;
+                case "TsangValues":
+                    TsangValues.Source = bitmap;
+                    break;
+                case "SheenaValues":
+                    SheenaValues.Source = bitmap;
+                    break;
+                case "DemetriusValues":
+                    DemetriusValues.Source = bitmap;
+                    break;
+                case "JaniceValues":
+                    JaniceValues.Source = bitmap;
+                    break;
+                case "KitaValues":
+                    KitaValues.Source = bitmap;
+                    break;
+                case "EileenValues":
+                    EileenValues.Source = bitmap;
+                    break;
+                case "OrikValues":
+                    OrikValues.Source = bitmap;
+                    break;
+                case "RosaValues":
+                    RosaValues.Source = bitmap;
+                    break;
+
+                case "SoruValues":
+                    SoruValues.Source = bitmap;
+                    break;
+                case "CecilValues":
+                    CecilValues.Source = bitmap;
+                    break;
+                case "StellaValues":
+                    StellaValues.Source = bitmap;
+                    break;
+                case "JilliannaValues":
+                    JilliannaValues.Source = bitmap;
+                    break;
+                case "BloodValues":
+                    BloodValues.Source = bitmap;
+                    break;
+                case "DaelkereValues":
+                    DaelkereValues.Source = bitmap;
+                    break;
+                case "IrolValues":
+                    IrolValues.Source = bitmap;
+                    break;
+                case "RoyValues":
+                    RoyValues.Source = bitmap;
+                    break;
+                case "KokuenraValues":
+                    KokuenraValues.Source = bitmap;
+                    break;
+                case "SpicaValues":
+                    SpicaValues.Source = bitmap;
+                    break;
+
+                case "ValcuaValues":
+                    ValcuaValues.Source = bitmap;
+                    break;
+                case "AversaValues":
+                    AversaValues.Source = bitmap;
+                    break;
+                case "EdgarValues":
+                    EdgarValues.Source = bitmap;
+                    break;
+                case "BlancheValues":
+                    BlancheValues.Source = bitmap;
+                    break;
+                case "HelenaValues":
+                    HelenaValues.Source = bitmap;
+                    break;
+                case "NicholasValues":
+                    NicholasValues.Source = bitmap;
+                    break;
+                case "AkaraValues":
+                    AkaraValues.Source = bitmap;
+                    break;
+                case "CitrineValues":
+                    CitrineValues.Source = bitmap;
+                    break;
+                case "MariseValues":
+                    MariseValues.Source = bitmap;
+                    break;
+                case "GrimReaperValues":
+                    GrimReaperValues.Source = bitmap;
+                    break;
+
+                case "LeonUzumakiValues":
+                    LeonUzumakiValues.Source = bitmap;
+                    break;
+                case "CherylValues":
+                    CherylValues.Source = bitmap;
+                    break;
+                case "TheoHValues":
+                    TheoHValues.Source = bitmap;
+                    break;
+                case "ChimeraValues":
+                    ChimeraValues.Source = bitmap;
+                    break;
+                case "FitzgeraldValues":
+                    FitzgeraldValues.Source = bitmap;
+                    break;
+                case "RoanCascadeValues":
+                    RoanCascadeValues.Source = bitmap;
+                    break;
+                case "SorenValues":
+                    SorenValues.Source = bitmap;
+                    break;
+                case "BasiliskValues":
+                    BasiliskValues.Source = bitmap;
+                    break;
+                case "ThymeValues":
+                    ThymeValues.Source = bitmap;
+                    break;
+                case "TheCalamityValues":
+                    TheCalamityValues.Source = bitmap;
                     break;
 
                 case "Slot1":
@@ -316,6 +685,38 @@ namespace SC3_pnach_editor.Views
                 case "Slot10":
                     Slot10.Source = bitmap;
                     break;
+
+
+                case "Slot11":
+                    Slot11.Source = bitmap;
+                    break;
+                case "Slot12":
+                    Slot12.Source = bitmap;
+                    break;
+                case "Slot13":
+                    Slot13.Source = bitmap;
+                    break;
+                case "Slot14":
+                    Slot14.Source = bitmap;
+                    break;
+                case "Slot15":
+                    Slot15.Source = bitmap;
+                    break;
+                case "Slot16":
+                    Slot16.Source = bitmap;
+                    break;
+                case "Slot17":
+                    Slot17.Source = bitmap;
+                    break;
+                case "Slot18":
+                    Slot18.Source = bitmap;
+                    break;
+                case "Slot19":
+                    Slot19.Source = bitmap;
+                    break;
+                case "Slot20":
+                    Slot20.Source = bitmap;
+                    break;
             }
 
         }
@@ -341,11 +742,11 @@ namespace SC3_pnach_editor.Views
                 case "ScorpionValues":
                     currentArray = viewModel.ScorpionValues;
                     break;
-                case "BloodValues":
-                    currentArray = viewModel.BloodValues;
+                case "CelestaValues":
+                    currentArray = viewModel.CelestaValues;
                     break;
-                case "SoruValues":
-                    currentArray = viewModel.SoruValues;
+                case "PoisonValues":
+                    currentArray = viewModel.PoisonValues;
                     break;
                 case "SoniaValues":
                     currentArray = viewModel.SoniaValues;
@@ -355,6 +756,130 @@ namespace SC3_pnach_editor.Views
                     break;
                 case "TifaValues":
                     currentArray = viewModel.TifaValues;
+                    break;
+
+                case "BlackKnightValues":
+                    currentArray = viewModel.BlackKnightValues;
+                    break;
+                case "EurydiceValues":
+                    currentArray = viewModel.EurydiceValues;
+                    break;
+                case "TsangValues":
+                    currentArray = viewModel.TsangValues;
+                    break;
+                case "SheenaValues":
+                    currentArray = viewModel.SheenaValues;
+                    break;
+                case "DemetriusValues":
+                    currentArray = viewModel.DemetriusValues;
+                    break;
+                case "JaniceValues":
+                    currentArray = viewModel.JaniceValues;
+                    break;
+                case "KitaValues":
+                    currentArray = viewModel.KitaValues;
+                    break;
+                case "EileenValues":
+                    currentArray = viewModel.EileenValues;
+                    break;
+                case "OrikValues":
+                    currentArray = viewModel.OrikValues;
+                    break;
+                case "RosaValues":
+                    currentArray = viewModel.RosaValues;
+                    break;
+
+                case "SoruValues":
+                    currentArray = viewModel.SoruValues;
+                    break;
+                case "CecilValues":
+                    currentArray = viewModel.CecilValues;
+                    break;
+                case "StellaValues":
+                    currentArray = viewModel.StellaValues;
+                    break;
+                case "JilliannaValues":
+                    currentArray = viewModel.JilliannaValues;
+                    break;
+                case "BloodValues":
+                    currentArray = viewModel.BloodValues;
+                    break;
+                case "DaelkereValues":
+                    currentArray = viewModel.DaelkereValues;
+                    break;
+                case "IrolValues":
+                    currentArray = viewModel.IrolValues;
+                    break;
+                case "RoyValues":
+                    currentArray = viewModel.RoyValues;
+                    break;
+                case "KokuenraValues":
+                    currentArray = viewModel.KokuenraValues;
+                    break;
+                case "SpicaValues":
+                    currentArray = viewModel.SpicaValues;
+                    break;
+
+                case "ValcuaValues":
+                    currentArray = viewModel.ValcuaValues;
+                    break;
+                case "AversaValues":
+                    currentArray = viewModel.AversaValues;
+                    break;
+                case "EdgarValues":
+                    currentArray = viewModel.EdgarValues;
+                    break;
+                case "BlancheValues":
+                    currentArray = viewModel.BlancheValues;
+                    break;
+                case "HelenaValues":
+                    currentArray = viewModel.HelenaValues;
+                    break;
+                case "NicholasValues":
+                    currentArray = viewModel.NicholasValues;
+                    break;
+                case "AkaraValues":
+                    currentArray = viewModel.AkaraValues;
+                    break;
+                case "CitrineValues":
+                    currentArray = viewModel.CitrineValues;
+                    break;
+                case "MariseValues":
+                    currentArray = viewModel.MariseValues;
+                    break;
+                case "GrimReaperValues":
+                    currentArray = viewModel.GrimReaperValues;
+                    break;
+
+                case "LeonUzumakiValues":
+                    currentArray = viewModel.LeonUzumakiValues;
+                    break;
+                case "CherylValues":
+                    currentArray = viewModel.CherylValues;
+                    break;
+                case "TheoHValues":
+                    currentArray = viewModel.TheoHValues;
+                    break;
+                case "ChimeraValues":
+                    currentArray = viewModel.ChimeraValues;
+                    break;
+                case "FitzgeraldValues":
+                    currentArray = viewModel.FitzgeraldValues;
+                    break;
+                case "RoanCascadeValues":
+                    currentArray = viewModel.RoanCascadeValues;
+                    break;
+                case "SorenValues":
+                    currentArray = viewModel.SorenValues;
+                    break;
+                case "BasiliskValues":
+                    currentArray = viewModel.BasiliskValues;
+                    break;
+                case "ThymeValues":
+                    currentArray = viewModel.ThymeValues;
+                    break;
+                case "TheCalamityValues":
+                    currentArray = viewModel.TheCalamityValues;
                     break;
 
                 case "Slot1":
@@ -386,6 +911,38 @@ namespace SC3_pnach_editor.Views
                     break;
                 case "Slot10":
                     currentArray = viewModel.Slot10Values;
+                    break;
+
+
+                case "Slot11":
+                    currentArray = viewModel.Slot11Values;
+                    break;
+                case "Slot12":
+                    currentArray = viewModel.Slot12Values;
+                    break;
+                case "Slot13":
+                    currentArray = viewModel.Slot13Values;
+                    break;
+                case "Slot14":
+                    currentArray = viewModel.Slot14Values;
+                    break;
+                case "Slot15":
+                    currentArray = viewModel.Slot15Values;
+                    break;
+                case "Slot16":
+                    currentArray = viewModel.Slot16Values;
+                    break;
+                case "Slot17":
+                    currentArray = viewModel.Slot17Values;
+                    break;
+                case "Slot18":
+                    currentArray = viewModel.Slot18Values;
+                    break;
+                case "Slot19":
+                    currentArray = viewModel.Slot19Values;
+                    break;
+                case "Slot20":
+                    currentArray = viewModel.Slot20Values;
                     break;
             }
             return currentArray;
@@ -441,6 +998,12 @@ namespace SC3_pnach_editor.Views
 
             string[,] currentArray = GetSelectedArray(imageName);
             string charIndex = currentArray[currentIndex, 4];
+            string textureToCopy = "";
+            string applyTexture = currentArray[currentIndex, 8];
+            if (applyTexture == "Yes")
+            {
+                textureToCopy = currentArray[currentIndex, 0];
+            }
 
             switch (_selectedSlotNumber)
             {
@@ -484,9 +1047,50 @@ namespace SC3_pnach_editor.Views
                     SettingsClass.CustomCharacter10 = charIndex;
                     SettingsClass.SaveData();
                     break;
+
+                case 11:
+                    SettingsClass.CustomCharacter11 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 12:
+                    SettingsClass.CustomCharacter12 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 13:
+                    SettingsClass.CustomCharacter13 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 14:
+                    SettingsClass.CustomCharacter14 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 15:
+                    SettingsClass.CustomCharacter15 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 16:
+                    SettingsClass.CustomCharacter16 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 17:
+                    SettingsClass.CustomCharacter17 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 18:
+                    SettingsClass.CustomCharacter18 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 19:
+                    SettingsClass.CustomCharacter19 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
+                case 20:
+                    SettingsClass.CustomCharacter20 = charIndex;
+                    SettingsClass.SaveData();
+                    break;
             }
 
-            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes();
+            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes(textureToCopy);
 
             File.WriteAllText(SettingsClass.codeFilePath, customCharacterPnachData, Encoding.UTF8);
         }
@@ -505,6 +1109,17 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("Slot9", null, null, null);
             UpdateImageAndText("Slot10", null, null, null);
 
+            UpdateImageAndText("Slot11", null, null, null);
+            UpdateImageAndText("Slot12", null, null, null);
+            UpdateImageAndText("Slot13", null, null, null);
+            UpdateImageAndText("Slot14", null, null, null);
+            UpdateImageAndText("Slot15", null, null, null);
+            UpdateImageAndText("Slot16", null, null, null);
+            UpdateImageAndText("Slot17", null, null, null);
+            UpdateImageAndText("Slot18", null, null, null);
+            UpdateImageAndText("Slot19", null, null, null);
+            UpdateImageAndText("Slot20", null, null, null);
+
             //Reset setting data
             SettingsClass.CustomCharacter1 = "";
             SettingsClass.CustomCharacter2 = "";
@@ -516,9 +1131,20 @@ namespace SC3_pnach_editor.Views
             SettingsClass.CustomCharacter8 = "";
             SettingsClass.CustomCharacter9 = "";
             SettingsClass.CustomCharacter10 = "";
+
+            SettingsClass.CustomCharacter11 = "";
+            SettingsClass.CustomCharacter12 = "";
+            SettingsClass.CustomCharacter13 = "";
+            SettingsClass.CustomCharacter14 = "";
+            SettingsClass.CustomCharacter15 = "";
+            SettingsClass.CustomCharacter16 = "";
+            SettingsClass.CustomCharacter17 = "";
+            SettingsClass.CustomCharacter18 = "";
+            SettingsClass.CustomCharacter19 = "";
+            SettingsClass.CustomCharacter20 = "";
             SettingsClass.SaveData();
 
-            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes();
+            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes("RESET");
 
             File.WriteAllText(SettingsClass.codeFilePath, customCharacterPnachData, Encoding.UTF8);
 
@@ -526,6 +1152,7 @@ namespace SC3_pnach_editor.Views
 
         private void DumpHexData_Click(object sender, RoutedEventArgs e)
         {
+            //USA
             //1  2053FC60 - 2054034F
             //2  20540350 - 20540A3F
             //3  20540A40 - 2054112F
@@ -536,6 +1163,44 @@ namespace SC3_pnach_editor.Views
             //8  20542CF0 - 205433DF
             //9  205433E0 - 20543ACF
             //10 20543AD0 - 205441BF
+
+            //EUROPE
+            //1  20540C90 - 2054137F
+            //2  20541380 - 20541A6F
+            //3  20541A70 - 2054215F
+            //4  20542160 - 2054284F
+            //5  20542850 - 20542F3F
+            //6  20542F40 - 2054362F
+            //7  20543630 - 20543D1F
+            //8  20543D20 - 2054440F
+            //9  20544410 - 20544AFF
+            //10 20544B00 - 205451EF
+
+            //USA slot 2
+            //1  20C32280 - 20C3296F
+            //2  20C32970 - 20C3305F
+            //3  20C33060 - 20C3374F
+            //4  20C33750 - 20C33E3F
+            //5  20C33E40 - 20C3452F
+            //6  20C34530 - 20C34C1F
+            //7  20C34C20 - 20C3530F
+            //8  20C35310 - 20C359FF
+            //9  20C35A00 - 20C360EF
+            //10 20C360F0 - 20C367DF
+
+            //TRUE START OF slot 1
+            //1  20C2D520 - 20C2DC0F
+            //2  20C2DC10 - 20C2E2FF
+            //3  20C2E300 - 20C2E9EF
+            //4  20C2E9F0 - 20C2F0DF
+            //5  20C2F0E0 - 20C2F7CF
+            //6  20C2F7D0 - 20C2FEBF
+            //7  20C2FEC0 - 20C305AF
+            //8  20C305B0 - 20C30C9F
+            //9  20C30CA0 - 20C3138F
+            //10 20C31390 - 20C31A7F
+
+            //add 6F0
 
             MessageBoxResult result = MessageBox.Show(
                 "Dump your character hex code in a text file, place it on desktop and name it hexInput.txt",
@@ -587,6 +1252,26 @@ namespace SC3_pnach_editor.Views
             }
 
 
+        }
+
+
+        private void ImageControl_MouseWheel(object sender, MouseWheelEventArgs e)
+        {
+            string imageName = ((Image)sender).Name;
+            string[,] currentArray = GetSelectedArray(imageName);
+
+            if (e.Delta > 0)
+            {
+                // Scroll down
+                currentIndex = (currentIndex - 1 + currentArray.GetLength(0)) % currentArray.GetLength(0);
+            }
+            else
+            {
+                // Scroll up
+                currentIndex = (currentIndex + 1) % currentArray.GetLength(0);
+            }
+
+            UpdateImageAndText(imageName, null, null, null);
         }
     }
 

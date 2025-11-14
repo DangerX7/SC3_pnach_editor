@@ -170,17 +170,101 @@
     <None Remove="Resources\char_08.png" />
     <None Remove="Resources\char_09.png" />
     <None Remove="Resources\char_10.png" />
+    <None Remove="Resources\char_11.png" />
+    <None Remove="Resources\char_12.png" />
+    <None Remove="Resources\char_13.png" />
+    <None Remove="Resources\char_14.png" />
+    <None Remove="Resources\char_15.png" />
+    <None Remove="Resources\char_16.png" />
+    <None Remove="Resources\char_17.png" />
+    <None Remove="Resources\char_18.png" />
+    <None Remove="Resources\char_19.png" />
+    <None Remove="Resources\char_20.png" />
+    <None Remove="Resources\char_21.png" />
+    <None Remove="Resources\char_22.png" />
+    <None Remove="Resources\char_23.png" />
+    <None Remove="Resources\char_24.png" />
+    <None Remove="Resources\char_25.png" />
+    <None Remove="Resources\char_26.png" />
+    <None Remove="Resources\char_27.png" />
+    <None Remove="Resources\char_28.png" />
+    <None Remove="Resources\char_29.png" />
+    <None Remove="Resources\char_30.png" />
+    <None Remove="Resources\char_31.png" />
+    <None Remove="Resources\char_32.png" />
+    <None Remove="Resources\char_33.png" />
+    <None Remove="Resources\char_34.png" />
+    <None Remove="Resources\char_35.png" />
+    <None Remove="Resources\char_36.png" />
+    <None Remove="Resources\char_37.png" />
+    <None Remove="Resources\char_38.png" />
+    <None Remove="Resources\char_39.png" />
+    <None Remove="Resources\char_40.png" />
+    <None Remove="Resources\char_41.png" />
+    <None Remove="Resources\char_42.png" />
+    <None Remove="Resources\char_43.png" />
+    <None Remove="Resources\char_44.png" />
+    <None Remove="Resources\char_45.png" />
+    <None Remove="Resources\char_46.png" />
+    <None Remove="Resources\char_47.png" />
+    <None Remove="Resources\char_48.png" />
+    <None Remove="Resources\char_49.png" />
+    <None Remove="Resources\char_50.png" />
     <None Remove="Resources\char_wall.png" />
     <None Remove="Resources\char__01.png" />
     <None Remove="Resources\char__02.png" />
     <None Remove="Resources\char__03.png" />
     <None Remove="Resources\char__04.png" />
+    <None Remove="Resources\char__04B.png" />
     <None Remove="Resources\char__05.png" />
     <None Remove="Resources\char__06.png" />
     <None Remove="Resources\char__07.png" />
     <None Remove="Resources\char__08.png" />
     <None Remove="Resources\char__09.png" />
     <None Remove="Resources\char__10.png" />
+    <None Remove="Resources\char__11.png" />
+    <None Remove="Resources\char__12.png" />
+    <None Remove="Resources\char__13.png" />
+    <None Remove="Resources\char__14.png" />
+    <None Remove="Resources\char__15.png" />
+    <None Remove="Resources\char__16.png" />
+    <None Remove="Resources\char__17.png" />
+    <None Remove="Resources\char__18.png" />
+    <None Remove="Resources\char__19.png" />
+    <None Remove="Resources\char__20.png" />
+    <None Remove="Resources\char__21.png" />
+    <None Remove="Resources\char__21B.png" />
+    <None Remove="Resources\char__22.png" />
+    <None Remove="Resources\char__23.png" />
+    <None Remove="Resources\char__24.png" />
+    <None Remove="Resources\char__24B.png" />
+    <None Remove="Resources\char__25.png" />
+    <None Remove="Resources\char__26.png" />
+    <None Remove="Resources\char__27.png" />
+    <None Remove="Resources\char__28.png" />
+    <None Remove="Resources\char__29.png" />
+    <None Remove="Resources\char__30.png" />
+    <None Remove="Resources\char__31.png" />
+    <None Remove="Resources\char__31B.png" />
+    <None Remove="Resources\char__32.png" />
+    <None Remove="Resources\char__33.png" />
+    <None Remove="Resources\char__34.png" />
+    <None Remove="Resources\char__35.png" />
+    <None Remove="Resources\char__36.png" />
+    <None Remove="Resources\char__37.png" />
+    <None Remove="Resources\char__38.png" />
+    <None Remove="Resources\char__39.png" />
+    <None Remove="Resources\char__40.png" />
+    <None Remove="Resources\char__41.png" />
+    <None Remove="Resources\char__42.png" />
+    <None Remove="Resources\char__43.png" />
+    <None Remove="Resources\char__44.png" />
+    <None Remove="Resources\char__45.png" />
+    <None Remove="Resources\char__46.png" />
+    <None Remove="Resources\char__47.png" />
+    <None Remove="Resources\char__48.png" />
+    <None Remove="Resources\char__49.png" />
+    <None Remove="Resources\char__50.png" />
     <None Remove="Resources\Chester.png" />
     <None Remove="Resources\Chester_1.webp" />
     <None Remove="Resources\Chester_2.webp" />
@@ -488,6 +572,7 @@
     <None Remove="Resources\Meilan.webp" />
     <None Remove="Resources\Meilan__1.png" />
     <None Remove="Resources\MemoryIcon.png" />
+    <None Remove="Resources\MemoryIcon2.png" />
     <None Remove="Resources\Minglian.webp" />
     <None Remove="Resources\Minglian__1.png" />
     <None Remove="Resources\Mingyue.webp" />
@@ -1407,6 +1492,126 @@
     <Content Include="Resources\char_10.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\char_11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_40.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_44.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\char__01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1435,6 +1640,135 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\char__10.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__11.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__12.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__13.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__14.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__15.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__16.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__17.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__18.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__19.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__20.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__21.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__21B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__22.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__23.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__24.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__24B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__25.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__26.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__27.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__28.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__29.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__30.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__31.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__31B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__33.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__35.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__36.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__37.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__38.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__39.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__40.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__41.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__42.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__43.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__44.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__45.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__46.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__47.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__48.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__49.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__50.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Chester.png">
@@ -2215,6 +2549,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\MemoryIcon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MemoryIcon2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Minglian__1.png">
@@ -3080,6 +3417,12 @@
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
     <PackageReference Include="System.Data.HashFunction.CRC" Version="2.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\char__04B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
