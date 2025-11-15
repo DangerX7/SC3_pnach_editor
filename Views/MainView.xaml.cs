@@ -167,6 +167,7 @@ namespace SC3_pnach_editor.Views
 
         private void ActivateCodes_Click(object sender, RoutedEventArgs e)
         {
+            string tyest = SettingsClass.CharacterP1;
 
             string weaponEfcP1 = Convert.ToString(WeaponEffectComboP1.SelectedValue);
             //string weaponSpP1 = Convert.ToString(WeaponSpecialPowerComboP1.SelectedValue);

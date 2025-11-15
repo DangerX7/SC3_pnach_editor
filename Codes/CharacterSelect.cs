@@ -23,39 +23,61 @@ namespace SC3_pnach_editor.Codes
                 {
                     if (SettingsClass.CharacterP1 != "FF")
                     {
-                        string voicePiece1 = "";
-                        if (SettingsClass.VoiceP1 != null && SettingsClass.VoiceP1 != "")
+                        if (SettingsClass.CharacterP1 == "FX")
                         {
-                            voicePiece1 = Environment.NewLine + "patch=1,EE,004B4872,extended," + SettingsClass.VoiceP1 + " //Voice";
-                            if (SettingsClass.CharacterP1 == "BF" && SettingsClass.ModelP1 == "01")
+                            if (SettingsClass.ModelP1 == "00")
                             {
-                                //Add Riese second voice
-                                voicePiece1 = voicePiece1 +
-                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4608 //Second Voice";
+                                player1Char = "patch=1,EE,204B4860,extended,00540028 //fighting style + model" + Environment.NewLine +
+                                              "patch=1,EE,204B4864,extended,00540054 //weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204B4868,extended,00010054 //type + weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204B486C,extended,00010028 //costume + model" + Environment.NewLine;
                             }
-                            if (SettingsClass.CharacterP1 == "C0" && SettingsClass.ModelP1 == "01")
+                            else if (SettingsClass.ModelP1 == "01")
                             {
-                                //Add Leraje second voice
-                                voicePiece1 = voicePiece1 +
-                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4540 //Second Voice";
-                            }
-                            if (SettingsClass.CharacterP1 == "E8" && SettingsClass.ModelP1 == "00")
-                            {
-                                //Add Heal-Do second voice
-                                voicePiece1 = voicePiece1 +
-                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F45E0 //Second Voice";
-                            }
-                            if (SettingsClass.CharacterP1 == "30" && SettingsClass.ModelP1 == "00")
-                            {
-                                //Add Amy special second voice
-                                voicePiece1 = voicePiece1 +
-                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4518 //Second Voice";
+                                player1Char = "patch=1,EE,204B4860,extended,000E0031 //fighting style + model" + Environment.NewLine +
+                                              "patch=1,EE,204B4864,extended,000E000E //weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204B4868,extended,0001000E //type + weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204B486C,extended,00020031 //costume + model" + Environment.NewLine +
+                                              "patch=1,EE,204B4AF4,extended,00020000 //No Armor" + Environment.NewLine;
                             }
                         }
+                        else
+                        {
+                            string voicePiece1 = "";
+                            if (SettingsClass.VoiceP1 != null && SettingsClass.VoiceP1 != "")
+                            {
+                                voicePiece1 = Environment.NewLine + "patch=1,EE,004B4872,extended," + SettingsClass.VoiceP1 + " //Voice";
+                                if (SettingsClass.CharacterP1 == "BF" && SettingsClass.ModelP1 == "01")
+                                {
+                                    //Add Riese second voice
+                                    voicePiece1 = voicePiece1 +
+                                        Environment.NewLine + "patch=1,EE,204B4888,extended,004F4608 //Second Voice";
+                                }
+                                if (SettingsClass.CharacterP1 == "C0" && SettingsClass.ModelP1 == "01")
+                                {
+                                    //Add Leraje second voice
+                                    voicePiece1 = voicePiece1 +
+                                        Environment.NewLine + "patch=1,EE,204B4888,extended,004F4540 //Second Voice";
+                                }
+                                if (SettingsClass.CharacterP1 == "E8" && SettingsClass.ModelP1 == "00")
+                                {
+                                    //Add Heal-Do second voice
+                                    voicePiece1 = voicePiece1 +
+                                        Environment.NewLine + "patch=1,EE,204B4888,extended,004F45E0 //Second Voice";
+                                }
+                                if (SettingsClass.CharacterP1 == "30" && SettingsClass.ModelP1 == "00")
+                                {
+                                    //Add Amy special second voice
+                                    voicePiece1 = voicePiece1 +
+                                        Environment.NewLine + "patch=1,EE,204B4888,extended,004F4518 //Second Voice";
+                                }
+                            }
 
-                        player1Char = "patch=1,EE,004B4860,extended," + SettingsClass.CharacterP1 + " //Character" + Environment.NewLine +
-                                      "patch=1,EE,004B486E,extended," + SettingsClass.ModelP1 + " //Model" +
-                                      voicePiece1;
+                            player1Char = "patch=1,EE,004B4860,extended," + SettingsClass.CharacterP1 + " //Character" + Environment.NewLine +
+                                          "patch=1,EE,004B486E,extended," + SettingsClass.ModelP1 + " //Model" +
+                                          voicePiece1;
+                        }
+
                     }
                     else//for bosses
                     {
@@ -203,39 +225,60 @@ namespace SC3_pnach_editor.Codes
                 {
                     if (SettingsClass.CharacterP2 != "FF")
                     {
-                        string voicePiece2 = "";
-                        if (SettingsClass.VoiceP2 != null && SettingsClass.VoiceP2 != "")
+                        if (SettingsClass.CharacterP2 == "FX")
                         {
-                            voicePiece2 = Environment.NewLine + "patch=1,EE,004D1FF2,extended," + SettingsClass.VoiceP2 + " //Voice";
-                            if (SettingsClass.CharacterP2 == "BF" && SettingsClass.ModelP2 == "01")
+                            if (SettingsClass.ModelP2 == "00")
                             {
-                                //Add Riese second voice
-                                voicePiece2 = voicePiece2 +
-                                    Environment.NewLine + "patch=1,EE,204D2008,extended,004F4608 //Second Voice";
+                                player2Char = "patch=1,EE,204D1FE0,extended,00540028 //fighting style + model" + Environment.NewLine +
+                                              "patch=1,EE,204D1FE4,extended,00540054 //weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204D1FE8,extended,00010054 //type + weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204D1FEC,extended,00010028 //costume + model" + Environment.NewLine;
                             }
-                            if (SettingsClass.CharacterP2 == "C0" && SettingsClass.ModelP2 == "01")
+                            else if (SettingsClass.ModelP2 == "01")
                             {
-                                //Add Leraje second voice
-                                voicePiece2 = voicePiece2 +
-                                    Environment.NewLine + "patch=1,EE,204D2008,extended,004F4540 //Second Voice";
-                            }
-                            if (SettingsClass.CharacterP2 == "E8" && SettingsClass.ModelP2 == "00")
-                            {
-                                //Add Heal-Do second voice
-                                voicePiece2 = voicePiece2 +
-                                    Environment.NewLine + "patch=1,EE,204D2008,extended,004F45E0 //Second Voice";
-                            }
-                            if (SettingsClass.CharacterP2 == "30" && SettingsClass.ModelP2 == "00")
-                            {
-                                //Add Amy special second voice
-                                voicePiece2 = voicePiece2 +
-                                    Environment.NewLine + "patch=1,EE,204B4888,extended,004F4518 //Second Voice";
+                                player2Char = "patch=1,EE,204D1FE0,extended,000E0031 //fighting style + model" + Environment.NewLine +
+                                              "patch=1,EE,204D1FE4,extended,000E000E //weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204D1FE8,extended,0001000E //type + weapon gfx mapping (use fighting style)" + Environment.NewLine +
+                                              "patch=1,EE,204D1FEC,extended,00020031 //costume + model" + Environment.NewLine +
+                                              "patch=1,EE,204D2274,extended,00020000 //No Armor" + Environment.NewLine;
                             }
                         }
+                        else
+                        {
+                            string voicePiece2 = "";
+                            if (SettingsClass.VoiceP2 != null && SettingsClass.VoiceP2 != "")
+                            {
+                                voicePiece2 = Environment.NewLine + "patch=1,EE,004D1FF2,extended," + SettingsClass.VoiceP2 + " //Voice";
+                                if (SettingsClass.CharacterP2 == "BF" && SettingsClass.ModelP2 == "01")
+                                {
+                                    //Add Riese second voice
+                                    voicePiece2 = voicePiece2 +
+                                        Environment.NewLine + "patch=1,EE,204D2008,extended,004F4608 //Second Voice";
+                                }
+                                if (SettingsClass.CharacterP2 == "C0" && SettingsClass.ModelP2 == "01")
+                                {
+                                    //Add Leraje second voice
+                                    voicePiece2 = voicePiece2 +
+                                        Environment.NewLine + "patch=1,EE,204D2008,extended,004F4540 //Second Voice";
+                                }
+                                if (SettingsClass.CharacterP2 == "E8" && SettingsClass.ModelP2 == "00")
+                                {
+                                    //Add Heal-Do second voice
+                                    voicePiece2 = voicePiece2 +
+                                        Environment.NewLine + "patch=1,EE,204D2008,extended,004F45E0 //Second Voice";
+                                }
+                                if (SettingsClass.CharacterP2 == "30" && SettingsClass.ModelP2 == "00")
+                                {
+                                    //Add Amy special second voice
+                                    voicePiece2 = voicePiece2 +
+                                        Environment.NewLine + "patch=1,EE,204B4888,extended,004F4518 //Second Voice";
+                                }
+                            }
 
-                        player2Char = "patch=1,EE,004D1FE0,extended," + SettingsClass.CharacterP2 + " //Character2" + Environment.NewLine +
-                                      "patch=1,EE,004D1FEE,extended," + SettingsClass.ModelP2 + " //Model2" +
-                                      voicePiece2;
+                            player2Char = "patch=1,EE,004D1FE0,extended," + SettingsClass.CharacterP2 + " //Character2" + Environment.NewLine +
+                                          "patch=1,EE,004D1FEE,extended," + SettingsClass.ModelP2 + " //Model2" +
+                                          voicePiece2;
+                        }
                     }
                     else//for bosses
                     {

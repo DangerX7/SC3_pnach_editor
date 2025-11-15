@@ -518,6 +518,7 @@
     <None Remove="Resources\Lilan__1.png" />
     <None Remove="Resources\LiLong.png" />
     <None Remove="Resources\Lizard Men__1.png" />
+    <None Remove="Resources\Lizard Men__Low.png" />
     <None Remove="Resources\Lizardman_1.png" />
     <None Remove="Resources\Lizardman_2.png" />
     <None Remove="Resources\Lizardman__1.png" />
@@ -806,6 +807,7 @@
     <None Remove="Resources\Seong Mi-na__1E.png" />
     <None Remove="Resources\Seong Mi-na__2.png" />
     <None Remove="Resources\Seong Mi-na__2E.png" />
+    <None Remove="Resources\Seong Mi-na__Low.png" />
     <None Remove="Resources\Seong Mi-na__X.png" />
     <None Remove="Resources\SeongMi-na_1.png" />
     <None Remove="Resources\SeongMi-na_2.png" />
@@ -2389,6 +2391,9 @@
     <Content Include="Resources\Lizard Men__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Lizard Men__Low.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Lizardman_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2921,6 +2926,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Seong Mi-na__2E.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Seong Mi-na__Low.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Seong Mi-na__X.png">

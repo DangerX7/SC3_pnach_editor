@@ -160,7 +160,8 @@ namespace SC3_pnach_editor.ViewModels
             { "Seong Mi-na", "Costume 1", "Soul of Seong Mi-na", "SeongMi-na_1.png", "02", "00", "Seong Mi-na__1.png", "" },
             { "Seong Mi-na", "Costume 2", "_", "SeongMi-na_2.png", "02", "01", "Seong Mi-na__2.png", "" },
             { "Seong Mi-na", "Costume 1 Color Edit", "_", "SeongMi-na_1.png", "02", "08", "Seong Mi-na__1E.png", "" },
-            { "Seong Mi-na", "Costume 2 Color Edit", "_", "SeongMi-na_2.png", "02", "09", "Seong Mi-na__2E.png", "" }
+            { "Seong Mi-na", "Costume 2 Color Edit", "_", "SeongMi-na_2.png", "02", "09", "Seong Mi-na__2E.png", "" },
+            { "Seong Mi-na", "Low Poly Model", "Wave Sword", "SeongMi-na_1.png", "FX", "00", "Seong Mi-na__Low.png", "" }
         };
         public string[,] TakiValues = new string[,]
         {
@@ -424,7 +425,8 @@ namespace SC3_pnach_editor.ViewModels
         //Tales of Souls NPC
         public string[,] LizardMenValues = new string[,]
         {
-            { "Lizard Men", "Costume 1", "Soul of Lizardman", "LizardMen.png", "1E", "00", "Lizard Men__1.png", "" }
+            { "Lizard Men", "Costume 1", "Soul of Lizardman", "LizardMen.png", "1E", "00", "Lizard Men__1.png", "" },
+            { "Lizard Men", "Low Poly Model", "_", "LizardMen.png", "FX", "01", "Lizard Men__Low.png", "" }
         };
         public string[,] NightTerrorValues = new string[,]
         {

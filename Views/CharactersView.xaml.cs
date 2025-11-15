@@ -45,8 +45,9 @@ namespace SC3_pnach_editor.Views
             this.DataContext = viewModel;
 
 
-
             SettingsClass.LoadData();
+
+            string test = SettingsClass.CharacterP1;
 
 
             customSound.Source = new Uri(@"D:\Danger\Mods And Others\ps2\Soulcalibur 3\WPF Build\Extras\History_Beckons.mp3");
@@ -1268,15 +1269,21 @@ namespace SC3_pnach_editor.Views
                 {
                     if (playerIndex == 1)
                     {
-                        SettingsClass.CharacterP1 = currentArray[currentIndex, 4];
-                        SettingsClass.ModelP1 = currentArray[currentIndex, 5];
-                        SettingsClass.VoiceP1 = currentArray[currentIndex, 7];
+                        if (SettingsClass.CharacterP1 != "FX")
+                        {
+                            SettingsClass.CharacterP1 = currentArray[currentIndex, 4];
+                            SettingsClass.ModelP1 = currentArray[currentIndex, 5];
+                            SettingsClass.VoiceP1 = currentArray[currentIndex, 7];
+                        }
                     }
                     else if (playerIndex == 2)
                     {
-                        SettingsClass.CharacterP2 = currentArray[currentIndex, 4];
-                        SettingsClass.ModelP2 = currentArray[currentIndex, 5];
-                        SettingsClass.VoiceP2 = currentArray[currentIndex, 7];
+                        if (SettingsClass.CharacterP2 != "FX")
+                        {
+                            SettingsClass.CharacterP2 = currentArray[currentIndex, 4];
+                            SettingsClass.ModelP2 = currentArray[currentIndex, 5];
+                            SettingsClass.VoiceP2 = currentArray[currentIndex, 7];
+                        }
                     }
                 }
                 else
