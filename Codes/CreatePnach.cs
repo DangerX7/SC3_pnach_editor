@@ -4441,6 +4441,8 @@ namespace SC3_pnach_editor.Services
             string char9code = "";
             string char10code = "";
 
+            string m2Code = "";
+
             string char11code = "";
             string char12code = "";
             string char13code = "";
@@ -4503,6 +4505,22 @@ namespace SC3_pnach_editor.Services
                 char10code = Environment.NewLine + "//Slot 10 \n" + char10code;
             }
 
+            if (SettingsClass.PnachName == "\\CAB2086E.pnach")
+            {
+                if (SettingsClass.CustomCharacter11 != "" || SettingsClass.CustomCharacter12 != "" ||
+                    SettingsClass.CustomCharacter13 != "" || SettingsClass.CustomCharacter14 != "" ||
+                    SettingsClass.CustomCharacter15 != "" || SettingsClass.CustomCharacter16 != "" ||
+                    SettingsClass.CustomCharacter17 != "" || SettingsClass.CustomCharacter18 != "" ||
+                    SettingsClass.CustomCharacter19 != "" || SettingsClass.CustomCharacter20 != "")
+                {
+                    //Add second memory card selection for arcade edition
+
+                    m2Code = "patch=1,EE,205A4CEE,extended,070100F2 //memory card 2 slot" + Environment.NewLine +
+                    "patch=1,EE,205A4CFA,extended,52010030 //Amy slot" + Environment.NewLine +
+                    "patch=1,EE,005A4AA0,extended,25 //Olcadan bonus slot" + Environment.NewLine;
+                }
+            }
+
             if (SettingsClass.CustomCharacter11 != "")
             {
                 char11code = GenerateCodePiece(11, SettingsClass.CustomCharacter11);
@@ -4557,7 +4575,7 @@ namespace SC3_pnach_editor.Services
 
             string allCodes = char1code + char2code + char3code + char4code + char5code +
                 char6code + char7code + char8code + char9code + char10code + Environment.NewLine +
-                char11code + char12code + char13code + char14code + char15code +
+                m2Code + char11code + char12code + char13code + char14code + char15code +
                 char16code + char17code + char18code + char19code + char20code + Environment.NewLine;
 
             string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
