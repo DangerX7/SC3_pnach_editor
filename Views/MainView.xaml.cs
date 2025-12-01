@@ -418,16 +418,23 @@ namespace SC3_pnach_editor.Views
             SettingsClass.P2Speed = 0;
 
             SettingsClass.NightTerrorSkin = "";
-            SettingsClass.TakiSkin = "";
-            SettingsClass.CassandraSkin = "";
+            SettingsClass.Taki1Skin = "";
+            SettingsClass.Cassandra2Skin = "";
             SettingsClass.ColossusSkin  = "";
-            SettingsClass.LynetteSkin = "";
-            SettingsClass.NightmareSkin = "";
-            SettingsClass.SiegfriedSkin = "";
-            SettingsClass.SophitiaSkin = "";
-            SettingsClass.AmySkin = "";
+            SettingsClass.Lynette1Skin = "";
+            SettingsClass.Nightmare1Skin = "";
+            SettingsClass.Siegfried1Skin = "";
+            SettingsClass.Sophitia1Skin = "";
+            SettingsClass.Amy1Skin = "";
             SettingsClass.CharadeSkin = "";
             SettingsClass.LizardMenSkin = "";
+            SettingsClass.Astaroth2Skin = "";
+            SettingsClass.SeongMina1Skin = "";
+            SettingsClass.Raphael2Skin = "";
+            SettingsClass.Ivy1Skin = "";
+            SettingsClass.Cassandra1Skin = "";
+            SettingsClass.Sophitia2Skin = "";
+            SettingsClass.Tira1Skin = "";
 
             SettingsClass.SelectedSurvivalMode = "";
 

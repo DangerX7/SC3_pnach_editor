@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Shapes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace SC3_pnach_editor.Services
@@ -4401,7 +4402,7 @@ namespace SC3_pnach_editor.Services
 
             //Custom Characters
             string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
-            string addressFilePath = Path.Combine(customFolder, "combinedPnach" + ".txt");
+            string addressFilePath = System.IO.Path.Combine(customFolder, "combinedPnach" + ".txt");
             string customCharactersCode = File.ReadAllText(addressFilePath);
 
             string pnachCode = "\n" + playerControlCode + opponentControlCode + survivalModeCode + stageCode + characterSelect + /*charCode + charCode2 +*/ 
@@ -4579,13 +4580,13 @@ namespace SC3_pnach_editor.Services
                 char16code + char17code + char18code + char19code + char20code + Environment.NewLine;
 
             string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
-            string addressFilePath = Path.Combine(customFolder, "combinedPnach" + ".txt");
+            string addressFilePath = System.IO.Path.Combine(customFolder, "combinedPnach" + ".txt");
             File.WriteAllText(addressFilePath, allCodes);
 
             if (textureFolder != "")
             {
                 string textureFolderPath = SettingsClass.GfxCopyTo;
-                string customTexturesFolder = Path.Combine(textureFolderPath, "Custom_Characters_Textures");
+                string customTexturesFolder =   System.IO.Path.Combine(textureFolderPath, "Custom_Characters_Textures");
 
                 if (textureFolder == "RESET")
                 {
@@ -4604,30 +4605,99 @@ namespace SC3_pnach_editor.Services
                         Directory.CreateDirectory(customTexturesFolder);
                     }
 
-                    string parentFolder = Path.Combine(SettingsClass.GfxCopyFrom, "Custom_Characters");
-                    string folderToCopy = Path.Combine(parentFolder, textureFolder);
+                    string parentFolder = System.IO.Path.Combine(SettingsClass.GfxCopyFrom, "Custom_Characters");
+                    string folderToCopy = System.IO.Path.Combine(parentFolder, textureFolder);
 
                     // Create a subfolder in the destination with the same name as the folder being copied
-                    string destinationFolder = Path.Combine(customTexturesFolder, Path.GetFileName(folderToCopy));
+                    string destinationFolder = System.IO.Path.Combine(customTexturesFolder, System.IO.Path.GetFileName(folderToCopy));
 
                     // Copy the folder and all its contents (including subfolders)
                     CopyDirectory(folderToCopy, destinationFolder);
                 }
             }
 
+            if (textureFolder != "RESET")
+            {
+                //checkTexturesToRemoveManually
+                var items = new List<(string Name, string Value)>
+                {
+                    ("Irol", "27"),
+                    ("Leon Uzumaki", "41"),
+                    ("Fitzgerald", "45"),
+                    ("Thyme", "49"),
+                    ("Mourn faer 1", "54"),
+                    ("Mourn faer 2", "54B")
+                };
+
+
+                // Put your character values into a list so we can loop them
+                var customCharacters = new List<string>
+                {
+                    SettingsClass.CustomCharacter1,
+                    SettingsClass.CustomCharacter2,
+                    SettingsClass.CustomCharacter3,
+                    SettingsClass.CustomCharacter4,
+                    SettingsClass.CustomCharacter5,
+                    SettingsClass.CustomCharacter6,
+                    SettingsClass.CustomCharacter7,
+                    SettingsClass.CustomCharacter8,
+                    SettingsClass.CustomCharacter9,
+                    SettingsClass.CustomCharacter10,
+                    SettingsClass.CustomCharacter11,
+                    SettingsClass.CustomCharacter12,
+                    SettingsClass.CustomCharacter13,
+                    SettingsClass.CustomCharacter14,
+                    SettingsClass.CustomCharacter15,
+                    SettingsClass.CustomCharacter16,
+                    SettingsClass.CustomCharacter17,
+                    SettingsClass.CustomCharacter18,
+                    SettingsClass.CustomCharacter19,
+                    SettingsClass.CustomCharacter20
+                };
+
+
+                // Loop through each (Name, Value) tuple
+                foreach (var item in items)
+                {
+                    // If ALL custom characters are NOT equal to this item's value → delete folder
+                    if (customCharacters.All(c => c != item.Value))
+                    {
+                        string parentFolder = System.IO.Path.Combine(SettingsClass.GfxCopyTo, "Custom_Characters_Textures");
+                        string folderToDelete = System.IO.Path.Combine(parentFolder, item.Name);
+
+                        if (Directory.Exists(folderToDelete))
+                        {
+                            Directory.Delete(folderToDelete, true);
+                        }
+                    }
+                }
+            }
+
+
             return allCodes;
         }
 
         public static string GenerateCodePiece(int slot, string character)
         {
+            //take snaphot instructions
+            //change useCustomMenuSlots to true
+            //full screen on old asus F10 - 4x native size
+            //width 1440 becomes 570 all to the left C
+            //height remains 1080
+            //for portret use 140x140 
+
+            string txtFileNames = "slot ";
+            //txtFileNames = "custom "; // USE FOR SNAPSHOT
+            //txtFileNames = "cots slot "; // USE FOR Cots
+
             int charSlot = slot;
             string selectedChar = character;
             //string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
 
-            string addressFilePath = Path.Combine(customFolder, "slot " + charSlot + ".txt");
-            string valuesFilePath = Path.Combine(customFolder, selectedChar + ".txt");
-            string outputFilePath = Path.Combine(customFolder, "combined.txt");
+            string addressFilePath = System.IO.Path.Combine(customFolder, txtFileNames + charSlot + ".txt");
+            string valuesFilePath = System.IO.Path.Combine(customFolder, selectedChar + ".txt");
+            string outputFilePath = System.IO.Path.Combine(customFolder, "combined.txt");
 
             // Read both files
             string[] addressLines = File.ReadAllLines(addressFilePath);
@@ -4653,14 +4723,14 @@ namespace SC3_pnach_editor.Services
             // Copy all files
             foreach (string file in Directory.GetFiles(sourceDir))
             {
-                string destFile = Path.Combine(destinationDir, Path.GetFileName(file));
+                string destFile = System.IO.Path.Combine(destinationDir, System.IO.Path.GetFileName(file));
                 File.Copy(file, destFile, overwrite: true);
             }
 
             // Recursively copy all subdirectories
             foreach (string subDir in Directory.GetDirectories(sourceDir))
             {
-                string destSubDir = Path.Combine(destinationDir, Path.GetFileName(subDir));
+                string destSubDir = System.IO.Path.Combine(destinationDir, System.IO.Path.GetFileName(subDir));
                 CopyDirectory(subDir, destSubDir);
             }
         }

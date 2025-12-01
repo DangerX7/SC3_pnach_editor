@@ -50,7 +50,6 @@ namespace SC3_pnach_editor.Views
             this.DataContext = viewModel;
 
 
-
             SettingsClass.LoadData();
 
 
@@ -293,6 +292,12 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("BasiliskValues", null, null, null);
             UpdateImageAndText("ThymeValues", null, null, null);
             UpdateImageAndText("TheCalamityValues", null, null, null);
+
+            UpdateImageAndText("DracoValues", null, null, null);
+            UpdateImageAndText("UmiValues", null, null, null);
+            UpdateImageAndText("EdgeMasterValues", null, null, null);
+            UpdateImageAndText("MournfaerValues", null, null, null);
+            UpdateImageAndText("VelikastrousValues", null, null, null);
 
         }
 
@@ -655,6 +660,22 @@ namespace SC3_pnach_editor.Views
                     TheCalamityValues.Source = bitmap;
                     break;
 
+                case "DracoValues":
+                    DracoValues.Source = bitmap;
+                    break;
+                case "UmiValues":
+                    UmiValues.Source = bitmap;
+                    break;
+                case "EdgeMasterValues":
+                    EdgeMasterValues.Source = bitmap;
+                    break;
+                case "MournfaerValues":
+                    MournfaerValues.Source = bitmap;
+                    break;
+                case "VelikastrousValues":
+                    VelikastrousValues.Source = bitmap;
+                    break;
+
                 case "Slot1":
                     Slot1.Source = bitmap;
                     break;
@@ -880,6 +901,22 @@ namespace SC3_pnach_editor.Views
                     break;
                 case "TheCalamityValues":
                     currentArray = viewModel.TheCalamityValues;
+                    break;
+
+                case "DracoValues":
+                    currentArray = viewModel.DracoValues;
+                    break;
+                case "UmiValues":
+                    currentArray = viewModel.UmiValues;
+                    break;
+                case "EdgeMasterValues":
+                    currentArray = viewModel.EdgeMasterValues;
+                    break;
+                case "MournfaerValues":
+                    currentArray = viewModel.MournfaerValues;
+                    break;
+                case "VelikastrousValues":
+                    currentArray = viewModel.VelikastrousValues;
                     break;
 
                 case "Slot1":
@@ -1152,6 +1189,7 @@ namespace SC3_pnach_editor.Views
 
         private void DumpHexData_Click(object sender, RoutedEventArgs e)
         {
+            #region notes
             //USA
             //1  2053FC60 - 2054034F
             //2  20540350 - 20540A3F
@@ -1201,6 +1239,55 @@ namespace SC3_pnach_editor.Views
             //10 20C31390 - 20C31A7F
 
             //add 6F0
+
+            //Cots replace
+
+            //Customs
+            //1  20C0F000 - 20C0F6EF
+            //2  20C0F6F0 - 20C0FDDF
+            //3  20C0FDE0 - 20C104CF
+            //4  20C104D0 - 20C10BBF
+            //5  20C10BC0 - 20C112AF
+            //6  20C112B0 - 20C1199F
+            //7  20C119A0 - 20C1208F
+            //8  20C12090 - 20C1277F
+            //9  20C12780 - 20C12E6F
+            //10 20C12E70 - 20C1355F
+
+            //Originals
+            //20C13560-20C2135F
+            //Abelia
+            //Abelia
+            //Abelia
+            //Girardot
+            //Aeneas
+            //Aeneas
+            //Eurydice
+            //Eurydice
+            //Jinkai
+            //Jinkai
+            //Xiaoxin
+            //Xiaoxin
+            //Meiga
+            //Meiga
+            //Kanon
+            //Kanon
+            //Ailian
+            //Ailian
+            //Leraje
+            //Leraje
+            //Rudiger
+            //Feofan
+            //Tina
+            //Yuilin
+            //Luca
+            //Luna
+            //Aege
+            //Heal-Do
+            //Elua
+            //Lupi
+
+            #endregion
 
             MessageBoxResult result = MessageBox.Show(
                 "Dump your character hex code in a text file, place it on desktop and name it hexInput.txt",
@@ -1272,6 +1359,16 @@ namespace SC3_pnach_editor.Views
             }
 
             UpdateImageAndText(imageName, null, null, null);
+        }
+
+        private void Slot1_Click(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Slot2_Click(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 

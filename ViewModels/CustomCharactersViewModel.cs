@@ -90,7 +90,13 @@ namespace SC3_pnach_editor.ViewModels
             "SorenValues",
             "BasiliskValues",
             "ThymeValues",
-            "TheCalamityValues"
+            "TheCalamityValues",
+
+            "DracoValues",
+            "UmiValues",
+            "EdgeMasterValues",
+            "MournfaerValues",
+            "VelikastrousValues"
         };
 
         public string CharListItem(int index)
@@ -366,6 +372,34 @@ namespace SC3_pnach_editor.ViewModels
         };
 
 
+        public string[,] DracoValues = new string[,]
+        {
+            { "Draco", "Costume 1", "Soul of Nightmare", "char_51.png", "51", "", "char__51.png", "", "No" }
+        };
+
+        public string[,] UmiValues = new string[,]
+        {
+            { "Umi", "Costume 1", "Rapier", "char_52.png", "52", "", "char__52.png", "", "No" }
+        };
+
+        public string[,] EdgeMasterValues = new string[,]
+        {
+            { "Edge Master", "Costume 1", "Any", "char_53.png", "53", "", "char__53.png", "", "No" }
+        };
+
+
+        public string[,] MournfaerValues = new string[,]
+        {
+            { "Morne faer 1", "Costume 1", "Soul of Siegfried", "char_54.png", "54", "", "char__54.png", "", "Yes" },
+            { "Morne faer 2", "Costume 2", "Soul of Siegfried", "char_54.png", "54B", "", "char__54B.png", "", "Yes" }
+        };
+
+        public string[,] VelikastrousValues = new string[,]
+        {
+            { "Velikastrous", "Costume 1", "Soul of Cervantes", "char_55.png", "55", "", "char__55.png", "", "No" }
+        };
+
+
 
         public string[,] Slot1Values = new string[,]
         {
@@ -465,6 +499,14 @@ namespace SC3_pnach_editor.ViewModels
         public string[,] Slot20Values = new string[,]
         {
             { "", "", "", "Slot10.png", "", "", "", "" }
+        };
+
+        public List<string> MenuOptions { get; } = new List<string>
+        {
+            "Memory Card 1",
+            "Memory Card 2",
+            "Character Creation Menu",
+            "Cots Mode"
         };
     }
 }

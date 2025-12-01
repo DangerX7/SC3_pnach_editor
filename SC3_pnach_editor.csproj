@@ -87,6 +87,7 @@
     <None Remove="Resources\Assassin.png" />
     <None Remove="Resources\Assassin__1.png" />
     <None Remove="Resources\Assassin__X.png" />
+    <None Remove="Resources\AstarothHuman.png" />
     <None Remove="Resources\Astaroth_1.png" />
     <None Remove="Resources\Astaroth_2.png" />
     <None Remove="Resources\Astaroth__1.png" />
@@ -139,6 +140,8 @@
     <None Remove="Resources\Brunhild.webp" />
     <None Remove="Resources\Brunhild__1.png" />
     <None Remove="Resources\CassandraPink.png" />
+    <None Remove="Resources\CassandraRed.png" />
+    <None Remove="Resources\CassandraValkyrie.png" />
     <None Remove="Resources\Cassandra_1.png" />
     <None Remove="Resources\Cassandra_2.png" />
     <None Remove="Resources\Cassandra__1.png" />
@@ -210,6 +213,11 @@
     <None Remove="Resources\char_48.png" />
     <None Remove="Resources\char_49.png" />
     <None Remove="Resources\char_50.png" />
+    <None Remove="Resources\char_51.png" />
+    <None Remove="Resources\char_52.png" />
+    <None Remove="Resources\char_53.png" />
+    <None Remove="Resources\char_54.png" />
+    <None Remove="Resources\char_55.png" />
     <None Remove="Resources\char_wall.png" />
     <None Remove="Resources\char__01.png" />
     <None Remove="Resources\char__02.png" />
@@ -265,6 +273,12 @@
     <None Remove="Resources\char__48.png" />
     <None Remove="Resources\char__49.png" />
     <None Remove="Resources\char__50.png" />
+    <None Remove="Resources\char__51.png" />
+    <None Remove="Resources\char__52.png" />
+    <None Remove="Resources\char__53.png" />
+    <None Remove="Resources\char__54.png" />
+    <None Remove="Resources\char__54B.png" />
+    <None Remove="Resources\char__55.png" />
     <None Remove="Resources\Chester.png" />
     <None Remove="Resources\Chester_1.webp" />
     <None Remove="Resources\Chester_2.webp" />
@@ -460,6 +474,7 @@
     <None Remove="Resources\Iris__1.png" />
     <None Remove="Resources\Ishtar.webp" />
     <None Remove="Resources\Ishtar__1.png" />
+    <None Remove="Resources\IvyPurple.png" />
     <None Remove="Resources\Ivy_1.png" />
     <None Remove="Resources\Ivy_2.png" />
     <None Remove="Resources\Ivy__1.png" />
@@ -550,6 +565,7 @@
     <None Remove="Resources\Lupi__3.png" />
     <None Remove="Resources\Lupi__4.png" />
     <None Remove="Resources\Lynette.png" />
+    <None Remove="Resources\LynetteGoth.png" />
     <None Remove="Resources\Lynette__1.png" />
     <None Remove="Resources\Lynette__2.png" />
     <None Remove="Resources\Maletta.webp" />
@@ -574,6 +590,8 @@
     <None Remove="Resources\Meilan__1.png" />
     <None Remove="Resources\MemoryIcon.png" />
     <None Remove="Resources\MemoryIcon2.png" />
+    <None Remove="Resources\MemoryIconX.png" />
+    <None Remove="Resources\MemoryIconY.png" />
     <None Remove="Resources\Minglian.webp" />
     <None Remove="Resources\Minglian__1.png" />
     <None Remove="Resources\Mingyue.webp" />
@@ -749,6 +767,7 @@
     <None Remove="Resources\Raguel.webp" />
     <None Remove="Resources\Raguel__1.png" />
     <None Remove="Resources\Random.png" />
+    <None Remove="Resources\RaphaelCustom.png" />
     <None Remove="Resources\Raphael_1.png" />
     <None Remove="Resources\Raphael_2.png" />
     <None Remove="Resources\Raphael__1.png" />
@@ -811,6 +830,7 @@
     <None Remove="Resources\Seong Mi-na__X.png" />
     <None Remove="Resources\SeongMi-na_1.png" />
     <None Remove="Resources\SeongMi-na_2.png" />
+    <None Remove="Resources\SeongMinaCyan.png" />
     <None Remove="Resources\Setsuka_1.png" />
     <None Remove="Resources\Setsuka_2.png" />
     <None Remove="Resources\Setsuka__1.png" />
@@ -856,6 +876,7 @@
     <None Remove="Resources\Slot8.png" />
     <None Remove="Resources\Slot9.png" />
     <None Remove="Resources\SophitiaBrown.png" />
+    <None Remove="Resources\SophitiaCustom.png" />
     <None Remove="Resources\Sophitia_1.png" />
     <None Remove="Resources\Sophitia_2.png" />
     <None Remove="Resources\Sophitia__1.png" />
@@ -964,6 +985,7 @@
     <None Remove="Resources\Tina.webp" />
     <None Remove="Resources\Tina__1.png" />
     <None Remove="Resources\Tina__2.png" />
+    <None Remove="Resources\TiraPosessed.png" />
     <None Remove="Resources\Tira_1.png" />
     <None Remove="Resources\Tira_2.png" />
     <None Remove="Resources\Tira__1.png" />
@@ -1248,6 +1270,9 @@
     <Content Include="Resources\Assassin__X.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\AstarothHuman.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Astaroth_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1399,6 +1424,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\CassandraPink.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CassandraRed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\CassandraValkyrie.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Cassandra_1.png">
@@ -1614,6 +1645,21 @@
     <Content Include="Resources\char_50.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\char_51.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_53.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_54.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_55.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\char__01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1771,6 +1817,24 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\char__50.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__51.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__52.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__53.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__54.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__54B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__55.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Chester.png">
@@ -2217,6 +2281,9 @@
     <Content Include="Resources\Ishtar__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\IvyPurple.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Ivy_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2487,6 +2554,9 @@
     <Content Include="Resources\Lynette.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\LynetteGoth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Lynette__1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2557,6 +2627,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\MemoryIcon2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MemoryIconX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\MemoryIconY.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Minglian__1.png">
@@ -2757,6 +2833,9 @@
     <Content Include="Resources\Random.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\RaphaelCustom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Raphael_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -2940,6 +3019,9 @@
     <Content Include="Resources\SeongMi-na_2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\SeongMinaCyan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Setsuka_1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -3064,6 +3146,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\SophitiaBrown.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\SophitiaCustom.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Sophitia_1.png">
@@ -3193,6 +3278,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Tina__2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\TiraPosessed.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Tira_1.png">

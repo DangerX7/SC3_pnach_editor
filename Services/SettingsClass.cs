@@ -79,16 +79,23 @@ namespace SC3_pnach_editor.Services
         public static int P2Speed = 0;
 
         public static string NightTerrorSkin { get; set; } = "";
-        public static string TakiSkin { get; set; } = "";
-        public static string CassandraSkin { get; set; } = "";
+        public static string Taki1Skin { get; set; } = "";
+        public static string Cassandra2Skin { get; set; } = "";
         public static string ColossusSkin { get; set; } = "";
-        public static string LynetteSkin { get; set; } = "";
-        public static string NightmareSkin { get; set; } = "";
-        public static string SiegfriedSkin { get; set; } = "";
-        public static string SophitiaSkin { get; set; } = "";
-        public static string AmySkin { get; set; } = "";
+        public static string Lynette1Skin { get; set; } = "";
+        public static string Nightmare1Skin { get; set; } = "";
+        public static string Siegfried1Skin { get; set; } = "";
+        public static string Sophitia1Skin { get; set; } = "";
+        public static string Amy1Skin { get; set; } = "";
         public static string CharadeSkin { get; set; } = "";
         public static string LizardMenSkin { get; set; } = "";
+        public static string Astaroth2Skin { get; set; } = "";
+        public static string SeongMina1Skin { get; set; } = "";
+        public static string Raphael2Skin { get; set; } = "";
+        public static string Ivy1Skin { get; set; } = "";
+        public static string Cassandra1Skin { get; set; } = "";
+        public static string Sophitia2Skin { get; set; } = "";
+        public static string Tira1Skin { get; set; } = "";
 
         public static string SelectedSurvivalMode { get; set; } = "";
         public static string LastSelectedCharP1 { get; set; } = "";
@@ -172,8 +179,9 @@ namespace SC3_pnach_editor.Services
             int wpnEffect7, int wpnEffect8, int wpnEffect9, int wpnEffect10, int wpnEffect11, int wpnEffect12,
             int wpnEffect13, int wpnEffect14, int wpnEffect15, int wpnEffect16, int wpnEffect17, int wpnEffect18,
             string characterP1, string characterP2, string modelP1, string modelP2, bool useSetCharacters, int p1Speed, int p2Speed,
-            string nightTerrorSkin, string takiSkin, string cassandraSkin, string colossusSkin, string lynetteSkin, string nightmareSkin, 
-            string siegfriedSkin, string sophitiaSkin, string amySkin, string charadeSkin, string lizardMenSkin,
+            string nightTerrorSkin, string taki1Skin, string cassandra2Skin, string colossusSkin, string lynette1Skin, string nightmare1Skin, 
+            string siegfried1Skin, string sophitia1Skin, string amy1Skin, string charadeSkin, string lizardMenSkin, string astaroth2Skin,
+            string seongMina1Skin, string raphael2Skin, string ivy1Skin, string cassandra1Skin, string sophitia2Skin, string tira1Skin,
             string selectedSurvivalMode, string lastSelectedCharP1, string lastSelectedCharP2,
             int lastSelectedIndexP1, int lastSelectedIndexP2, string voiceP1, string voiceP2,
             bool allGuardBreakP1, bool allGuardBreakP2, bool allUnblockableP1, bool allUnblockableP2, bool paralysisP1, bool paralysisP2,
@@ -240,16 +248,23 @@ namespace SC3_pnach_editor.Services
             P2Speed = p2Speed;
 
             NightTerrorSkin = nightTerrorSkin;
-            TakiSkin = takiSkin;
-            CassandraSkin = cassandraSkin;
+            Taki1Skin = taki1Skin;
+            Cassandra2Skin = cassandra2Skin;
             ColossusSkin = colossusSkin;
-            LynetteSkin = lynetteSkin;
-            NightmareSkin = nightmareSkin;
-            SiegfriedSkin = siegfriedSkin;
-            SophitiaSkin = sophitiaSkin;
-            AmySkin = amySkin;
+            Lynette1Skin = lynette1Skin;
+            Nightmare1Skin = nightmare1Skin;
+            Siegfried1Skin = siegfried1Skin;
+            Sophitia1Skin = sophitia1Skin;
+            Amy1Skin = amy1Skin;
             CharadeSkin = charadeSkin;
             LizardMenSkin = lizardMenSkin;
+            Astaroth2Skin = astaroth2Skin;
+            SeongMina1Skin = seongMina1Skin;
+            Raphael2Skin = raphael2Skin;
+            Ivy1Skin = ivy1Skin;
+            Cassandra1Skin = cassandra1Skin;
+            Sophitia2Skin = sophitia2Skin;
+            Tira1Skin = tira1Skin;
 
             SelectedSurvivalMode = selectedSurvivalMode;
 
@@ -386,16 +401,23 @@ namespace SC3_pnach_editor.Services
             public int P2Speed { get; set; } = SettingsClass.P2Speed;
 
             public string NightTerrorSkin { get; set; } = SettingsClass.NightTerrorSkin;
-            public string TakiSkin { get; set; } = SettingsClass.TakiSkin;
-            public string CassandraSkin { get; set; } = SettingsClass.CassandraSkin;
+            public string Taki1Skin { get; set; } = SettingsClass.Taki1Skin;
+            public string Cassandra2Skin { get; set; } = SettingsClass.Cassandra2Skin;
             public string ColossusSkin { get; set; } = SettingsClass.ColossusSkin;
-            public string LynetteSkin { get; set; } = SettingsClass.LynetteSkin;
-            public string NightmareSkin { get; set; } = SettingsClass.NightmareSkin;
-            public string SiegfriedSkin { get; set; } = SettingsClass.SiegfriedSkin;
-            public string SophitiaSkin { get; set; } = SettingsClass.SophitiaSkin;
-            public string AmySkin { get; set; } = SettingsClass.AmySkin;
+            public string Lynette1Skin { get; set; } = SettingsClass.Lynette1Skin;
+            public string Nightmare1Skin { get; set; } = SettingsClass.Nightmare1Skin;
+            public string Siegfried1Skin { get; set; } = SettingsClass.Siegfried1Skin;
+            public string Sophitia1Skin { get; set; } = SettingsClass.Sophitia1Skin;
+            public string Amy1Skin { get; set; } = SettingsClass.Amy1Skin;
             public string CharadeSkin { get; set; } = SettingsClass.CharadeSkin;
             public string LizardMenSkin { get; set; } = SettingsClass.LizardMenSkin;
+            public string Astaroth2Skin { get; set; } = SettingsClass.Astaroth2Skin;
+            public string SeongMina1Skin { get; set; } = SettingsClass.SeongMina1Skin;
+            public string Raphael2Skin { get; set; } = SettingsClass.Raphael2Skin;
+            public string Ivy1Skin { get; set; } = SettingsClass.Ivy1Skin;
+            public string Cassandra1Skin { get; set; } = SettingsClass.Cassandra1Skin;
+            public string Sophitia2Skin { get; set; } = SettingsClass.Sophitia2Skin;
+            public string Tira1Skin { get; set; } = SettingsClass.Tira1Skin;
 
             public string SelectedSurvivalMode { get; set; } = SettingsClass.SelectedSurvivalMode;
             public string LastSelectedCharP1 { get; set; } = SettingsClass.LastSelectedCharP1;
@@ -539,16 +561,23 @@ namespace SC3_pnach_editor.Services
                 P2Speed = Settings.P2Speed;
 
                 NightTerrorSkin = Settings.NightTerrorSkin;
-                TakiSkin = Settings.TakiSkin;
-                CassandraSkin = Settings.CassandraSkin;
+                Taki1Skin = Settings.Taki1Skin;
+                Cassandra2Skin = Settings.Cassandra2Skin;
                 ColossusSkin = Settings.ColossusSkin;
-                LynetteSkin = Settings.LynetteSkin;
-                NightmareSkin = Settings.NightmareSkin;
-                SiegfriedSkin = Settings.SiegfriedSkin;
-                SophitiaSkin = Settings.SophitiaSkin;
-                AmySkin = Settings.AmySkin;
+                Lynette1Skin = Settings.Lynette1Skin;
+                Nightmare1Skin = Settings.Nightmare1Skin;
+                Siegfried1Skin = Settings.Siegfried1Skin;
+                Sophitia1Skin = Settings.Sophitia1Skin;
+                Amy1Skin = Settings.Amy1Skin;
                 CharadeSkin = Settings.CharadeSkin;
                 LizardMenSkin = Settings.LizardMenSkin;
+                Astaroth2Skin = Settings.Astaroth2Skin;
+                SeongMina1Skin = Settings.SeongMina1Skin;
+                Raphael2Skin = Settings.Raphael2Skin;
+                Ivy1Skin = Settings.Ivy1Skin;
+                Cassandra1Skin = Settings.Cassandra1Skin;
+                Sophitia2Skin = Settings.Sophitia2Skin;
+                Tira1Skin = Settings.Tira1Skin;
 
                 SelectedSurvivalMode = Settings.SelectedSurvivalMode;
                 LastSelectedCharP1 = Settings.LastSelectedCharP1;
@@ -687,16 +716,23 @@ namespace SC3_pnach_editor.Services
             Settings.P2Speed = P2Speed;
 
             Settings.NightTerrorSkin = NightTerrorSkin;
-            Settings.TakiSkin = TakiSkin;
-            Settings.CassandraSkin = CassandraSkin;
+            Settings.Taki1Skin = Taki1Skin;
+            Settings.Cassandra2Skin = Cassandra2Skin;
             Settings.ColossusSkin = ColossusSkin;
-            Settings.LynetteSkin = LynetteSkin;
-            Settings.NightmareSkin = NightmareSkin;
-            Settings.SiegfriedSkin = SiegfriedSkin;
-            Settings.SophitiaSkin = SophitiaSkin;
-            Settings.AmySkin = AmySkin;
+            Settings.Lynette1Skin = Lynette1Skin;
+            Settings.Nightmare1Skin = Nightmare1Skin;
+            Settings.Siegfried1Skin = Siegfried1Skin;
+            Settings.Sophitia1Skin = Sophitia1Skin;
+            Settings.Amy1Skin = Amy1Skin;
             Settings.CharadeSkin = CharadeSkin;
             Settings.LizardMenSkin = LizardMenSkin;
+            Settings.Astaroth2Skin = Astaroth2Skin;
+            Settings.SeongMina1Skin = SeongMina1Skin;
+            Settings.Raphael2Skin = Raphael2Skin;
+            Settings.Ivy1Skin = Ivy1Skin;
+            Settings.Cassandra1Skin = Cassandra1Skin;
+            Settings.Sophitia2Skin = Sophitia2Skin;
+            Settings.Tira1Skin = Tira1Skin;
 
             Settings.SelectedSurvivalMode = SelectedSurvivalMode;
             Settings.LastSelectedCharP1 = LastSelectedCharP1;

@@ -23,19 +23,6 @@ namespace SC3_pnach_editor.ViewModels
             SettingsClass.LoadData();
             TexturesBaseFolderPath = SettingsClass.GfxCopyFrom + @"\Skins\";
             TexturesTargetFolderPath = SettingsClass.GfxCopyTo + @"\";
-
-
-            NightTerrorSkin = SettingsClass.NightTerrorSkin;
-            TakiSkin = SettingsClass.TakiSkin;
-            CassandraSkin = SettingsClass.CassandraSkin;
-            ColossusSkin = SettingsClass.ColossusSkin;
-            LynetteSkin = SettingsClass.LynetteSkin;
-            NightmareSkin = SettingsClass.NightmareSkin;
-            SiegfriedSkin = SettingsClass.SiegfriedSkin;
-            SophitiaSkin = SettingsClass.SophitiaSkin;
-            AmySkin = SettingsClass.AmySkin;
-            CharadeSkin = SettingsClass.CharadeSkin;
-            LizardMenSkin = SettingsClass.LizardMenSkin;
         }
 
 
@@ -81,184 +68,6 @@ namespace SC3_pnach_editor.ViewModels
             }
         }
 
-
-        private string _nightTerrorSkin;
-
-        public string NightTerrorSkin
-        {
-            get { return _nightTerrorSkin; }
-            set
-            {
-                if (_nightTerrorSkin != value)
-                {
-                    _nightTerrorSkin = value;
-                    SettingsClass.NightTerrorSkin = _nightTerrorSkin;
-                    RaisePropertyChanged("NightTerrorSkin");
-                }
-            }
-        }
-
-        private string _takiSkin;
-
-        public string TakiSkin
-        {
-            get { return _takiSkin; }
-            set
-            {
-                if (_takiSkin != value)
-                {
-                    _takiSkin = value;
-                    SettingsClass.TakiSkin = _takiSkin;
-                    RaisePropertyChanged("TakiSkin");
-                }
-            }
-        }
-
-        private string _cassandraSkin;
-
-        public string CassandraSkin
-        {
-            get { return _cassandraSkin; }
-            set
-            {
-                if (_cassandraSkin != value)
-                {
-                    _cassandraSkin = value;
-                    SettingsClass.CassandraSkin = _cassandraSkin;
-                    RaisePropertyChanged("CassandraSkin");
-                }
-            }
-        }
-
-        private string _colossusSkin;
-
-        public string ColossusSkin
-        {
-            get { return _colossusSkin; }
-            set
-            {
-                if (_colossusSkin != value)
-                {
-                    _colossusSkin = value;
-                    SettingsClass.ColossusSkin = _colossusSkin;
-                    RaisePropertyChanged("ColossusSkin");
-                }
-            }
-        }
-
-        private string _lynetteSkin;
-
-        public string LynetteSkin
-        {
-            get { return _lynetteSkin; }
-            set
-            {
-                if (_lynetteSkin != value)
-                {
-                    _lynetteSkin = value;
-                    SettingsClass.LynetteSkin = _lynetteSkin;
-                    RaisePropertyChanged("LynetteSkin");
-                }
-            }
-        }
-
-        private string _nightmareSkin;
-
-        public string NightmareSkin
-        {
-            get { return _nightmareSkin; }
-            set
-            {
-                if (_nightmareSkin != value)
-                {
-                    _nightmareSkin = value;
-                    SettingsClass.NightmareSkin = _nightmareSkin;
-                    RaisePropertyChanged("NightmareSkin");
-                }
-            }
-        }
-
-        private string _siegfriedSkin;
-
-        public string SiegfriedSkin
-        {
-            get { return _siegfriedSkin; }
-            set
-            {
-                if (_siegfriedSkin != value)
-                {
-                    _siegfriedSkin = value;
-                    SettingsClass.SiegfriedSkin = _siegfriedSkin;
-                    RaisePropertyChanged("SiegfriedSkin");
-                }
-            }
-        }
-
-        private string _sophitiaSkin;
-
-        public string SophitiaSkin
-        {
-            get { return _sophitiaSkin; }
-            set
-            {
-                if (_sophitiaSkin != value)
-                {
-                    _sophitiaSkin = value;
-                    SettingsClass.SophitiaSkin = _sophitiaSkin;
-                    RaisePropertyChanged("SophitiaSkin");
-                }
-            }
-        }
-
-        private string _amySkin;
-
-        public string AmySkin
-        {
-            get { return _amySkin; }
-            set
-            {
-                if (_amySkin != value)
-                {
-                    _amySkin = value;
-                    SettingsClass.AmySkin = _amySkin;
-                    RaisePropertyChanged("AmySkin");
-                }
-            }
-        }
-
-        private string _charadeSkin;
-
-        public string CharadeSkin
-        {
-            get { return _charadeSkin; }
-            set
-            {
-                if (_charadeSkin != value)
-                {
-                    _charadeSkin = value;
-                    SettingsClass.CharadeSkin = _charadeSkin;
-                    RaisePropertyChanged("CharadeSkin");
-                }
-            }
-        }
-
-        private string _lizardMenSkin;
-
-        public string LizardMenSkin
-        {
-            get { return _lizardMenSkin; }
-            set
-            {
-                if (_lizardMenSkin != value)
-                {
-                    _lizardMenSkin = value;
-                    SettingsClass.LizardMenSkin = _lizardMenSkin;
-                    RaisePropertyChanged("LizardMenSkin");
-                }
-            }
-        }
-
-
         private string _errorTextMessage;
 
         public string ErrorTextMessage
@@ -275,11 +84,12 @@ namespace SC3_pnach_editor.ViewModels
         }
         
 
-        public void AddOrRemoveTextures(string type, string texture)
+        public void AddOrRemoveTextures(string type, string texture, string skin)
         {
             try
             {
                 ReplaceTexturesPack(texture, type);
+                ChangeValues(skin, texture, type);
             }
             catch (Exception error)
             {
@@ -604,5 +414,193 @@ namespace SC3_pnach_editor.ViewModels
             File.Delete(TexturesTargetFolderPath + @"\" + name30 + ".png");
         }
 
+        public void ChangeValues(string address, string value, string type)
+        {
+            switch (address)
+            {
+                case "NightTerrorSkin":
+                    if (type == "add")
+                    {
+                        SettingsClass.NightTerrorSkin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.NightTerrorSkin = "";
+                    }
+                    break;
+                case "Taki1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Taki1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Taki1Skin = "";
+                    }
+                    break;
+                case "Cassandra2Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Cassandra2Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Cassandra2Skin = "";
+                    }
+                    break;
+                case "ColossusSkin":
+                    if (type == "add")
+                    {
+                        SettingsClass.ColossusSkin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.ColossusSkin = "";
+                    }
+                    break;
+                case "Lynette1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Lynette1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Lynette1Skin = "";
+                    }
+                    break;
+                case "Nightmare1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Nightmare1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Nightmare1Skin = "";
+                    }
+                    break;
+                case "Siegfried1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Siegfried1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Siegfried1Skin = "";
+                    }
+                    break;
+                case "Sophitia1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Sophitia1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Sophitia1Skin = "";
+                    }
+                    break;
+                case "Amy1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Amy1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Amy1Skin = "";
+                    }
+                    break;
+                case "CharadeSkin":
+                    if (type == "add")
+                    {
+                        SettingsClass.CharadeSkin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.CharadeSkin = "";
+                    }
+                    break;
+                case "LizardMenSkin":
+                    if (type == "add")
+                    {
+                        SettingsClass.LizardMenSkin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.LizardMenSkin = "";
+                    }
+                    break;
+                case "Astaroth2Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Astaroth2Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Astaroth2Skin = "";
+                    }
+                    break;
+                case "SeongMina1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.SeongMina1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.SeongMina1Skin = "";
+                    }
+                    break;
+                case "Raphael2Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Raphael2Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Raphael2Skin = "";
+                    }
+                    break;
+                case "Ivy1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Ivy1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Ivy1Skin = "";
+                    }
+                    break;
+                case "Cassandra1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Cassandra1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Cassandra1Skin = "";
+                    }
+                    break;
+                case "Sophitia2Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Sophitia2Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Sophitia2Skin = "";
+                    }
+                    break;
+                case "Tira1Skin":
+                    if (type == "add")
+                    {
+                        SettingsClass.Tira1Skin = value;
+                    }
+                    else if (type == "remove")
+                    {
+                        SettingsClass.Tira1Skin = "";
+                    }
+                    break;
+            }
+
+            SettingsClass.SaveData();
+        }
     }
 }

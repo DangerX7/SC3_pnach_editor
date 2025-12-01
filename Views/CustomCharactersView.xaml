@@ -117,7 +117,8 @@
                    Source="/Resources/MemoryIcon.png"
                    Height="100"
                    Grid.Row="1"
-                   Grid.Column="11"/>
+                   Grid.Column="11"
+                   MouseLeftButtonUp="Slot1_Click"/>
 
         <Image x:Name="Slot11"
                    MouseEnter="MouseEnter"
@@ -173,7 +174,9 @@
                    Source="/Resources/MemoryIcon2.png"
                    Height="100"
                    Grid.Row="2"
-                   Grid.Column="11"/>
+                   Grid.Column="11"
+                   MouseLeftButtonUp="Slot2_Click"/>
+
 
         <!--Custom Characters-->
 
@@ -441,6 +444,33 @@
                MouseEnter="MouseEnter"
                Grid.Row="8"
                Grid.Column="10"
+               MouseLeftButtonDown="Character_Click"/>
+
+        <Image x:Name="DracoValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="9"
+               Grid.Column="1"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="UmiValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="9"
+               Grid.Column="2"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="EdgeMasterValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="9"
+               Grid.Column="3"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="MournfaerValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="9"
+               Grid.Column="4"
+               MouseWheel="ImageControl_MouseWheel"
+               MouseLeftButtonDown="Character_Click"/>
+        <Image x:Name="VelikastrousValues"
+               MouseEnter="MouseEnter"
+               Grid.Row="9"
+               Grid.Column="5"
                MouseLeftButtonDown="Character_Click"/>
 
 

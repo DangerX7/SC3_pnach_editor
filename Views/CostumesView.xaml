@@ -39,7 +39,8 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="40*"/>
             <ColumnDefinition Width="300*"/>
-            <ColumnDefinition Width="340*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="300*"/>
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
 
@@ -61,9 +62,9 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="NightTerrorCheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding NightTerrorSkin}"
                           Width="20"
                           Checked="NightTerrorGraySkin_Checked"
                           Unchecked="NightTerrorGraySkin_Unchecked"/>
@@ -94,9 +95,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Taki1CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding TakiSkin}"
+                          IsChecked="{Binding Taki1Skin}"
                           Width="20"
                           Checked="TakiStockingsSkin_Checked"
                           Unchecked="TakiStockingsSkin_Unchecked"/>
@@ -127,9 +129,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Cassandra2CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding CassandraSkin}"
+                          IsChecked="{Binding Cassandra2Skin}"
                           Width="20"
                           Checked="CassandraPinkSkin_Checked"
                           Unchecked="CassandraPinkSkin_Unchecked"/>
@@ -160,7 +163,8 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="ColossusCheckBox"
+                          Content="Automat"
                           Foreground="Black"
                           IsChecked="{Binding ColossusSkin}"
                           Width="20"
@@ -193,9 +197,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Lynette1CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding LynetteSkin}"
+                          IsChecked="{Binding Lynette1Skin}"
                           Width="20"
                           Checked="GreenLynetteSkin_Checked"
                           Unchecked="GreenLynetteSkin_Unchecked"/>
@@ -226,9 +231,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Nightmare1CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding NightmareSkin}"
+                          IsChecked="{Binding Nightmare1Skin}"
                           Width="20"
                           Checked="NightmareRedSkin_Checked"
                           Unchecked="NightmareRedSkin_Unchecked"/>
@@ -240,7 +246,7 @@
            FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
-           Text="Nightmare - Costume 1 [lightier]"
+           Text="Nightmare - Costume 1 [red]"
            Tag="NightmareRed"
            MouseEnter="SkinPreview"/>
 
@@ -259,9 +265,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Siegfried1CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding SiegfriedSkin}"
+                          IsChecked="{Binding Siegfried1Skin}"
                           Width="20"
                           Checked="SiegfriedPurpleSkin_Checked"
                           Unchecked="SiegfriedPurpleSkin_Unchecked"/>
@@ -272,9 +279,9 @@
            FontSize="40"
            TextWrapping="WrapWithOverflow"
            Foreground="LightGreen"
-           Text="Siegfried - Costume 1 [Pink or something]"
+           Text="Siegfried - Costume 1 [blue]"
            Tag="SiegfriedPurple"
-           MouseEnter="SkinPreview" Grid.ColumnSpan="3" Margin="98,0,817,0"/>
+           MouseEnter="SkinPreview" Grid.ColumnSpan="3" Margin="98,0,0,0"/>
 
         <!--SophitiaBrownSkin-->
         <Border Grid.Row="7"
@@ -291,9 +298,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Sophitia1CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding SophitiaSkin}"
+                          IsChecked="{Binding Sophitia1Skin}"
                           Width="20"
                           Checked="SophitiaBrownSkin_Checked"
                           Unchecked="SophitiaBrownSkin_Unchecked"/>
@@ -323,9 +331,10 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="Amy1CheckBox"
+                          Content="Automat"
                           Foreground="Black"
-                          IsChecked="{Binding AmySkin}"
+                          IsChecked="{Binding Amy1Skin}"
                           Width="20"
                           Checked="RedAmySkin_Checked"
                           Unchecked="RedAmySkin_Unchecked"/>
@@ -355,7 +364,8 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="CharadeCheckBox"
+                          Content="Automat"
                           Foreground="Black"
                           IsChecked="{Binding CharadeSkin}"
                           Width="20"
@@ -387,7 +397,8 @@
             </Border.RenderTransform>
 
             <Viewbox  ToolTip="">
-                <CheckBox Content="Automat"
+                <CheckBox x:Name="LizardMenCheckBox"
+                          Content="Automat"
                           Foreground="Black"
                           IsChecked="{Binding LizardMenSkin}"
                           Width="20"
@@ -404,21 +415,317 @@
            Text="Lizard Men - Costume 1 [Blue]"
            Tag="LizardMenBlue"
            MouseEnter="SkinPreview"/>
+        <!--LynetteGothSkin-->
+        <Border Grid.Row="11"
+                Grid.Column="0"
+                Name="LynetteGothSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
 
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Lynette1CheckBox2"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Lynette1Skin}"
+                          Width="20"
+                          Checked="LynetteGothSkin_Checked"
+                          Unchecked="LynetteGothSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="11"
+           Grid.Column="1"
+           Name="LynetteGothText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Lynette - Costume 1 [Goth]"
+           Tag="LynetteGoth"
+           MouseEnter="SkinPreview"/>
+        <!--AstarothHumanSkin-->
+        <Border Grid.Row="12"
+                Grid.Column="0"
+                Name="AstarothHumanSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Astaroth2CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Astaroth2Skin}"
+                          Width="20"
+                          Checked="AstarothHumanSkin_Checked"
+                          Unchecked="AstarothHumanSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="12"
+           Grid.Column="1"
+           Name="AstarothHumanText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Astaroth - Costume 2 [Human]"
+           Tag="AstarothHuman"
+           MouseEnter="SkinPreview"/>
+        <!--SeongMinaCyanSkin-->
+        <Border Grid.Row="13"
+                Grid.Column="0"
+                Name="SeongMinaCyanSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="SeongMina1CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding SeongMina1Skin}"
+                          Width="20"
+                          Checked="SeongMinaCyanSkin_Checked"
+                          Unchecked="SeongMinaCyanSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="13"
+           Grid.Column="1"
+           Name="SeongMinaCyanText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Seong Mi-na - Costume 1 [Cyan]"
+           Tag="SeongMinaCyan"
+           MouseEnter="SkinPreview"/>
+        <!--RaphaelCustomSkin-->
+        <Border Grid.Row="14"
+                Grid.Column="0"
+                Name="RaphaelCustomSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Raphael2CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Raphael2Skin}"
+                          Width="20"
+                          Checked="RaphaelCustomSkin_Checked"
+                          Unchecked="RaphaelCustomSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="14"
+           Grid.Column="1"
+           Name="RaphaelCustomText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Raphael - Costume 2 [Custom]"
+           Tag="RaphaelCustom"
+           MouseEnter="SkinPreview"/>
+        <!--IvyPurpleSkin-->
+        <Border Grid.Row="15"
+                Grid.Column="0"
+                Name="IvyPurpleSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Ivy1CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Ivy1Skin}"
+                          Width="20"
+                          Checked="IvyPurpleSkin_Checked"
+                          Unchecked="IvyPurpleSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="15"
+           Grid.Column="1"
+           Name="IvyPurpleText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Ivy - Costume 1 [Purple]"
+           Tag="IvyPurple"
+           MouseEnter="SkinPreview"/>
+        <!--CassandraRedSkin-->
+        <Border Grid.Row="16"
+                Grid.Column="0"
+                Name="CassandraRedSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Cassandra1CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Cassandra1Skin}"
+                          Width="20"
+                          Checked="CassandraRedSkin_Checked"
+                          Unchecked="CassandraRedSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="16"
+           Grid.Column="1"
+           Name="CassandraRedText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Cassandra - Costume 1 [Red]"
+           Tag="CassandraRed"
+           MouseEnter="SkinPreview"/>
+        <!--CassandraValkyrieSkin-->
+        <Border Grid.Row="17"
+                Grid.Column="0"
+                Name="CassandraValkyrieSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Cassandra2CheckBox2"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Cassandra2Skin}"
+                          Width="20"
+                          Checked="CassandraValkyrieSkin_Checked"
+                          Unchecked="CassandraValkyrieSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="17"
+           Grid.Column="1"
+           Name="CassandraValkyrieText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Cassandra - Costume 2 [Valkyrie]"
+           Tag="CassandraValkyrie"
+           MouseEnter="SkinPreview"/>
+        <!--SophitiaCustomSkin-->
+        <Border Grid.Row="0"
+                Grid.Column="2"
+                Name="SophitiaCustomSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Sophitia2CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Sophitia2Skin}"
+                          Width="20"
+                          Checked="SophitiaCustomSkin_Checked"
+                          Unchecked="SophitiaCustomSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="0"
+           Grid.Column="3"
+           Name="SophitiaCustomText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Sophitia - Costume 2 [Custom]"
+           Tag="SophitiaCustom"
+           MouseEnter="SkinPreview"/>
+        <!--TiraPosessedSkin-->
+        <Border Grid.Row="1"
+                Grid.Column="2"
+                Name="TiraPosessedSkinBox"
+                BorderBrush="Blue"
+                BorderThickness="0">
+            <Border.RenderTransform>
+                <TransformGroup>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Border.RenderTransform>
+
+            <Viewbox  ToolTip="">
+                <CheckBox x:Name="Tira1CheckBox"
+                          Content="Automat"
+                          Foreground="Black"
+                          IsChecked="{Binding Tira1Skin}"
+                          Width="20"
+                          Checked="TiraPosessedSkin_Checked"
+                          Unchecked="TiraPosessedSkin_Unchecked"/>
+            </Viewbox>
+        </Border>
+        <TextBlock Grid.Row="1"
+           Grid.Column="3"
+           Name="TiraPosessedText"
+           FontSize="40"
+           TextWrapping="WrapWithOverflow"
+           Foreground="LightGreen"
+           Text="Tira - Costume 1 [Posessed]"
+           Tag="TiraPosessed"
+           MouseEnter="SkinPreview"/>
 
 
 
         <!--Costume Preview-->
         <Image Source="{Binding SkinPreview}"
                Grid.Row="4"
-               Grid.Column="2"
-               Margin="50,10,60,50"
+               Grid.Column="3"
+               Margin="20,10,20,50"
                Height="660" Grid.RowSpan="12"/>
 
 
         <!--Switch to Main Page-->
         <Button Grid.Row="8"
-                Grid.Column="3"
+                Grid.Column="4"
                 Grid.RowSpan="2"
                 x:Name="MainPage"
                 Foreground="#181818"
@@ -449,7 +756,7 @@
 
         <!--ErrorMessage-->
         <TextBlock Grid.Row="16"
-           Grid.Column="2"
+           Grid.Column="3"
            Name="ErrorText"
            FontSize="26"
            TextWrapping="WrapWithOverflow"
