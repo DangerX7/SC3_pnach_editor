@@ -299,6 +299,7 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("MournfaerValues", null, null, null);
             UpdateImageAndText("VelikastrousValues", null, null, null);
 
+            PreUpdateIcons();
         }
 
         private void GoToMainPage_Click(object sender, RoutedEventArgs e)
@@ -1363,12 +1364,125 @@ namespace SC3_pnach_editor.Views
 
         private void Slot1_Click(object sender, MouseButtonEventArgs e)
         {
+            string lastOption = SettingsClass.Slot1Type;
+            if (lastOption == "")
+            {
+                lastOption = "Memory Card 1";
+            }
+            string option = GetNewOption(lastOption, 1);
 
+            //MessageBox.Show("Slot change to: " + option);
+            SettingsClass.Slot1Type = option;
+
+            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes("");
+            File.WriteAllText(SettingsClass.codeFilePath, customCharacterPnachData, Encoding.UTF8);
+
+            SettingsClass.SaveData();
         }
 
         private void Slot2_Click(object sender, MouseButtonEventArgs e)
         {
+            string lastOption = SettingsClass.Slot2Type;
+            if (lastOption == "")
+            {
+                lastOption = "Memory Card 2";
+            }
+            string option = GetNewOption(lastOption, 2);
 
+            //MessageBox.Show("Slot change to: " + option);
+            SettingsClass.Slot2Type = option;
+
+            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes("");
+            File.WriteAllText(SettingsClass.codeFilePath, customCharacterPnachData, Encoding.UTF8);
+
+            SettingsClass.SaveData();
+        }
+
+        private string GetNewOption(string lastOption, int slotNumber)
+        {
+            string option = "";
+            switch (lastOption)
+            {
+                case "Memory Card 1":
+                    option = "Memory Card 2";
+                    if (slotNumber == 1)
+                    {
+                        MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIcon2.png", UriKind.Relative));
+                    }
+                    else if (slotNumber == 2)
+                    {
+                        MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIcon2.png", UriKind.Relative));
+                    }
+                    break;
+                case "Memory Card 2":
+                    option = "Character Creation Menu";
+                    if (slotNumber == 1)
+                    {
+                        MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIconX.png", UriKind.Relative));
+                    }
+                    else if (slotNumber == 2)
+                    {
+                        MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIconX.png", UriKind.Relative));
+                    }
+                    break;
+                case "Character Creation Menu":
+                    option = "Cots Mode";
+                    if (slotNumber == 1)
+                    {
+                        MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIconY.png", UriKind.Relative));
+                    }
+                    else if (slotNumber == 2)
+                    {
+                        MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIconY.png", UriKind.Relative));
+                    }
+                    break;
+                case "Cots Mode":
+                    option = "Memory Card 1";
+                    if (slotNumber == 1)
+                    {
+                        MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIcon.png", UriKind.Relative));
+                    }
+                    else if (slotNumber == 2)
+                    {
+                        MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIcon.png", UriKind.Relative));
+                    }
+                    break;
+            }
+            return option;
+        }
+
+        private void PreUpdateIcons()
+        {
+            switch (SettingsClass.Slot1Type)
+            {
+                case "Memory Card 1":
+                    MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIcon.png", UriKind.Relative));
+                    break;
+                case "Memory Card 2":
+                    MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIcon2.png", UriKind.Relative));
+                    break;
+                case "Character Creation Menu":
+                    MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIconX.png", UriKind.Relative));
+                    break;
+                case "Cots Mode":
+                    MemCard.Source = new BitmapImage(new Uri("/Resources/MemoryIconY.png", UriKind.Relative));
+                    break;
+            }
+            switch (SettingsClass.Slot2Type)
+            {
+                case "Memory Card 1":
+                    MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIcon.png", UriKind.Relative));
+                    break;
+                case "Memory Card 2":
+                    MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIcon2.png", UriKind.Relative));
+                    break;
+                case "Character Creation Menu":
+                    MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIconX.png", UriKind.Relative));
+                    break;
+                case "Cots Mode":
+                    MemCard2.Source = new BitmapImage(new Uri("/Resources/MemoryIconY.png", UriKind.Relative));
+                    break;
+            }
         }
     }
 

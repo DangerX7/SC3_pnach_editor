@@ -4686,7 +4686,45 @@ namespace SC3_pnach_editor.Services
             //height remains 1080
             //for portret use 140x140 
 
-            string txtFileNames = "slot ";
+            string fileName = "";
+            if (slot <= 10)
+            {
+                switch (SettingsClass.Slot1Type)
+                {
+                    case "Memory Card 1" :
+                        fileName = "slot " + slot;
+                        break;
+                    case "Memory Card 2":
+                        fileName = "slot " + (slot + 10);
+                        break;
+                    case "Character Creation Menu":
+                        fileName = "custom " + slot;
+                        break;
+                    case "Cots Mode":
+                        fileName = "cots slot " + slot;
+                        break;
+                }
+            }
+            else
+            {
+                switch (SettingsClass.Slot2Type)
+                {
+                    case "Memory Card 1":
+                        fileName = "slot " + (slot - 10);
+                        break;
+                    case "Memory Card 2":
+                        fileName = "slot " + slot;
+                        break;
+                    case "Character Creation Menu":
+                        fileName = "custom " + (slot - 10);
+                        break;
+                    case "Cots Mode":
+                        fileName = "cots slot " + (slot - 10);
+                        break;
+                }
+            }
+
+            //string txtFileNames = "slot ";
             //txtFileNames = "custom "; // USE FOR SNAPSHOT
             //txtFileNames = "cots slot "; // USE FOR Cots
 
@@ -4695,7 +4733,7 @@ namespace SC3_pnach_editor.Services
             //string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string customFolder = SettingsClass.SurvivalPath + "\\Custom Characters";
 
-            string addressFilePath = System.IO.Path.Combine(customFolder, txtFileNames + charSlot + ".txt");
+            string addressFilePath = System.IO.Path.Combine(customFolder, fileName + ".txt");
             string valuesFilePath = System.IO.Path.Combine(customFolder, selectedChar + ".txt");
             string outputFilePath = System.IO.Path.Combine(customFolder, "combined.txt");
 

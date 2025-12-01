@@ -511,6 +511,10 @@ namespace SC3_pnach_editor.Views
             SettingsClass.CustomCharacter18 = "";
             SettingsClass.CustomCharacter19 = "";
             SettingsClass.CustomCharacter20 = "";
+
+            SettingsClass.Slot1Type = "Memory Card 1";
+            SettingsClass.Slot2Type = "Memory Card 2";
+
             string reset = CreatePnach.GetCustomCharactersPnachCodes("RESET");
 
             SettingsClass.SaveData();
