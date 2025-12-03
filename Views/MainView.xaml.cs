@@ -623,11 +623,36 @@ namespace SC3_pnach_editor.Views
                         return;
                     }
 
-                    // Get the full path of the executable
-                    string exePath = Assembly.GetExecutingAssembly().Location;
 
-                    // Get just the folder path
-                    string exeFolder = Path.GetDirectoryName(exePath);
+                    // Step 2: Welcome message
+                    System.Windows.Forms.MessageBox.Show(
+                        "Now locate your WPF folder and select the PICK_ME file."
+                    );
+
+                    // Step 3: Open file dialog for PCSX2
+                    OpenFileDialog dialog2 = new OpenFileDialog();
+                    dialog2.Title = "Select PICK_ME.txt FILE";
+                    dialog2.Filter = "PICK_ME Files|PICK_ME*.txt";   // Shows pcsx2.exe, pcsx2-qt.exe, etc.
+                    dialog2.InitialDirectory = "C:\\";                  // Optional
+
+                    DialogResult result2 = dialog2.ShowDialog();
+
+                    // Step 4: Handle cancel
+                    if (result2 == DialogResult.Cancel)
+                    {
+                        System.Windows.Forms.MessageBox.Show("Operation canceled. You must select the PICK_ME file to continue.");
+                        return;
+                    }
+
+                    // Step 5: Handle correct selection
+                    string exeFolder = "";
+                    if (result2 == DialogResult.OK)
+                    {
+                        string pcsx2Path2 = dialog2.FileName;
+                        int lastBackslashIndex2 = pcsx2Path.LastIndexOf('\\');
+                        exeFolder = pcsx2Path.Substring(0, lastBackslashIndex);
+
+                    }
 
                     string texturesInFolderPath = exeFolder + "\\Textures";
                     string survivalAndCustomPath = exeFolder + "\\Custom Survival Files";
@@ -641,14 +666,14 @@ namespace SC3_pnach_editor.Views
 
                     // Step 6: configure pnach
                     // Show message box with Yes/No buttons and custom text
-                    DialogResult result2 = System.Windows.Forms.MessageBox.Show("Are you using Topaz arcade edition or the original version of the game? Select Yes for Topaz or no for Original.", "Choose", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                    DialogResult result3 = System.Windows.Forms.MessageBox.Show("Are you using Topaz arcade edition or the original version of the game? Select Yes for Topaz or no for Original.", "Choose", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                     string selectedPnach = "";
 
-                    if (result2 == DialogResult.Yes)
+                    if (result3 == DialogResult.Yes)
                     {
                         selectedPnach = "Topaz arcade edition";
                     }
-                    else if (result2 == DialogResult.No)
+                    else if (result3 == DialogResult.No)
                     {
                         selectedPnach = "Original version";
                     }
@@ -661,19 +686,19 @@ namespace SC3_pnach_editor.Views
                     if (selectedPnach == "Close")
                     {
                         SettingsClass.PnachName = @"\CAB2086E.pnach";
-                        System.Windows.Forms.MessageBox.Show("Paths configured successfully! Topaz version was selected.\n\n" + pcsx2Path);
+                        System.Windows.Forms.MessageBox.Show("Paths configured successfully! Topaz version was selected.");
                     }
                     else
                     {
                         if (selectedPnach == "Topaz arcade edition")
                         {
                             SettingsClass.PnachName = @"\CAB2086E.pnach";
-                            System.Windows.Forms.MessageBox.Show("Paths configured successfully! Topaz version was selected.\n\n" + pcsx2Path);
+                            System.Windows.Forms.MessageBox.Show("Paths configured successfully! Topaz version was selected.");
                         }
                         else if (selectedPnach == "Original version")
                         {
                             SettingsClass.PnachName = @"\027C604C.pnach";
-                            System.Windows.Forms.MessageBox.Show("Paths configured successfully! Original version was selected.\n\n" + pcsx2Path);
+                            System.Windows.Forms.MessageBox.Show("Paths configured successfully! Original version was selected.");
                         }
                     }
 
