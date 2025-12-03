@@ -561,6 +561,21 @@ namespace SC3_pnach_editor.ViewModels
             "Ultra Hard",
             "Extremely Hard"
         };
+
+
+        private string _soundButton;
+        public string SoundButton
+        {
+            get { return _soundButton; }
+            set
+            {
+                if (_soundButton != value)
+                {
+                    _soundButton = value;
+                    RaisePropertyChanged("SoundButton");
+                }
+            }
+        }
     }
 
 

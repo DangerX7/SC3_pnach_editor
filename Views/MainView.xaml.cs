@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.FileSystemGlobbing;
+using NAudio.SoundFont;
 using NAudio.Wave;
 using SC3_pnach_editor.Codes;
 using SC3_pnach_editor.Services;
@@ -61,9 +62,22 @@ namespace SC3_pnach_editor.Views
             timer.Interval = TimeSpan.FromSeconds(2); // Adjust the duration as needed
             timer.Tick += Timer_Tick;
 
+            if (SettingsClass.SoundOn)
+            {
+                viewModel.SoundButton = "/Resources/SoundOn.png";
+            }
+            else
+            {
+                viewModel.SoundButton = "/Resources/SoundOff.png";
+            }
 
-            customSound.Source = new Uri(@"D:\Danger\Mods And Others\ps2\Soulcalibur 3\WPF Build\Extras\Narator_Tittle_Screen.wav");
-            customSound.Volume = 0.2;
+            if (SettingsClass.SoundOn)
+            {
+                string soundPath = System.IO.Path.Combine(Directory.GetParent(SettingsClass.SurvivalPath)!.FullName,
+                    @"Extras\Narator_Tittle_Screen.wav");
+                customSound.Source = new Uri(soundPath);
+                customSound.Volume = 0.2;
+            }
 
             if (SettingsClass.P1Speed == 0)
             {
@@ -671,6 +685,23 @@ namespace SC3_pnach_editor.Views
                     // File.WriteAllText(@"C:\AppSettings\PCSX2_Path.txt", pcsx2Path);
                 }
             }
+        }
+
+
+        private void MouseLeftClickSound(object sender, MouseButtonEventArgs e)
+        {
+            if (SettingsClass.SoundOn)
+            {
+                viewModel.SoundButton = "/Resources/SoundOff.png";
+                customSound.Volume = 0;
+            }
+            else
+            {
+                viewModel.SoundButton = "/Resources/SoundOn.png";
+                customSound.Volume = 0.1;
+            }
+
+            SettingsClass.SoundOn = !SettingsClass.SoundOn;
         }
     }
 

@@ -46,6 +46,13 @@ namespace SC3_pnach_editor.Views
 
             SettingsClass.LoadData();
 
+            if (SettingsClass.SoundOn)
+            {
+                string soundPath = System.IO.Path.Combine(Directory.GetParent(SettingsClass.SurvivalPath)!.FullName,
+                    @"Extras\Char_Creation_Bgm.mp3");
+                customSound.Source = new Uri(soundPath);
+                customSound.Volume = 0.1;
+            }
         }
 
         private void Activate_Click(object sender, RoutedEventArgs e)

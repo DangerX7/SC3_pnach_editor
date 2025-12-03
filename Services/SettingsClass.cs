@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic;
+using NAudio.SoundFont;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace SC3_pnach_editor.Services
 
         public static string Slot1Type = "Memory Card 1";
         public static string Slot2Type = "Memory Card 2";
+
+        public static bool SoundOn = true;
 
         public static bool BonusCharacters { get; set; } = false;
         public static bool UltimateWeapons { get; set; } = false;
@@ -175,7 +178,7 @@ namespace SC3_pnach_editor.Services
         public static string CustomCharacter19 { get; set; } = "";
         public static string CustomCharacter20 { get; set; } = "";
         public SettingsClass(string connectionString, string pnachName, string gfxCopyFrom, string gfxCopyTo, string survivalPath,
-            string slot1Type, string slot2Type, bool bonusCharacters, bool ultimateWeapons,
+            string slot1Type, string slot2Type, bool soundOn, bool bonusCharacters, bool ultimateWeapons,
             int guardianForceP1, int guardianForceP2, int weaponEffectP1, int weaponSpecialPowerP1, int weaponEffectP2, int weaponSpecialPowerP2,
             bool slipperyFieldP1, bool slipperyFieldP2, int chroniclesCharacterP1, int chroniclesCharacterP2, int playerControl, int opponentControl,
             int chroniclesCharacterP1_weapon, int chroniclesCharacterP2_weapon,
@@ -207,6 +210,7 @@ namespace SC3_pnach_editor.Services
             SurvivalPath = survivalPath;
             Slot1Type = slot1Type;
             Slot2Type = slot2Type;
+            SoundOn = soundOn;
             BonusCharacters = bonusCharacters;
             UltimateWeapons = ultimateWeapons;
             GuardianForceP1 = guardianForceP1;
@@ -360,7 +364,8 @@ namespace SC3_pnach_editor.Services
             public string SurvivalPath { get; set; } = SettingsClass.SurvivalPath;
             public string Slot1Type { get; set; } = SettingsClass.Slot1Type;
             public string Slot2Type { get; set; } = SettingsClass.Slot2Type;
-
+            public bool SoundOn { get; set; } = SettingsClass.SoundOn;
+            
             public bool BonusCharacters { get; set; } = SettingsClass.BonusCharacters;
             public bool UltimateWeapons { get; set; } = SettingsClass.UltimateWeapons;
             public int GuardianForceP1 { get; set; } = SettingsClass.GuardianForceP1;
@@ -522,6 +527,8 @@ namespace SC3_pnach_editor.Services
                 SurvivalPath = Settings.SurvivalPath;
                 Slot1Type = Settings.Slot1Type;
                 Slot2Type = Settings.Slot2Type;
+                SoundOn = Settings.SoundOn;
+                
                 BonusCharacters = Settings.BonusCharacters;
                 UltimateWeapons = Settings.UltimateWeapons;
                 GuardianForceP1 = Settings.GuardianForceP1;
@@ -681,6 +688,8 @@ namespace SC3_pnach_editor.Services
             Settings.SurvivalPath = SurvivalPath;
             Settings.Slot1Type = Slot1Type;
             Settings.Slot2Type = Slot2Type;
+            Settings.SoundOn = SoundOn;
+            
             Settings.BonusCharacters = BonusCharacters;
             Settings.UltimateWeapons = UltimateWeapons;
             Settings.GuardianForceP1 = GuardianForceP1;

@@ -45,8 +45,13 @@ namespace SC3_pnach_editor.Views
             SetBooleans();
 
 
-            customSound.Source = new Uri(@"D:\Danger\Mods And Others\ps2\Soulcalibur 3\WPF Build\Extras\Char_Creation_Bgm.mp3");
-            customSound.Volume = 0.1;
+            if (SettingsClass.SoundOn)
+            {
+                string soundPath = System.IO.Path.Combine(Directory.GetParent(SettingsClass.SurvivalPath)!.FullName,
+                    @"Extras\History_Beckons.mp3");
+                customSound.Source = new Uri(soundPath);
+                customSound.Volume = 0.1;
+            }
 
 
         }

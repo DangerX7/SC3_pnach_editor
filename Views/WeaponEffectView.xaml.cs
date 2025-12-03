@@ -44,8 +44,13 @@ namespace SC3_pnach_editor.Views
             SettingsClass.LoadData();
 
 
-            customSound.Source = new Uri(@"D:\Danger\Mods And Others\ps2\Soulcalibur 3\WPF Build\Extras\Char_Creation_Bgm.mp3");
-            customSound.Volume = 0.1;
+            if (SettingsClass.SoundOn)
+            {
+                string soundPath = System.IO.Path.Combine(Directory.GetParent(SettingsClass.SurvivalPath)!.FullName,
+                    @"Extras\Lorekeeper.mp3");
+                customSound.Source = new Uri(soundPath);
+                customSound.Volume = 0.1;
+            }
 
 
             slider_1.Value = SettingsClass.WpnEffect1;

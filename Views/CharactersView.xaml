@@ -1729,15 +1729,6 @@
                    Margin="-10,0,0,0"/>
 
 
-        <Image x:Name="SoundBtn" 
-               Source="{Binding SoundButton}"
-               Grid.Row="20"
-               Grid.RowSpan="2"
-               Grid.Column="9"
-               Grid.ColumnSpan="2"
-               Margin="10,10,10,10"
-               MouseLeftButtonDown="MouseLeftClickSound"/>
-
 
         <Button Grid.Row="20"
                 Grid.Column="17"
