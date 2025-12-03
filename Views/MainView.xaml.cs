@@ -51,6 +51,10 @@ namespace SC3_pnach_editor.Views
 
             //Check if configuration file exist
             FirstTimeConfiguration();
+            if (!File.Exists(@"C:\AppSettings\Settings_File2"))
+            {
+                System.Environment.Exit(0);
+            }
 
             viewModel = new();
             this.DataContext = viewModel;
@@ -624,12 +628,12 @@ namespace SC3_pnach_editor.Views
                     }
 
 
-                    // Step 2: Welcome message
+                    // Step 2x: Welcome message
                     System.Windows.Forms.MessageBox.Show(
                         "Now locate your WPF folder and select the PICK_ME file."
                     );
 
-                    // Step 3: Open file dialog for PCSX2
+                    // Step 3x: Open file dialog for PCSX2
                     OpenFileDialog dialog2 = new OpenFileDialog();
                     dialog2.Title = "Select PICK_ME.txt FILE";
                     dialog2.Filter = "PICK_ME Files|PICK_ME*.txt";   // Shows pcsx2.exe, pcsx2-qt.exe, etc.
@@ -637,20 +641,20 @@ namespace SC3_pnach_editor.Views
 
                     DialogResult result2 = dialog2.ShowDialog();
 
-                    // Step 4: Handle cancel
+                    // Step 4x: Handle cancel
                     if (result2 == DialogResult.Cancel)
                     {
                         System.Windows.Forms.MessageBox.Show("Operation canceled. You must select the PICK_ME file to continue.");
                         return;
                     }
 
-                    // Step 5: Handle correct selection
+                    // Step 5x: Handle correct selection
                     string exeFolder = "";
                     if (result2 == DialogResult.OK)
                     {
                         string pcsx2Path2 = dialog2.FileName;
                         int lastBackslashIndex2 = pcsx2Path.LastIndexOf('\\');
-                        exeFolder = pcsx2Path.Substring(0, lastBackslashIndex);
+                        exeFolder = pcsx2Path.Substring(0, lastBackslashIndex2);
 
                     }
 
@@ -703,13 +707,10 @@ namespace SC3_pnach_editor.Views
                     }
 
 
-                    //CAB2086E
 
-                    // TODO: Save the path or continue setup here
-                    // Example:
-                    // File.WriteAllText(@"C:\AppSettings\PCSX2_Path.txt", pcsx2Path);
                 }
             }
+
         }
 
 
