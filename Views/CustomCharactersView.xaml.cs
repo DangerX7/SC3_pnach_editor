@@ -1484,6 +1484,106 @@ namespace SC3_pnach_editor.Views
                     break;
             }
         }
+
+        private void Slot_Clear(object sender, MouseButtonEventArgs e)
+        {
+            // Convert sender to Image
+            Image clickedImage = sender as Image;
+            string slotName = clickedImage.Name;
+            string slotNumberStr = new string(slotName.Where(char.IsDigit).ToArray());
+            _selectedSlotNumber = Convert.ToInt32(slotNumberStr);
+
+            switch (_selectedSlotNumber)
+            {
+                case 1:
+                    UpdateImageAndText("Slot1", null, null, null);
+                    SettingsClass.CustomCharacter1 = "";
+                    break;
+                case 2:
+                    UpdateImageAndText("Slot2", null, null, null);
+                    SettingsClass.CustomCharacter2 = "";
+                    break;
+                case 3:
+                    UpdateImageAndText("Slot3", null, null, null);
+                    SettingsClass.CustomCharacter3 = "";
+                    break;
+                case 4:
+                    UpdateImageAndText("Slot4", null, null, null);
+                    SettingsClass.CustomCharacter4 = "";
+                    break;
+                case 5:
+                    UpdateImageAndText("Slot5", null, null, null);
+                    SettingsClass.CustomCharacter5 = "";
+                    break;
+                case 6:
+                    UpdateImageAndText("Slot6", null, null, null);
+                    SettingsClass.CustomCharacter6 = "";
+                    break;
+                case 7:
+                    UpdateImageAndText("Slot7", null, null, null);
+                    SettingsClass.CustomCharacter7 = "";
+                    break;
+                case 8:
+                    UpdateImageAndText("Slot8", null, null, null);
+                    SettingsClass.CustomCharacter8 = "";
+                    break;
+                case 9:
+                    UpdateImageAndText("Slot9", null, null, null);
+                    SettingsClass.CustomCharacter9 = "";
+                    break;
+                case 10:
+                    UpdateImageAndText("Slot10", null, null, null);
+                    SettingsClass.CustomCharacter10 = "";
+                    break;
+
+                case 11:
+                    UpdateImageAndText("Slot11", null, null, null);
+                    SettingsClass.CustomCharacter11 = "";
+                    break;
+                case 12:
+                    UpdateImageAndText("Slot12", null, null, null);
+                    SettingsClass.CustomCharacter12 = "";
+                    break;
+                case 13:
+                    UpdateImageAndText("Slot13", null, null, null);
+                    SettingsClass.CustomCharacter13 = "";
+                    break;
+                case 14:
+                    UpdateImageAndText("Slot14", null, null, null);
+                    SettingsClass.CustomCharacter14 = "";
+                    break;
+                case 15:
+                    UpdateImageAndText("Slot15", null, null, null);
+                    SettingsClass.CustomCharacter15 = "";
+                    break;
+                case 16:
+                    UpdateImageAndText("Slot16", null, null, null);
+                    SettingsClass.CustomCharacter16 = "";
+                    break;
+                case 17:
+                    UpdateImageAndText("Slot17", null, null, null);
+                    SettingsClass.CustomCharacter17 = "";
+                    break;
+                case 18:
+                    UpdateImageAndText("Slot18", null, null, null);
+                    SettingsClass.CustomCharacter18 = "";
+                    break;
+                case 19:
+                    UpdateImageAndText("Slot19", null, null, null);
+                    SettingsClass.CustomCharacter19 = "";
+                    break;
+                case 20:
+                    UpdateImageAndText("Slot20", null, null, null);
+                    SettingsClass.CustomCharacter20 = "";
+                    break;
+            }
+
+            SettingsClass.SaveData();
+
+            string customCharacterPnachData = CreatePnach.GetCustomCharactersPnachCodes("RESET");
+
+            File.WriteAllText(SettingsClass.codeFilePath, customCharacterPnachData, Encoding.UTF8);
+        }
     }
 
 
