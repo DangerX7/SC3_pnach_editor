@@ -13,7 +13,7 @@ namespace SC3_pnach_editor.Services
     public class SettingsClass
     {
 
-        public static string PnachName = @"\CABA0878.pnach";
+        public static string PnachName = @"\CAB2086E.pnach";
         public static string codeFolderPath { get; set; } = @"";
         public static string codeFilePath = codeFolderPath + PnachName;
 

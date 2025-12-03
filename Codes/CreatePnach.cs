@@ -4586,7 +4586,7 @@ namespace SC3_pnach_editor.Services
             if (textureFolder != "")
             {
                 string textureFolderPath = SettingsClass.GfxCopyTo;
-                string customTexturesFolder =   System.IO.Path.Combine(textureFolderPath, "Custom_Characters_Textures");
+                string customTexturesFolder = System.IO.Path.Combine(textureFolderPath, "Custom_Characters_Textures");
 
                 if (textureFolder == "RESET")
                 {
