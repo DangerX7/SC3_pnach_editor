@@ -653,8 +653,8 @@ namespace SC3_pnach_editor.Views
                     if (result2 == DialogResult.OK)
                     {
                         string pcsx2Path2 = dialog2.FileName;
-                        int lastBackslashIndex2 = pcsx2Path.LastIndexOf('\\');
-                        exeFolder = pcsx2Path.Substring(0, lastBackslashIndex2);
+                        int lastBackslashIndex2 = pcsx2Path2.LastIndexOf('\\');
+                        exeFolder = pcsx2Path2.Substring(0, lastBackslashIndex2);
 
                     }
 
