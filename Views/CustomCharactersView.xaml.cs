@@ -1497,6 +1497,7 @@ namespace SC3_pnach_editor.Views
             string slotName = clickedImage.Name;
             string slotNumberStr = new string(slotName.Where(char.IsDigit).ToArray());
             _selectedSlotNumber = Convert.ToInt32(slotNumberStr);
+            currentIndex = 0;
 
             switch (_selectedSlotNumber)
             {
