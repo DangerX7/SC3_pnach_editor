@@ -4625,8 +4625,13 @@ namespace SC3_pnach_editor.Services
                     ("Leon Uzumaki", "41"),
                     ("Fitzgerald", "45"),
                     ("Thyme", "49"),
-                    ("Mourn faer 1", "54"),
-                    ("Mourn faer 2", "54B")
+                    ("Mourn faer 1", "34"),
+                    ("Mourn faer 2", "34B"),
+                    ("Nina 2", "04B"),
+                    ("Valcua", "51"),
+                    ("Gail", "57"),
+                    ("Raiten", "64"),
+                    ("Khanate", "67")
                 };
 
 
@@ -4679,7 +4684,7 @@ namespace SC3_pnach_editor.Services
 
         public static string GenerateCodePiece(int slot, string character)
         {
-            //take snaphot instructions
+            //take snapshot instructions
             //change useCustomMenuSlots to true
             //full screen on old asus F10 - 4x native size
             //width 1440 becomes 570 all to the left C

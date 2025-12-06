@@ -218,7 +218,23 @@
     <None Remove="Resources\char_53.png" />
     <None Remove="Resources\char_54.png" />
     <None Remove="Resources\char_55.png" />
+    <None Remove="Resources\char_56.png" />
+    <None Remove="Resources\char_57.png" />
+    <None Remove="Resources\char_58.png" />
+    <None Remove="Resources\char_59.png" />
+    <None Remove="Resources\char_60.png" />
+    <None Remove="Resources\char_61.png" />
+    <None Remove="Resources\char_62.png" />
+    <None Remove="Resources\char_63.png" />
+    <None Remove="Resources\char_64.png" />
+    <None Remove="Resources\char_65.png" />
+    <None Remove="Resources\char_66.png" />
+    <None Remove="Resources\char_67.png" />
+    <None Remove="Resources\char_68.png" />
+    <None Remove="Resources\char_69.png" />
+    <None Remove="Resources\char_70.png" />
     <None Remove="Resources\char_wall.png" />
+    <None Remove="Resources\char_XX.png" />
     <None Remove="Resources\char__01.png" />
     <None Remove="Resources\char__02.png" />
     <None Remove="Resources\char__03.png" />
@@ -257,6 +273,7 @@
     <None Remove="Resources\char__32.png" />
     <None Remove="Resources\char__33.png" />
     <None Remove="Resources\char__34.png" />
+    <None Remove="Resources\char__34B.png" />
     <None Remove="Resources\char__35.png" />
     <None Remove="Resources\char__36.png" />
     <None Remove="Resources\char__37.png" />
@@ -274,11 +291,28 @@
     <None Remove="Resources\char__49.png" />
     <None Remove="Resources\char__50.png" />
     <None Remove="Resources\char__51.png" />
+    <None Remove="Resources\char__51B.png" />
     <None Remove="Resources\char__52.png" />
     <None Remove="Resources\char__53.png" />
     <None Remove="Resources\char__54.png" />
     <None Remove="Resources\char__54B.png" />
     <None Remove="Resources\char__55.png" />
+    <None Remove="Resources\char__56.png" />
+    <None Remove="Resources\char__57.png" />
+    <None Remove="Resources\char__58.png" />
+    <None Remove="Resources\char__59.png" />
+    <None Remove="Resources\char__60.png" />
+    <None Remove="Resources\char__61.png" />
+    <None Remove="Resources\char__62.png" />
+    <None Remove="Resources\char__63.png" />
+    <None Remove="Resources\char__64.png" />
+    <None Remove="Resources\char__65.png" />
+    <None Remove="Resources\char__66.png" />
+    <None Remove="Resources\char__67.png" />
+    <None Remove="Resources\char__68.png" />
+    <None Remove="Resources\char__69.png" />
+    <None Remove="Resources\char__70.png" />
+    <None Remove="Resources\char__XX.png" />
     <None Remove="Resources\Chester.png" />
     <None Remove="Resources\Chester_1.webp" />
     <None Remove="Resources\Chester_2.webp" />
@@ -1660,6 +1694,54 @@
     <Content Include="Resources\char_55.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\char_56.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_58.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_59.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_61.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_62.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_63.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_65.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_66.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_67.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_68.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_69.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char_XX.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\char__01.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1759,9 +1841,6 @@
     <Content Include="Resources\char__31.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\char__31B.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\char__32.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1769,6 +1848,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\char__34.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__34B.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\char__35.png">
@@ -1822,6 +1904,9 @@
     <Content Include="Resources\char__51.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\char__51B.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\char__52.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1831,10 +1916,55 @@
     <Content Include="Resources\char__54.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\char__54B.png">
+    <Content Include="Resources\char__55.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\char__55.png">
+    <Content Include="Resources\char__56.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__57.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__58.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__59.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__60.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__61.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__62.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__63.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__64.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__65.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__66.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__67.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__68.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__69.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__70.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\char__XX.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Chester.png">

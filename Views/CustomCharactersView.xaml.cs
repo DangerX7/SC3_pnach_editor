@@ -276,12 +276,12 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("KokuenraValues", null, null, null);
             UpdateImageAndText("SpicaValues", null, null, null);
 
-            UpdateImageAndText("ValcuaValues", null, null, null);
-            UpdateImageAndText("AversaValues", null, null, null);
-            UpdateImageAndText("EdgarValues", null, null, null);
-            UpdateImageAndText("BlancheValues", null, null, null);
-            UpdateImageAndText("HelenaValues", null, null, null);
-            UpdateImageAndText("NicholasValues", null, null, null);
+            UpdateImageAndText("DracoValues", null, null, null);
+            UpdateImageAndText("UmiValues", null, null, null);
+            UpdateImageAndText("EdgeMasterValues", null, null, null);
+            UpdateImageAndText("MournfaerValues", null, null, null);
+            UpdateImageAndText("VelikastrousValues", null, null, null);
+            UpdateImageAndText("KaosValues", null, null, null);
             UpdateImageAndText("AkaraValues", null, null, null);
             UpdateImageAndText("CitrineValues", null, null, null);
             UpdateImageAndText("MariseValues", null, null, null);
@@ -298,11 +298,27 @@ namespace SC3_pnach_editor.Views
             UpdateImageAndText("ThymeValues", null, null, null);
             UpdateImageAndText("TheCalamityValues", null, null, null);
 
-            UpdateImageAndText("DracoValues", null, null, null);
-            UpdateImageAndText("UmiValues", null, null, null);
-            UpdateImageAndText("EdgeMasterValues", null, null, null);
-            UpdateImageAndText("MournfaerValues", null, null, null);
-            UpdateImageAndText("VelikastrousValues", null, null, null);
+            UpdateImageAndText("ValcuaValues", null, null, null);
+            UpdateImageAndText("AversaValues", null, null, null);
+            UpdateImageAndText("EdgarValues", null, null, null);
+            UpdateImageAndText("BlancheValues", null, null, null);
+            UpdateImageAndText("HelenaValues", null, null, null);
+            UpdateImageAndText("NicholasValues", null, null, null);
+            UpdateImageAndText("GailValues", null, null, null);
+            UpdateImageAndText("KatrinaValues", null, null, null);
+            UpdateImageAndText("SaellumvValues", null, null, null);
+            UpdateImageAndText("KronneValues", null, null, null);
+
+            UpdateImageAndText("AkashanValues", null, null, null);
+            UpdateImageAndText("ErnestValues", null, null, null);
+            UpdateImageAndText("NokklingValues", null, null, null);
+            UpdateImageAndText("RaitenValues", null, null, null);
+            UpdateImageAndText("AdamValues", null, null, null);
+            UpdateImageAndText("AlexanderValues", null, null, null);
+            UpdateImageAndText("KhanateValues", null, null, null);
+            UpdateImageAndText("SindrielValues", null, null, null);
+            UpdateImageAndText("TristanValues", null, null, null);
+            UpdateImageAndText("LongcastleValues", null, null, null);
 
             PreUpdateIcons();
         }
@@ -604,23 +620,23 @@ namespace SC3_pnach_editor.Views
                     SpicaValues.Source = bitmap;
                     break;
 
-                case "ValcuaValues":
-                    ValcuaValues.Source = bitmap;
+                case "DracoValues":
+                    DracoValues.Source = bitmap;
                     break;
-                case "AversaValues":
-                    AversaValues.Source = bitmap;
+                case "UmiValues":
+                    UmiValues.Source = bitmap;
                     break;
-                case "EdgarValues":
-                    EdgarValues.Source = bitmap;
+                case "EdgeMasterValues":
+                    EdgeMasterValues.Source = bitmap;
                     break;
-                case "BlancheValues":
-                    BlancheValues.Source = bitmap;
+                case "MournfaerValues":
+                    MournfaerValues.Source = bitmap;
                     break;
-                case "HelenaValues":
-                    HelenaValues.Source = bitmap;
+                case "VelikastrousValues":
+                    VelikastrousValues.Source = bitmap;
                     break;
-                case "NicholasValues":
-                    NicholasValues.Source = bitmap;
+                case "KaosValues":
+                    KaosValues.Source = bitmap;
                     break;
                 case "AkaraValues":
                     AkaraValues.Source = bitmap;
@@ -666,20 +682,66 @@ namespace SC3_pnach_editor.Views
                     TheCalamityValues.Source = bitmap;
                     break;
 
-                case "DracoValues":
-                    DracoValues.Source = bitmap;
+                case "ValcuaValues":
+                    ValcuaValues.Source = bitmap;
                     break;
-                case "UmiValues":
-                    UmiValues.Source = bitmap;
+                case "AversaValues":
+                    AversaValues.Source = bitmap;
                     break;
-                case "EdgeMasterValues":
-                    EdgeMasterValues.Source = bitmap;
+                case "EdgarValues":
+                    EdgarValues.Source = bitmap;
                     break;
-                case "MournfaerValues":
-                    MournfaerValues.Source = bitmap;
+                case "BlancheValues":
+                    BlancheValues.Source = bitmap;
                     break;
-                case "VelikastrousValues":
-                    VelikastrousValues.Source = bitmap;
+                case "HelenaValues":
+                    HelenaValues.Source = bitmap;
+                    break;
+                case "NicholasValues":
+                    NicholasValues.Source = bitmap;
+                    break;
+                case "GailValues":
+                    GailValues.Source = bitmap;
+                    break;
+                case "KatrinaValues":
+                    KatrinaValues.Source = bitmap;
+                    break;
+                case "SaellumvValues":
+                    SaellumvValues.Source = bitmap;
+                    break;
+                case "KronneValues":
+                    KronneValues.Source = bitmap;
+                    break;
+
+                case "AkashanValues":
+                    AkashanValues.Source = bitmap;
+                    break;
+                case "ErnestValues":
+                    ErnestValues.Source = bitmap;
+                    break;
+                case "NokklingValues":
+                    NokklingValues.Source = bitmap;
+                    break;
+                case "RaitenValues":
+                    RaitenValues.Source = bitmap;
+                    break;
+                case "AdamValues":
+                    AdamValues.Source = bitmap;
+                    break;
+                case "AlexanderValues":
+                    AlexanderValues.Source = bitmap;
+                    break;
+                case "KhanateValues":
+                    KhanateValues.Source = bitmap;
+                    break;
+                case "SindrielValues":
+                    SindrielValues.Source = bitmap;
+                    break;
+                case "TristanValues":
+                    TristanValues.Source = bitmap;
+                    break;
+                case "LongcastleValues":
+                    LongcastleValues.Source = bitmap;
                     break;
 
                 case "Slot1":
@@ -847,23 +909,23 @@ namespace SC3_pnach_editor.Views
                     currentArray = viewModel.SpicaValues;
                     break;
 
-                case "ValcuaValues":
-                    currentArray = viewModel.ValcuaValues;
+                case "DracoValues":
+                    currentArray = viewModel.DracoValues;
                     break;
-                case "AversaValues":
-                    currentArray = viewModel.AversaValues;
+                case "UmiValues":
+                    currentArray = viewModel.UmiValues;
                     break;
-                case "EdgarValues":
-                    currentArray = viewModel.EdgarValues;
+                case "EdgeMasterValues":
+                    currentArray = viewModel.EdgeMasterValues;
                     break;
-                case "BlancheValues":
-                    currentArray = viewModel.BlancheValues;
+                case "MournfaerValues":
+                    currentArray = viewModel.MournfaerValues;
                     break;
-                case "HelenaValues":
-                    currentArray = viewModel.HelenaValues;
+                case "VelikastrousValues":
+                    currentArray = viewModel.VelikastrousValues;
                     break;
-                case "NicholasValues":
-                    currentArray = viewModel.NicholasValues;
+                case "KaosValues":
+                    currentArray = viewModel.KaosValues;
                     break;
                 case "AkaraValues":
                     currentArray = viewModel.AkaraValues;
@@ -909,20 +971,66 @@ namespace SC3_pnach_editor.Views
                     currentArray = viewModel.TheCalamityValues;
                     break;
 
-                case "DracoValues":
-                    currentArray = viewModel.DracoValues;
+                case "ValcuaValues":
+                    currentArray = viewModel.ValcuaValues;
                     break;
-                case "UmiValues":
-                    currentArray = viewModel.UmiValues;
+                case "AversaValues":
+                    currentArray = viewModel.AversaValues;
                     break;
-                case "EdgeMasterValues":
-                    currentArray = viewModel.EdgeMasterValues;
+                case "EdgarValues":
+                    currentArray = viewModel.EdgarValues;
                     break;
-                case "MournfaerValues":
-                    currentArray = viewModel.MournfaerValues;
+                case "BlancheValues":
+                    currentArray = viewModel.BlancheValues;
                     break;
-                case "VelikastrousValues":
-                    currentArray = viewModel.VelikastrousValues;
+                case "HelenaValues":
+                    currentArray = viewModel.HelenaValues;
+                    break;
+                case "NicholasValues":
+                    currentArray = viewModel.NicholasValues;
+                    break;
+                case "GailValues":
+                    currentArray = viewModel.GailValues;
+                    break;
+                case "KatrinaValues":
+                    currentArray = viewModel.KatrinaValues;
+                    break;
+                case "SaellumvValues":
+                    currentArray = viewModel.SaellumvValues;
+                    break;
+                case "KronneValues":
+                    currentArray = viewModel.KronneValues;
+                    break;
+
+                case "AkashanValues":
+                    currentArray = viewModel.AkashanValues;
+                    break;
+                case "ErnestValues":
+                    currentArray = viewModel.ErnestValues;
+                    break;
+                case "NokklingValues":
+                    currentArray = viewModel.NokklingValues;
+                    break;
+                case "RaitenValues":
+                    currentArray = viewModel.RaitenValues;
+                    break;
+                case "AdamValues":
+                    currentArray = viewModel.AdamValues;
+                    break;
+                case "AlexanderValues":
+                    currentArray = viewModel.AlexanderValues;
+                    break;
+                case "KhanateValues":
+                    currentArray = viewModel.KhanateValues;
+                    break;
+                case "SindrielValues":
+                    currentArray = viewModel.SindrielValues;
+                    break;
+                case "TristanValues":
+                    currentArray = viewModel.TristanValues;
+                    break;
+                case "LongcastleValues":
+                    currentArray = viewModel.LongcastleValues;
                     break;
 
                 case "Slot1":

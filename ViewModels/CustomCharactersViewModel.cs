@@ -70,12 +70,12 @@ namespace SC3_pnach_editor.ViewModels
             "KokuenraValues",
             "SpicaValues",
 
-            "ValcuaValues",
-            "AversaValues",
-            "EdgarValues",
-            "BlancheValues",
-            "HelenaValues",
-            "NicholasValues",
+            "DracoValues",
+            "UmiValues",
+            "EdgeMasterValues",
+            "MournfaerValues",
+            "VelikastrousValues",
+            "KaosValues",
             "AkaraValues",
             "CitrineValues",
             "MariseValues",
@@ -92,11 +92,28 @@ namespace SC3_pnach_editor.ViewModels
             "ThymeValues",
             "TheCalamityValues",
 
-            "DracoValues",
-            "UmiValues",
-            "EdgeMasterValues",
-            "MournfaerValues",
-            "VelikastrousValues"
+            "ValcuaValues",
+            "AversaValues",
+            "EdgarValues",
+            "BlancheValues",
+            "HelenaValues",
+            "NicholasValues",
+            "GailValues",
+            "KatrinaValues",
+            "SaellumvValues",
+            "KronneValues",
+
+            "AkashanValues",
+            "ErnestValues",
+            "NokklingValues",
+            "RaitenValues",
+            "AdamValues",
+            "AlexanderValues",
+            "KhanateValues",
+            "SindrielValues",
+            "TristanValues",
+            "LongcastleValues"
+
         };
 
         public string CharListItem(int index)
@@ -112,7 +129,7 @@ namespace SC3_pnach_editor.ViewModels
             { "_", "_"}
         };
 
-
+        //0
         public string[,] YuilinValues = new string[,]
         {
             { "Yuilin", "Costume 1", "Steel Fan", "char_01.png", "01", "", "char__01.png", "", "No" }
@@ -131,7 +148,7 @@ namespace SC3_pnach_editor.ViewModels
         public string[,] NinaValues = new string[,]
         {
             { "Nina", "Costume 1", "Soul of Taki", "char_04.png", "04", "", "char__04.png", "", "No" },
-            { "Nina", "Costume 2", "Soul of Taki", "char_04.png", "04B", "", "char__04B.png", "", "No" }
+            { "Nina 2", "Costume 2", "Soul of Taki", "char_04.png", "04B", "", "char__04B.png", "", "Yes" }
         };
 
         public string[,] ScorpionValues = new string[,]
@@ -164,7 +181,7 @@ namespace SC3_pnach_editor.ViewModels
             { "Tifa", "Costume 1", "Grieve Edge", "char_10.png", "10", "", "char__10.png", "", "No" }
         };
 
-
+        //1
         public string[,] BlackKnightValues = new string[,]
         {
             { "Black Knight", "Costume 1", "Iron Sword", "char_11.png", "11", "", "char__11.png", "", "No" }
@@ -215,7 +232,7 @@ namespace SC3_pnach_editor.ViewModels
             { "Rosa", "Costume 1", "Sword & Shield", "char_20.png", "20", "", "char__20.png", "", "No" }
         };
 
-
+        //2
         public string[,] SoruValues = new string[,]
         {
             { "Soru", "Costume 1", "Soul of Siegfried", "char_21.png", "21", "", "char__21.png", "", "No" },
@@ -268,36 +285,36 @@ namespace SC3_pnach_editor.ViewModels
             { "Spica", "Costume 1", "Rapier", "char_30.png", "30", "", "char__30.png", "", "No" }
         };
 
-
-        public string[,] ValcuaValues = new string[,]
+        //3
+        public string[,] DracoValues = new string[,]
         {
-            { "Valcua", "Costume 1", "Iron Sword", "char_31.png", "31", "", "char__31.png", "", "No" },
-            { "Valcua", "Costume 2", "Soul of Siegfried", "char_31.png", "31B", "", "char__31B.png", "", "No" }
+            { "Draco", "Costume 1", "Soul of Nightmare", "char_31.png", "31", "", "char__31.png", "", "No" }
         };
 
-        public string[,] AversaValues = new string[,]
+        public string[,] UmiValues = new string[,]
         {
-            { "Aversa", "Costume 1", "Soul of Zasalamel", "char_32.png", "32", "", "char__32.png", "", "No" }
+            { "Umi", "Costume 1", "Rapier", "char_32.png", "32", "", "char__32.png", "", "No" }
         };
 
-        public string[,] EdgarValues = new string[,]
+        public string[,] EdgeMasterValues = new string[,]
         {
-            { "Edgar", "Costume 1", "Soul of Siegfried", "char_33.png", "33", "", "char__33.png", "", "No" }
+            { "Edge Master", "Costume 1", "Any", "char_33.png", "33", "", "char__33.png", "", "No" }
         };
 
-        public string[,] BlancheValues = new string[,]
+        public string[,] MournfaerValues = new string[,]
         {
-            { "Blanche", "Costume 1", "Chinese Blade", "char_34.png", "34", "", "char__34.png", "", "No" }
+            { "Morne faer 1", "Costume 1", "Soul of Siegfried", "char_34.png", "34", "", "char__34.png", "", "Yes" },
+            { "Morne faer 2", "Costume 2", "Soul of Siegfried", "char_34.png", "34B", "", "char__34B.png", "", "Yes" }
         };
 
-        public string[,] HelenaValues = new string[,]
+        public string[,] VelikastrousValues = new string[,]
         {
-            { "Helena", "Costume 1", "Soul of Setsuka", "char_35.png", "35", "", "char__35.png", "", "No" }
+            { "Velikastrous", "Costume 1", "Soul of Cervantes", "char_35.png", "35", "", "char__35.png", "", "No" }
         };
 
-        public string[,] NicholasValues = new string[,]
+        public string[,] KaosValues = new string[,]
         {
-            { "Nicholas", "Costume 1", "Katana & Shuriken", "char_36.png", "36", "", "char__36.png", "", "No" }
+            { "Kaos", "Costume 1", "Lance", "char_36.png", "36", "", "char__36.png", "", "No" }
         };
 
         public string[,] AkaraValues = new string[,]
@@ -320,10 +337,10 @@ namespace SC3_pnach_editor.ViewModels
             { "Grim Reaper", "Costume 1", "Soul of Zasalamel", "char_40.png", "40", "", "char__40.png", "", "No" }
         };
 
-
+        //4
         public string[,] LeonUzumakiValues = new string[,]
         {
-            { "Leon Uzumaki", "Costume 1", "Iron Sword", "char_41.png", "41", "", "char__41.png", "", "Yes" }
+            { "Leon Uzumaki", "Costume 1", "Soul of Siegfried", "char_41.png", "41", "", "char__41.png", "", "Yes" }
         };
 
         public string[,] CherylValues = new string[,]
@@ -371,34 +388,108 @@ namespace SC3_pnach_editor.ViewModels
             { "The Calamity", "Costume 1", "Soul of Nightmare", "char_50.png", "50", "", "char__50.png", "", "No" }
         };
 
-
-        public string[,] DracoValues = new string[,]
+        //5
+        public string[,] ValcuaValues = new string[,]
         {
-            { "Draco", "Costume 1", "Soul of Nightmare", "char_51.png", "51", "", "char__51.png", "", "No" }
+            { "Valcua", "Costume 1", "Soul of Siegfried", "char_51.png", "51", "", "char__51.png", "", "Yes" },
+            { "Valcua", "Costume 2", "Iron Sword", "char_51.png", "51B", "", "char__51B.png", "", "No" }
         };
 
-        public string[,] UmiValues = new string[,]
+        public string[,] AversaValues = new string[,]
         {
-            { "Umi", "Costume 1", "Rapier", "char_52.png", "52", "", "char__52.png", "", "No" }
+            { "Aversa", "Costume 1", "Soul of Zasalamel", "char_52.png", "52", "", "char__52.png", "", "No" }
         };
 
-        public string[,] EdgeMasterValues = new string[,]
+        public string[,] EdgarValues = new string[,]
         {
-            { "Edge Master", "Costume 1", "Any", "char_53.png", "53", "", "char__53.png", "", "No" }
+            { "Edgar", "Costume 1", "Soul of Mitsurugi", "char_53.png", "53", "", "char__53.png", "", "No" }
         };
 
-
-        public string[,] MournfaerValues = new string[,]
+        public string[,] BlancheValues = new string[,]
         {
-            { "Morne faer 1", "Costume 1", "Soul of Siegfried", "char_54.png", "54", "", "char__54.png", "", "Yes" },
-            { "Morne faer 2", "Costume 2", "Soul of Siegfried", "char_54.png", "54B", "", "char__54B.png", "", "Yes" }
+            { "Blanche", "Costume 1", "Soul of Xianghua", "char_54.png", "54", "", "char__54.png", "", "No" }
         };
 
-        public string[,] VelikastrousValues = new string[,]
+        public string[,] HelenaValues = new string[,]
         {
-            { "Velikastrous", "Costume 1", "Soul of Cervantes", "char_55.png", "55", "", "char__55.png", "", "No" }
+            { "Helena", "Costume 1", "Soul of Setsuka", "char_55.png", "55", "", "char__55.png", "", "No" }
         };
 
+        public string[,] NicholasValues = new string[,]
+        {
+            { "Nicholas", "Costume 1", "Katana & Shuriken", "char_56.png", "56", "", "char__56.png", "", "No" }
+        };
+
+        public string[,] GailValues = new string[,]
+        {
+            { "Gail", "Costume 1", "Soul of Nightmare", "char_57.png", "57", "", "char__57.png", "", "Yes" }
+        };
+
+        public string[,] KatrinaValues = new string[,]
+        {
+            { "Katrina", "Costume 1", "Chinese Sword", "char_58.png", "58", "", "char__58.png", "", "No" }
+        };
+
+        public string[,] SaellumvValues = new string[,]
+        {
+            { "Saellum V", "Costume 1", "Soul of Siegfried", "char_59.png", "59", "", "char__59.png", "", "No" }
+        };
+
+        public string[,] KronneValues = new string[,]
+        {
+            { "Kronne", "Costume 1", "Iron Sword", "char_60.png", "60", "", "char__60.png", "", "No" }
+        };
+
+        //6
+        public string[,] AkashanValues = new string[,]
+        {
+            { "AkashanValues", "Costume 1", "Soul of Yun-Seong", "char_61.png", "61", "", "char__61.png", "", "No" }
+        };
+
+        public string[,] ErnestValues = new string[,]
+        {
+            { "Ernest", "Costume 1", "Wave Sword", "char_62.png", "62", "", "char__62.png", "", "No" }
+        };
+
+        public string[,] NokklingValues = new string[,]
+        {
+            { "Nokkling", "Costume 1", "Wave Sword", "char_63.png", "63", "", "char__63.png", "", "No" }
+        };
+
+        public string[,] RaitenValues = new string[,]
+        {
+            { "Raiten", "Costume 1", "Katana & Shuriken", "char_64.png", "64", "", "char__64.png", "", "Yes" }
+        };
+
+        public string[,] AdamValues = new string[,]
+        {
+            { "Adam", "Costume 1", "Iron Sword", "char_65.png", "65", "", "char__65.png", "", "No" }
+        };
+
+        public string[,] AlexanderValues = new string[,]
+        {
+            { "Alexander", "Costume 1", "Lance", "char_66.png", "66", "", "char__66.png", "", "No" }
+        };
+
+        public string[,] KhanateValues = new string[,]
+        {
+            { "Khanate", "Costume 1", "Iron Sword", "char_67.png", "67", "", "char__67.png", "", "Yes" }
+        };
+
+        public string[,] SindrielValues = new string[,]
+        {
+            { "Sindriel", "Costume 1", "Katana", "char_68.png", "68", "", "char__68.png", "", "No" }
+        };
+
+        public string[,] TristanValues = new string[,]
+        {
+            { "Tristan", "Costume 1", "Soul of Siegfried", "char_69.png", "69", "", "char__69.png", "", "No" }
+        };
+
+        public string[,] LongcastleValues = new string[,]
+        {
+            { "Longcastle", "Costume 1", "Soul of Raphael", "char_70.png", "70", "", "char__70.png", "", "No" }
+        };
 
 
         public string[,] Slot1Values = new string[,]
